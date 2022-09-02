@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     
     private lazy var signUpButton: UIButton = {
         let button = UIButton(type: .system)
-        button.backgroundColor = .primaryWhitSnow
+        button.backgroundColor = .primaryWhiteSnow
         button.setTitle("Войти", for: .normal)
         button.titleLabel?.font = .robotoBold16()
         button.tintColor = .primaryMidnight
