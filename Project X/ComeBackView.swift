@@ -11,7 +11,6 @@ class ComeBackView: UIView {
     
     private lazy var childButton: UIButton = {
         let button = UIButton(type: .system)
-        button.backgroundColor = .primaryWhiteSnow
         button.setTitle("Ребенок", for: .normal)
         button.titleLabel?.font = .nexaDemoBold16()
         button.tintColor = .primaryMidnight
@@ -22,27 +21,12 @@ class ComeBackView: UIView {
     
     private lazy var parentButton: UIButton = {
         let button = UIButton(type: .system)
-        button.backgroundColor = .primaryWhiteSnow
         button.setTitle("Родитель", for: .normal)
         button.titleLabel?.font = .nexaDemoBold16()
         button.tintColor = .primaryMidnight
         button.translatesAutoresizingMaskIntoConstraints = false
         button.addTarget(self, action: #selector(parentButtonTapped), for: .touchUpInside)
         return button
-    }()
-    
-    private var childButtonShadowView: UIView = {
-        let shadowView = UIView()
-        shadowView.backgroundColor = .primaryMidnight
-        shadowView.translatesAutoresizingMaskIntoConstraints = false
-        return shadowView
-    }()
-    
-    private var parentButtonShadowView: UIView = {
-        let shadowView = UIView()
-        shadowView.backgroundColor = .primaryMidnight
-        shadowView.translatesAutoresizingMaskIntoConstraints = false
-        return shadowView
     }()
     
     override init(frame: CGRect) {
@@ -59,21 +43,16 @@ class ComeBackView: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        childButton.roundCorners([.topLeft, .topRight, .bottomRight], radius: 12, borderColor: .primaryMidnight, borderWidth: 1.4)
-        parentButton.roundCorners([.topLeft, .topRight, .bottomLeft], radius: 12, borderColor: .primaryMidnight, borderWidth: 1.4)
-        childButtonShadowView.roundCorners([.topLeft, .topRight, .bottomRight], radius: 12, borderColor: nil, borderWidth: nil)
-        parentButtonShadowView.roundCorners([.topLeft, .topRight, .bottomLeft], radius: 12, borderColor: nil, borderWidth: nil)
+        childButton.createCustomViewWithShadow([.topLeft, .topRight, .bottomRight], radius: 12, borderColor: .primaryMidnight, borderWidth: 1.4, fillColor: .primaryWhiteSnow, shadowColor: .primaryMidnight)
+        parentButton.createCustomViewWithShadow([.topLeft, .topRight, .bottomLeft], radius: 12, borderColor: .primaryMidnight, borderWidth: 1.4, fillColor: .primaryWhiteSnow, shadowColor: .primaryMidnight)
     }
     
     private func setupViews() {
         
         backgroundColor = .primaryWhiteSnow
-        //backgroundColor = .orange
         translatesAutoresizingMaskIntoConstraints = false
         
-        addSubview(parentButtonShadowView)
         addSubview(parentButton)
-        addSubview(childButtonShadowView)
         addSubview(childButton)
     }
     
@@ -99,20 +78,6 @@ class ComeBackView: UIView {
             childButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 32),
             childButton.heightAnchor.constraint(equalToConstant: 56),
             childButton.widthAnchor.constraint(equalToConstant: 160)
-        ])
-        
-        NSLayoutConstraint.activate([
-            childButtonShadowView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -69),
-            childButtonShadowView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 34.5),
-            childButtonShadowView.heightAnchor.constraint(equalToConstant: 56),
-            childButtonShadowView.widthAnchor.constraint(equalToConstant: 160)
-        ])
-        
-        NSLayoutConstraint.activate([
-            parentButtonShadowView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -85),
-            parentButtonShadowView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -29.5),
-            parentButtonShadowView.heightAnchor.constraint(equalToConstant: 56),
-            parentButtonShadowView.widthAnchor.constraint(equalToConstant: 160)
         ])
     }
 }
