@@ -32,6 +32,7 @@ extension UIView {
         layer.shadowOffset = CGSize(width: 2.5, height: 3)
         layer.shadowColor = shadowColor.cgColor
         layer.shadowPath = path.cgPath
+        
 
         if borderWidth != nil {
             addBorder(shapeLayer, borderWidth: borderWidth!, borderColor: borderColor!)

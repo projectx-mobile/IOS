@@ -10,21 +10,23 @@ import UIKit
 class ComeBackView: UIView {
     
     private lazy var childButton: UIButton = {
-        let button = UIButton(type: .system)
+        let button = CustomButton()
         button.setTitle("Ребенок", for: .normal)
         button.titleLabel?.font = .nexaDemoBold16()
-        button.tintColor = .primaryMidnight
+        button.setTitleColor(.primaryMidnight, for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
+        
         button.addTarget(self, action: #selector(childButtonTapped), for: .touchUpInside)
         return button
     }()
     
     private lazy var parentButton: UIButton = {
-        let button = UIButton(type: .system)
+        let button = CustomButton()
         button.setTitle("Родитель", for: .normal)
         button.titleLabel?.font = .nexaDemoBold16()
-        button.tintColor = .primaryMidnight
+        button.setTitleColor(.primaryMidnight, for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
+        
         button.addTarget(self, action: #selector(parentButtonTapped), for: .touchUpInside)
         return button
     }()
@@ -58,10 +60,12 @@ class ComeBackView: UIView {
     
     @objc private func childButtonTapped() {
         print("childButtonTapped")
+        bringSubviewToFront(childButton)
     }
     
     @objc private func parentButtonTapped() {
         print("parentButtonTapped")
+        bringSubviewToFront(parentButton)
     }
     
     private func setConstraints() {

@@ -10,32 +10,16 @@ import UIKit
 class ViewController: UIViewController {
     
     private lazy var logInButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.backgroundColor = .primaryJuicyGrape
-        button.setTitle("Создать аккаунт", for: .normal)
-        button.titleLabel?.font = .robotoBold16()
-        button.tintColor = .primaryPureWhite
-        button.layer.cornerRadius = 8
-        button.layer.borderWidth = 1.4
-        button.layer.borderColor = UIColor.primaryMidnight.cgColor
-        button.addShadowOnView()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
+       
+        let button = PrimaryButton(text: "Войти", fillColor: .primaryWhiteSnow, tintColor: .primaryMidnight, borderColor: .primaryMidnight)
+        button.addTarget(self, action: #selector(logInButtonTapped), for: .touchUpInside)
         return button
     }()
     
     private lazy var signUpButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.backgroundColor = .primaryWhiteSnow
-        button.setTitle("Войти", for: .normal)
-        button.titleLabel?.font = .robotoBold16()
-        button.tintColor = .primaryMidnight
-        button.layer.cornerRadius = 8
-        button.layer.borderWidth = 1.4
-        button.layer.borderColor = UIColor.primaryMidnight.cgColor
-        button.addShadowOnView()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.addTarget(self, action: #selector(logInButtonTapped), for: .touchUpInside)
+        
+        let button = PrimaryButton(text: "Создать аккаунт", fillColor: .primaryJuicyGrape, tintColor: .primaryPureWhite, borderColor: .primaryMidnight)
+        button.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
         return button
     }()
     
@@ -51,7 +35,6 @@ class ViewController: UIViewController {
     }
     
     private func setupViews() {
-        
         view.addSubview(signUpButton)
         view.addSubview(logInButton)
         view.addSubview(comeBackView)
