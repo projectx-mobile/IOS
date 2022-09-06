@@ -9,8 +9,12 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    private let screenWidth = UIScreen.main.bounds.size.height < UIScreen.main.bounds.size.width ? UIScreen.main.bounds.size.height : UIScreen.main.bounds.size.width
+    
+    private let screenHeight = UIScreen.main.bounds.size.height > UIScreen.main.bounds.size.width ? UIScreen.main.bounds.size.height : UIScreen.main.bounds.size.width
+    
     private lazy var logInButton: UIButton = {
-       
+        
         let button = PrimaryButton(text: "Войти", fillColor: .primaryWhiteSnow, tintColor: .primaryMidnight, borderColor: .primaryMidnight)
         button.addTarget(self, action: #selector(logInButtonTapped), for: .touchUpInside)
         return button
@@ -24,7 +28,7 @@ class ViewController: UIViewController {
     }()
     
     private let comeBackView = ComeBackView()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,22 +36,48 @@ class ViewController: UIViewController {
         
         setupViews()
         setConstraints()
+        addSwipe()
     }
     
     private func setupViews() {
         view.addSubview(signUpButton)
         view.addSubview(logInButton)
         view.addSubview(comeBackView)
+        
+    }
+    
+    private func addSwipe() {
+        let swipe = UISwipeGestureRecognizer(target: self, action: #selector(doSwipe))
+        swipe.direction = .down
+        swipe.numberOfTouchesRequired = 1
+        comeBackView.isUserInteractionEnabled = true
+        comeBackView.addGestureRecognizer(swipe)
+    }
+    
+    @objc private func doSwipe() {
+        print("swipe")
+        UIView.animate(withDuration: 1) {
+            self.comeBackView.frame = CGRect(x: 0,
+                                             y: self.screenHeight,
+                                             width: self.comeBackView.frame.width ,
+                                             height: self.comeBackView.frame.height)
+        }
+
     }
     
     @objc private func signUpButtonTapped() {
         print("signUpButtonTapped")
-
+        
     }
     
     @objc private func logInButtonTapped() {
         print("logInButtonTapped")
-
+        UIView.animate(withDuration: 1) {
+            self.comeBackView.frame = CGRect(x: 0,
+                                             y: (self.screenHeight - self.comeBackView.frame.height),
+                                             width: self.comeBackView.frame.width ,
+                                             height: self.comeBackView.frame.height)
+        }
     }
 }
 
