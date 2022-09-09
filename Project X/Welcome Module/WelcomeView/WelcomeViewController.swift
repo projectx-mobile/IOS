@@ -7,7 +7,17 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+protocol WelcomeViewInputProtocol: AnyObject {
+}
+
+protocol WelcomeViewOutputProtocol {
+    init(view: WelcomeViewInputProtocol)
+}
+
+class WelcomeViewController: UIViewController {
+    
+    var presenter: WelcomeViewOutputProtocol!
+    private let configurator: WelcomeConfiguratorInputProtocol = WelcomeConfigurator()
     
     private let screenWidth = UIScreen.main.bounds.size.height < UIScreen.main.bounds.size.width ? UIScreen.main.bounds.size.height : UIScreen.main.bounds.size.width
     
@@ -81,7 +91,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController {
+extension WelcomeViewController {
     
     private func setConstraints() {
         

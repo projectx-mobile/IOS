@@ -16,9 +16,13 @@
 		8816CB9A28BF524600E209FD /* UIView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8816CB9928BF524600E209FD /* UIView + Extension.swift */; };
 		88494F2F28C11A3800879F62 /* ComeBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88494F2E28C11A3800879F62 /* ComeBackView.swift */; };
 		88494F3128C11E9400879F62 /* UIButton + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88494F3028C11E9400879F62 /* UIButton + Extension.swift */; };
+		884ED27A28CA3401006B1EC9 /* WelcomeConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884ED27928CA3401006B1EC9 /* WelcomeConfigurator.swift */; };
+		884ED27C28CA3464006B1EC9 /* WelcomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884ED27B28CA3464006B1EC9 /* WelcomePresenter.swift */; };
+		884ED27E28CA34D1006B1EC9 /* WelcomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884ED27D28CA34D1006B1EC9 /* WelcomeInteractor.swift */; };
+		884ED28128CA355D006B1EC9 /* WelcomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884ED28028CA355D006B1EC9 /* WelcomeRouter.swift */; };
 		CA214CEE28BDFEF5006176A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA214CED28BDFEF5006176A7 /* AppDelegate.swift */; };
 		CA214CF028BDFEF5006176A7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA214CEF28BDFEF5006176A7 /* SceneDelegate.swift */; };
-		CA214CF228BDFEF5006176A7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA214CF128BDFEF5006176A7 /* ViewController.swift */; };
+		CA214CF228BDFEF5006176A7 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA214CF128BDFEF5006176A7 /* WelcomeViewController.swift */; };
 		CA214CF728BDFEF7006176A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA214CF628BDFEF7006176A7 /* Assets.xcassets */; };
 		CA214CFA28BDFEF7006176A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA214CF828BDFEF7006176A7 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -33,10 +37,14 @@
 		8816CB9928BF524600E209FD /* UIView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extension.swift"; sourceTree = "<group>"; };
 		88494F2E28C11A3800879F62 /* ComeBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComeBackView.swift; sourceTree = "<group>"; };
 		88494F3028C11E9400879F62 /* UIButton + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton + Extension.swift"; sourceTree = "<group>"; };
+		884ED27928CA3401006B1EC9 /* WelcomeConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeConfigurator.swift; sourceTree = "<group>"; };
+		884ED27B28CA3464006B1EC9 /* WelcomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePresenter.swift; sourceTree = "<group>"; };
+		884ED27D28CA34D1006B1EC9 /* WelcomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeInteractor.swift; sourceTree = "<group>"; };
+		884ED28028CA355D006B1EC9 /* WelcomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeRouter.swift; sourceTree = "<group>"; };
 		CA214CEA28BDFEF5006176A7 /* Project X.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project X.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA214CED28BDFEF5006176A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA214CEF28BDFEF5006176A7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CA214CF128BDFEF5006176A7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CA214CF128BDFEF5006176A7 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		CA214CF628BDFEF7006176A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA214CF928BDFEF7006176A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CA214CFB28BDFEF7006176A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -73,6 +81,38 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		884ED27628CA172C006B1EC9 /* Welcome Module */ = {
+			isa = PBXGroup;
+			children = (
+				884ED27928CA3401006B1EC9 /* WelcomeConfigurator.swift */,
+				884ED27F28CA3549006B1EC9 /* WelcomeView */,
+				884ED27B28CA3464006B1EC9 /* WelcomePresenter.swift */,
+				884ED27D28CA34D1006B1EC9 /* WelcomeInteractor.swift */,
+				884ED28028CA355D006B1EC9 /* WelcomeRouter.swift */,
+			);
+			path = "Welcome Module";
+			sourceTree = "<group>";
+		};
+		884ED27F28CA3549006B1EC9 /* WelcomeView */ = {
+			isa = PBXGroup;
+			children = (
+				CA214CF128BDFEF5006176A7 /* WelcomeViewController.swift */,
+				88494F2E28C11A3800879F62 /* ComeBackView.swift */,
+			);
+			path = WelcomeView;
+			sourceTree = "<group>";
+		};
+		884ED28228CA376D006B1EC9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8816CB9328BF478B00E209FD /* UIFonts + Extension.swift */,
+				8816CB9728BF4E2100E209FD /* UIColor + Extension.swift */,
+				8816CB9928BF524600E209FD /* UIView + Extension.swift */,
+				88494F3028C11E9400879F62 /* UIButton + Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		CA214CE128BDFEF5006176A7 = {
 			isa = PBXGroup;
 			children = (
@@ -94,12 +134,8 @@
 			children = (
 				CA214CED28BDFEF5006176A7 /* AppDelegate.swift */,
 				CA214CEF28BDFEF5006176A7 /* SceneDelegate.swift */,
-				CA214CF128BDFEF5006176A7 /* ViewController.swift */,
-				88494F2E28C11A3800879F62 /* ComeBackView.swift */,
-				8816CB9328BF478B00E209FD /* UIFonts + Extension.swift */,
-				8816CB9728BF4E2100E209FD /* UIColor + Extension.swift */,
-				8816CB9928BF524600E209FD /* UIView + Extension.swift */,
-				88494F3028C11E9400879F62 /* UIButton + Extension.swift */,
+				884ED27628CA172C006B1EC9 /* Welcome Module */,
+				884ED28228CA376D006B1EC9 /* Extensions */,
 				8816CB8B28BF45DC00E209FD /* Resources */,
 				CA214CF828BDFEF7006176A7 /* LaunchScreen.storyboard */,
 				CA214CFB28BDFEF7006176A7 /* Info.plist */,
@@ -181,8 +217,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				884ED27A28CA3401006B1EC9 /* WelcomeConfigurator.swift in Sources */,
+				884ED27C28CA3464006B1EC9 /* WelcomePresenter.swift in Sources */,
+				884ED27E28CA34D1006B1EC9 /* WelcomeInteractor.swift in Sources */,
+				884ED28128CA355D006B1EC9 /* WelcomeRouter.swift in Sources */,
 				8816CB9428BF478B00E209FD /* UIFonts + Extension.swift in Sources */,
-				CA214CF228BDFEF5006176A7 /* ViewController.swift in Sources */,
+				CA214CF228BDFEF5006176A7 /* WelcomeViewController.swift in Sources */,
 				8816CB9A28BF524600E209FD /* UIView + Extension.swift in Sources */,
 				CA214CEE28BDFEF5006176A7 /* AppDelegate.swift in Sources */,
 				88494F2F28C11A3800879F62 /* ComeBackView.swift in Sources */,
