@@ -1,15 +1,13 @@
 //
-//  UIButton + Extension.swift
+//  PrimaryButton.swift
 //  Project X
 //
-//  Created by Nataliya Lazouskaya on 1.09.22.
+//  Created by Nataliya Lazouskaya on 12.09.22.
 //
+
 import UIKit
 
-extension UIButton{
-}
-
-class PrimaryButton: UIButton {
+final class PrimaryButton: UIButton {
 
     convenience init(text: String = "", fillColor: UIColor, tintColor: UIColor, borderColor: UIColor) {
         self.init(type: .custom)
@@ -33,17 +31,3 @@ class PrimaryButton: UIButton {
         }
     }
 }
-
-class CustomButton: UIButton {
-    
-    override var isHighlighted: Bool {
-        didSet {
-            UIView.animate(withDuration: 0.1) {
-                self.layer.shadowOpacity = self.isHighlighted ? 0 : 1
-            }
-        }
-    }
-}
-
-
-

@@ -18,7 +18,6 @@ extension UIView {
     }
     
     func createCustomViewWithShadow(_ corners: UIRectCorner, radius: CGFloat, borderColor: UIColor?, borderWidth: CGFloat?, fillColor: UIColor?, shadowColor: UIColor) {
-        
         let path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
 
         let shapeLayer = CAShapeLayer()
@@ -33,7 +32,6 @@ extension UIView {
         layer.shadowColor = shadowColor.cgColor
         layer.shadowPath = path.cgPath
         
-
         if borderWidth != nil {
             addBorder(shapeLayer, borderWidth: borderWidth!, borderColor: borderColor!)
         }

@@ -7,31 +7,18 @@
 
 import UIKit
 
-protocol WelcomeViewInputProtocol: AnyObject {
-}
-
-protocol WelcomeViewOutputProtocol {
-    init(view: WelcomeViewInputProtocol)
-}
-
 class WelcomeViewController: UIViewController {
     
     var presenter: WelcomeViewOutputProtocol!
     private let configurator: WelcomeConfiguratorInputProtocol = WelcomeConfigurator()
     
-    private let screenWidth = UIScreen.main.bounds.size.height < UIScreen.main.bounds.size.width ? UIScreen.main.bounds.size.height : UIScreen.main.bounds.size.width
-    
-    private let screenHeight = UIScreen.main.bounds.size.height > UIScreen.main.bounds.size.width ? UIScreen.main.bounds.size.height : UIScreen.main.bounds.size.width
-    
     private lazy var logInButton: UIButton = {
-        
         let button = PrimaryButton(text: "Войти", fillColor: .primaryWhiteSnow, tintColor: .primaryMidnight, borderColor: .primaryMidnight)
         button.addTarget(self, action: #selector(logInButtonTapped), for: .touchUpInside)
         return button
     }()
     
     private lazy var signUpButton: UIButton = {
-        
         let button = PrimaryButton(text: "Создать аккаунт", fillColor: .primaryJuicyGrape, tintColor: .primaryPureWhite, borderColor: .primaryMidnight)
         button.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
         return button
@@ -48,12 +35,15 @@ class WelcomeViewController: UIViewController {
         setConstraints()
         addSwipe()
     }
+}
+
+//MARK: - Private extension
+extension WelcomeViewController {
     
     private func setupViews() {
         view.addSubview(signUpButton)
         view.addSubview(logInButton)
         view.addSubview(comeBackView)
-        
     }
     
     private func addSwipe() {
@@ -65,36 +55,27 @@ class WelcomeViewController: UIViewController {
     }
     
     @objc private func doSwipe() {
-        print("swipe")
         UIView.animate(withDuration: 1) {
             self.comeBackView.frame = CGRect(x: 0,
-                                             y: self.screenHeight,
+                                             y: UIScreen.main.bounds.size.height,
                                              width: self.comeBackView.frame.width ,
                                              height: self.comeBackView.frame.height)
         }
-
     }
     
     @objc private func signUpButtonTapped() {
-        print("signUpButtonTapped")
-        
     }
     
     @objc private func logInButtonTapped() {
-        print("logInButtonTapped")
         UIView.animate(withDuration: 1) {
             self.comeBackView.frame = CGRect(x: 0,
-                                             y: (self.screenHeight - self.comeBackView.frame.height),
+                                             y: (UIScreen.main.bounds.size.height - self.comeBackView.frame.height),
                                              width: self.comeBackView.frame.width ,
                                              height: self.comeBackView.frame.height)
         }
     }
-}
-
-extension WelcomeViewController {
     
     private func setConstraints() {
-        
         NSLayoutConstraint.activate([
             signUpButton.bottomAnchor.constraint(equalTo: logInButton.topAnchor, constant: -16),
             signUpButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),

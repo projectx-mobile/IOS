@@ -7,26 +7,16 @@
 
 import UIKit
 
-class ComeBackView: UIView {
+final class ComeBackView: UIView {
     
-    private lazy var childButton: UIButton = {
-        let button = CustomButton()
-        button.setTitle("Ребенок", for: .normal)
-        button.titleLabel?.font = .nexaDemoBold16()
-        button.setTitleColor(.primaryMidnight, for: .normal)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        
+    private lazy var childButton: CustomButton = {
+        let button = CustomButton(text: "Ребенок")
         button.addTarget(self, action: #selector(childButtonTapped), for: .touchUpInside)
         return button
     }()
     
-    private lazy var parentButton: UIButton = {
-        let button = CustomButton()
-        button.setTitle("Родитель", for: .normal)
-        button.titleLabel?.font = .nexaDemoBold16()
-        button.setTitleColor(.primaryMidnight, for: .normal)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        
+    private lazy var parentButton: CustomButton = {
+        let button = CustomButton(text: "Родитель")
         button.addTarget(self, action: #selector(parentButtonTapped), for: .touchUpInside)
         return button
     }()
@@ -50,7 +40,6 @@ class ComeBackView: UIView {
     }
     
     private func setupViews() {
-        
         backgroundColor = .primaryWhiteSnow
         translatesAutoresizingMaskIntoConstraints = false
         
@@ -59,17 +48,14 @@ class ComeBackView: UIView {
     }
     
     @objc private func childButtonTapped() {
-        print("childButtonTapped")
         bringSubviewToFront(childButton)
     }
     
     @objc private func parentButtonTapped() {
-        print("parentButtonTapped")
         bringSubviewToFront(parentButton)
     }
     
     private func setConstraints() {
-        
         NSLayoutConstraint.activate([
             parentButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -88),
             parentButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -32),

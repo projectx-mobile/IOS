@@ -7,13 +7,6 @@
 
 import Foundation
 
-protocol WelcomeInteractorInputProtocol {
-   init(presenter: WelcomeInteractorOutputProtocol)
-}
-
-protocol WelcomeInteractorOutputProtocol: AnyObject {
-}
-
 class WelcomeInteractor: WelcomeInteractorInputProtocol {
    
    unowned let presenter: WelcomeInteractorOutputProtocol

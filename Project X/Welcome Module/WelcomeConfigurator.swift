@@ -14,7 +14,6 @@ protocol WelcomeConfiguratorInputProtocol {
 class WelcomeConfigurator: WelcomeConfiguratorInputProtocol {
     
     func configure(with viewController: WelcomeViewController) {
-
         let presenter = WelcomePresenter(view: viewController as! WelcomeViewInputProtocol)
         let interactor = WelcomeInteractor(presenter: presenter)
         let router = WelcomeRouter(viewController: viewController)
