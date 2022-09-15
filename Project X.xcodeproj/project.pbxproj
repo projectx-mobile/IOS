@@ -23,6 +23,17 @@
 		884ED28128CA355D006B1EC9 /* WelcomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884ED28028CA355D006B1EC9 /* WelcomeRouter.swift */; };
 		887B9E1228CF538B0029EF82 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887B9E1128CF538B0029EF82 /* CustomButton.swift */; };
 		887B9E1428CF53CA0029EF82 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887B9E1328CF53CA0029EF82 /* PrimaryButton.swift */; };
+		88C830E228D3031900355B8D /* ParentHomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C830E128D3031900355B8D /* ParentHomeScreenViewController.swift */; };
+		88C830E528D3035100355B8D /* ParentHomeScreenConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C830E428D3035100355B8D /* ParentHomeScreenConfigurator.swift */; };
+		88C830E728D3048500355B8D /* ParentHomeScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C830E628D3048500355B8D /* ParentHomeScreenInteractor.swift */; };
+		88C830E928D3049C00355B8D /* ParentHomeScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C830E828D3049C00355B8D /* ParentHomeScreenPresenter.swift */; };
+		88C830EB28D304AD00355B8D /* ParentHomeScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C830EA28D304AD00355B8D /* ParentHomeScreenRouter.swift */; };
+		88C830EE28D304F500355B8D /* ParentHomeScreenViewIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C830ED28D304F500355B8D /* ParentHomeScreenViewIO.swift */; };
+		88C830F128D3053B00355B8D /* ParentHomeScreenInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C830F028D3053B00355B8D /* ParentHomeScreenInteractorIO.swift */; };
+		88C830F428D30D9500355B8D /* TitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C830F328D30D9500355B8D /* TitleLabel.swift */; };
+		88C830F628D3111D00355B8D /* SecondaryLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C830F528D3111D00355B8D /* SecondaryLabel.swift */; };
+		88C830F828D3181500355B8D /* SubtitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C830F728D3181500355B8D /* SubtitleLabel.swift */; };
+		88C830FA28D3229A00355B8D /* SecondaryLabelWithIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C830F928D3229A00355B8D /* SecondaryLabelWithIcon.swift */; };
 		CA214CEE28BDFEF5006176A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA214CED28BDFEF5006176A7 /* AppDelegate.swift */; };
 		CA214CF028BDFEF5006176A7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA214CEF28BDFEF5006176A7 /* SceneDelegate.swift */; };
 		CA214CF228BDFEF5006176A7 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA214CF128BDFEF5006176A7 /* WelcomeViewController.swift */; };
@@ -47,6 +58,17 @@
 		884ED28028CA355D006B1EC9 /* WelcomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeRouter.swift; sourceTree = "<group>"; };
 		887B9E1128CF538B0029EF82 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		887B9E1328CF53CA0029EF82 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		88C830E128D3031900355B8D /* ParentHomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentHomeScreenViewController.swift; sourceTree = "<group>"; };
+		88C830E428D3035100355B8D /* ParentHomeScreenConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentHomeScreenConfigurator.swift; sourceTree = "<group>"; };
+		88C830E628D3048500355B8D /* ParentHomeScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentHomeScreenInteractor.swift; sourceTree = "<group>"; };
+		88C830E828D3049C00355B8D /* ParentHomeScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentHomeScreenPresenter.swift; sourceTree = "<group>"; };
+		88C830EA28D304AD00355B8D /* ParentHomeScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentHomeScreenRouter.swift; sourceTree = "<group>"; };
+		88C830ED28D304F500355B8D /* ParentHomeScreenViewIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentHomeScreenViewIO.swift; sourceTree = "<group>"; };
+		88C830F028D3053B00355B8D /* ParentHomeScreenInteractorIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentHomeScreenInteractorIO.swift; sourceTree = "<group>"; };
+		88C830F328D30D9500355B8D /* TitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleLabel.swift; sourceTree = "<group>"; };
+		88C830F528D3111D00355B8D /* SecondaryLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryLabel.swift; sourceTree = "<group>"; };
+		88C830F728D3181500355B8D /* SubtitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtitleLabel.swift; sourceTree = "<group>"; };
+		88C830F928D3229A00355B8D /* SecondaryLabelWithIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryLabelWithIcon.swift; sourceTree = "<group>"; };
 		CA214CEA28BDFEF5006176A7 /* Project X.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project X.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA214CED28BDFEF5006176A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA214CEF28BDFEF5006176A7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +92,8 @@
 		880A47BE28D20E7400815893 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				88494F2E28C11A3800879F62 /* ComeBackView.swift */,
+				88C830F228D30D6B00355B8D /* Labels */,
 				887B9E1028CF535F0029EF82 /* Buttons */,
 			);
 			path = Views;
@@ -121,7 +145,6 @@
 			children = (
 				880A47BF28D2194D00815893 /* WelcomeViewIO.swift */,
 				CA214CF128BDFEF5006176A7 /* WelcomeViewController.swift */,
-				88494F2E28C11A3800879F62 /* ComeBackView.swift */,
 			);
 			path = WelcomeView;
 			sourceTree = "<group>";
@@ -153,6 +176,47 @@
 			path = Buttons;
 			sourceTree = "<group>";
 		};
+		88C830E328D3032A00355B8D /* ParentHomeScreenModule */ = {
+			isa = PBXGroup;
+			children = (
+				88C830E428D3035100355B8D /* ParentHomeScreenConfigurator.swift */,
+				88C830EC28D304D700355B8D /* ParentHomeScreenView */,
+				88C830EF28D3050500355B8D /* ParentHomeScreenInteractor */,
+				88C830E828D3049C00355B8D /* ParentHomeScreenPresenter.swift */,
+				88C830EA28D304AD00355B8D /* ParentHomeScreenRouter.swift */,
+			);
+			path = ParentHomeScreenModule;
+			sourceTree = "<group>";
+		};
+		88C830EC28D304D700355B8D /* ParentHomeScreenView */ = {
+			isa = PBXGroup;
+			children = (
+				88C830ED28D304F500355B8D /* ParentHomeScreenViewIO.swift */,
+				88C830E128D3031900355B8D /* ParentHomeScreenViewController.swift */,
+			);
+			path = ParentHomeScreenView;
+			sourceTree = "<group>";
+		};
+		88C830EF28D3050500355B8D /* ParentHomeScreenInteractor */ = {
+			isa = PBXGroup;
+			children = (
+				88C830F028D3053B00355B8D /* ParentHomeScreenInteractorIO.swift */,
+				88C830E628D3048500355B8D /* ParentHomeScreenInteractor.swift */,
+			);
+			path = ParentHomeScreenInteractor;
+			sourceTree = "<group>";
+		};
+		88C830F228D30D6B00355B8D /* Labels */ = {
+			isa = PBXGroup;
+			children = (
+				88C830F328D30D9500355B8D /* TitleLabel.swift */,
+				88C830F728D3181500355B8D /* SubtitleLabel.swift */,
+				88C830F528D3111D00355B8D /* SecondaryLabel.swift */,
+				88C830F928D3229A00355B8D /* SecondaryLabelWithIcon.swift */,
+			);
+			path = Labels;
+			sourceTree = "<group>";
+		};
 		CA214CE128BDFEF5006176A7 = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +238,7 @@
 			children = (
 				CA214CED28BDFEF5006176A7 /* AppDelegate.swift */,
 				CA214CEF28BDFEF5006176A7 /* SceneDelegate.swift */,
+				88C830E328D3032A00355B8D /* ParentHomeScreenModule */,
 				884ED27628CA172C006B1EC9 /* Welcome Module */,
 				887B9E0F28CF50350029EF82 /* Design System */,
 				884ED28228CA376D006B1EC9 /* Extensions */,
@@ -258,19 +323,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88C830E728D3048500355B8D /* ParentHomeScreenInteractor.swift in Sources */,
 				887B9E1228CF538B0029EF82 /* CustomButton.swift in Sources */,
+				88C830E228D3031900355B8D /* ParentHomeScreenViewController.swift in Sources */,
 				880A47C428D21D0F00815893 /* WelcomeInteractorIO.swift in Sources */,
 				884ED27A28CA3401006B1EC9 /* WelcomeConfigurator.swift in Sources */,
 				884ED27C28CA3464006B1EC9 /* WelcomePresenter.swift in Sources */,
+				88C830F428D30D9500355B8D /* TitleLabel.swift in Sources */,
 				884ED27E28CA34D1006B1EC9 /* WelcomeInteractor.swift in Sources */,
+				88C830EB28D304AD00355B8D /* ParentHomeScreenRouter.swift in Sources */,
 				887B9E1428CF53CA0029EF82 /* PrimaryButton.swift in Sources */,
+				88C830FA28D3229A00355B8D /* SecondaryLabelWithIcon.swift in Sources */,
+				88C830EE28D304F500355B8D /* ParentHomeScreenViewIO.swift in Sources */,
+				88C830E528D3035100355B8D /* ParentHomeScreenConfigurator.swift in Sources */,
 				880A47C028D2194D00815893 /* WelcomeViewIO.swift in Sources */,
 				884ED28128CA355D006B1EC9 /* WelcomeRouter.swift in Sources */,
 				8816CB9428BF478B00E209FD /* UIFonts + Extension.swift in Sources */,
+				88C830F828D3181500355B8D /* SubtitleLabel.swift in Sources */,
+				88C830F628D3111D00355B8D /* SecondaryLabel.swift in Sources */,
 				CA214CF228BDFEF5006176A7 /* WelcomeViewController.swift in Sources */,
 				8816CB9A28BF524600E209FD /* UIView + Extension.swift in Sources */,
 				CA214CEE28BDFEF5006176A7 /* AppDelegate.swift in Sources */,
+				88C830E928D3049C00355B8D /* ParentHomeScreenPresenter.swift in Sources */,
 				88494F2F28C11A3800879F62 /* ComeBackView.swift in Sources */,
+				88C830F128D3053B00355B8D /* ParentHomeScreenInteractorIO.swift in Sources */,
 				CA214CF028BDFEF5006176A7 /* SceneDelegate.swift in Sources */,
 				8816CB9828BF4E2100E209FD /* UIColor + Extension.swift in Sources */,
 			);

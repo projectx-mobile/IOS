@@ -7,7 +7,7 @@
 
 import UIKit
 
-class WelcomeViewController: UIViewController {
+class WelcomeViewController: UIViewController, WelcomeViewInputProtocol {
     
     var presenter: WelcomeViewOutputProtocol!
     private let configurator: WelcomeConfiguratorInputProtocol = WelcomeConfigurator()
