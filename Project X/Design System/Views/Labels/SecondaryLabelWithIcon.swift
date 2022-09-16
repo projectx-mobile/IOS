@@ -11,7 +11,6 @@ class SecondaryLabelWithIcon: UILabel {
 
     convenience init(text: String) {
         self.init()
-        self.text = text
         self.textColor = .duskGrey
         self.font = .robotoRegular14()
         

@@ -23,6 +23,7 @@
 		884ED28128CA355D006B1EC9 /* WelcomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884ED28028CA355D006B1EC9 /* WelcomeRouter.swift */; };
 		887B9E1228CF538B0029EF82 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887B9E1128CF538B0029EF82 /* CustomButton.swift */; };
 		887B9E1428CF53CA0029EF82 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887B9E1328CF53CA0029EF82 /* PrimaryButton.swift */; };
+		8896285228D45A16002FFC5E /* KidsCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8896285128D45A16002FFC5E /* KidsCardTableViewCell.swift */; };
 		88C830E228D3031900355B8D /* ParentHomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C830E128D3031900355B8D /* ParentHomeScreenViewController.swift */; };
 		88C830E528D3035100355B8D /* ParentHomeScreenConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C830E428D3035100355B8D /* ParentHomeScreenConfigurator.swift */; };
 		88C830E728D3048500355B8D /* ParentHomeScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C830E628D3048500355B8D /* ParentHomeScreenInteractor.swift */; };
@@ -58,6 +59,7 @@
 		884ED28028CA355D006B1EC9 /* WelcomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeRouter.swift; sourceTree = "<group>"; };
 		887B9E1128CF538B0029EF82 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		887B9E1328CF53CA0029EF82 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		8896285128D45A16002FFC5E /* KidsCardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KidsCardTableViewCell.swift; sourceTree = "<group>"; };
 		88C830E128D3031900355B8D /* ParentHomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentHomeScreenViewController.swift; sourceTree = "<group>"; };
 		88C830E428D3035100355B8D /* ParentHomeScreenConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentHomeScreenConfigurator.swift; sourceTree = "<group>"; };
 		88C830E628D3048500355B8D /* ParentHomeScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentHomeScreenInteractor.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				88494F2E28C11A3800879F62 /* ComeBackView.swift */,
+				8896285328D45A1B002FFC5E /* Cells */,
 				88C830F228D30D6B00355B8D /* Labels */,
 				887B9E1028CF535F0029EF82 /* Buttons */,
 			);
@@ -174,6 +177,14 @@
 				887B9E1328CF53CA0029EF82 /* PrimaryButton.swift */,
 			);
 			path = Buttons;
+			sourceTree = "<group>";
+		};
+		8896285328D45A1B002FFC5E /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				8896285128D45A16002FFC5E /* KidsCardTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		88C830E328D3032A00355B8D /* ParentHomeScreenModule */ = {
@@ -337,6 +348,7 @@
 				88C830EE28D304F500355B8D /* ParentHomeScreenViewIO.swift in Sources */,
 				88C830E528D3035100355B8D /* ParentHomeScreenConfigurator.swift in Sources */,
 				880A47C028D2194D00815893 /* WelcomeViewIO.swift in Sources */,
+				8896285228D45A16002FFC5E /* KidsCardTableViewCell.swift in Sources */,
 				884ED28128CA355D006B1EC9 /* WelcomeRouter.swift in Sources */,
 				8816CB9428BF478B00E209FD /* UIFonts + Extension.swift in Sources */,
 				88C830F828D3181500355B8D /* SubtitleLabel.swift in Sources */,
