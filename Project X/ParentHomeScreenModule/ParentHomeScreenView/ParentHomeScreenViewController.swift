@@ -19,18 +19,21 @@ class ParentHomeScreenViewController: UIViewController, ParentHomeScreenViewInpu
     
     private let idKidsCardTableViewCell = "idKidsCardTableViewCell"
     
+    private var contentSizeObservation: NSKeyValueObservation?
+    private var tableViewHeightConstraint: NSLayoutConstraint?
+    
     var kidsArray:[KidsData] = [KidsData(name: "Alice", numberOfTasks: 1, numberOfTasksDone: 2),
     KidsData(name: "Mike", numberOfTasks: 4, numberOfTasksDone: 2)]
     
     private let tableView: UITableView = {
         let tableView = UITableView()
-        tableView.backgroundColor = .primaryWhiteSnow
+        //tableView.backgroundColor = .primaryWhiteSnow
+        tableView.backgroundColor = .purple
         tableView.showsVerticalScrollIndicator = false
         tableView.bounces = false
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.delaysContentTouches = false
         tableView.isHidden = false
-        tableView.sizeToFit()
         return tableView
     }()
 
@@ -41,6 +44,15 @@ class ParentHomeScreenViewController: UIViewController, ParentHomeScreenViewInpu
         setDelegates()
         setConstraints()
         tableView.register(KidsCardTableViewCell.self, forCellReuseIdentifier: idKidsCardTableViewCell)
+        
+        contentSizeObservation = tableView.observe(\.contentSize, options: .new, changeHandler: { [weak self] (tv, _) in
+            guard let self = self else { return }
+            self.tableViewHeightConstraint!.constant = tv.contentSize.height
+        })
+    }
+    
+    deinit {
+        contentSizeObservation?.invalidate()
     }
 }
 
@@ -96,13 +108,16 @@ extension ParentHomeScreenViewController {
             inviteUsersLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
             inviteUsersLabel.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16)
         ])
-        
+
         NSLayoutConstraint.activate([
             tableView.topAnchor.constraint(equalTo: myFamilyLabel.bottomAnchor, constant: 5),
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16.5),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16.5),
-            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+           // tableView.heightAnchor.constraint(equalToConstant: 20)
         ])
+        
+        tableViewHeightConstraint = tableView.heightAnchor.constraint(equalToConstant: 20)
+        NSLayoutConstraint.activate([tableViewHeightConstraint!])
     }
 }
 
