@@ -11,7 +11,7 @@ class KidsCardTableViewCell: UITableViewCell {
     
     private let backgroundCell:UIView = {
         let view = UIView()
-        view.backgroundColor = .primaryWhiteSnow
+        view.backgroundColor = .accentStatus
         view.layer.cornerRadius = 8
         view.layer.borderWidth = 1.4
         view.layer.borderColor = UIColor.primaryMidnight.cgColor
@@ -89,7 +89,6 @@ class KidsCardTableViewCell: UITableViewCell {
     
     override func layoutSubviews() {
         kidsImageView.layer.cornerRadius = 27
-        addProgress(view: circleView, tasks: 6, tasksDone: 2)
     }
     
     required init?(coder: NSCoder) {
@@ -127,8 +126,10 @@ class KidsCardTableViewCell: UITableViewCell {
         view.layer.addSublayer(shapeLayer)
     }
 
-    func cellConfigure(data:[KidsData]) {
-
+    func cellConfigure(data:KidsData) {
+        kidNameLabel.text = data.name
+        tasksLabel.text = "\(data.numberOfTasksDone)/\(data.numberOfTasks) задач"
+        addProgress(view: circleView, tasks: data.numberOfTasks, tasksDone: data.numberOfTasksDone)
     }
     
     private func setConstraints() {

@@ -7,11 +7,6 @@
 
 import Foundation
 
-struct KidsData {
-    let name: String
-    var numberOfTasks: Int
-    var numberOfTasksDone: Int
-}
 
 class ParentHomeScreenPresenter: ParentHomeScreenViewOutputProtocol{
     

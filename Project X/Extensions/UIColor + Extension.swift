@@ -15,4 +15,6 @@ extension UIColor {
     static let primaryPureWhite = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
     static let duskGrey = #colorLiteral(red: 0.4235294118, green: 0.431372549, blue: 0.5176470588, alpha: 1)
     static let darkTextColor = #colorLiteral(red: 0.1607843137, green: 0.1764705882, blue: 0.1960784314, alpha: 1)
+    static let accentStatus = #colorLiteral(red: 0.9279568791, green: 0.9267095923, blue: 0.9846253991, alpha: 1)
+    static let someGray = #colorLiteral(red: 0.882971704, green: 0.8829715848, blue: 0.8829715848, alpha: 1)
 }

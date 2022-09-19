@@ -35,6 +35,8 @@
 		88C830F628D3111D00355B8D /* SecondaryLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C830F528D3111D00355B8D /* SecondaryLabel.swift */; };
 		88C830F828D3181500355B8D /* SubtitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C830F728D3181500355B8D /* SubtitleLabel.swift */; };
 		88C830FA28D3229A00355B8D /* SecondaryLabelWithIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C830F928D3229A00355B8D /* SecondaryLabelWithIcon.swift */; };
+		88ED93DD28D8C5BB00A01A73 /* UpdatesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88ED93DC28D8C5BB00A01A73 /* UpdatesTableViewCell.swift */; };
+		88ED93DF28D8C78400A01A73 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88ED93DE28D8C78400A01A73 /* Entity.swift */; };
 		CA214CEE28BDFEF5006176A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA214CED28BDFEF5006176A7 /* AppDelegate.swift */; };
 		CA214CF028BDFEF5006176A7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA214CEF28BDFEF5006176A7 /* SceneDelegate.swift */; };
 		CA214CF228BDFEF5006176A7 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA214CF128BDFEF5006176A7 /* WelcomeViewController.swift */; };
@@ -71,6 +73,8 @@
 		88C830F528D3111D00355B8D /* SecondaryLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryLabel.swift; sourceTree = "<group>"; };
 		88C830F728D3181500355B8D /* SubtitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtitleLabel.swift; sourceTree = "<group>"; };
 		88C830F928D3229A00355B8D /* SecondaryLabelWithIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryLabelWithIcon.swift; sourceTree = "<group>"; };
+		88ED93DC28D8C5BB00A01A73 /* UpdatesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatesTableViewCell.swift; sourceTree = "<group>"; };
+		88ED93DE28D8C78400A01A73 /* Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
 		CA214CEA28BDFEF5006176A7 /* Project X.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project X.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA214CED28BDFEF5006176A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA214CEF28BDFEF5006176A7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -183,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				8896285128D45A16002FFC5E /* KidsCardTableViewCell.swift */,
+				88ED93DC28D8C5BB00A01A73 /* UpdatesTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -191,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				88C830E428D3035100355B8D /* ParentHomeScreenConfigurator.swift */,
+				88ED93DE28D8C78400A01A73 /* Entity.swift */,
 				88C830EC28D304D700355B8D /* ParentHomeScreenView */,
 				88C830EF28D3050500355B8D /* ParentHomeScreenInteractor */,
 				88C830E828D3049C00355B8D /* ParentHomeScreenPresenter.swift */,
@@ -335,6 +341,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				88C830E728D3048500355B8D /* ParentHomeScreenInteractor.swift in Sources */,
+				88ED93DF28D8C78400A01A73 /* Entity.swift in Sources */,
 				887B9E1228CF538B0029EF82 /* CustomButton.swift in Sources */,
 				88C830E228D3031900355B8D /* ParentHomeScreenViewController.swift in Sources */,
 				880A47C428D21D0F00815893 /* WelcomeInteractorIO.swift in Sources */,
@@ -360,6 +367,7 @@
 				88494F2F28C11A3800879F62 /* ComeBackView.swift in Sources */,
 				88C830F128D3053B00355B8D /* ParentHomeScreenInteractorIO.swift in Sources */,
 				CA214CF028BDFEF5006176A7 /* SceneDelegate.swift in Sources */,
+				88ED93DD28D8C5BB00A01A73 /* UpdatesTableViewCell.swift in Sources */,
 				8816CB9828BF4E2100E209FD /* UIColor + Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
