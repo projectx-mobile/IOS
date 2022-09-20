@@ -7,7 +7,7 @@
 
 import UIKit
 
-class Button: UIButton {
+final class Button: UIButton {
     
     enum Style {
         case primary
