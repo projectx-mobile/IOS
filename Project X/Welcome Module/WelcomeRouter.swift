@@ -11,7 +11,7 @@ protocol WelcomeRouterInputProtocol {
     init(viewController: WelcomeViewController)
 }
 
-class WelcomeRouter: WelcomeRouterInputProtocol {
+final class WelcomeRouter: WelcomeRouterInputProtocol {
     
     unowned let viewController: WelcomeViewController
     
