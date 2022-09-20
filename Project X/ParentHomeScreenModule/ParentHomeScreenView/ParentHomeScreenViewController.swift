@@ -42,7 +42,9 @@ class ParentHomeScreenViewController: UIViewController, ParentHomeScreenViewInpu
     var kidsArray:[KidsData] = [KidsData(name: "Alice", numberOfTasks: 2, numberOfTasksDone: 1),
     KidsData(name: "Mike", numberOfTasks: 4, numberOfTasksDone: 3), KidsData(name: "Harry", numberOfTasks: 8, numberOfTasksDone: 3)]
     
-    var kidsUpdates:[KidsUpdates] = [KidsUpdates(name: "Mike", update: .created), KidsUpdates(name: "Alice", update: .completed)]
+    var kidsUpdates:[KidsUpdates] = [KidsUpdates(name: "Mike", update: .created),
+                                     KidsUpdates(name: "Alice", update: .completed),
+                                     KidsUpdates(name: "Harry", update: .selected)]
 
     private let kidsTableView: UITableView = {
         let tableView = UITableView()
@@ -56,9 +58,7 @@ class ParentHomeScreenViewController: UIViewController, ParentHomeScreenViewInpu
     
     private let updatesTableView: UITableView = {
         let tableView = UITableView()
-        //tableView.backgroundColor = .primaryWhiteSnow
-        tableView.backgroundColor = .lightGray
-
+        tableView.backgroundColor = .primaryWhiteSnow
         tableView.showsVerticalScrollIndicator = false
         tableView.bounces = false
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -191,7 +191,7 @@ extension ParentHomeScreenViewController {
         ])
         
         NSLayoutConstraint.activate([
-            updatesTableView.topAnchor.constraint(equalTo: updatesLabel.bottomAnchor, constant: 14),
+            updatesTableView.topAnchor.constraint(equalTo: updatesLabel.bottomAnchor, constant: 19),
             updatesTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
             updatesTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
             updatesTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -24)
@@ -218,6 +218,8 @@ extension ParentHomeScreenViewController: UITableViewDataSource {
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: idUpdatesTableViewCell, for: indexPath) as! UpdatesTableViewCell
+            cell.cellConfigure(data: kidsUpdates[indexPath.row])
+            cell.accessoryType = .disclosureIndicator
             return cell
         }
     }
