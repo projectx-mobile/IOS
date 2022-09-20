@@ -7,35 +7,37 @@
 
 import UIKit
 
-final class Button: UIButton {
+final class ButtonForUI: UIButton {
     
+    var title: String = ""
+    private var style: Style
+    //MARK: - Initializer
+    private init(style: Style, title: String){
+        self.style = style
+        self.title = title
+        super.init(frame: .zero)
+        setup()
+    }
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
+    //MARK: - Constants
+
+private extension ButtonForUI {
     enum Style {
         case primary
         case secondary
     }
-    
     
     enum Corner {
         case large
         case medium
         case small
     }
-   //MARK: - Initializer
-    
-    public var style: Style
-    public var title: String
-    
-    init (style: Style, title: String) {
-        self.style = style
-        self.title = title
-        super.init(frame: .zero)
-        setup()
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    //MARK: - Methods
+}
+// MARK: - Private methods
+private extension ButtonForUI {
     private func setup() {
         buttonSetup()
         setButtonStyle()
@@ -44,7 +46,6 @@ final class Button: UIButton {
     private func buttonSetup() {
         translatesAutoresizingMaskIntoConstraints = false
         setTitle(title, for: .normal)
-        
     }
     
     private func setButtonStyle() {
@@ -61,9 +62,7 @@ final class Button: UIButton {
             titleLabel?.font = UIFont(name: "Roboto-Medium", size: 25)
         case .secondary:
             backgroundColor = .none
-            
             layer.borderWidth = 1
         }
     }
-    }
-
+}

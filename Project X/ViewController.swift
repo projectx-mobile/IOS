@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    let button = Button(style: .primary, title: "Continue")
+    let button = ButtonForUI(style: .primary, title: "Continue")
     override func viewDidLoad() {
         super.viewDidLoad()
         buttonSetup()
