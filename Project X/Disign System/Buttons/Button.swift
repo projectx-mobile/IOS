@@ -10,9 +10,9 @@ import UIKit
 final class ButtonForUI: UIButton {
     
     var title: String = ""
-    private var style: Style
+    var style: Style
     //MARK: - Initializer
-    private init(style: Style, title: String){
+     init(style: Style, title: String){
         self.style = style
         self.title = title
         super.init(frame: .zero)
@@ -24,7 +24,7 @@ final class ButtonForUI: UIButton {
 }
     //MARK: - Constants
 
-private extension ButtonForUI {
+ extension ButtonForUI {
     enum Style {
         case primary
         case secondary
