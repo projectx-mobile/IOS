@@ -7,8 +7,8 @@
 
 import UIKit
 
-class PrimaryButton: UIButton {
-    
+final class PrimaryButton: UIButton {
+
     convenience init(text: String = "", fillColor: UIColor, tintColor: UIColor, borderColor: UIColor) {
         self.init(type: .custom)
         self.backgroundColor =  fillColor
