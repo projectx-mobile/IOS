@@ -7,13 +7,6 @@
 
 import Foundation
 
-struct KidsData {
-    let name: String
-    var numberOfTasks: Int
-    var numberOfTasksDone: Int
-}
-
-
 struct KidsUpdates {
     let name: String
     let update: Action

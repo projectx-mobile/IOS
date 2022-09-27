@@ -19,7 +19,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
         
         let navVC = UINavigationController()
+        let configurator:ParentHomeScreenConfiguratorInputProtocol = ParentHomeScreenConfigurator()
         let parentVC = ParentHomeScreenViewController()
+        configurator.configure(with: parentVC)
         navVC.viewControllers = [parentVC]
         window?.rootViewController = navVC
         window?.makeKeyAndVisible()

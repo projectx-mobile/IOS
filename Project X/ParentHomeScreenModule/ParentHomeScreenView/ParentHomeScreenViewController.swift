@@ -15,11 +15,28 @@ class ParentHomeScreenViewController: UIViewController, ParentHomeScreenViewInpu
     
     private let titleLabel = TitleLabel(text: "Задачи")
     private let activeTasksLabel = SecondaryLabel(text: "Активных на сегодня (0)")
-    private let myFamilyLabel = SubtitleLabel(text: "Моя семья")
     private let inviteUsersLabel = SecondaryLabelWithIcon(text: "Пригласить пользователей")
     private let updatesLabel = SubtitleLabel(text: "Обновления")
     private let seeAllLabel = SecondaryLabelWithIcon(text: "Смотреть все")
     private let noUpdatesLabel = SecondaryLabel(text: "Пока здесь пусто.")
+    
+    let noKidsImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "noKids")
+        imageView.bounds.size = CGSize(width: 85.0, height: 78.0)
+        imageView.contentMode = .scaleAspectFit
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
+    }()
+    
+    let noUpdatesImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "noUpdates")
+        imageView.bounds.size = CGSize(width: 167.0, height: 152.0)
+        imageView.contentMode = .scaleAspectFit
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
+    }()
     
     let separatorView: UIView = {
         let view = UIView()
@@ -30,6 +47,12 @@ class ParentHomeScreenViewController: UIViewController, ParentHomeScreenViewInpu
         view.layer.shadowOffset = CGSize(width: 0, height: -2.0)
         view.layer.shadowOpacity = 1
         view.layer.shadowRadius = 0
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
+    let containerView: UIView = {
+        let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -45,7 +68,11 @@ class ParentHomeScreenViewController: UIViewController, ParentHomeScreenViewInpu
     
     var kidsUpdates:[KidsUpdates] = [KidsUpdates(name: "Mike", update: .created),
                                      KidsUpdates(name: "Alice", update: .completed),
-                                     KidsUpdates(name: "Harry", update: .selected)]
+                                     KidsUpdates(name: "Harry", update: .selected),
+                                     KidsUpdates(name: "Harry", update: .selected),
+                                     KidsUpdates(name: "Harry", update: .selected),
+                                     KidsUpdates(name: "Harry", update: .selected)
+    ]
 
     private let kidsTableView: UITableView = {
         let tableView = UITableView()
@@ -62,6 +89,7 @@ class ParentHomeScreenViewController: UIViewController, ParentHomeScreenViewInpu
         tableView.backgroundColor = .primaryWhiteSnow
         tableView.showsVerticalScrollIndicator = false
         tableView.bounces = false
+        tableView.isScrollEnabled = false
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.delaysContentTouches = false
         return tableView
@@ -71,13 +99,17 @@ class ParentHomeScreenViewController: UIViewController, ParentHomeScreenViewInpu
         super.viewDidLoad()
         view.backgroundColor = .primaryWhiteSnow
         setupViews()
+        seeAllLabel.font = .robotoRegular13()
         setDelegates()
         setConstraints()
+        
         kidsTableView.register(KidsCardTableViewCell.self, forCellReuseIdentifier: idKidsCardTableViewCell)
         
         contentSizeObservation = kidsTableView.observe(\.contentSize, options: .new, changeHandler: { [weak self] (tv, _) in
             guard let self = self else { return }
-            self.tableViewHeightConstraint!.constant = tv.contentSize.height
+            if tv.contentSize.height > CGFloat(220.0) {
+                self.tableViewHeightConstraint!.constant = tv.contentSize.height
+            }
         })
         
         updatesTableView.register(UpdatesTableViewCell.self, forCellReuseIdentifier: idUpdatesTableViewCell)
@@ -85,6 +117,17 @@ class ParentHomeScreenViewController: UIViewController, ParentHomeScreenViewInpu
     
     deinit {
         contentSizeObservation?.invalidate()
+    }
+    
+    private var numberOfKidsCells = 0
+    private var numberOfUpdatesCells = 0
+    
+    func receiveNumberOfKidsCells(number: Int) {
+        numberOfKidsCells = number
+    }
+    
+    func receiveNumberOfUpdatesCells(number: Int) {
+        numberOfUpdatesCells = number
     }
 }
 
@@ -94,14 +137,16 @@ extension ParentHomeScreenViewController {
     private func setupViews() {
         view.addSubview(titleLabel)
         view.addSubview(activeTasksLabel)
-        view.addSubview(myFamilyLabel)
         view.addSubview(inviteUsersLabel)
+        view.addSubview(noKidsImageView)
         view.addSubview(kidsTableView)
-        view.addSubview(separatorView)
-        view.addSubview(updatesLabel)
-        view.addSubview(seeAllLabel)
-        view.addSubview(noUpdatesLabel)
-        view.addSubview(updatesTableView)
+        view.addSubview(containerView)
+        containerView.addSubview(separatorView)
+        containerView.addSubview(updatesLabel)
+        containerView.addSubview(seeAllLabel)
+        containerView.addSubview(noUpdatesLabel)
+        containerView.addSubview(updatesTableView)
+        containerView.addSubview(noUpdatesImageView)
         checkNumberOfKids()
         checkUpdates()
     }
@@ -114,30 +159,36 @@ extension ParentHomeScreenViewController {
     }
     
     private func checkNumberOfKids() {
-        if kidsArray.count == 0 {
+        presenter.getNumberOfKidsCells()
+        if numberOfKidsCells == 0 {
             kidsTableView.isHidden = true
+            noKidsImageView.isHidden = false
             inviteUsersLabel.isHidden = false
         } else {
             kidsTableView.isHidden = false
+            noKidsImageView.isHidden = true
             inviteUsersLabel.isHidden = true
         }
     }
     
     private func checkUpdates() {
-        if kidsUpdates.count == 0 {
+        presenter.getNumberOfUpdatesCells()
+        if numberOfUpdatesCells == 0 {
             updatesTableView.isHidden = true
             seeAllLabel.isHidden = true
             noUpdatesLabel.isHidden = false
+            noUpdatesImageView.isHidden = false
         } else {
             updatesTableView.isHidden = false
             seeAllLabel.isHidden = false
             noUpdatesLabel.isHidden = true
+            noUpdatesImageView.isHidden = true
         }
     }
     
     private func setConstraints() {
         NSLayoutConstraint.activate([
-            titleLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 84),
+            titleLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 76),
             titleLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
             titleLabel.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16)
         ])
@@ -149,53 +200,63 @@ extension ParentHomeScreenViewController {
         ])
         
         NSLayoutConstraint.activate([
-            myFamilyLabel.topAnchor.constraint(equalTo: activeTasksLabel.bottomAnchor, constant: 29),
-            myFamilyLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
-            myFamilyLabel.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16)
+            noKidsImageView.topAnchor.constraint(equalTo: activeTasksLabel.bottomAnchor, constant: 52),
+            noKidsImageView.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
         ])
         
         NSLayoutConstraint.activate([
-            inviteUsersLabel.topAnchor.constraint(equalTo: myFamilyLabel.bottomAnchor, constant: 9),
-            inviteUsersLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
-            inviteUsersLabel.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16)
+            inviteUsersLabel.topAnchor.constraint(equalTo: noKidsImageView.bottomAnchor, constant: 14),
+            inviteUsersLabel.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
         ])
 
         NSLayoutConstraint.activate([
-            kidsTableView.topAnchor.constraint(equalTo: myFamilyLabel.bottomAnchor, constant: 5),
+            kidsTableView.topAnchor.constraint(equalTo: activeTasksLabel.bottomAnchor, constant: 24),
             kidsTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16.5),
             kidsTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16.5),
         ])
         
-        tableViewHeightConstraint = kidsTableView.heightAnchor.constraint(equalToConstant: 20)
+        tableViewHeightConstraint = kidsTableView.heightAnchor.constraint(equalToConstant: 220)
         NSLayoutConstraint.activate([tableViewHeightConstraint!])
         
         NSLayoutConstraint.activate([
-            separatorView.topAnchor.constraint(equalTo: kidsTableView.bottomAnchor, constant: 20),
-            separatorView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-            separatorView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-            separatorView.heightAnchor.constraint(equalToConstant: 20)
+            containerView.topAnchor.constraint(equalTo: kidsTableView.bottomAnchor, constant: 30.0),
+            containerView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            containerView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            containerView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+        ])
+        
+        NSLayoutConstraint.activate([
+            separatorView.topAnchor.constraint(equalTo: containerView.topAnchor),
+            separatorView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
+            separatorView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
+            separatorView.heightAnchor.constraint(equalToConstant: 20.0)
         ])
         
         NSLayoutConstraint.activate([
             updatesLabel.topAnchor.constraint(equalTo: separatorView.bottomAnchor, constant: 8),
-            updatesLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
+            updatesLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 16),
         ])
         
         NSLayoutConstraint.activate([
             seeAllLabel.centerYAnchor.constraint(equalTo: updatesLabel.centerYAnchor),
-            seeAllLabel.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16)
+            seeAllLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -16)
         ])
         
         NSLayoutConstraint.activate([
             noUpdatesLabel.topAnchor.constraint(equalTo: updatesLabel.bottomAnchor, constant: 8),
-            noUpdatesLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16)
+            noUpdatesLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 16)
+        ])
+        
+        NSLayoutConstraint.activate([
+            noUpdatesImageView.topAnchor.constraint(equalTo: noUpdatesLabel.bottomAnchor, constant: 24),
+            noUpdatesImageView.centerXAnchor.constraint(equalTo: containerView.centerXAnchor),
         ])
         
         NSLayoutConstraint.activate([
             updatesTableView.topAnchor.constraint(equalTo: updatesLabel.bottomAnchor, constant: 19),
-            updatesTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-            updatesTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
-            updatesTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -24)
+            updatesTableView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 16),
+            updatesTableView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -16),
+            updatesTableView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -24)
         ])
     }
 }
@@ -205,9 +266,11 @@ extension ParentHomeScreenViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if tableView == kidsTableView  {
-            return kidsArray.count
+            presenter.getNumberOfKidsCells()
+            return numberOfKidsCells
         } else {
-            return kidsUpdates.count
+            presenter.getNumberOfUpdatesCells()
+            return numberOfUpdatesCells
         }
     }
     

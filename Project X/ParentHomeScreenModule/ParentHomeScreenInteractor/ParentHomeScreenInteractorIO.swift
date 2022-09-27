@@ -7,9 +7,13 @@
 
 import Foundation
 
-protocol ParentHomeScreenInteractorInputProtocol {
-   init(presenter: ParentHomeScreenInteractorOutputProtocol)
+protocol ParentHomeScreenInteractorInputProtocol: AnyObject {
+    init(presenter: ParentHomeScreenInteractorOutputProtocol)
+    func provideNumberOfKids()
+    func provideNumberOfUpdates()
 }
 
 protocol ParentHomeScreenInteractorOutputProtocol: AnyObject {
+    func receiveNumberOfKids(number: Int)
+    func receiveNumberOfUpdates(number: Int)
 }
