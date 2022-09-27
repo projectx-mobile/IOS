@@ -23,7 +23,7 @@ final class WelcomScreenLogin: UIViewController {
     }
 }
 
-extension WelcomScreenLogin {
+private extension WelcomScreenLogin {
     func setupUI() {
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.textColor = .primaryMidnight
