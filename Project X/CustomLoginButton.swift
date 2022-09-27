@@ -7,13 +7,6 @@
 
 import UIKit
 
-struct CustomLoginButtonViewModel {
-    let textLabel: String
-    let imageView: String
-    let backgroundColor: UIColor
-    let tintColor: UIColor
-}
-
 final class CustomLoginButton: UIButton {
     
     private let textLabel: UILabel = {
@@ -57,8 +50,7 @@ final class CustomLoginButton: UIButton {
         layer.backgroundColor = viewModel.backgroundColor.cgColor
     }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
+    private func setupLayout() {
         textLabel.sizeToFit()
         let iconSize: CGFloat = 20
         let xPosition: CGFloat = (frame.size.width - textLabel.frame.size.width - iconSize - 5) / 2
@@ -70,5 +62,10 @@ final class CustomLoginButton: UIButton {
                                  y: 0,
                                  width: textLabel.frame.size.width,
                                  height: frame.size.height)
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        setupLayout()
     }
 }

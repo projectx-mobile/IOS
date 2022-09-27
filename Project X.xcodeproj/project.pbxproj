@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		004AD9BD28E30C1F00C9F88B /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004AD9BC28E30C1F00C9F88B /* ViewModel.swift */; };
+		004AD9C028E30CF900C9F88B /* WelcomeScreenLogin + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004AD9BF28E30CF900C9F88B /* WelcomeScreenLogin + Extension.swift */; };
 		008727C228C14FDD00E3D297 /* NexaDemo-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 008727C128C14FDD00E3D297 /* NexaDemo-Bold.ttf */; };
 		00A878E228DC7FF300889C8D /* UIColor + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A878E128DC7FF300889C8D /* UIColor + Extension.swift */; };
 		00B2BB2C28CF36450001CD4A /* CustomLoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B2BB2B28CF36450001CD4A /* CustomLoginButton.swift */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		004AD9BC28E30C1F00C9F88B /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		004AD9BF28E30CF900C9F88B /* WelcomeScreenLogin + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WelcomeScreenLogin + Extension.swift"; sourceTree = "<group>"; };
 		008727C128C14FDD00E3D297 /* NexaDemo-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NexaDemo-Bold.ttf"; sourceTree = "<group>"; };
 		00A878E128DC7FF300889C8D /* UIColor + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Extension.swift"; sourceTree = "<group>"; };
 		00B2BB2B28CF36450001CD4A /* CustomLoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLoginButton.swift; sourceTree = "<group>"; };
@@ -92,7 +96,9 @@
 				00A878E128DC7FF300889C8D /* UIColor + Extension.swift */,
 				CA214CEF28BDFEF5006176A7 /* SceneDelegate.swift */,
 				00B2BB2B28CF36450001CD4A /* CustomLoginButton.swift */,
+				004AD9BC28E30C1F00C9F88B /* ViewModel.swift */,
 				CA214CF128BDFEF5006176A7 /* WelcomScreenLogin.swift */,
+				004AD9BF28E30CF900C9F88B /* WelcomeScreenLogin + Extension.swift */,
 				CA214CF328BDFEF5006176A7 /* Main.storyboard */,
 				CA214CF628BDFEF7006176A7 /* Assets.xcassets */,
 				CA214CF828BDFEF7006176A7 /* LaunchScreen.storyboard */,
@@ -180,7 +186,9 @@
 				CA214CF228BDFEF5006176A7 /* WelcomScreenLogin.swift in Sources */,
 				CA214CEE28BDFEF5006176A7 /* AppDelegate.swift in Sources */,
 				CA214CF028BDFEF5006176A7 /* SceneDelegate.swift in Sources */,
+				004AD9BD28E30C1F00C9F88B /* ViewModel.swift in Sources */,
 				00A878E228DC7FF300889C8D /* UIColor + Extension.swift in Sources */,
+				004AD9C028E30CF900C9F88B /* WelcomeScreenLogin + Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
