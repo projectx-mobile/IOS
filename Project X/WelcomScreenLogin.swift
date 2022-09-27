@@ -11,9 +11,9 @@ final class WelcomScreenLogin: UIViewController {
     private let titleLabel = UILabel()
     private let subTitleLabel = UILabel()
     private let createLabel = UILabel()
-    private let buttonLoginGoogle = CustomLoginButton()
-    private let buttonLoginApple = CustomLoginButton()
-    private let buttonLoginMail = CustomLoginButton()
+    private let buttonLoginGoogle = LoginButton()
+    private let buttonLoginApple = LoginButton()
+    private let buttonLoginMail = LoginButton()
     private let createButton = UIButton()
     
     override func viewDidLoad() {

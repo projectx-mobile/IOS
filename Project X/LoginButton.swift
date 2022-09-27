@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class CustomLoginButton: UIButton {
+final class LoginButton: UIButton {
     
     private let textLabel: UILabel = {
         let label = UILabel()
