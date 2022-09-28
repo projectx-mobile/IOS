@@ -11,6 +11,7 @@ struct KidsInformation {
     let name: String
     var numberOfTasks: Int
     var numberOfTasksDone: Int
+    var kidsImage: Data?
 }
 
 struct UpdatesInformation {
@@ -36,13 +37,23 @@ class ParentHomeScreenPresenter: ParentHomeScreenViewOutputProtocol{
     func getNumberOfKidsCells() {
         interactor.provideNumberOfKids()
     }
+    
     func getNumberOfUpdatesCells() {
         interactor.provideNumberOfUpdates()
+    }
+    
+    func getInfoForKidsCell(at indexPath: IndexPath) {
+        interactor.provideInfoForKidsCell(at: indexPath)
+    }
+    
+    func getInfoForUpdatesCell(at indexPath: IndexPath) {
+        interactor.provideInfoForUpdatesCell(at: indexPath)
     }
 }
 
 // MARK: - ParentHomeScreenInteractorOutputProtocol
 extension ParentHomeScreenPresenter: ParentHomeScreenInteractorOutputProtocol {
+
     func receiveNumberOfKids(number: Int) {
         let numberOfCells = number
         view.receiveNumberOfKidsCells(number: numberOfCells)
@@ -53,4 +64,11 @@ extension ParentHomeScreenPresenter: ParentHomeScreenInteractorOutputProtocol {
         view.receiveNumberOfUpdatesCells(number: numberOfCells)
     }
     
+    func receiveInfoForKidsCell(info: KidsData) {
+        view.receiveInfoForKidsCells(info: info)
+    }
+    
+    func receiveInfoForUpdatesCell(info: KidsUpdates) {
+        view.receiveInfoForUpdatesCells(info: info)
+    }
 }

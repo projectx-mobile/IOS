@@ -11,9 +11,13 @@ protocol ParentHomeScreenInteractorInputProtocol: AnyObject {
     init(presenter: ParentHomeScreenInteractorOutputProtocol)
     func provideNumberOfKids()
     func provideNumberOfUpdates()
+    func provideInfoForKidsCell(at indexpath: IndexPath)
+    func provideInfoForUpdatesCell(at indexpath: IndexPath)
 }
 
 protocol ParentHomeScreenInteractorOutputProtocol: AnyObject {
     func receiveNumberOfKids(number: Int)
     func receiveNumberOfUpdates(number: Int)
+    func receiveInfoForKidsCell(info: KidsData)
+    func receiveInfoForUpdatesCell(info: KidsUpdates)
 }

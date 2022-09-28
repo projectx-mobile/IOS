@@ -10,10 +10,14 @@ import Foundation
 protocol ParentHomeScreenViewInputProtocol: AnyObject {
     func receiveNumberOfKidsCells(number: Int)
     func receiveNumberOfUpdatesCells(number: Int)
+    func receiveInfoForKidsCells(info: KidsData)
+    func receiveInfoForUpdatesCells(info: KidsUpdates)
 }
 
 protocol ParentHomeScreenViewOutputProtocol: AnyObject {
     init(view: ParentHomeScreenViewInputProtocol)
     func getNumberOfKidsCells()
     func getNumberOfUpdatesCells()
+    func getInfoForKidsCell(at indexPath: IndexPath)
+    func getInfoForUpdatesCell(at indexPath: IndexPath)
 }

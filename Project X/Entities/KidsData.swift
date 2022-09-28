@@ -11,5 +11,6 @@ struct KidsData {
     let name: String
     var numberOfTasks: Int
     var numberOfTasksDone: Int
+    var kidsImage: String?
 }
 

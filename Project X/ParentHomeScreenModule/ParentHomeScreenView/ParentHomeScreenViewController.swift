@@ -9,7 +9,7 @@
 import UIKit
 
 class ParentHomeScreenViewController: UIViewController, ParentHomeScreenViewInputProtocol {
-    
+
     var presenter: ParentHomeScreenViewOutputProtocol!
     private let configurator: ParentHomeScreenConfiguratorInputProtocol = ParentHomeScreenConfigurator()
     
@@ -62,17 +62,6 @@ class ParentHomeScreenViewController: UIViewController, ParentHomeScreenViewInpu
     
     private var contentSizeObservation: NSKeyValueObservation?
     private var tableViewHeightConstraint: NSLayoutConstraint?
-    
-    var kidsArray:[KidsData] = [KidsData(name: "Alice", numberOfTasks: 2, numberOfTasksDone: 1),
-    KidsData(name: "Mike", numberOfTasks: 4, numberOfTasksDone: 3), KidsData(name: "Harry", numberOfTasks: 8, numberOfTasksDone: 3)]
-    
-    var kidsUpdates:[KidsUpdates] = [KidsUpdates(name: "Mike", update: .created),
-                                     KidsUpdates(name: "Alice", update: .completed),
-                                     KidsUpdates(name: "Harry", update: .selected),
-                                     KidsUpdates(name: "Harry", update: .selected),
-                                     KidsUpdates(name: "Harry", update: .selected),
-                                     KidsUpdates(name: "Harry", update: .selected)
-    ]
 
     private let kidsTableView: UITableView = {
         let tableView = UITableView()
@@ -121,6 +110,8 @@ class ParentHomeScreenViewController: UIViewController, ParentHomeScreenViewInpu
     
     private var numberOfKidsCells = 0
     private var numberOfUpdatesCells = 0
+    private var cellKidsInfo: KidsData?
+    private var cellUpdatesInfo: KidsUpdates?
     
     func receiveNumberOfKidsCells(number: Int) {
         numberOfKidsCells = number
@@ -128,6 +119,14 @@ class ParentHomeScreenViewController: UIViewController, ParentHomeScreenViewInpu
     
     func receiveNumberOfUpdatesCells(number: Int) {
         numberOfUpdatesCells = number
+    }
+    
+    func receiveInfoForKidsCells(info: KidsData) {
+        cellKidsInfo = info
+    }
+    
+    func receiveInfoForUpdatesCells(info: KidsUpdates) {
+        cellUpdatesInfo = info
     }
 }
 
@@ -277,11 +276,17 @@ extension ParentHomeScreenViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if tableView == kidsTableView  {
             let cell = tableView.dequeueReusableCell(withIdentifier: idKidsCardTableViewCell, for: indexPath) as! KidsCardTableViewCell
-            cell.cellConfigure(data: kidsArray[indexPath.row])
+            presenter.getInfoForKidsCell(at: indexPath)
+            if let cellinfo = cellKidsInfo {
+                cell.cellConfigure(data: cellinfo)
+            }
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: idUpdatesTableViewCell, for: indexPath) as! UpdatesTableViewCell
-            cell.cellConfigure(data: kidsUpdates[indexPath.row])
+            presenter.getInfoForUpdatesCell(at: indexPath)
+            if let cellinfo = cellUpdatesInfo {
+                cell.cellConfigure(data: cellinfo)
+            }
             cell.accessoryType = .disclosureIndicator
             return cell
         }
