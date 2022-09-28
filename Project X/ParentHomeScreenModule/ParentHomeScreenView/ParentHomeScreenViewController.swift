@@ -9,7 +9,7 @@
 import UIKit
 
 class ParentHomeScreenViewController: UIViewController, ParentHomeScreenViewInputProtocol {
-
+    
     var presenter: ParentHomeScreenViewOutputProtocol!
     private let configurator: ParentHomeScreenConfiguratorInputProtocol = ParentHomeScreenConfigurator()
     
@@ -53,6 +53,7 @@ class ParentHomeScreenViewController: UIViewController, ParentHomeScreenViewInpu
     
     let containerView: UIView = {
         let view = UIView()
+        view.backgroundColor = .primaryWhiteSnow
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -60,9 +61,12 @@ class ParentHomeScreenViewController: UIViewController, ParentHomeScreenViewInpu
     private let idKidsCardTableViewCell = "idKidsCardTableViewCell"
     private let idUpdatesTableViewCell = "idUpdatesTableViewCell"
     
-    private var contentSizeObservation: NSKeyValueObservation?
-    private var tableViewHeightConstraint: NSLayoutConstraint?
-
+    private var contentSizeKidsTableViewObservation: NSKeyValueObservation?
+    private var contentSizeUpdatesTableViewObservation: NSKeyValueObservation?
+    
+    private var kidsTableViewHeightConstraint: NSLayoutConstraint?
+    private var updatesTableViewHeightConstraint: NSLayoutConstraint?
+    
     private let kidsTableView: UITableView = {
         let tableView = UITableView()
         tableView.backgroundColor = .primaryWhiteSnow
@@ -83,7 +87,7 @@ class ParentHomeScreenViewController: UIViewController, ParentHomeScreenViewInpu
         tableView.delaysContentTouches = false
         return tableView
     }()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .primaryWhiteSnow
@@ -94,18 +98,37 @@ class ParentHomeScreenViewController: UIViewController, ParentHomeScreenViewInpu
         
         kidsTableView.register(KidsCardTableViewCell.self, forCellReuseIdentifier: idKidsCardTableViewCell)
         
-        contentSizeObservation = kidsTableView.observe(\.contentSize, options: .new, changeHandler: { [weak self] (tv, _) in
+        contentSizeKidsTableViewObservation = kidsTableView.observe(\.contentSize, options: .new, changeHandler: { [weak self] (tv, _) in
             guard let self = self else { return }
             if tv.contentSize.height > LayoutConstants.initialHeight220 {
-                self.tableViewHeightConstraint!.constant = tv.contentSize.height
+                self.kidsTableViewHeightConstraint!.constant = tv.contentSize.height
             }
         })
         
         updatesTableView.register(UpdatesTableViewCell.self, forCellReuseIdentifier: idUpdatesTableViewCell)
+        
+        contentSizeUpdatesTableViewObservation = updatesTableView.observe(\.contentSize, options: .new, changeHandler: { [weak self] (tv, _) in
+            guard let self = self else { return }
+            if tv.contentSize.height > LayoutConstants.initialHeight1000 {
+                self.updatesTableViewHeightConstraint!.constant = tv.contentSize.height
+            }
+        })
+        
+        let panGesture = UIPanGestureRecognizer(target: self, action: #selector(respondToPanGesture(_:)))
+        
+        containerView.isUserInteractionEnabled = true
+        containerView.addGestureRecognizer(panGesture)
+    }
+    
+    @objc func respondToPanGesture(_ sender: UIPanGestureRecognizer) {
+        let translation = sender.translation(in: self.view)
+        containerView.frame.origin.y = containerView.frame.origin.y + translation.y
+        sender.setTranslation(CGPoint.zero, in: self.view)
     }
     
     deinit {
-        contentSizeObservation?.invalidate()
+        contentSizeKidsTableViewObservation?.invalidate()
+        contentSizeUpdatesTableViewObservation?.invalidate()
     }
     
     private var numberOfKidsCells = 0
@@ -207,21 +230,22 @@ extension ParentHomeScreenViewController {
             inviteUsersLabel.topAnchor.constraint(equalTo: noKidsImageView.bottomAnchor, constant: LayoutConstants.inset14),
             inviteUsersLabel.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
         ])
-
+        
         NSLayoutConstraint.activate([
             kidsTableView.topAnchor.constraint(equalTo: activeTasksLabel.bottomAnchor, constant: LayoutConstants.inset24),
             kidsTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: LayoutConstants.inset16),
             kidsTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -LayoutConstants.inset16),
         ])
         
-        tableViewHeightConstraint = kidsTableView.heightAnchor.constraint(equalToConstant: LayoutConstants.initialHeight220)
-        NSLayoutConstraint.activate([tableViewHeightConstraint!])
+        kidsTableViewHeightConstraint = kidsTableView.heightAnchor.constraint(equalToConstant: LayoutConstants.initialHeight220)
+        NSLayoutConstraint.activate([kidsTableViewHeightConstraint!])
         
         NSLayoutConstraint.activate([
             containerView.topAnchor.constraint(equalTo: kidsTableView.bottomAnchor, constant: LayoutConstants.inset30),
             containerView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             containerView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-            containerView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+            containerView.bottomAnchor.constraint(equalTo: updatesTableView.bottomAnchor)
+            
         ])
         
         NSLayoutConstraint.activate([
@@ -251,11 +275,13 @@ extension ParentHomeScreenViewController {
             noUpdatesImageView.centerXAnchor.constraint(equalTo: containerView.centerXAnchor),
         ])
         
+        updatesTableViewHeightConstraint = updatesTableView.heightAnchor.constraint(equalToConstant: LayoutConstants.initialHeight1000)
+        NSLayoutConstraint.activate([updatesTableViewHeightConstraint!])
+        
         NSLayoutConstraint.activate([
             updatesTableView.topAnchor.constraint(equalTo: updatesLabel.bottomAnchor, constant: LayoutConstants.inset19),
             updatesTableView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: LayoutConstants.inset16),
-            updatesTableView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -LayoutConstants.inset16),
-            updatesTableView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -LayoutConstants.inset24)
+            updatesTableView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -LayoutConstants.inset16)
         ])
     }
 }

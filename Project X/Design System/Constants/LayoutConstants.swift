@@ -72,6 +72,7 @@ enum LayoutConstants {
     static let circleViewRadius72: CGFloat = 72.0
     
     //updatesTableView
+    static let initialHeight1000: CGFloat = 1000.0
     static let rowHeight66: CGFloat = 66.0
     
     //secondaryLabelWithIcon
