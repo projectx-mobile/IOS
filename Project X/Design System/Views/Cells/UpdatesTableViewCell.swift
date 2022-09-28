@@ -13,8 +13,8 @@ class UpdatesTableViewCell: UITableViewCell {
     private let backgroundCell:UIView = {
         let view = UIView()
         view.backgroundColor = .accentStatus
-        view.layer.cornerRadius = 8
-        view.layer.borderWidth = 1.4
+        view.layer.cornerRadius = LayoutConstants.cornerRadius8
+        view.layer.borderWidth = LayoutConstants.borderWidth
         view.layer.borderColor = UIColor.primaryMidnight.cgColor
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -54,15 +54,15 @@ class UpdatesTableViewCell: UITableViewCell {
     private func setConstraints() {
         
         NSLayoutConstraint.activate([
-            backgroundCell.topAnchor.constraint(equalTo: topAnchor, constant: 5),
+            backgroundCell.topAnchor.constraint(equalTo: topAnchor, constant: LayoutConstants.inset5),
             backgroundCell.leadingAnchor.constraint(equalTo: leadingAnchor),
             backgroundCell.trailingAnchor.constraint(equalTo: trailingAnchor),
-            backgroundCell.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -5)
+            backgroundCell.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -LayoutConstants.inset5)
         ])
         
         NSLayoutConstraint.activate([
             updateLabel.centerYAnchor.constraint(equalTo: backgroundCell.centerYAnchor),
-            updateLabel.leadingAnchor.constraint(equalTo: backgroundCell.leadingAnchor, constant: 16)
+            updateLabel.leadingAnchor.constraint(equalTo: backgroundCell.leadingAnchor, constant: LayoutConstants.inset16)
         ])
     }
 }

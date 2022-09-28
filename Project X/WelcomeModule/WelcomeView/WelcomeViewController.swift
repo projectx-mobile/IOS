@@ -78,24 +78,24 @@ extension WelcomeViewController {
 
     private func setConstraints() {
         NSLayoutConstraint.activate([
-            signUpButton.bottomAnchor.constraint(equalTo: logInButton.topAnchor, constant: -16),
-            signUpButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
-            signUpButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16),
-            signUpButton.heightAnchor.constraint(equalToConstant: 48)
+            signUpButton.bottomAnchor.constraint(equalTo: logInButton.topAnchor, constant: -LayoutConstants.inset16),
+            signUpButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: LayoutConstants.inset16),
+            signUpButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -LayoutConstants.inset16),
+            signUpButton.heightAnchor.constraint(equalToConstant: LayoutConstants.height48)
         ])
         
         NSLayoutConstraint.activate([
-            logInButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -58),
-            logInButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
-            logInButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16),
-            logInButton.heightAnchor.constraint(equalToConstant: 48)
+            logInButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -LayoutConstants.inset58),
+            logInButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: LayoutConstants.inset16),
+            logInButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -LayoutConstants.inset16),
+            logInButton.heightAnchor.constraint(equalToConstant: LayoutConstants.height48)
         ])
 
         NSLayoutConstraint.activate([
             comeBackView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             comeBackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             comeBackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-            comeBackView.heightAnchor.constraint(equalToConstant: 375)
+            comeBackView.heightAnchor.constraint(equalToConstant: LayoutConstants.height375)
         ])
     }
 }

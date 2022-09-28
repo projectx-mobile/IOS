@@ -19,7 +19,7 @@ final class CustomButton: UIButton {
     
     override var isHighlighted: Bool {
         didSet {
-            UIView.animate(withDuration: 0.1) {
+            UIView.animate(withDuration: LayoutConstants.duration) {
                 self.layer.shadowOpacity = self.isHighlighted ? 0 : 1
             }
         }

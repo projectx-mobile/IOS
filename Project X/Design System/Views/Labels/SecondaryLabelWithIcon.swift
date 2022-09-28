@@ -17,7 +17,7 @@ class SecondaryLabelWithIcon: UILabel {
         
         let imageAttachment = NSTextAttachment()
         imageAttachment.image = UIImage(named:"right")
-        let imageOffsetY: CGFloat = -2.0
+        let imageOffsetY: CGFloat = -LayoutConstants.imageOffset2
         imageAttachment.bounds = CGRect(x: 0, y: imageOffsetY, width: imageAttachment.image!.size.width, height: imageAttachment.image!.size.height)
         let attachmentString = NSAttributedString(attachment: imageAttachment)
         let completeText = NSMutableAttributedString(string: "")

@@ -23,7 +23,7 @@ class ParentHomeScreenViewController: UIViewController, ParentHomeScreenViewInpu
     let noKidsImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "noKids")
-        imageView.bounds.size = CGSize(width: 85.0, height: 78.0)
+        imageView.bounds.size = CGSize(width: LayoutConstants.width85, height: LayoutConstants.height78)
         imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
@@ -32,7 +32,7 @@ class ParentHomeScreenViewController: UIViewController, ParentHomeScreenViewInpu
     let noUpdatesImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "noUpdates")
-        imageView.bounds.size = CGSize(width: 167.0, height: 152.0)
+        imageView.bounds.size = CGSize(width: LayoutConstants.width167, height: LayoutConstants.height152)
         imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
@@ -41,12 +41,12 @@ class ParentHomeScreenViewController: UIViewController, ParentHomeScreenViewInpu
     let separatorView: UIView = {
         let view = UIView()
         view.backgroundColor = .primaryWhiteSnow
-        view.layer.cornerRadius = 10.0
+        view.layer.cornerRadius = LayoutConstants.cornerRadius10
         view.layer.shadowColor = UIColor.someGray.cgColor
         view.layer.masksToBounds = false
-        view.layer.shadowOffset = CGSize(width: 0, height: -2.0)
-        view.layer.shadowOpacity = 1
-        view.layer.shadowRadius = 0
+        view.layer.shadowOffset = CGSize(width: LayoutConstants.shadowOffsetWidth0, height: -LayoutConstants.shadowOffsetHeight2)
+        view.layer.shadowOpacity = LayoutConstants.shadowOpacity1
+        view.layer.shadowRadius = LayoutConstants.shadowRadius0
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -96,7 +96,7 @@ class ParentHomeScreenViewController: UIViewController, ParentHomeScreenViewInpu
         
         contentSizeObservation = kidsTableView.observe(\.contentSize, options: .new, changeHandler: { [weak self] (tv, _) in
             guard let self = self else { return }
-            if tv.contentSize.height > CGFloat(220.0) {
+            if tv.contentSize.height > LayoutConstants.initialHeight220 {
                 self.tableViewHeightConstraint!.constant = tv.contentSize.height
             }
         })
@@ -187,38 +187,38 @@ extension ParentHomeScreenViewController {
     
     private func setConstraints() {
         NSLayoutConstraint.activate([
-            titleLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 76),
-            titleLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
-            titleLabel.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16)
+            titleLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: LayoutConstants.inset76),
+            titleLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: LayoutConstants.inset16),
+            titleLabel.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -LayoutConstants.inset16)
         ])
         
         NSLayoutConstraint.activate([
-            activeTasksLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 8),
-            activeTasksLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
-            activeTasksLabel.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16)
+            activeTasksLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: LayoutConstants.inset8),
+            activeTasksLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: LayoutConstants.inset16),
+            activeTasksLabel.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -LayoutConstants.inset16)
         ])
         
         NSLayoutConstraint.activate([
-            noKidsImageView.topAnchor.constraint(equalTo: activeTasksLabel.bottomAnchor, constant: 52),
+            noKidsImageView.topAnchor.constraint(equalTo: activeTasksLabel.bottomAnchor, constant: LayoutConstants.inset52),
             noKidsImageView.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
         ])
         
         NSLayoutConstraint.activate([
-            inviteUsersLabel.topAnchor.constraint(equalTo: noKidsImageView.bottomAnchor, constant: 14),
+            inviteUsersLabel.topAnchor.constraint(equalTo: noKidsImageView.bottomAnchor, constant: LayoutConstants.inset14),
             inviteUsersLabel.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
         ])
 
         NSLayoutConstraint.activate([
-            kidsTableView.topAnchor.constraint(equalTo: activeTasksLabel.bottomAnchor, constant: 24),
-            kidsTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16.5),
-            kidsTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16.5),
+            kidsTableView.topAnchor.constraint(equalTo: activeTasksLabel.bottomAnchor, constant: LayoutConstants.inset24),
+            kidsTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: LayoutConstants.inset16),
+            kidsTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -LayoutConstants.inset16),
         ])
         
-        tableViewHeightConstraint = kidsTableView.heightAnchor.constraint(equalToConstant: 220)
+        tableViewHeightConstraint = kidsTableView.heightAnchor.constraint(equalToConstant: LayoutConstants.initialHeight220)
         NSLayoutConstraint.activate([tableViewHeightConstraint!])
         
         NSLayoutConstraint.activate([
-            containerView.topAnchor.constraint(equalTo: kidsTableView.bottomAnchor, constant: 30.0),
+            containerView.topAnchor.constraint(equalTo: kidsTableView.bottomAnchor, constant: LayoutConstants.inset30),
             containerView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             containerView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
             containerView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
@@ -228,34 +228,34 @@ extension ParentHomeScreenViewController {
             separatorView.topAnchor.constraint(equalTo: containerView.topAnchor),
             separatorView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
             separatorView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
-            separatorView.heightAnchor.constraint(equalToConstant: 20.0)
+            separatorView.heightAnchor.constraint(equalToConstant: LayoutConstants.inset20)
         ])
         
         NSLayoutConstraint.activate([
-            updatesLabel.topAnchor.constraint(equalTo: separatorView.bottomAnchor, constant: 8),
-            updatesLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 16),
+            updatesLabel.topAnchor.constraint(equalTo: separatorView.bottomAnchor, constant: LayoutConstants.inset8),
+            updatesLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: LayoutConstants.inset16),
         ])
         
         NSLayoutConstraint.activate([
             seeAllLabel.centerYAnchor.constraint(equalTo: updatesLabel.centerYAnchor),
-            seeAllLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -16)
+            seeAllLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -LayoutConstants.inset16)
         ])
         
         NSLayoutConstraint.activate([
-            noUpdatesLabel.topAnchor.constraint(equalTo: updatesLabel.bottomAnchor, constant: 8),
-            noUpdatesLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 16)
+            noUpdatesLabel.topAnchor.constraint(equalTo: updatesLabel.bottomAnchor, constant: LayoutConstants.inset8),
+            noUpdatesLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: LayoutConstants.inset16)
         ])
         
         NSLayoutConstraint.activate([
-            noUpdatesImageView.topAnchor.constraint(equalTo: noUpdatesLabel.bottomAnchor, constant: 24),
+            noUpdatesImageView.topAnchor.constraint(equalTo: noUpdatesLabel.bottomAnchor, constant: LayoutConstants.inset24),
             noUpdatesImageView.centerXAnchor.constraint(equalTo: containerView.centerXAnchor),
         ])
         
         NSLayoutConstraint.activate([
-            updatesTableView.topAnchor.constraint(equalTo: updatesLabel.bottomAnchor, constant: 19),
-            updatesTableView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 16),
-            updatesTableView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -16),
-            updatesTableView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -24)
+            updatesTableView.topAnchor.constraint(equalTo: updatesLabel.bottomAnchor, constant: LayoutConstants.inset19),
+            updatesTableView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: LayoutConstants.inset16),
+            updatesTableView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -LayoutConstants.inset16),
+            updatesTableView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -LayoutConstants.inset24)
         ])
     }
 }
@@ -298,9 +298,9 @@ extension ParentHomeScreenViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if tableView == kidsTableView {
-            return 80.0
+            return LayoutConstants.rowHeight80
         } else {
-            return 66.0
+            return LayoutConstants.rowHeight66
         }
     }
 }

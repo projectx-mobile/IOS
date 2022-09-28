@@ -12,8 +12,8 @@ class KidsCardTableViewCell: UITableViewCell {
     private let backgroundCell:UIView = {
         let view = UIView()
         view.backgroundColor = .accentStatus
-        view.layer.cornerRadius = 8
-        view.layer.borderWidth = 1.4
+        view.layer.cornerRadius = LayoutConstants.cornerRadius8
+        view.layer.borderWidth = LayoutConstants.borderWidth
         view.layer.borderColor = UIColor.primaryMidnight.cgColor
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -21,9 +21,9 @@ class KidsCardTableViewCell: UITableViewCell {
     
     private let circleView: UIView = {
         let view = UIView()
-        view.layer.cornerRadius = 36
+        view.layer.cornerRadius = LayoutConstants.cornerRadius36
         view.backgroundColor = .primaryWhiteSnow
-        view.layer.borderWidth = 1.4
+        view.layer.borderWidth = LayoutConstants.borderWidth
         view.layer.borderColor = UIColor.primaryMidnight.cgColor
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -32,8 +32,8 @@ class KidsCardTableViewCell: UITableViewCell {
     private let kidsImageView: UIImageView = {
         let view = UIImageView()
         view.image = UIImage(named: "boy")//?.withRenderingMode(.alwaysTemplate)
-        view.layer.cornerRadius = 27
-        view.layer.borderWidth = 1.4
+        view.layer.cornerRadius = LayoutConstants.cornerRadius27
+        view.layer.borderWidth = LayoutConstants.borderWidth
         view.layer.borderColor = UIColor.primaryMidnight.cgColor
         view.clipsToBounds = true
         view.contentMode = .scaleAspectFit
@@ -88,7 +88,7 @@ class KidsCardTableViewCell: UITableViewCell {
     }
     
     override func layoutSubviews() {
-        kidsImageView.layer.cornerRadius = 27
+        kidsImageView.layer.cornerRadius = LayoutConstants.cornerRadius27
     }
     
     required init?(coder: NSCoder) {
@@ -109,16 +109,16 @@ class KidsCardTableViewCell: UITableViewCell {
     }
     
     private func addProgress(view: UIView, tasks: Int, tasksDone: Int) {
-        let center = CGPoint(x: 36, y: 36)
+        let center = LayoutConstants.centerBezier
         
         let startAngle:CGFloat = (-CGFloat.pi) / 2
         let endAngle:CGFloat = startAngle + (2 * CGFloat.pi)
         
-        let circularPath = UIBezierPath(arcCenter: center, radius: 32, startAngle: startAngle, endAngle: endAngle, clockwise: true)
+        let circularPath = UIBezierPath(arcCenter: center, radius: LayoutConstants.radiusBezier, startAngle: startAngle, endAngle: endAngle, clockwise: true)
         
         let shapeLayer = CAShapeLayer()
         shapeLayer.path = circularPath.cgPath
-        shapeLayer.lineWidth = 8
+        shapeLayer.lineWidth = LayoutConstants.lineWidthBezier
         shapeLayer.fillColor = UIColor.clear.cgColor
         shapeLayer.strokeEnd = (CGFloat(tasksDone) / CGFloat(tasks))
         shapeLayer.lineCap = .round
@@ -135,37 +135,37 @@ class KidsCardTableViewCell: UITableViewCell {
     private func setConstraints() {
         
         NSLayoutConstraint.activate([
-            backgroundCell.topAnchor.constraint(equalTo: topAnchor, constant: 16),
-            backgroundCell.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 36),
+            backgroundCell.topAnchor.constraint(equalTo: topAnchor, constant: LayoutConstants.inset16),
+            backgroundCell.leadingAnchor.constraint(equalTo: leadingAnchor, constant: LayoutConstants.inset36),
             backgroundCell.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0),
-            backgroundCell.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -8)
+            backgroundCell.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -LayoutConstants.inset8)
         ])
         
         NSLayoutConstraint.activate([
             circleView.centerYAnchor.constraint(equalTo: backgroundCell.centerYAnchor),
             circleView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            circleView.heightAnchor.constraint(equalToConstant: 72),
-            circleView.widthAnchor.constraint(equalToConstant: 72)
+            circleView.heightAnchor.constraint(equalToConstant: LayoutConstants.circleViewRadius72),
+            circleView.widthAnchor.constraint(equalToConstant: LayoutConstants.circleViewRadius72)
         ])
         
         NSLayoutConstraint.activate([
-            kidsImageView.topAnchor.constraint(equalTo: circleView.topAnchor, constant: 8),
-            kidsImageView.leadingAnchor.constraint(equalTo: circleView.leadingAnchor, constant: 8),
-            kidsImageView.trailingAnchor.constraint(equalTo: circleView.trailingAnchor, constant: -8),
-            kidsImageView.bottomAnchor.constraint(equalTo: circleView.bottomAnchor, constant: -8)
+            kidsImageView.topAnchor.constraint(equalTo: circleView.topAnchor, constant: LayoutConstants.inset8),
+            kidsImageView.leadingAnchor.constraint(equalTo: circleView.leadingAnchor, constant: LayoutConstants.inset8),
+            kidsImageView.trailingAnchor.constraint(equalTo: circleView.trailingAnchor, constant: -LayoutConstants.inset8),
+            kidsImageView.bottomAnchor.constraint(equalTo: circleView.bottomAnchor, constant: -LayoutConstants.inset8)
         ])
         
         NSLayoutConstraint.activate([
             kidNameLabel.centerYAnchor.constraint(equalTo: backgroundCell.centerYAnchor),
-            kidNameLabel.leadingAnchor.constraint(equalTo: circleView.trailingAnchor, constant: 14),
-            kidNameLabel.trailingAnchor.constraint(equalTo: greenImageView.leadingAnchor, constant: -10)
+            kidNameLabel.leadingAnchor.constraint(equalTo: circleView.trailingAnchor, constant: LayoutConstants.inset14),
+            kidNameLabel.trailingAnchor.constraint(equalTo: greenImageView.leadingAnchor, constant: -LayoutConstants.inset10)
         ])
         
         NSLayoutConstraint.activate([
             greenImageView.centerYAnchor.constraint(equalTo: backgroundCell.centerYAnchor),
-            greenImageView.widthAnchor.constraint(equalToConstant: 20),
-            greenImageView.heightAnchor.constraint(equalToConstant: 20),
-            greenImageView.trailingAnchor.constraint(equalTo: tasksLabel.leadingAnchor, constant: -6)
+            greenImageView.widthAnchor.constraint(equalToConstant: LayoutConstants.inset20),
+            greenImageView.heightAnchor.constraint(equalToConstant: LayoutConstants.inset20),
+            greenImageView.trailingAnchor.constraint(equalTo: tasksLabel.leadingAnchor, constant: -LayoutConstants.inset6)
         ])
         
         NSLayoutConstraint.activate([
@@ -175,10 +175,10 @@ class KidsCardTableViewCell: UITableViewCell {
         
         NSLayoutConstraint.activate([
             tasksLabel.centerYAnchor.constraint(equalTo: backgroundCell.centerYAnchor),
-            tasksLabel.trailingAnchor.constraint(equalTo: backgroundCell.trailingAnchor, constant: -16),
+            tasksLabel.trailingAnchor.constraint(equalTo: backgroundCell.trailingAnchor, constant: -LayoutConstants.inset16),
         ])
         
-        let optionalWidthConstraint = tasksLabel.widthAnchor.constraint(equalToConstant: 10)
+        let optionalWidthConstraint = tasksLabel.widthAnchor.constraint(equalToConstant: LayoutConstants.inset10)
         optionalWidthConstraint.priority = .defaultLow
         NSLayoutConstraint.activate([optionalWidthConstraint])
     }

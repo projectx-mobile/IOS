@@ -24,6 +24,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         configurator.configure(with: parentVC)
         navVC.viewControllers = [parentVC]
         window?.rootViewController = navVC
+       // window?.rootViewController = WelcomeViewController()
         window?.makeKeyAndVisible()
         window?.overrideUserInterfaceStyle = .light
     }
