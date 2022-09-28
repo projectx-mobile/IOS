@@ -8,12 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		004AD9BD28E30C1F00C9F88B /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004AD9BC28E30C1F00C9F88B /* ViewModel.swift */; };
-		008727C228C14FDD00E3D297 /* NexaDemo-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 008727C128C14FDD00E3D297 /* NexaDemo-Bold.ttf */; };
-		00A878E228DC7FF300889C8D /* UIColor + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A878E128DC7FF300889C8D /* UIColor + Extension.swift */; };
 		00B2BB2C28CF36450001CD4A /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B2BB2B28CF36450001CD4A /* LoginButton.swift */; };
-		00E7260028D9DEF8000FC931 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 00E725FD28D9DEF8000FC931 /* Roboto-Medium.ttf */; };
-		00E7260128D9DEF8000FC931 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 00E725FE28D9DEF8000FC931 /* Roboto-Regular.ttf */; };
-		00E7260228D9DEF8000FC931 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 00E725FF28D9DEF8000FC931 /* Roboto-Bold.ttf */; };
 		889F433C28E18B9200DC347D /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889F433B28E18B9200DC347D /* CustomButton.swift */; };
 		889F433E28E18BEC00DC347D /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889F433D28E18BEC00DC347D /* PrimaryButton.swift */; };
 		889F434128E18C7800DC347D /* UIColor + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889F434028E18C7800DC347D /* UIColor + Extension.swift */; };
@@ -32,19 +27,13 @@
 		CA214CEE28BDFEF5006176A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA214CED28BDFEF5006176A7 /* AppDelegate.swift */; };
 		CA214CF028BDFEF5006176A7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA214CEF28BDFEF5006176A7 /* SceneDelegate.swift */; };
 		CA214CF228BDFEF5006176A7 /* WelcomScreenLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA214CF128BDFEF5006176A7 /* WelcomScreenLogin.swift */; };
-		CA214CF528BDFEF5006176A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA214CF328BDFEF5006176A7 /* Main.storyboard */; };
 		CA214CF728BDFEF7006176A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA214CF628BDFEF7006176A7 /* Assets.xcassets */; };
 		CA214CFA28BDFEF7006176A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA214CF828BDFEF7006176A7 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		004AD9BC28E30C1F00C9F88B /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
-		008727C128C14FDD00E3D297 /* NexaDemo-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NexaDemo-Bold.ttf"; sourceTree = "<group>"; };
-		00A878E128DC7FF300889C8D /* UIColor + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Extension.swift"; sourceTree = "<group>"; };
 		00B2BB2B28CF36450001CD4A /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
-		00E725FD28D9DEF8000FC931 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
-		00E725FE28D9DEF8000FC931 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
-		00E725FF28D9DEF8000FC931 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		889F433B28E18B9200DC347D /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		889F433D28E18BEC00DC347D /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		889F434028E18C7800DC347D /* UIColor + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Extension.swift"; sourceTree = "<group>"; };
@@ -67,7 +56,6 @@
 		CA214CED28BDFEF5006176A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA214CEF28BDFEF5006176A7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CA214CF128BDFEF5006176A7 /* WelcomScreenLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomScreenLogin.swift; sourceTree = "<group>"; };
-		CA214CF428BDFEF5006176A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CA214CF628BDFEF7006176A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA214CF928BDFEF7006176A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CA214CFB28BDFEF7006176A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -84,6 +72,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0030963A28E48E8700C321CC /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		0030963B28E4915600C321CC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0030963C28E4916500C321CC /* CustomLoginButtonViewModel */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0030963C28E4916500C321CC /* CustomLoginButtonViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				004AD9BC28E30C1F00C9F88B /* ViewModel.swift */,
+			);
+			path = CustomLoginButtonViewModel;
+			sourceTree = "<group>";
+		};
+		0030963D28E4919300C321CC /* App */ = {
+			isa = PBXGroup;
+			children = (
+				CA214CED28BDFEF5006176A7 /* AppDelegate.swift */,
+				CA214CEF28BDFEF5006176A7 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		0030963E28E491DA00C321CC /* Stories */ = {
+			isa = PBXGroup;
+			children = (
+				889F434828E18F0500DC347D /* WelcomeModule */,
+			);
+			path = Stories;
+			sourceTree = "<group>";
+		};
 		889F433A28E18B5B00DC347D /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +173,7 @@
 		975958FB28D9B2FD00570BB4 /* Design System */ = {
 			isa = PBXGroup;
 			children = (
+				0030963B28E4915600C321CC /* Models */,
 				889F433A28E18B5B00DC347D /* Views */,
 			);
 			path = "Design System";
@@ -154,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				975958FD28D9B40900570BB4 /* Button.swift */,
+				00B2BB2B28CF36450001CD4A /* LoginButton.swift */,
 				889F433B28E18B9200DC347D /* CustomButton.swift */,
 				889F433D28E18BEC00DC347D /* PrimaryButton.swift */,
 			);
@@ -176,6 +206,7 @@
 			children = (
 				CA214CEC28BDFEF5006176A7 /* Project X */,
 				CA214CEB28BDFEF5006176A7 /* Products */,
+				0030963A28E48E8700C321CC /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -190,19 +221,12 @@
 		CA214CEC28BDFEF5006176A7 /* Project X */ = {
 			isa = PBXGroup;
 			children = (
-				008727BF28C14EF000E3D297 /* Resources */,
-				CA214CED28BDFEF5006176A7 /* AppDelegate.swift */,
-				00A878E128DC7FF300889C8D /* UIColor + Extension.swift */,
-				CA214CEF28BDFEF5006176A7 /* SceneDelegate.swift */,
-				00B2BB2B28CF36450001CD4A /* LoginButton.swift */,
-				004AD9BC28E30C1F00C9F88B /* ViewModel.swift */,
+				0030963E28E491DA00C321CC /* Stories */,
+				0030963D28E4919300C321CC /* App */,
 				CA214CF128BDFEF5006176A7 /* WelcomScreenLogin.swift */,
-				CA214CF128BDFEF5006176A7 /* ViewController.swift */,
-				889F434828E18F0500DC347D /* WelcomeModule */,
 				975958FB28D9B2FD00570BB4 /* Design System */,
 				889F433F28E18C4F00DC347D /* Extensions */,
 				889F434B28E18FA800DC347D /* Resources */,
-				CA214CF328BDFEF5006176A7 /* Main.storyboard */,
 				CA214CF828BDFEF7006176A7 /* LaunchScreen.storyboard */,
 				CA214CFB28BDFEF7006176A7 /* Info.plist */,
 			);
@@ -267,14 +291,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E7260228D9DEF8000FC931 /* Roboto-Bold.ttf in Resources */,
-				00E7260128D9DEF8000FC931 /* Roboto-Regular.ttf in Resources */,
-				00E7260028D9DEF8000FC931 /* Roboto-Medium.ttf in Resources */,
 				889F434728E18E6100DC347D /* NexaDemo-Bold.ttf in Resources */,
 				CA214CFA28BDFEF7006176A7 /* LaunchScreen.storyboard in Resources */,
 				CA214CF728BDFEF7006176A7 /* Assets.xcassets in Resources */,
-				008727C228C14FDD00E3D297 /* NexaDemo-Bold.ttf in Resources */,
-				CA214CF528BDFEF5006176A7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,7 +311,7 @@
 				889F434128E18C7800DC347D /* UIColor + Extension.swift in Sources */,
 				889F434D28E18FE000DC347D /* WelcomeInteractor.swift in Sources */,
 				889F433E28E18BEC00DC347D /* PrimaryButton.swift in Sources */,
-				CA214CF228BDFEF5006176A7 /* ViewController.swift in Sources */,
+				CA214CF228BDFEF5006176A7 /* WelcomScreenLogin.swift in Sources */,
 				975958FE28D9B40900570BB4 /* Button.swift in Sources */,
 				889F435B28E191CF00DC347D /* WelcomeViewIO.swift in Sources */,
 				CA214CEE28BDFEF5006176A7 /* AppDelegate.swift in Sources */,
@@ -301,7 +320,6 @@
 				889F434F28E1900B00DC347D /* WelcomeInteractorIO.swift in Sources */,
 				CA214CF028BDFEF5006176A7 /* SceneDelegate.swift in Sources */,
 				004AD9BD28E30C1F00C9F88B /* ViewModel.swift in Sources */,
-				00A878E228DC7FF300889C8D /* UIColor + Extension.swift in Sources */,
 				889F433C28E18B9200DC347D /* CustomButton.swift in Sources */,
 				889F435428E1909600DC347D /* WelcomeRouter.swift in Sources */,
 				889F434528E18D1000DC347D /* UIView + Extension.swift in Sources */,
@@ -312,14 +330,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CA214CF328BDFEF5006176A7 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CA214CF428BDFEF5006176A7 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CA214CF828BDFEF7006176A7 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -457,7 +467,6 @@
 				INFOPLIST_FILE = "Project X/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
@@ -486,7 +495,6 @@
 				INFOPLIST_FILE = "Project X/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
