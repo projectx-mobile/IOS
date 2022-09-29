@@ -49,11 +49,14 @@ class ParentHomeScreenPresenter: ParentHomeScreenViewOutputProtocol{
     func getInfoForUpdatesCell(at indexPath: IndexPath) {
         interactor.provideInfoForUpdatesCell(at: indexPath)
     }
+    
+    func getNumberOfActiveTasks() {
+        interactor.provideNumberOfActiveTasks()
+    }
 }
 
 // MARK: - ParentHomeScreenInteractorOutputProtocol
 extension ParentHomeScreenPresenter: ParentHomeScreenInteractorOutputProtocol {
-
     func receiveNumberOfKids(number: Int) {
         let numberOfCells = number
         view.receiveNumberOfKidsCells(number: numberOfCells)
@@ -70,5 +73,10 @@ extension ParentHomeScreenPresenter: ParentHomeScreenInteractorOutputProtocol {
     
     func receiveInfoForUpdatesCell(info: KidsUpdates) {
         view.receiveInfoForUpdatesCells(info: info)
+    }
+    
+    func receiveNumberOfActiveTasks(number: Int) {
+        let text = "Активных на сегодня (\(number))"
+        view.receiveNumberOfActiveTasks(text: text)
     }
 }

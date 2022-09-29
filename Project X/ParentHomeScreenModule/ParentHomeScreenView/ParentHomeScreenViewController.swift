@@ -9,7 +9,7 @@
 import UIKit
 
 class ParentHomeScreenViewController: UIViewController, ParentHomeScreenViewInputProtocol {
-    
+ 
     var presenter: ParentHomeScreenViewOutputProtocol!
     private let configurator: ParentHomeScreenConfiguratorInputProtocol = ParentHomeScreenConfigurator()
     
@@ -151,6 +151,10 @@ class ParentHomeScreenViewController: UIViewController, ParentHomeScreenViewInpu
     func receiveInfoForUpdatesCells(info: KidsUpdates) {
         cellUpdatesInfo = info
     }
+    
+    func receiveNumberOfActiveTasks(text: String) {
+        activeTasksLabel.text = text
+    }
 }
 
 //MARK: - Private extension
@@ -171,6 +175,7 @@ extension ParentHomeScreenViewController {
         containerView.addSubview(noUpdatesImageView)
         checkNumberOfKids()
         checkUpdates()
+        presenter.getNumberOfActiveTasks()
     }
     
     private func setDelegates() {

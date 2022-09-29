@@ -13,6 +13,7 @@ protocol ParentHomeScreenInteractorInputProtocol: AnyObject {
     func provideNumberOfUpdates()
     func provideInfoForKidsCell(at indexpath: IndexPath)
     func provideInfoForUpdatesCell(at indexpath: IndexPath)
+    func provideNumberOfActiveTasks()
 }
 
 protocol ParentHomeScreenInteractorOutputProtocol: AnyObject {
@@ -20,4 +21,5 @@ protocol ParentHomeScreenInteractorOutputProtocol: AnyObject {
     func receiveNumberOfUpdates(number: Int)
     func receiveInfoForKidsCell(info: KidsData)
     func receiveInfoForUpdatesCell(info: KidsUpdates)
+    func receiveNumberOfActiveTasks(number: Int)
 }

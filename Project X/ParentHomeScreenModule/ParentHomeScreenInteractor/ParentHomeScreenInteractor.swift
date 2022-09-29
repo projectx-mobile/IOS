@@ -8,7 +8,6 @@
 import Foundation
 
 class ParentHomeScreenInteractor: ParentHomeScreenInteractorInputProtocol {
-    
     unowned let presenter: ParentHomeScreenInteractorOutputProtocol
     
     required init(presenter: ParentHomeScreenInteractorOutputProtocol) {
@@ -44,5 +43,12 @@ class ParentHomeScreenInteractor: ParentHomeScreenInteractorInputProtocol {
     func provideInfoForUpdatesCell(at indexpath: IndexPath) {
         let updateData = updatesDataFromEntity[indexpath.row]
         presenter.receiveInfoForUpdatesCell(info: updateData)
+    }
+    
+    func provideNumberOfActiveTasks() {
+        let numberOfActiveTasks = kidsDataFromEntity.reduce(0){total, kid in
+            total + kid.numberOfTasks
+        }
+        presenter.receiveNumberOfActiveTasks(number: numberOfActiveTasks)
     }
 }

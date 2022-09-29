@@ -12,6 +12,7 @@ protocol ParentHomeScreenViewInputProtocol: AnyObject {
     func receiveNumberOfUpdatesCells(number: Int)
     func receiveInfoForKidsCells(info: KidsData)
     func receiveInfoForUpdatesCells(info: KidsUpdates)
+    func receiveNumberOfActiveTasks(text: String)
 }
 
 protocol ParentHomeScreenViewOutputProtocol: AnyObject {
@@ -20,4 +21,5 @@ protocol ParentHomeScreenViewOutputProtocol: AnyObject {
     func getNumberOfUpdatesCells()
     func getInfoForKidsCell(at indexPath: IndexPath)
     func getInfoForUpdatesCell(at indexPath: IndexPath)
+    func getNumberOfActiveTasks()
 }
