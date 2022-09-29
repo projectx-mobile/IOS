@@ -24,6 +24,7 @@ enum LayoutConstants {
     static let inset10: CGFloat = 10.0
     static let inset14: CGFloat = 14.0
     static let inset16: CGFloat = 16.0
+    static let inset18: CGFloat = 18.0
     static let inset19: CGFloat = 19.0
     static let inset20: CGFloat = 20.0
     static let inset24: CGFloat = 24.0
@@ -35,6 +36,7 @@ enum LayoutConstants {
     static let inset72: CGFloat = 72.0
     static let inset76: CGFloat = 76.0
     static let inset88: CGFloat = 88.0
+    static let inset92: CGFloat = 92.0
  
     //CustomButtons, Primary Buttons
     static let height48: CGFloat = 48.0

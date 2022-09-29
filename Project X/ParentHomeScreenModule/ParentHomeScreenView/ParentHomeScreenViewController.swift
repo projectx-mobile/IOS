@@ -8,8 +8,8 @@
 
 import UIKit
 
-class ParentHomeScreenViewController: UIViewController, ParentHomeScreenViewInputProtocol {
- 
+class ParentHomeScreenViewController: UIViewController {
+    
     var presenter: ParentHomeScreenViewOutputProtocol!
     private let configurator: ParentHomeScreenConfiguratorInputProtocol = ParentHomeScreenConfigurator()
     
@@ -88,6 +88,11 @@ class ParentHomeScreenViewController: UIViewController, ParentHomeScreenViewInpu
         return tableView
     }()
     
+    private var numberOfKidsCells = 0
+    private var numberOfUpdatesCells = 0
+    private var cellKidsInfo: KidsData?
+    private var cellUpdatesInfo: KidsUpdates?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .primaryWhiteSnow
@@ -95,6 +100,7 @@ class ParentHomeScreenViewController: UIViewController, ParentHomeScreenViewInpu
         seeAllLabel.font = .robotoRegular13()
         setDelegates()
         setConstraints()
+        addTaps()
         
         kidsTableView.register(KidsCardTableViewCell.self, forCellReuseIdentifier: idKidsCardTableViewCell)
         
@@ -120,6 +126,11 @@ class ParentHomeScreenViewController: UIViewController, ParentHomeScreenViewInpu
         containerView.addGestureRecognizer(panGesture)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setupNavigationBar()
+    }
+    
     @objc func respondToPanGesture(_ sender: UIPanGestureRecognizer) {
         let translation = sender.translation(in: self.view)
         containerView.frame.origin.y = containerView.frame.origin.y + translation.y
@@ -131,11 +142,19 @@ class ParentHomeScreenViewController: UIViewController, ParentHomeScreenViewInpu
         contentSizeUpdatesTableViewObservation?.invalidate()
     }
     
-    private var numberOfKidsCells = 0
-    private var numberOfUpdatesCells = 0
-    private var cellKidsInfo: KidsData?
-    private var cellUpdatesInfo: KidsUpdates?
+    private func addTaps() {
+        let tapLabel = UITapGestureRecognizer(target: self, action: #selector(seeAllUpdatesTapped))
+        seeAllLabel.isUserInteractionEnabled = true
+        seeAllLabel.addGestureRecognizer(tapLabel)
+    }
     
+    @objc private func seeAllUpdatesTapped() {
+        presenter.seeAllUpdatesLabelTapped()
+    }
+}
+
+//MARK: - ParentHomeScreenViewInputProtocol
+extension ParentHomeScreenViewController: ParentHomeScreenViewInputProtocol {
     func receiveNumberOfKidsCells(number: Int) {
         numberOfKidsCells = number
     }
@@ -183,6 +202,7 @@ extension ParentHomeScreenViewController {
         kidsTableView.dataSource = self
         updatesTableView.delegate = self
         updatesTableView.dataSource = self
+      //  containerView.seeAllDelegate = self
     }
     
     private func checkNumberOfKids() {
@@ -213,6 +233,17 @@ extension ParentHomeScreenViewController {
         }
     }
     
+    private func setupNavigationBar() {
+        if #available(iOS 13.0, *) {
+            let navBarAppearance = UINavigationBarAppearance()
+            navBarAppearance.configureWithTransparentBackground()
+            navBarAppearance.backgroundColor = .clear
+            
+            navigationController?.navigationBar.standardAppearance = navBarAppearance
+            navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
+        }
+    }
+
     private func setConstraints() {
         NSLayoutConstraint.activate([
             titleLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: LayoutConstants.inset76),

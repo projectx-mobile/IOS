@@ -22,4 +22,5 @@ protocol ParentHomeScreenViewOutputProtocol: AnyObject {
     func getInfoForKidsCell(at indexPath: IndexPath)
     func getInfoForUpdatesCell(at indexPath: IndexPath)
     func getNumberOfActiveTasks()
+    func seeAllUpdatesLabelTapped()
 }

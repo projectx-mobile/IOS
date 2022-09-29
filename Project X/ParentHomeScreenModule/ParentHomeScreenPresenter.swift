@@ -26,6 +26,7 @@ struct UpdatesInformation {
 }
 
 class ParentHomeScreenPresenter: ParentHomeScreenViewOutputProtocol{
+    
     unowned let view: ParentHomeScreenViewInputProtocol
     var interactor: ParentHomeScreenInteractorInputProtocol!
     var router: ParentHomeScreenRouterInputProtocol!
@@ -52,6 +53,10 @@ class ParentHomeScreenPresenter: ParentHomeScreenViewOutputProtocol{
     
     func getNumberOfActiveTasks() {
         interactor.provideNumberOfActiveTasks()
+    }
+    
+    func seeAllUpdatesLabelTapped() {
+        router.openParentUpdatesViewController()
     }
 }
 
