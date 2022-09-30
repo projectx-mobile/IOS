@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0030964328E665AE00C321CC /* LoginWithMailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0030964228E665AE00C321CC /* LoginWithMailScreen.swift */; };
 		004AD9BD28E30C1F00C9F88B /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004AD9BC28E30C1F00C9F88B /* ViewModel.swift */; };
 		00B2BB2C28CF36450001CD4A /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B2BB2B28CF36450001CD4A /* LoginButton.swift */; };
 		889F433C28E18B9200DC347D /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889F433B28E18B9200DC347D /* CustomButton.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0030964228E665AE00C321CC /* LoginWithMailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWithMailScreen.swift; sourceTree = "<group>"; };
 		004AD9BC28E30C1F00C9F88B /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		00B2BB2B28CF36450001CD4A /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
 		889F433B28E18B9200DC347D /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
@@ -107,9 +109,99 @@
 		0030963E28E491DA00C321CC /* Stories */ = {
 			isa = PBXGroup;
 			children = (
+				0030963F28E660D800C321CC /* LoginModule */,
 				889F434828E18F0500DC347D /* WelcomeModule */,
 			);
 			path = Stories;
+			sourceTree = "<group>";
+		};
+		0030963F28E660D800C321CC /* LoginModule */ = {
+			isa = PBXGroup;
+			children = (
+				0030964028E660F300C321CC /* WelcomeScreenModule */,
+				0030964128E6616A00C321CC /* LoginScreenModule */,
+			);
+			path = LoginModule;
+			sourceTree = "<group>";
+		};
+		0030964028E660F300C321CC /* WelcomeScreenModule */ = {
+			isa = PBXGroup;
+			children = (
+				0030964A28E6666A00C321CC /* View */,
+				0030964928E6665500C321CC /* Interactor */,
+				0030964C28E6668000C321CC /* Presenter */,
+				0030964D28E6668400C321CC /* Assembly */,
+			);
+			path = WelcomeScreenModule;
+			sourceTree = "<group>";
+		};
+		0030964128E6616A00C321CC /* LoginScreenModule */ = {
+			isa = PBXGroup;
+			children = (
+				0030964528E665CC00C321CC /* View */,
+				0030964628E665D700C321CC /* Interactor */,
+				0030964828E6660B00C321CC /* Presenter */,
+				0030964728E665F100C321CC /* Assembly */,
+			);
+			path = LoginScreenModule;
+			sourceTree = "<group>";
+		};
+		0030964528E665CC00C321CC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0030964228E665AE00C321CC /* LoginWithMailScreen.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0030964628E665D700C321CC /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		0030964728E665F100C321CC /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		0030964828E6660B00C321CC /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		0030964928E6665500C321CC /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Interactor;
+			sourceTree = "<group>";
+		};
+		0030964A28E6666A00C321CC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CA214CF128BDFEF5006176A7 /* WelcomScreenLogin.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		0030964C28E6668000C321CC /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		0030964D28E6668400C321CC /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Assembly;
 			sourceTree = "<group>";
 		};
 		889F433A28E18B5B00DC347D /* Views */ = {
@@ -223,7 +315,6 @@
 			children = (
 				0030963E28E491DA00C321CC /* Stories */,
 				0030963D28E4919300C321CC /* App */,
-				CA214CF128BDFEF5006176A7 /* WelcomScreenLogin.swift */,
 				975958FB28D9B2FD00570BB4 /* Design System */,
 				889F433F28E18C4F00DC347D /* Extensions */,
 				889F434B28E18FA800DC347D /* Resources */,
@@ -313,6 +404,7 @@
 				889F433E28E18BEC00DC347D /* PrimaryButton.swift in Sources */,
 				CA214CF228BDFEF5006176A7 /* WelcomScreenLogin.swift in Sources */,
 				975958FE28D9B40900570BB4 /* Button.swift in Sources */,
+				0030964328E665AE00C321CC /* LoginWithMailScreen.swift in Sources */,
 				889F435B28E191CF00DC347D /* WelcomeViewIO.swift in Sources */,
 				CA214CEE28BDFEF5006176A7 /* AppDelegate.swift in Sources */,
 				889F435728E190EA00DC347D /* ComeBackView.swift in Sources */,

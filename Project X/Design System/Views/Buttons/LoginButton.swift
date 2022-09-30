@@ -13,7 +13,7 @@ final class LoginButton: UIButton {
         let label = UILabel()
         label.numberOfLines = 1
         label.textAlignment = .center
-        label.font = UIFont(name: "Roboto-Medium", size: 16)
+        label.font = .robotoMedium16()
         return label
     }()
     
@@ -46,19 +46,18 @@ final class LoginButton: UIButton {
         textLabel.text = viewModel.textLabel
         textLabel.textColor = viewModel.tintColor
         iconImageView.image = UIImage(named: viewModel.imageView)
-        iconImageView.tintColor = viewModel.tintColor
         layer.backgroundColor = viewModel.backgroundColor.cgColor
     }
     
     private func setupLayout() {
         textLabel.sizeToFit()
-        let iconSize: CGFloat = 20
+        let iconSize: CGFloat = 24
         let xPosition: CGFloat = (frame.size.width - textLabel.frame.size.width - iconSize - 5) / 2
         iconImageView.frame = CGRect(x: xPosition,
                                      y: (frame.size.height - iconSize) / 2,
                                      width: iconSize,
                                      height: iconSize)
-        textLabel.frame = CGRect(x: xPosition + iconSize + 12,
+        textLabel.frame = CGRect(x: xPosition + iconSize + 10,
                                  y: 0,
                                  width: textLabel.frame.size.width,
                                  height: frame.size.height)
@@ -67,5 +66,13 @@ final class LoginButton: UIButton {
     override func layoutSubviews() {
         super.layoutSubviews()
         setupLayout()
+    }
+    
+    override var isHighlighted: Bool {
+        didSet {
+            UIView.animate(withDuration: 0.1) {
+                self.layer.shadowOpacity = self.isHighlighted ? 0 : 1
+            }
+        }
     }
 }

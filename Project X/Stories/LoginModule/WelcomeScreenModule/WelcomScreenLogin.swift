@@ -11,10 +11,10 @@ final class WelcomScreenLogin: UIViewController {
     private let titleLabel = UILabel()
     private let subTitleLabel = UILabel()
     private let createLabel = UILabel()
+    private let createButton = UIButton()
     private let buttonLoginGoogle = LoginButton()
     private let buttonLoginApple = LoginButton()
     private let buttonLoginMail = LoginButton()
-    private let createButton = UIButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,13 +27,13 @@ private extension WelcomScreenLogin {
     func setupUI() {
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.textColor = .primaryMidnight
-        titleLabel.font = UIFont(name: "NexaDemo-Bold", size: 32)
+        titleLabel.font = .nexaDemoBold32()
         titleLabel.text = "Войти"
         view.addSubview(titleLabel)
         
         subTitleLabel.translatesAutoresizingMaskIntoConstraints = false
-        subTitleLabel.textColor = UIColor(red: 0.424, green: 0.431, blue: 0.517, alpha: 1)
-        subTitleLabel.font = UIFont(name: "Roboto-Regular", size: 14)
+        subTitleLabel.textColor = .secondaryDuskGrey
+        subTitleLabel.font = .robotoRegular14()
         subTitleLabel.text = "Выбери способ доступа в свой аккаунт."
         view.addSubview(subTitleLabel)
         
@@ -41,28 +41,36 @@ private extension WelcomScreenLogin {
         let underlineString = NSAttributedString(string: "Создать аккаунт.", attributes: [NSAttributedString.Key.underlineStyle: 1, NSAttributedString.Key.foregroundColor : UIColor.primaryJuicyGrape])
         attributedString.append(underlineString)
         createLabel.translatesAutoresizingMaskIntoConstraints = false
-        createLabel.font = UIFont(name: "Roboto-Medium", size: 14)
+        createLabel.font = .robotoMedium14()
         createLabel.attributedText = attributedString
         createLabel.textAlignment = .center
         view.addSubview(createLabel)
         
+        view.addSubview(createButton)
+        createButton.addTarget(self, action: #selector(createButtonDidTap), for: .touchUpInside)
+        
+        
         view.addSubview(buttonLoginGoogle)
+        buttonLoginGoogle.addTarget(self, action: #selector(buttonLoginGoogleDidTap), for: .touchUpInside)
         buttonLoginGoogle.configurate(with: CustomLoginButtonViewModel(textLabel: "Войти с Google",
                                                                        imageView: "googleIcon",
                                                                        backgroundColor: .primaryWhiteSnow,
                                                                        tintColor: .primaryMidnight))
         view.addSubview(buttonLoginApple)
+        buttonLoginApple.addTarget(self, action: #selector(buttonLoginAppleDidTap), for: .touchUpInside)
         buttonLoginApple.configurate(with: CustomLoginButtonViewModel(textLabel: "Войти с Apple",
                                                                       imageView: "appleIcon",
                                                                       backgroundColor: .primaryPureWhite,
                                                                       tintColor: .primaryMidnight))
         view.addSubview(buttonLoginMail)
+        buttonLoginMail.addTarget(self, action: #selector(buttonLoginMailDidTap), for: .touchUpInside)
         buttonLoginMail.configurate(with: CustomLoginButtonViewModel(textLabel: "Войти по email",
                                                                      imageView: "emailIcon",
                                                                      backgroundColor: .primaryJuicyGrape,
                                                                      tintColor: .primaryPureWhite))
+        view.backgroundColor = .primaryWhiteSnow
     }
-        //MARK: - NSLayoutConstraint
+    //MARK: - NSLayoutConstraint
     func setupConstraint() {
         NSLayoutConstraint.activate([
             titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16),
@@ -97,6 +105,26 @@ private extension WelcomScreenLogin {
             createButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16),
             createButton.heightAnchor.constraint(equalToConstant: 20)
         ])
+    }
+    // MARK: - TargetFunction
+    @objc private func buttonLoginGoogleDidTap() {
+        //Логин через гугл аккаунт и показ домашнего экрана
+    }
+    
+    @objc private func buttonLoginAppleDidTap() {
+        //Логин через apple id и показ домашнего экрана
+    }
+    
+    @objc private func buttonLoginMailDidTap() {
+        //Логин через mail и показ экрана входа по почте
+        let infoVC = LoginWithMailScreen(nibName: String(describing: LoginWithMailScreen.self), bundle: nil)
+        navigationController?.pushViewController(infoVC, animated: true)
+        print("MailTap")
+//        navigationController?.pushViewController(LoginWithMailScreen, animated: true)
+    }
+    
+    @objc private func createButtonDidTap() {
+        // вызов экрана создания аккаунта
     }
 }
 

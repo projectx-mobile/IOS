@@ -12,6 +12,9 @@ import UIKit
      static func robotoMedium16() -> UIFont? {
          return UIFont.init(name: "Roboto-Medium", size: 16)
      }
+     static func robotoMedium14() -> UIFont? {
+         return UIFont.init(name: "Roboto-Medium", size: 14)
+     }
 
      static func robotoBold16() -> UIFont? {
          return UIFont.init(name: "Roboto-Bold", size: 16)
@@ -23,5 +26,13 @@ import UIKit
 
      static func nexaDemoBold16() -> UIFont? {
          return UIFont.init(name: "NexaDemo-Bold", size: 16)
+     }
+     
+     static func nexaDemoBold32() -> UIFont? {
+         return UIFont.init(name: "NexaDemo-Bold", size: 32)
+     }
+     
+     static func robotoRegular14() -> UIFont? {
+         return UIFont.init(name: "Roboto-Regular", size: 14)
      }
  }
