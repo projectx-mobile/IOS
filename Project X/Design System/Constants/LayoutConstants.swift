@@ -9,6 +9,7 @@ import Foundation
 
 enum LayoutConstants {
     
+    //MARK: - borderWidth
     static let borderWidth: CGFloat = 1.4
 
     //MARK: - Insets
