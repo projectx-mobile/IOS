@@ -11,6 +11,10 @@ final class CustomButton: UIButton {
     
     convenience init(text: String = "") {
         self.init(type: .custom)
+        configure(with: text)
+    }
+    
+    private func configure(with text: String) {
         self.setTitle(text, for: .normal)
         self.titleLabel?.font = .nexaDemoBold16()
         self.setTitleColor(.primaryMidnight, for: .normal)

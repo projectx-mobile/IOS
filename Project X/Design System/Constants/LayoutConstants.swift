@@ -17,7 +17,8 @@ enum LayoutConstants {
     
     static let shadowRadius12: CGFloat = 12.0
     
-    //common insets
+    
+    //MARK: - Insets
     static let inset5: CGFloat = 5.0
     static let inset6: CGFloat = 6.0
     static let inset8: CGFloat = 8.0
@@ -38,23 +39,22 @@ enum LayoutConstants {
     static let inset88: CGFloat = 88.0
     static let inset92: CGFloat = 92.0
  
-    //CustomButtons, Primary Buttons
-    static let height48: CGFloat = 48.0
-    static let height56: CGFloat = 56.0
-    static let width160: CGFloat = 160.0
+    //MARK: - Duration
     static let duration: TimeInterval = 0.1
     
-    
-    //ComeBackView
+    //MARK: - Height
+    static let height48: CGFloat = 48.0
+    static let height56: CGFloat = 56.0
+    static let height78: Double = 78.0
+    static let height152: Double = 152.0
     static let height375: CGFloat = 375.0
     
-    //noKidsImageView
-    static let width85: Double = 85.0
-    static let height78: Double = 78.0
     
-    //noUpdatesImageView
+    //MARK: - Width
+    static let width85: Double = 85.0
+    static let width160: CGFloat = 160.0
     static let width167: Double = 167.0
-    static let height152: Double = 152.0
+    
     
     //separatorView
     static let cornerRadius10: CGFloat = 10.0

@@ -11,6 +11,10 @@ final class PrimaryButton: UIButton {
 
     convenience init(text: String = "", fillColor: UIColor, tintColor: UIColor, borderColor: UIColor) {
         self.init(type: .custom)
+        configure(with: text, and: fillColor, and: tintColor, and: borderColor)
+    }
+    
+    private func configure(with text: String, and fillColor: UIColor, and tintColor: UIColor, and borderColor: UIColor ) {
         self.backgroundColor =  fillColor
         self.setTitle(text, for: .normal)
         self.titleLabel?.font = .robotoBold16()
