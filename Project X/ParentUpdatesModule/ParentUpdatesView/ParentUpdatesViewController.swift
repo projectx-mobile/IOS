@@ -51,8 +51,6 @@ private extension ParentUpdatesViewController {
     }
     
     func setupNavigationBar() {
-        if #available(iOS 13.0, *) {
-            
             let navBarAppearance = UINavigationBarAppearance()
             navBarAppearance.configureWithTransparentBackground()
             navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.primaryMidnight]
@@ -70,7 +68,6 @@ private extension ParentUpdatesViewController {
             backButton.title = ""
             backButton.tintColor = .primaryMidnight
             self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
-        }
     }
     
     func setConstraints() {
