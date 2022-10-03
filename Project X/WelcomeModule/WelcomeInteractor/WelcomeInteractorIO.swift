@@ -13,4 +13,3 @@ import Foundation
 
  protocol WelcomeInteractorOutputProtocol: AnyObject {
  }
-

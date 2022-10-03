@@ -7,12 +7,10 @@
 
 import Foundation
 
- final class WelcomePresenter: WelcomeViewOutputProtocol{
-
+ final class WelcomePresenter: WelcomeViewOutputProtocol {
      unowned let view: WelcomeViewInputProtocol
      var interactor: WelcomeInteractorInputProtocol!
      var router: WelcomeRouterInputProtocol!
-
      required init(view: WelcomeViewInputProtocol) {
          self.view = view
      }

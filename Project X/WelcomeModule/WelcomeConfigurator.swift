@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+//swiftlint:disable force_cast
  protocol WelcomeConfiguratorInputProtocol {
      func configure(with viewController: WelcomeViewController)
  }

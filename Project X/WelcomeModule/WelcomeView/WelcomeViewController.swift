@@ -40,13 +40,11 @@ class WelcomeViewController: UIViewController {
 
 //MARK: - Private extension
 extension WelcomeViewController {
-    
     private func setupViews() {
         view.addSubview(signUpButton)
         view.addSubview(logInButton)
         view.addSubview(comeBackView)
     }
-    
     private func addSwipe() {
         let swipe = UISwipeGestureRecognizer(target: self, action: #selector(doSwipe))
         swipe.direction = .down
@@ -54,24 +52,20 @@ extension WelcomeViewController {
         comeBackView.isUserInteractionEnabled = true
         comeBackView.addGestureRecognizer(swipe)
     }
-    
     @objc private func doSwipe() {
         UIView.animate(withDuration: 1) {
             self.comeBackView.frame = CGRect(x: 0,
-                                             y: UIScreen.main.bounds.size.height,
-                                             width: self.comeBackView.frame.width ,
+                                             y: UIScreen.main.bounds.size.height,width: self.comeBackView.frame.width ,
                                              height: self.comeBackView.frame.height)
         }
     }
-    
     @objc private func signUpButtonTapped() {
     }
 
     @objc private func logInButtonTapped() {
         UIView.animate(withDuration: 1) {
             self.comeBackView.frame = CGRect(x: 0,
-                                             y: (UIScreen.main.bounds.size.height - self.comeBackView.frame.height),
-                                             width: self.comeBackView.frame.width ,
+                                             y: (UIScreen.main.bounds.size.height - self.comeBackView.frame.height),width: self.comeBackView.frame.width,
                                              height: self.comeBackView.frame.height)
         }
     }
@@ -83,7 +77,6 @@ extension WelcomeViewController {
             signUpButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16),
             signUpButton.heightAnchor.constraint(equalToConstant: 48)
         ])
-        
         NSLayoutConstraint.activate([
             logInButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -58),
             logInButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),

@@ -224,6 +224,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CA214CFE28BDFEF7006176A7 /* Build configuration list for PBXNativeTarget "Project X" */;
 			buildPhases = (
+				972A5EFC28EAC3ED00996235 /* ShellScript */,
 				B43EA00EEBBFE018B93A6694 /* [CP] Check Pods Manifest.lock */,
 				972A5EEC28EA0E4800996235 /* Run R.swift */,
 				CA214CE628BDFEF5006176A7 /* Sources */,
@@ -307,6 +308,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
+		972A5EFC28EAC3ED00996235 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint\n";
 		};
 		B43EA00EEBBFE018B93A6694 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
