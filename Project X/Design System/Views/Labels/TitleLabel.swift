@@ -7,10 +7,14 @@
 
 import UIKit
 
-class TitleLabel: UILabel {
+final class TitleLabel: UILabel {
     
     convenience init(text: String) {
         self.init()
+        configure(with: text)
+    }
+    
+    private func configure(with text: String) {
         self.text = text
         self.textColor = .primaryMidnight
         self.font = .nexaDemoBold32()

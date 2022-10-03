@@ -177,9 +177,9 @@ extension ParentHomeScreenViewController: ParentHomeScreenViewInputProtocol {
 }
 
 //MARK: - Private extension
-extension ParentHomeScreenViewController {
+private extension ParentHomeScreenViewController {
     
-    private func setupViews() {
+    func setupViews() {
         view.addSubview(titleLabel)
         view.addSubview(activeTasksLabel)
         view.addSubview(inviteUsersLabel)
@@ -197,15 +197,14 @@ extension ParentHomeScreenViewController {
         presenter.getNumberOfActiveTasks()
     }
     
-    private func setDelegates() {
+    func setDelegates() {
         kidsTableView.delegate = self
         kidsTableView.dataSource = self
         updatesTableView.delegate = self
         updatesTableView.dataSource = self
-      //  containerView.seeAllDelegate = self
     }
     
-    private func checkNumberOfKids() {
+    func checkNumberOfKids() {
         presenter.getNumberOfKidsCells()
         if numberOfKidsCells == 0 {
             kidsTableView.isHidden = true
@@ -218,7 +217,7 @@ extension ParentHomeScreenViewController {
         }
     }
     
-    private func checkUpdates() {
+    func checkUpdates() {
         presenter.getNumberOfUpdatesCells()
         if numberOfUpdatesCells == 0 {
             updatesTableView.isHidden = true
@@ -233,7 +232,7 @@ extension ParentHomeScreenViewController {
         }
     }
     
-    private func setupNavigationBar() {
+    func setupNavigationBar() {
         if #available(iOS 13.0, *) {
             let navBarAppearance = UINavigationBarAppearance()
             navBarAppearance.configureWithTransparentBackground()
@@ -244,7 +243,7 @@ extension ParentHomeScreenViewController {
         }
     }
 
-    private func setConstraints() {
+    func setConstraints() {
         NSLayoutConstraint.activate([
             titleLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: LayoutConstants.inset76),
             titleLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: LayoutConstants.inset16),

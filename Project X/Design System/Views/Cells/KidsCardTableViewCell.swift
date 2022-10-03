@@ -7,7 +7,7 @@
 
 import UIKit
 
-class KidsCardTableViewCell: UITableViewCell {
+final class KidsCardTableViewCell: UITableViewCell {
     
     private let backgroundCell:UIView = {
         let view = UIView()
@@ -95,7 +95,16 @@ class KidsCardTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func setupViews() {
+    func cellConfigure(data:KidsData) {
+        kidNameLabel.text = data.name
+        tasksLabel.text = "\(data.numberOfTasksDone)/\(data.numberOfTasks) задач"
+        addProgress(view: circleView, tasks: data.numberOfTasks, tasksDone: data.numberOfTasksDone)
+    }
+}
+
+//MARK: - Private extension
+private extension KidsCardTableViewCell {
+    func setupViews() {
         backgroundColor = .clear
         selectionStyle = .none
        
@@ -108,7 +117,7 @@ class KidsCardTableViewCell: UITableViewCell {
         addSubview(tasksLabel)
     }
     
-    private func addProgress(view: UIView, tasks: Int, tasksDone: Int) {
+    func addProgress(view: UIView, tasks: Int, tasksDone: Int) {
         let center = LayoutConstants.centerBezier
         
         let startAngle:CGFloat = (-CGFloat.pi) / 2
@@ -125,15 +134,8 @@ class KidsCardTableViewCell: UITableViewCell {
         shapeLayer.strokeColor = UIColor.primaryJuicyGrape.cgColor
         view.layer.addSublayer(shapeLayer)
     }
-
-    func cellConfigure(data:KidsData) {
-        kidNameLabel.text = data.name
-        tasksLabel.text = "\(data.numberOfTasksDone)/\(data.numberOfTasks) задач"
-        addProgress(view: circleView, tasks: data.numberOfTasks, tasksDone: data.numberOfTasksDone)
-    }
     
-    private func setConstraints() {
-        
+    func setConstraints() {
         NSLayoutConstraint.activate([
             backgroundCell.topAnchor.constraint(equalTo: topAnchor, constant: LayoutConstants.inset16),
             backgroundCell.leadingAnchor.constraint(equalTo: leadingAnchor, constant: LayoutConstants.inset36),

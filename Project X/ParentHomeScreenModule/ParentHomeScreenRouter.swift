@@ -21,20 +21,9 @@ class ParentHomeScreenRouter: ParentHomeScreenRouterInputProtocol {
     }
     
     func openParentUpdatesViewController() {
-        
-        //        let configurator: ParentUpdatesConfiguratorInputProtocol = ParentUpdatesConfigurator()
-        //        let updatesVC = ParentUpdatesViewController()
-        //        configurator.configure(with: updatesVC)
-        //        window?.rootViewController = updatesVC
-        
         let parentUpdatesVC = ParentUpdatesViewController()
         let configurator: ParentUpdatesConfiguratorInputProtocol = ParentUpdatesConfigurator()
         configurator.configure(with: parentUpdatesVC)
         navigationController?.pushViewController(parentUpdatesVC, animated: true)
-        
-        
-        
-      //  newWorkoutViewController.modalPresentationStyle = .fullScreen
-      //  present(newWorkoutViewController, animated: true, completion: nil)
     }
 }

@@ -39,18 +39,18 @@ class ParentUpdatesViewController: UIViewController {
 }
 
 //MARK: - Private extension
-extension ParentUpdatesViewController {
+private extension ParentUpdatesViewController {
     
-    private func setupViews() {
+    func setupViews() {
         view.addSubview(updatesTableView)
     }
     
-    private func setDelegates() {
+    func setDelegates() {
         updatesTableView.delegate = self
         updatesTableView.dataSource = self
     }
     
-    private func setupNavigationBar() {
+    func setupNavigationBar() {
         if #available(iOS 13.0, *) {
             
             let navBarAppearance = UINavigationBarAppearance()
@@ -73,7 +73,7 @@ extension ParentUpdatesViewController {
         }
     }
     
-    private func setConstraints() {
+    func setConstraints() {
         NSLayoutConstraint.activate([
             updatesTableView.topAnchor.constraint(equalTo: view.topAnchor),
             updatesTableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: LayoutConstants.inset18),

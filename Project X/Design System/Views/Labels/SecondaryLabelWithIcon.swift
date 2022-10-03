@@ -8,10 +8,14 @@
 
 import UIKit
 
-class SecondaryLabelWithIcon: UILabel {
+final class SecondaryLabelWithIcon: UILabel {
 
     convenience init(text: String) {
         self.init()
+        configure(with: text)
+    }
+    
+    private func configure(with text: String) {
         self.textColor = .duskGrey
         self.font = .robotoRegular14()
         

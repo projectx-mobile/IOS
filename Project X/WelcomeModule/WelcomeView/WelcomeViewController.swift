@@ -37,9 +37,8 @@ class WelcomeViewController: UIViewController {
     }
 }
 
-
 //MARK: - Private extension
-extension WelcomeViewController {
+private extension WelcomeViewController {
     
     private func setupViews() {
         view.addSubview(signUpButton)

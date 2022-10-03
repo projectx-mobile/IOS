@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UpdatesTableViewCell: UITableViewCell {
+final class UpdatesTableViewCell: UITableViewCell {
     
     private let backgroundCell:UIView = {
         let view = UIView()
@@ -39,7 +39,14 @@ class UpdatesTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func setupViews() {
+    func cellConfigure(data:KidsUpdates) {
+        updateLabel.text = "\(data.name) \(data.update.rawValue)"
+    }
+}
+
+//MARK: - Private extension
+private extension UpdatesTableViewCell {
+    func setupViews() {
         backgroundColor = .clear
         selectionStyle = .none
        
@@ -47,12 +54,7 @@ class UpdatesTableViewCell: UITableViewCell {
         addSubview(updateLabel)
     }
     
-    func cellConfigure(data:KidsUpdates) {
-        updateLabel.text = "\(data.name) \(data.update.rawValue)"
-    }
-    
-    private func setConstraints() {
-        
+    func setConstraints() {
         NSLayoutConstraint.activate([
             backgroundCell.topAnchor.constraint(equalTo: topAnchor, constant: LayoutConstants.inset5),
             backgroundCell.leadingAnchor.constraint(equalTo: leadingAnchor),
