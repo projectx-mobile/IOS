@@ -12,7 +12,7 @@ protocol ParentHomeScreenRouterInputProtocol {
     func openParentUpdatesViewController()
 }
 
-class ParentHomeScreenRouter: ParentHomeScreenRouterInputProtocol {
+final class ParentHomeScreenRouter: ParentHomeScreenRouterInputProtocol {
     unowned let viewController: ParentHomeScreenViewController
     weak var navigationController: UINavigationController?
     

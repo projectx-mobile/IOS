@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ParentUpdatesViewController: UIViewController {
+final class ParentUpdatesViewController: UIViewController {
     var presenter: ParentUpdatesViewOutputProtocol!
     
     private let idUpdatesTableViewCell = "idUpdatesTableViewCell"
@@ -26,7 +26,7 @@ class ParentUpdatesViewController: UIViewController {
     private var cellUpdatesInfo: KidsUpdates?
     
     override func viewDidLoad() {
-        title = "Обновления"
+        title = Constants.title
         super.viewDidLoad()
         view.backgroundColor = .primaryWhiteSnow
         setupViews()
@@ -77,6 +77,13 @@ private extension ParentUpdatesViewController {
             updatesTableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -LayoutConstants.inset18),
             updatesTableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: 0)
         ])
+    }
+}
+
+//MARK: - Private extension
+private extension ParentUpdatesViewController {
+    enum Constants {
+        static let title = "Обновления"
     }
 }
 

@@ -14,7 +14,10 @@ final class SecondaryLabelWithIcon: UILabel {
         self.init()
         configure(with: text)
     }
-    
+}
+
+//MARK: - Private extension
+private extension SecondaryLabelWithIcon {
     private func configure(with text: String) {
         self.textColor = .duskGrey
         self.font = .robotoRegular14()

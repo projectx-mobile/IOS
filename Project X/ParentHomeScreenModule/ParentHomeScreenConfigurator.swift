@@ -12,7 +12,7 @@ protocol ParentHomeScreenConfiguratorInputProtocol {
     func configure(with viewController: ParentHomeScreenViewController, with navigationController: UINavigationController)
 }
 
-class ParentHomeScreenConfigurator: ParentHomeScreenConfiguratorInputProtocol {
+final class ParentHomeScreenConfigurator: ParentHomeScreenConfiguratorInputProtocol {
     func configure(with viewController: ParentHomeScreenViewController, with navigationController: UINavigationController) {
         let presenter = ParentHomeScreenPresenter(view: viewController as ParentHomeScreenViewInputProtocol)
         let interactor = ParentHomeScreenInteractor(presenter: presenter)

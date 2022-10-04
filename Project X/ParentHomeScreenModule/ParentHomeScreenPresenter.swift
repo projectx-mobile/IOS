@@ -25,7 +25,7 @@ struct UpdatesInformation {
     }
 }
 
-class ParentHomeScreenPresenter: ParentHomeScreenViewOutputProtocol{
+final class ParentHomeScreenPresenter: ParentHomeScreenViewOutputProtocol{
     
     unowned let view: ParentHomeScreenViewInputProtocol
     var interactor: ParentHomeScreenInteractorInputProtocol!

@@ -11,7 +11,7 @@ protocol ParentUpdatesConfiguratorInputProtocol {
     func configure(with viewController: ParentUpdatesViewController)
 }
 
-class ParentUpdatesConfigurator: ParentUpdatesConfiguratorInputProtocol {
+final class ParentUpdatesConfigurator: ParentUpdatesConfiguratorInputProtocol {
     
     func configure(with viewController: ParentUpdatesViewController) {
         let presenter = ParentUpdatesPresenter(view: viewController as ParentUpdatesViewInputProtocol)

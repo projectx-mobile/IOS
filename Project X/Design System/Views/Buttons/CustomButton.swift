@@ -13,14 +13,7 @@ final class CustomButton: UIButton {
         self.init(type: .custom)
         configure(with: text)
     }
-    
-    private func configure(with text: String) {
-        self.setTitle(text, for: .normal)
-        self.titleLabel?.font = .nexaDemoBold16()
-        self.setTitleColor(.primaryMidnight, for: .normal)
-        self.translatesAutoresizingMaskIntoConstraints = false
-    }
-    
+
     override var isHighlighted: Bool {
         didSet {
             UIView.animate(withDuration: LayoutConstants.duration) {
@@ -29,3 +22,16 @@ final class CustomButton: UIButton {
         }
     }
 }
+
+//MARK: - Private extension
+private extension CustomButton {
+    private func configure(with text: String) {
+        self.setTitle(text, for: .normal)
+        self.titleLabel?.font = .nexaDemoBold16()
+        self.setTitleColor(.primaryMidnight, for: .normal)
+        self.translatesAutoresizingMaskIntoConstraints = false
+    }
+}
+    
+
+

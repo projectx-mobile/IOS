@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ParentUpdatesInteractor: ParentUpdatesInteractorInputProtocol {
+final class ParentUpdatesInteractor: ParentUpdatesInteractorInputProtocol {
     unowned let presenter: ParentUpdatesInteractorOutputProtocol
     
     required init(presenter: ParentUpdatesInteractorOutputProtocol) {

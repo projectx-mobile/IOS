@@ -13,7 +13,10 @@ final class SubtitleLabel: UILabel {
         self.init()
         configure(with: text)
     }
-    
+}
+
+//MARK: - Private extension
+private extension SubtitleLabel {
     private func configure(with text: String) {
         self.text = text
         self.textColor = .black

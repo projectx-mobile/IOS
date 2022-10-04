@@ -13,7 +13,10 @@ final class TitleLabel: UILabel {
         self.init()
         configure(with: text)
     }
-    
+}
+
+//MARK: - Private extension
+private extension TitleLabel {
     private func configure(with text: String) {
         self.text = text
         self.textColor = .primaryMidnight

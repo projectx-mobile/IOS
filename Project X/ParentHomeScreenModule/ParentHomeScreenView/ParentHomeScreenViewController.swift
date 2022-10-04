@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ParentHomeScreenViewController: UIViewController {
+final class ParentHomeScreenViewController: UIViewController {
     
     var presenter: ParentHomeScreenViewOutputProtocol!
     private let configurator: ParentHomeScreenConfiguratorInputProtocol = ParentHomeScreenConfigurator()

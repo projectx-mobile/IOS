@@ -13,7 +13,10 @@ final class SecondaryLabel: UILabel {
         self.init()
         configure(with: text)
     }
-    
+}
+
+//MARK: - Private extension
+private extension SecondaryLabel {
     private func configure(with text: String) {
         self.text = text
         self.textColor = .duskGrey

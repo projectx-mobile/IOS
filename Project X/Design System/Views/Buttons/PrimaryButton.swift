@@ -14,6 +14,17 @@ final class PrimaryButton: UIButton {
         configure(with: text, and: fillColor, and: tintColor, and: borderColor)
     }
     
+    override var isHighlighted: Bool {
+        didSet {
+            UIView.animate(withDuration: LayoutConstants.duration) {
+                self.layer.shadowOpacity = self.isHighlighted ? 0 : 1
+            }
+        }
+    }
+}
+
+//MARK: - Private extension
+private extension PrimaryButton {
     private func configure(with text: String, and fillColor: UIColor, and tintColor: UIColor, and borderColor: UIColor ) {
         self.backgroundColor =  fillColor
         self.setTitle(text, for: .normal)
@@ -25,13 +36,5 @@ final class PrimaryButton: UIButton {
         self.layer.borderColor = borderColor.cgColor
         self.addShadowOnView()
         self.translatesAutoresizingMaskIntoConstraints = false
-    }
-    
-    override var isHighlighted: Bool {
-        didSet {
-            UIView.animate(withDuration: LayoutConstants.duration) {
-                self.layer.shadowOpacity = self.isHighlighted ? 0 : 1
-            }
-        }
     }
 }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ParentHomeScreenInteractor: ParentHomeScreenInteractorInputProtocol {
+final class ParentHomeScreenInteractor: ParentHomeScreenInteractorInputProtocol {
     unowned let presenter: ParentHomeScreenInteractorOutputProtocol
     
     required init(presenter: ParentHomeScreenInteractorOutputProtocol) {
