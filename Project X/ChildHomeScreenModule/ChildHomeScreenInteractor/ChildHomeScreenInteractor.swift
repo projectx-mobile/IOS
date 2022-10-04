@@ -8,9 +8,25 @@
 import Foundation
 
 final class ChildHomeScreenInteractor: ChildHomeScreenInteractorInputProtocol {
+
     unowned let presenter: ChildHomeScreenInteractorOutputProtocol
     
     required init(presenter: ChildHomeScreenInteractorOutputProtocol) {
         self.presenter = presenter
+    }
+    
+    let kidsNotificationsFromEntity:[KidsNotification] = [
+        KidsNotification(text: "У тебя появилась первая новая задача на сегодня, постарайся успеть."),
+        KidsNotification(text: "У тебя появилась новая задача на сегодня, постарайся успеть.")
+    ]
+
+    func provideNumberOfNotifications() {
+        let numberOfNotifications = kidsNotificationsFromEntity.count
+        presenter.receiveNumberOfNotifications(number: numberOfNotifications)
+    }
+    
+    func provideTextOfNotification() {
+        let text = kidsNotificationsFromEntity[0].text
+        presenter.receiveTextOfNotification(text: text)
     }
 }

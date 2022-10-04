@@ -233,14 +233,12 @@ private extension ParentHomeScreenViewController {
     }
     
     func setupNavigationBar() {
-        if #available(iOS 13.0, *) {
             let navBarAppearance = UINavigationBarAppearance()
             navBarAppearance.configureWithTransparentBackground()
             navBarAppearance.backgroundColor = .clear
             
             navigationController?.navigationBar.standardAppearance = navBarAppearance
             navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
-        }
     }
 
     func setConstraints() {

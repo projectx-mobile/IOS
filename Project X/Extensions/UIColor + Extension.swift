@@ -17,4 +17,6 @@ extension UIColor {
     static let darkTextColor = #colorLiteral(red: 0.1607843137, green: 0.1764705882, blue: 0.1960784314, alpha: 1)
     static let accentStatus = #colorLiteral(red: 0.9279568791, green: 0.9267095923, blue: 0.9846253991, alpha: 1)
     static let someGray = #colorLiteral(red: 0.882971704, green: 0.8829715848, blue: 0.8829715848, alpha: 1)
+    static let lavanderGrey = #colorLiteral(red: 0.7529411765, green: 0.7568627451, blue: 0.8235294118, alpha: 1)
+    static let notifications = #colorLiteral(red: 0.9921568627, green: 0.9764705882, blue: 0.8470588235, alpha: 1)
 }

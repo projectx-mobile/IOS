@@ -46,4 +46,18 @@ extension UIView {
         borderLayer.frame = bounds
         layer.addSublayer(borderLayer)
     }
+    
+    func createCustomView(_ corners: UIRectCorner, radius: CGFloat, borderColor: UIColor?, borderWidth: CGFloat?, fillColor: UIColor?) {
+        let path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+
+        let shapeLayer = CAShapeLayer()
+        shapeLayer.frame = self.bounds
+        shapeLayer.path = path.cgPath
+        shapeLayer.fillColor = fillColor?.cgColor
+        layer.insertSublayer(shapeLayer, at: 0)
+        
+        if borderWidth != nil {
+            addBorder(shapeLayer, borderWidth: borderWidth!, borderColor: borderColor!)
+        }
+    }
 }

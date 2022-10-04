@@ -9,7 +9,11 @@ import Foundation
 
 protocol ChildHomeScreenInteractorInputProtocol: AnyObject {
     init(presenter: ChildHomeScreenInteractorOutputProtocol)
+    func provideNumberOfNotifications()
+    func provideTextOfNotification()
 }
 
 protocol ChildHomeScreenInteractorOutputProtocol: AnyObject {
+    func receiveNumberOfNotifications(number: Int)
+    func receiveTextOfNotification(text: String)
 }

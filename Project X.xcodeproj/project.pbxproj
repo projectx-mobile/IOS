@@ -51,6 +51,8 @@
 		88EC058428EC726E00A7E07C /* ChildHomeScreenInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EC058328EC726E00A7E07C /* ChildHomeScreenInteractorIO.swift */; };
 		88EC058728EC728E00A7E07C /* ChildHomeScreenConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EC058628EC728E00A7E07C /* ChildHomeScreenConfigurator.swift */; };
 		88EC058928EC729B00A7E07C /* ChildHomeScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EC058828EC729B00A7E07C /* ChildHomeScreenRouter.swift */; };
+		88EC058B28EC7C3600A7E07C /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EC058A28EC7C3600A7E07C /* NotificationView.swift */; };
+		88EC058D28EC8C2D00A7E07C /* KidsNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EC058C28EC8C2D00A7E07C /* KidsNotification.swift */; };
 		975958FE28D9B40900570BB4 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975958FD28D9B40900570BB4 /* Button.swift */; };
 		CA214CEE28BDFEF5006176A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA214CED28BDFEF5006176A7 /* AppDelegate.swift */; };
 		CA214CF028BDFEF5006176A7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA214CEF28BDFEF5006176A7 /* SceneDelegate.swift */; };
@@ -105,6 +107,8 @@
 		88EC058328EC726E00A7E07C /* ChildHomeScreenInteractorIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildHomeScreenInteractorIO.swift; sourceTree = "<group>"; };
 		88EC058628EC728E00A7E07C /* ChildHomeScreenConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildHomeScreenConfigurator.swift; sourceTree = "<group>"; };
 		88EC058828EC729B00A7E07C /* ChildHomeScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildHomeScreenRouter.swift; sourceTree = "<group>"; };
+		88EC058A28EC7C3600A7E07C /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		88EC058C28EC8C2D00A7E07C /* KidsNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KidsNotification.swift; sourceTree = "<group>"; };
 		975958FD28D9B40900570BB4 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		9759590028D9B5A200570BB4 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		9759590128D9B5A200570BB4 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
@@ -283,6 +287,7 @@
 			children = (
 				88D5282328E328C800220DFB /* KidsData.swift */,
 				8858668828E199F600F11B72 /* KidsUpdates.swift */,
+				88EC058C28EC8C2D00A7E07C /* KidsNotification.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -304,6 +309,7 @@
 			children = (
 				88EC057C28EC721200A7E07C /* ChildHomeScreenViewIO.swift */,
 				88EC057A28EC71F800A7E07C /* ChildHomeScreenViewController.swift */,
+				88EC058A28EC7C3600A7E07C /* NotificationView.swift */,
 			);
 			path = ChildHomeScreenView;
 			sourceTree = "<group>";
@@ -490,7 +496,9 @@
 				889F434F28E1900B00DC347D /* WelcomeInteractorIO.swift in Sources */,
 				CA214CF028BDFEF5006176A7 /* SceneDelegate.swift in Sources */,
 				88EC058228EC725500A7E07C /* ChildHomeScreenInteractor.swift in Sources */,
+				88EC058D28EC8C2D00A7E07C /* KidsNotification.swift in Sources */,
 				889F433C28E18B9200DC347D /* CustomButton.swift in Sources */,
+				88EC058B28EC7C3600A7E07C /* NotificationView.swift in Sources */,
 				88C988E528E5E3B7002DF8A3 /* ParentUpdatesConfigurator.swift in Sources */,
 				88EC057B28EC71F800A7E07C /* ChildHomeScreenViewController.swift in Sources */,
 				8858667128E1962000F11B72 /* KidsCardTableViewCell.swift in Sources */,
