@@ -19,10 +19,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
         
         let navVC = UINavigationController()
-        let configurator:ParentHomeScreenConfiguratorInputProtocol = ParentHomeScreenConfigurator()
-        let parentVC = ParentHomeScreenViewController()
-        navVC.viewControllers = [parentVC]
-        configurator.configure(with: parentVC, with: navVC)
+        let configurator:ChildHomeScreenConfiguratorInputProtocol = ChildHomeScreenConfigurator()
+        let childVC = ChildHomeScreenViewController()
+        navVC.viewControllers = [childVC]
+        configurator.configure(with: childVC, with: navVC)
         window?.rootViewController = navVC
         window?.makeKeyAndVisible()
         window?.overrideUserInterfaceStyle = .light

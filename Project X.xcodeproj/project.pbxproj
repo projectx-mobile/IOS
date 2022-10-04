@@ -44,6 +44,13 @@
 		88C988F128E5E48B002DF8A3 /* ParentUpdatesViewIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C988F028E5E48B002DF8A3 /* ParentUpdatesViewIO.swift */; };
 		88C988F328E5E4A1002DF8A3 /* ParentUpdatesInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C988F228E5E4A1002DF8A3 /* ParentUpdatesInteractorIO.swift */; };
 		88D5282428E328C800220DFB /* KidsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D5282328E328C800220DFB /* KidsData.swift */; };
+		88EC057B28EC71F800A7E07C /* ChildHomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EC057A28EC71F800A7E07C /* ChildHomeScreenViewController.swift */; };
+		88EC057D28EC721200A7E07C /* ChildHomeScreenViewIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EC057C28EC721200A7E07C /* ChildHomeScreenViewIO.swift */; };
+		88EC058028EC723C00A7E07C /* ChildHomeScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EC057F28EC723C00A7E07C /* ChildHomeScreenPresenter.swift */; };
+		88EC058228EC725500A7E07C /* ChildHomeScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EC058128EC725500A7E07C /* ChildHomeScreenInteractor.swift */; };
+		88EC058428EC726E00A7E07C /* ChildHomeScreenInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EC058328EC726E00A7E07C /* ChildHomeScreenInteractorIO.swift */; };
+		88EC058728EC728E00A7E07C /* ChildHomeScreenConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EC058628EC728E00A7E07C /* ChildHomeScreenConfigurator.swift */; };
+		88EC058928EC729B00A7E07C /* ChildHomeScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EC058828EC729B00A7E07C /* ChildHomeScreenRouter.swift */; };
 		975958FE28D9B40900570BB4 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975958FD28D9B40900570BB4 /* Button.swift */; };
 		CA214CEE28BDFEF5006176A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA214CED28BDFEF5006176A7 /* AppDelegate.swift */; };
 		CA214CF028BDFEF5006176A7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA214CEF28BDFEF5006176A7 /* SceneDelegate.swift */; };
@@ -91,6 +98,13 @@
 		88C988F028E5E48B002DF8A3 /* ParentUpdatesViewIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentUpdatesViewIO.swift; sourceTree = "<group>"; };
 		88C988F228E5E4A1002DF8A3 /* ParentUpdatesInteractorIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentUpdatesInteractorIO.swift; sourceTree = "<group>"; };
 		88D5282328E328C800220DFB /* KidsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KidsData.swift; sourceTree = "<group>"; };
+		88EC057A28EC71F800A7E07C /* ChildHomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildHomeScreenViewController.swift; sourceTree = "<group>"; };
+		88EC057C28EC721200A7E07C /* ChildHomeScreenViewIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildHomeScreenViewIO.swift; sourceTree = "<group>"; };
+		88EC057F28EC723C00A7E07C /* ChildHomeScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildHomeScreenPresenter.swift; sourceTree = "<group>"; };
+		88EC058128EC725500A7E07C /* ChildHomeScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildHomeScreenInteractor.swift; sourceTree = "<group>"; };
+		88EC058328EC726E00A7E07C /* ChildHomeScreenInteractorIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildHomeScreenInteractorIO.swift; sourceTree = "<group>"; };
+		88EC058628EC728E00A7E07C /* ChildHomeScreenConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildHomeScreenConfigurator.swift; sourceTree = "<group>"; };
+		88EC058828EC729B00A7E07C /* ChildHomeScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildHomeScreenRouter.swift; sourceTree = "<group>"; };
 		975958FD28D9B40900570BB4 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		9759590028D9B5A200570BB4 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		9759590128D9B5A200570BB4 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
@@ -273,6 +287,36 @@
 			path = Entities;
 			sourceTree = "<group>";
 		};
+		88EC057928EC71B800A7E07C /* ChildHomeScreenModule */ = {
+			isa = PBXGroup;
+			children = (
+				88EC057E28EC721A00A7E07C /* ChildHomeScreenView */,
+				88EC057F28EC723C00A7E07C /* ChildHomeScreenPresenter.swift */,
+				88EC058528EC727400A7E07C /* ChildHomeScreenInteractor */,
+				88EC058628EC728E00A7E07C /* ChildHomeScreenConfigurator.swift */,
+				88EC058828EC729B00A7E07C /* ChildHomeScreenRouter.swift */,
+			);
+			path = ChildHomeScreenModule;
+			sourceTree = "<group>";
+		};
+		88EC057E28EC721A00A7E07C /* ChildHomeScreenView */ = {
+			isa = PBXGroup;
+			children = (
+				88EC057C28EC721200A7E07C /* ChildHomeScreenViewIO.swift */,
+				88EC057A28EC71F800A7E07C /* ChildHomeScreenViewController.swift */,
+			);
+			path = ChildHomeScreenView;
+			sourceTree = "<group>";
+		};
+		88EC058528EC727400A7E07C /* ChildHomeScreenInteractor */ = {
+			isa = PBXGroup;
+			children = (
+				88EC058328EC726E00A7E07C /* ChildHomeScreenInteractorIO.swift */,
+				88EC058128EC725500A7E07C /* ChildHomeScreenInteractor.swift */,
+			);
+			path = ChildHomeScreenInteractor;
+			sourceTree = "<group>";
+		};
 		975958FB28D9B2FD00570BB4 /* Design System */ = {
 			isa = PBXGroup;
 			children = (
@@ -325,6 +369,7 @@
 				CA214CED28BDFEF5006176A7 /* AppDelegate.swift */,
 				CA214CEF28BDFEF5006176A7 /* SceneDelegate.swift */,
 				CA214CF128BDFEF5006176A7 /* ViewController.swift */,
+				88EC057928EC71B800A7E07C /* ChildHomeScreenModule */,
 				88D5282228E328AE00220DFB /* Entities */,
 				889F434828E18F0500DC347D /* WelcomeModule */,
 				8858667D28E1985800F11B72 /* ParentHomeScreenModule */,
@@ -423,31 +468,38 @@
 				8858668F28E19A7700F11B72 /* ParentHomeScreenRouter.swift in Sources */,
 				8858667C28E1975A00F11B72 /* TitleLabel.swift in Sources */,
 				975958FE28D9B40900570BB4 /* Button.swift in Sources */,
+				88EC058728EC728E00A7E07C /* ChildHomeScreenConfigurator.swift in Sources */,
 				8858667628E196E600F11B72 /* SecondaryLabel.swift in Sources */,
 				8858667828E1970C00F11B72 /* SecondaryLabelWithIcon.swift in Sources */,
 				889F435B28E191CF00DC347D /* WelcomeViewIO.swift in Sources */,
 				CA214CEE28BDFEF5006176A7 /* AppDelegate.swift in Sources */,
 				88D5282428E328C800220DFB /* KidsData.swift in Sources */,
 				8890090928E426930044E02D /* LayoutConstants.swift in Sources */,
+				88EC058428EC726E00A7E07C /* ChildHomeScreenInteractorIO.swift in Sources */,
 				88C988F128E5E48B002DF8A3 /* ParentUpdatesViewIO.swift in Sources */,
 				8858668228E198D900F11B72 /* ParentHomeScreenInteractor.swift in Sources */,
+				88EC058928EC729B00A7E07C /* ChildHomeScreenRouter.swift in Sources */,
 				889F435728E190EA00DC347D /* ComeBackView.swift in Sources */,
 				8858667A28E1973000F11B72 /* SubtitleLabel.swift in Sources */,
 				8858668B28E19A2500F11B72 /* ParentHomeScreenConfigurator.swift in Sources */,
 				8858668928E199F600F11B72 /* KidsUpdates.swift in Sources */,
 				889F435228E1904A00DC347D /* WelcomePresenter.swift in Sources */,
 				8858668728E199AC00F11B72 /* ParentHomeScreenViewController.swift in Sources */,
+				88EC058028EC723C00A7E07C /* ChildHomeScreenPresenter.swift in Sources */,
 				8858668028E198B200F11B72 /* ParentHomeScreenInteractorIO.swift in Sources */,
 				889F434F28E1900B00DC347D /* WelcomeInteractorIO.swift in Sources */,
 				CA214CF028BDFEF5006176A7 /* SceneDelegate.swift in Sources */,
+				88EC058228EC725500A7E07C /* ChildHomeScreenInteractor.swift in Sources */,
 				889F433C28E18B9200DC347D /* CustomButton.swift in Sources */,
 				88C988E528E5E3B7002DF8A3 /* ParentUpdatesConfigurator.swift in Sources */,
+				88EC057B28EC71F800A7E07C /* ChildHomeScreenViewController.swift in Sources */,
 				8858667128E1962000F11B72 /* KidsCardTableViewCell.swift in Sources */,
 				8858668D28E19A4A00F11B72 /* ParentHomeScreenPresenter.swift in Sources */,
 				8858667328E1968000F11B72 /* UpdatesTableViewCell.swift in Sources */,
 				889F435428E1909600DC347D /* WelcomeRouter.swift in Sources */,
 				889F434528E18D1000DC347D /* UIView + Extension.swift in Sources */,
 				88C988EB28E5E407002DF8A3 /* ParentUpdatesViewController.swift in Sources */,
+				88EC057D28EC721200A7E07C /* ChildHomeScreenViewIO.swift in Sources */,
 				88C988E728E5E3CA002DF8A3 /* ParentUpdatesPresenter.swift in Sources */,
 				889F434A28E18F5300DC347D /* WelcomeConfigurator.swift in Sources */,
 				88C988E928E5E3F1002DF8A3 /* ParentUpdatesInteractor.swift in Sources */,

@@ -25,7 +25,7 @@ final class PrimaryButton: UIButton {
 
 //MARK: - Private extension
 private extension PrimaryButton {
-    private func configure(with text: String, and fillColor: UIColor, and tintColor: UIColor, and borderColor: UIColor ) {
+    func configure(with text: String, and fillColor: UIColor, and tintColor: UIColor, and borderColor: UIColor ) {
         self.backgroundColor =  fillColor
         self.setTitle(text, for: .normal)
         self.titleLabel?.font = .robotoBold16()
