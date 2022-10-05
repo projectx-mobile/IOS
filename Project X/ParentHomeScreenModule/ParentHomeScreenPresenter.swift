@@ -17,7 +17,6 @@ struct KidsInformation {
 struct UpdatesInformation {
     let name: String
     let update: Action
-    
     enum Action: String {
         case selected = "selected reward"
         case completed = "completed task"
@@ -26,35 +25,27 @@ struct UpdatesInformation {
 }
 
 final class ParentHomeScreenPresenter: ParentHomeScreenViewOutputProtocol{
-    
     unowned let view: ParentHomeScreenViewInputProtocol
     var interactor: ParentHomeScreenInteractorInputProtocol!
     var router: ParentHomeScreenRouterInputProtocol!
-    
     required init(view: ParentHomeScreenViewInputProtocol) {
         self.view = view
     }
-    
     func getNumberOfKidsCells() {
         interactor.provideNumberOfKids()
     }
-    
     func getNumberOfUpdatesCells() {
         interactor.provideNumberOfUpdates()
     }
-    
     func getInfoForKidsCell(at indexPath: IndexPath) {
         interactor.provideInfoForKidsCell(at: indexPath)
     }
-    
     func getInfoForUpdatesCell(at indexPath: IndexPath) {
         interactor.provideInfoForUpdatesCell(at: indexPath)
     }
-    
     func getNumberOfActiveTasks() {
         interactor.provideNumberOfActiveTasks()
     }
-    
     func seeAllUpdatesLabelTapped() {
         router.openParentUpdatesViewController()
     }
@@ -66,20 +57,16 @@ extension ParentHomeScreenPresenter: ParentHomeScreenInteractorOutputProtocol {
         let numberOfCells = number
         view.receiveNumberOfKidsCells(number: numberOfCells)
     }
-    
     func receiveNumberOfUpdates(number: Int) {
         let numberOfCells = number
         view.receiveNumberOfUpdatesCells(number: numberOfCells)
     }
-    
     func receiveInfoForKidsCell(info: KidsData) {
         view.receiveInfoForKidsCells(info: info)
     }
-    
     func receiveInfoForUpdatesCell(info: KidsUpdates) {
         view.receiveInfoForUpdatesCells(info: info)
     }
-    
     func receiveNumberOfActiveTasks(number: Int) {
         let text = "Активных на сегодня (\(number))"
         view.receiveNumberOfActiveTasks(text: text)

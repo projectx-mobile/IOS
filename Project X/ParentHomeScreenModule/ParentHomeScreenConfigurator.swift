@@ -5,7 +5,6 @@
 //  Created by Nataliya Lazouskaya on 26.09.22.
 //
 
-
 import UIKit
 
 protocol ParentHomeScreenConfiguratorInputProtocol {
@@ -17,7 +16,6 @@ final class ParentHomeScreenConfigurator: ParentHomeScreenConfiguratorInputProto
         let presenter = ParentHomeScreenPresenter(view: viewController as ParentHomeScreenViewInputProtocol)
         let interactor = ParentHomeScreenInteractor(presenter: presenter)
         let router = ParentHomeScreenRouter(viewController: viewController)
-        
         viewController.presenter = presenter
         presenter.interactor = interactor
         presenter.router = router

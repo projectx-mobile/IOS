@@ -39,13 +39,11 @@ class WelcomeViewController: UIViewController {
 
 //MARK: - Private extension
 private extension WelcomeViewController {
-    
     private func setupViews() {
         view.addSubview(signUpButton)
         view.addSubview(logInButton)
         view.addSubview(comeBackView)
     }
-    
     private func addSwipe() {
         let swipe = UISwipeGestureRecognizer(target: self, action: #selector(doSwipe))
         swipe.direction = .down
@@ -53,7 +51,6 @@ private extension WelcomeViewController {
         comeBackView.isUserInteractionEnabled = true
         comeBackView.addGestureRecognizer(swipe)
     }
-    
     @objc private func doSwipe() {
         UIView.animate(withDuration: 1) {
             self.comeBackView.frame = CGRect(x: 0,
@@ -62,7 +59,6 @@ private extension WelcomeViewController {
                                              height: self.comeBackView.frame.height)
         }
     }
-    
     @objc private func signUpButtonTapped() {
     }
 
@@ -82,7 +78,6 @@ private extension WelcomeViewController {
             signUpButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -LayoutConstants.inset16),
             signUpButton.heightAnchor.constraint(equalToConstant: LayoutConstants.height48)
         ])
-        
         NSLayoutConstraint.activate([
             logInButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -LayoutConstants.inset58),
             logInButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: LayoutConstants.inset16),

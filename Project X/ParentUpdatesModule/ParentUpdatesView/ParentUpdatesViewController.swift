@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+// swiftlint:disable force_cast
 final class ParentUpdatesViewController: UIViewController {
     var presenter: ParentUpdatesViewOutputProtocol!
     

@@ -4,7 +4,7 @@
 //
 //  Created by Nataliya Lazouskaya on 26.09.22.
 //
-
+// swiftlint:disable force_cast
 import Foundation
 
  protocol WelcomeConfiguratorInputProtocol {

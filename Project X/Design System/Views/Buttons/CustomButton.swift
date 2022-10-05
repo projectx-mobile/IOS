@@ -8,7 +8,6 @@
 import UIKit
 
 final class CustomButton: UIButton {
-    
     convenience init(text: String = "") {
         self.init(type: .custom)
         configure(with: text)
@@ -32,6 +31,4 @@ private extension CustomButton {
         self.translatesAutoresizingMaskIntoConstraints = false
     }
 }
-    
-
 

@@ -15,11 +15,9 @@ protocol ParentHomeScreenRouterInputProtocol {
 final class ParentHomeScreenRouter: ParentHomeScreenRouterInputProtocol {
     unowned let viewController: ParentHomeScreenViewController
     weak var navigationController: UINavigationController?
-    
     required init(viewController: ParentHomeScreenViewController) {
         self.viewController = viewController
     }
-    
     func openParentUpdatesViewController() {
         let parentUpdatesVC = ParentUpdatesViewController()
         let configurator: ParentUpdatesConfiguratorInputProtocol = ParentUpdatesConfigurator()

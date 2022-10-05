@@ -8,12 +8,11 @@
 import UIKit
 
 final class ButtonForUI: UIButton {
-    
     var title: String = ""
     var style: Style
     //MARK: - Initializer
-     init(style: Style, title: String){
-        self.style = style
+     init(style: Style, title: String) {
+         self.style = style
         self.title = title
         super.init(frame: .zero)
         setup()
@@ -23,13 +22,11 @@ final class ButtonForUI: UIButton {
     }
 }
     //MARK: - Constants
-
  extension ButtonForUI {
     enum Style {
         case primary
         case secondary
     }
-    
     enum Corner {
         case large
         case medium
@@ -42,12 +39,10 @@ private extension ButtonForUI {
         buttonSetup()
         setButtonStyle()
     }
-    
     private func buttonSetup() {
         translatesAutoresizingMaskIntoConstraints = false
         setTitle(title, for: .normal)
     }
-    
     private func setButtonStyle() {
         switch style {
         case .primary:

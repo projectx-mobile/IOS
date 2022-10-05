@@ -13,4 +13,3 @@ struct KidsData {
     var numberOfTasksDone: Int
     var kidsImage: String?
 }
-
