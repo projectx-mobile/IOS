@@ -8,20 +8,30 @@
 import UIKit
 
 final class CustomButton: UIButton {
+    
+    convenience init(text: String = "") {
+        self.init(type: .custom)
+        configure(with: text)
+    }
 
-     convenience init(text: String = "") {
-         self.init(type: .custom)
-         self.setTitle(text, for: .normal)
-         self.titleLabel?.font = .nexaDemoBold16()
-         self.setTitleColor(.primaryMidnight, for: .normal)
-         self.translatesAutoresizingMaskIntoConstraints = false
-     }
+    override var isHighlighted: Bool {
+        didSet {
+            UIView.animate(withDuration: LayoutConstants.duration) {
+                self.layer.shadowOpacity = self.isHighlighted ? 0 : 1
+            }
+        }
+    }
+}
 
-     override var isHighlighted: Bool {
-         didSet {
-             UIView.animate(withDuration: 0.1) {
-                 self.layer.shadowOpacity = self.isHighlighted ? 0 : 1
-             }
-         }
-     }
- }
+//MARK: - Private extension
+private extension CustomButton {
+    private func configure(with text: String) {
+        self.setTitle(text, for: .normal)
+        self.titleLabel?.font = .nexaDemoBold16()
+        self.setTitleColor(.primaryMidnight, for: .normal)
+        self.translatesAutoresizingMaskIntoConstraints = false
+    }
+}
+    
+
+

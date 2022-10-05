@@ -35,8 +35,8 @@ final class ComeBackView: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        childButton.createCustomViewWithShadow([.topLeft, .topRight, .bottomRight], radius: 12, borderColor: .primaryMidnight, borderWidth: 1.4, fillColor: .primaryWhiteSnow, shadowColor: .primaryMidnight)
-        parentButton.createCustomViewWithShadow([.topLeft, .topRight, .bottomLeft], radius: 12, borderColor: .primaryMidnight, borderWidth: 1.4, fillColor: .primaryWhiteSnow, shadowColor: .primaryMidnight)
+        childButton.createCustomViewWithShadow([.topLeft, .topRight, .bottomRight], radius: LayoutConstants.shadowRadius12, borderColor: .primaryMidnight, borderWidth: LayoutConstants.borderWidth, fillColor: .primaryWhiteSnow, shadowColor: .primaryMidnight)
+        parentButton.createCustomViewWithShadow([.topLeft, .topRight, .bottomLeft], radius: LayoutConstants.shadowRadius12, borderColor: .primaryMidnight, borderWidth: LayoutConstants.borderWidth, fillColor: .primaryWhiteSnow, shadowColor: .primaryMidnight)
     }
     
     private func setupViews() {
@@ -57,17 +57,17 @@ final class ComeBackView: UIView {
     
     private func setConstraints() {
         NSLayoutConstraint.activate([
-            parentButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -88),
-            parentButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -32),
-            parentButton.heightAnchor.constraint(equalToConstant: 56),
-            parentButton.widthAnchor.constraint(equalToConstant: 160)
+            parentButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -LayoutConstants.inset88),
+            parentButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -LayoutConstants.inset32),
+            parentButton.heightAnchor.constraint(equalToConstant: LayoutConstants.height56),
+            parentButton.widthAnchor.constraint(equalToConstant: LayoutConstants.width160)
         ])
         
         NSLayoutConstraint.activate([
-            childButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -72),
-            childButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 32),
-            childButton.heightAnchor.constraint(equalToConstant: 56),
-            childButton.widthAnchor.constraint(equalToConstant: 160)
+            childButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -LayoutConstants.inset72),
+            childButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: LayoutConstants.inset32),
+            childButton.heightAnchor.constraint(equalToConstant: LayoutConstants.height56),
+            childButton.widthAnchor.constraint(equalToConstant: LayoutConstants.width160)
         ])
     }
 }
