@@ -30,6 +30,10 @@ final class ChildHomeScreenPresenter: ChildHomeScreenViewOutputProtocol{
     func getTextOfNotification() {
         interactor.provideTextOfNotification()
     }
+    
+    func deleteFirstNotification() {
+        interactor.deleteFirstNotification()
+    }
 }
 
 // MARK: - ChildHomeScreenInteractorOutputProtocol

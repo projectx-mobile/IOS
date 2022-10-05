@@ -7,8 +7,12 @@
 
 import UIKit
 
+protocol CloseProtocol: AnyObject {
+    func closeButtonTapped()
+}
+
 class NotificationView: UIView {
-    let noKidsImageView: UIImageView = {
+    private let notificationImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "noNotifications")
         imageView.bounds.size = CGSize(width: LayoutConstants.width20, height: LayoutConstants.height20)
@@ -17,7 +21,7 @@ class NotificationView: UIView {
         return imageView
     }()
     
-    let notificationLabel: UILabel = {
+    private let notificationLabel: UILabel = {
         let label = UILabel()
         label.textColor = .primaryMidnight
         label.font = .robotoRegular13()
@@ -27,6 +31,18 @@ class NotificationView: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
+    
+    private lazy var closeButton: UIButton = {
+        let button = UIButton(type: .system)
+        let image = UIImage(named: "close")?.withRenderingMode(.alwaysTemplate)
+        button.setImage(image, for: .normal)
+        button.tintColor = .primaryMidnight
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(closeButtonTapped), for: .touchUpInside)
+        return button
+    }()
+    
+    weak var closeDelegate: CloseProtocol?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -48,10 +64,18 @@ class NotificationView: UIView {
         layer.borderWidth = LayoutConstants.borderWidth
         layer.borderColor = UIColor.lavanderGrey.cgColor
         notificationLabel.text = "Супер! Нет новых уведомлений."
+        notificationImageView.image = UIImage(named: "noNotifications")
+        closeButton.isHidden = true
+        closeButton.isUserInteractionEnabled = false
     }
     
     func configureWithText(text: String) {
         notificationLabel.text = text
+        notificationImageView.image = UIImage(named: "notification")
+    }
+    
+    @objc private func closeButtonTapped() {
+        closeDelegate?.closeButtonTapped()
     }
 }
 
@@ -61,21 +85,29 @@ private extension NotificationView {
         backgroundColor = .primaryPureWhite
         translatesAutoresizingMaskIntoConstraints = false
         
-        addSubview(noKidsImageView)
+        addSubview(notificationImageView)
         addSubview(notificationLabel)
+        addSubview(closeButton)
     }
     
     func setConstraints() {
         NSLayoutConstraint.activate([
-            noKidsImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: LayoutConstants.inset18),
-            noKidsImageView.centerYAnchor.constraint(equalTo: centerYAnchor)
+            notificationImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: LayoutConstants.inset18),
+            notificationImageView.centerYAnchor.constraint(equalTo: centerYAnchor)
         ])
         
         NSLayoutConstraint.activate([
-            notificationLabel.leadingAnchor.constraint(equalTo: noKidsImageView.trailingAnchor, constant: LayoutConstants.inset10),
+            notificationLabel.leadingAnchor.constraint(equalTo: notificationImageView.trailingAnchor, constant: LayoutConstants.inset10),
             notificationLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
             notificationLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -LayoutConstants.inset55),
             notificationLabel.heightAnchor.constraint(equalToConstant: LayoutConstants.height24)
+        ])
+        
+        NSLayoutConstraint.activate([
+            closeButton.centerYAnchor.constraint(equalTo: centerYAnchor),
+            closeButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -LayoutConstants.inset24),
+            closeButton.heightAnchor.constraint(equalToConstant: 8),
+            closeButton.widthAnchor.constraint(equalToConstant: 8)
         ])
     }
 }

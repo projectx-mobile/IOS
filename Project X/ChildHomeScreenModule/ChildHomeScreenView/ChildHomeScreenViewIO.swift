@@ -16,4 +16,5 @@ protocol ChildHomeScreenViewOutputProtocol: AnyObject {
     init(view: ChildHomeScreenViewInputProtocol)
     func getNumberOfNotifications()
     func getTextOfNotification()
+    func deleteFirstNotification()
 }

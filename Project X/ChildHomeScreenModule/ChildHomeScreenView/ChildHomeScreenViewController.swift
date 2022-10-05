@@ -26,7 +26,12 @@ final class ChildHomeScreenViewController: UIViewController {
         return view
     }()
     
-    private var numberOfNotifications = 0
+    private var numberOfNotifications = 0 {
+        didSet {
+            setUpNotificationView()
+        }
+    }
+    
     private var textOfNotification = ""
 
     override func viewDidLoad() {
@@ -34,6 +39,7 @@ final class ChildHomeScreenViewController: UIViewController {
         view.backgroundColor = .primaryWhiteSnow
         setupViews()
         setConstraints()
+        setDelegates()
     }
     
     override func viewDidLayoutSubviews() {
@@ -64,6 +70,10 @@ private extension ChildHomeScreenViewController {
     
     func checkNumberOfNotifications() {
         presenter.getNumberOfNotifications()
+        setUpNotificationView()
+    }
+    
+    func setUpNotificationView() {
         if numberOfNotifications == 0 {
             notificationView.noNotificationsSetup()
             backgroundView.isHidden = true
@@ -80,10 +90,10 @@ private extension ChildHomeScreenViewController {
         }
     }
     
-    func setupBackgroundView() {
-        
+    func setDelegates() {
+        notificationView.closeDelegate = self
     }
-
+    
     func setConstraints() {
         NSLayoutConstraint.activate([
             titleLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: LayoutConstants.inset76),
@@ -111,6 +121,14 @@ private extension ChildHomeScreenViewController {
             backgroundView.heightAnchor.constraint(equalToConstant: LayoutConstants.height60)
         ])
         
+    }
+}
+
+//MARK: - CloseProtocol
+extension ChildHomeScreenViewController: CloseProtocol{
+    func closeButtonTapped() {
+        print("close tapped")
+        presenter.deleteFirstNotification()
     }
 }
 

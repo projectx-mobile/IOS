@@ -11,6 +11,7 @@ protocol ChildHomeScreenInteractorInputProtocol: AnyObject {
     init(presenter: ChildHomeScreenInteractorOutputProtocol)
     func provideNumberOfNotifications()
     func provideTextOfNotification()
+    func deleteFirstNotification()
 }
 
 protocol ChildHomeScreenInteractorOutputProtocol: AnyObject {

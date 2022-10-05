@@ -15,7 +15,7 @@ final class ChildHomeScreenInteractor: ChildHomeScreenInteractorInputProtocol {
         self.presenter = presenter
     }
     
-    let kidsNotificationsFromEntity:[KidsNotification] = [
+    var kidsNotificationsFromEntity:[KidsNotification] = [
         KidsNotification(text: "У тебя появилась первая новая задача на сегодня, постарайся успеть."),
         KidsNotification(text: "У тебя появилась новая задача на сегодня, постарайся успеть.")
     ]
@@ -28,5 +28,17 @@ final class ChildHomeScreenInteractor: ChildHomeScreenInteractorInputProtocol {
     func provideTextOfNotification() {
         let text = kidsNotificationsFromEntity[0].text
         presenter.receiveTextOfNotification(text: text)
+    }
+    
+    func deleteFirstNotification() {
+        if kidsNotificationsFromEntity.count > 0 {
+            kidsNotificationsFromEntity.removeFirst()
+        }
+        let numberOfNotifications = kidsNotificationsFromEntity.count
+        presenter.receiveNumberOfNotifications(number: numberOfNotifications)
+        if numberOfNotifications > 0 {
+            let text = kidsNotificationsFromEntity[0].text
+            presenter.receiveTextOfNotification(text: text)
+        }
     }
 }
