@@ -17,7 +17,8 @@ final class ChildHomeScreenInteractor: ChildHomeScreenInteractorInputProtocol {
     
     var kidsNotificationsFromEntity:[KidsNotification] = [
         KidsNotification(text: "У тебя появилась первая новая задача на сегодня, постарайся успеть."),
-        KidsNotification(text: "У тебя появилась новая задача на сегодня, постарайся успеть.")
+        KidsNotification(text: "У тебя появилась новая задача на сегодня, постарайся успеть."),
+        KidsNotification(text: "Исткело время, выделенное на выполнение задачи.")
     ]
 
     func provideNumberOfNotifications() {

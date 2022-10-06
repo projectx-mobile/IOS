@@ -15,6 +15,7 @@ final class ChildHomeScreenViewController: UIViewController {
     private let titleLabel = TitleLabel(text: "Задачи")
     private let activeTasksLabel = SecondaryLabel(text: "Активных на сегодня (0)")
     private let notificationView = NotificationView()
+    private let noNotificationView = NoNotificationView()
     
     private let backgroundView: UIView = {
         let view = UIView()
@@ -57,6 +58,7 @@ private extension ChildHomeScreenViewController {
         view.addSubview(titleLabel)
         view.addSubview(activeTasksLabel)
         view.addSubview(notificationView)
+        view.addSubview(noNotificationView)
     }
     
     func setupNavigationBar() {
@@ -75,16 +77,19 @@ private extension ChildHomeScreenViewController {
     
     func setUpNotificationView() {
         if numberOfNotifications == 0 {
-            notificationView.noNotificationsSetup()
+            notificationView.isHidden = true
+            noNotificationView.isHidden = false
             backgroundView.isHidden = true
         } else if numberOfNotifications == 1{
-            notificationView.createCustomView([.topLeft, .topRight, .bottomRight], radius: LayoutConstants.cornerRadius10, borderColor: .primaryMidnight, borderWidth: LayoutConstants.borderWidth, fillColor: .notifications)
             backgroundView.isHidden = true
+            notificationView.isHidden = false
+            noNotificationView.isHidden = true
             presenter.getTextOfNotification()
             notificationView.configureWithText(text: textOfNotification)
         } else {
-            notificationView.createCustomView([.topLeft, .topRight, .bottomRight], radius: LayoutConstants.cornerRadius10, borderColor: .primaryMidnight, borderWidth: LayoutConstants.borderWidth, fillColor: .notifications)
             backgroundView.isHidden = false
+            notificationView.isHidden = false
+            noNotificationView.isHidden = true
             presenter.getTextOfNotification()
             notificationView.configureWithText(text: textOfNotification)
         }
@@ -115,6 +120,13 @@ private extension ChildHomeScreenViewController {
         ])
         
         NSLayoutConstraint.activate([
+            noNotificationView.topAnchor.constraint(equalTo: activeTasksLabel.bottomAnchor, constant: LayoutConstants.inset40),
+            noNotificationView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: LayoutConstants.inset16),
+            noNotificationView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -LayoutConstants.inset16),
+            noNotificationView.heightAnchor.constraint(equalToConstant: LayoutConstants.height64)
+        ])
+        
+        NSLayoutConstraint.activate([
             backgroundView.centerXAnchor.constraint(equalTo: notificationView.centerXAnchor),
             backgroundView.centerYAnchor.constraint(equalTo: notificationView.centerYAnchor, constant: -LayoutConstants.inset14),
             backgroundView.widthAnchor.constraint(equalTo: notificationView.widthAnchor, constant: -LayoutConstants.inset32),
@@ -127,7 +139,6 @@ private extension ChildHomeScreenViewController {
 //MARK: - CloseProtocol
 extension ChildHomeScreenViewController: CloseProtocol{
     func closeButtonTapped() {
-        print("close tapped")
         presenter.deleteFirstNotification()
     }
 }

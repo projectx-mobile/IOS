@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		88512C6B28EEFF97003DB63F /* NoNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88512C6A28EEFF97003DB63F /* NoNotificationView.swift */; };
 		8858667128E1962000F11B72 /* KidsCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8858667028E1962000F11B72 /* KidsCardTableViewCell.swift */; };
 		8858667328E1968000F11B72 /* UpdatesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8858667228E1968000F11B72 /* UpdatesTableViewCell.swift */; };
 		8858667628E196E600F11B72 /* SecondaryLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8858667528E196E600F11B72 /* SecondaryLabel.swift */; };
@@ -63,6 +64,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		88512C6A28EEFF97003DB63F /* NoNotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoNotificationView.swift; sourceTree = "<group>"; };
 		8858667028E1962000F11B72 /* KidsCardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KidsCardTableViewCell.swift; sourceTree = "<group>"; };
 		8858667228E1968000F11B72 /* UpdatesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatesTableViewCell.swift; sourceTree = "<group>"; };
 		8858667528E196E600F11B72 /* SecondaryLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryLabel.swift; sourceTree = "<group>"; };
@@ -310,6 +312,7 @@
 				88EC057C28EC721200A7E07C /* ChildHomeScreenViewIO.swift */,
 				88EC057A28EC71F800A7E07C /* ChildHomeScreenViewController.swift */,
 				88EC058A28EC7C3600A7E07C /* NotificationView.swift */,
+				88512C6A28EEFF97003DB63F /* NoNotificationView.swift */,
 			);
 			path = ChildHomeScreenView;
 			sourceTree = "<group>";
@@ -500,6 +503,7 @@
 				889F433C28E18B9200DC347D /* CustomButton.swift in Sources */,
 				88EC058B28EC7C3600A7E07C /* NotificationView.swift in Sources */,
 				88C988E528E5E3B7002DF8A3 /* ParentUpdatesConfigurator.swift in Sources */,
+				88512C6B28EEFF97003DB63F /* NoNotificationView.swift in Sources */,
 				88EC057B28EC71F800A7E07C /* ChildHomeScreenViewController.swift in Sources */,
 				8858667128E1962000F11B72 /* KidsCardTableViewCell.swift in Sources */,
 				8858668D28E19A4A00F11B72 /* ParentHomeScreenPresenter.swift in Sources */,

@@ -1,20 +1,16 @@
 //
-//  NotificationView.swift
+//  NoNotificationView.swift
 //  Project X
 //
-//  Created by Nataliya Lazouskaya on 4.10.22.
+//  Created by Nataliya Lazouskaya on 6.10.22.
 //
 
 import UIKit
 
-protocol CloseProtocol: AnyObject {
-    func closeButtonTapped()
-}
-
-final class NotificationView: UIView {
+final class NoNotificationView: UIView {
     private let notificationImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: "notification")
+        imageView.image = UIImage(named: "noNotifications")
         imageView.contentMode = .scaleToFill
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
@@ -25,57 +21,34 @@ final class NotificationView: UIView {
         label.textColor = .primaryMidnight
         label.font = .robotoRegular13()
         label.textAlignment = .left
+        label.text = "Супер! Нет новых уведомлений."
         label.numberOfLines = 0
         label.adjustsFontSizeToFitWidth = true
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-    
-    private lazy var closeButton: UIButton = {
-        let button = UIButton(type: .system)
-        let image = UIImage(named: "close")?.withRenderingMode(.alwaysTemplate)
-        button.setImage(image, for: .normal)
-        button.tintColor = .primaryMidnight
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.addTarget(self, action: #selector(closeButtonTapped), for: .touchUpInside)
-        return button
-    }()
-    
-    weak var closeDelegate: CloseProtocol?
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
         setupViews()
         setConstraints()
     }
-
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        createCustomView([.topLeft, .topRight, .bottomRight], radius: LayoutConstants.cornerRadius10, borderColor: .primaryMidnight, borderWidth: LayoutConstants.borderWidth, fillColor: .notifications)
-    }
-
-    func configureWithText(text: String) {
-        notificationLabel.text = text
-    }
-    
-    @objc private func closeButtonTapped() {
-        closeDelegate?.closeButtonTapped()
     }
 }
 
 //MARK: - Private extension
-private extension NotificationView {
+private extension NoNotificationView {
     func setupViews() {
+        backgroundColor = .primaryPureWhite
         translatesAutoresizingMaskIntoConstraints = false
-        
+        layer.cornerRadius = LayoutConstants.cornerRadius10
+        layer.borderWidth = LayoutConstants.borderWidth
+        layer.borderColor = UIColor.lavanderGrey.cgColor
         addSubview(notificationImageView)
         addSubview(notificationLabel)
-        addSubview(closeButton)
     }
     
     func setConstraints() {
@@ -91,13 +64,6 @@ private extension NotificationView {
             notificationLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
             notificationLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -LayoutConstants.inset55),
             notificationLabel.heightAnchor.constraint(equalToConstant: LayoutConstants.height24)
-        ])
-        
-        NSLayoutConstraint.activate([
-            closeButton.centerYAnchor.constraint(equalTo: centerYAnchor),
-            closeButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -LayoutConstants.inset24),
-            closeButton.heightAnchor.constraint(equalToConstant: 8),
-            closeButton.widthAnchor.constraint(equalToConstant: 8)
         ])
     }
 }
