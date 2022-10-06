@@ -16,6 +16,7 @@ final class ChildHomeScreenViewController: UIViewController {
     private let activeTasksLabel = SecondaryLabel(text: "Активных на сегодня (0)")
     private let notificationView = NotificationView()
     private let noNotificationView = NoNotificationView()
+    private let calendarView = CalendarView()
     
     private let backgroundView: UIView = {
         let view = UIView()
@@ -34,7 +35,7 @@ final class ChildHomeScreenViewController: UIViewController {
     }
     
     private var textOfNotification = ""
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .primaryWhiteSnow
@@ -59,15 +60,23 @@ private extension ChildHomeScreenViewController {
         view.addSubview(activeTasksLabel)
         view.addSubview(notificationView)
         view.addSubview(noNotificationView)
+        view.addSubview(calendarView)
+        
+        let families = UIFont.familyNames
+        families.sorted().forEach {
+        print("\($0)")
+        let names = UIFont.fontNames(forFamilyName: $0)
+            print(names)
+        }
     }
     
     func setupNavigationBar() {
-            let navBarAppearance = UINavigationBarAppearance()
-            navBarAppearance.configureWithTransparentBackground()
-            navBarAppearance.backgroundColor = .clear
-            
-            navigationController?.navigationBar.standardAppearance = navBarAppearance
-            navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
+        let navBarAppearance = UINavigationBarAppearance()
+        navBarAppearance.configureWithTransparentBackground()
+        navBarAppearance.backgroundColor = .clear
+        
+        navigationController?.navigationBar.standardAppearance = navBarAppearance
+        navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
     }
     
     func checkNumberOfNotifications() {
@@ -83,6 +92,7 @@ private extension ChildHomeScreenViewController {
         } else if numberOfNotifications == 1{
             backgroundView.isHidden = true
             notificationView.isHidden = false
+            noNotificationView.isHidden = true
             noNotificationView.isHidden = true
             presenter.getTextOfNotification()
             notificationView.configureWithText(text: textOfNotification)
@@ -133,6 +143,12 @@ private extension ChildHomeScreenViewController {
             backgroundView.heightAnchor.constraint(equalToConstant: LayoutConstants.height60)
         ])
         
+        NSLayoutConstraint.activate([
+            calendarView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor,constant: LayoutConstants.inset16),
+            calendarView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor,constant: -LayoutConstants.inset16),
+            calendarView.topAnchor.constraint(equalTo: noNotificationView.bottomAnchor,constant: LayoutConstants.inset16),
+            calendarView.heightAnchor.constraint(equalToConstant: LayoutConstants.height121)
+        ])
     }
 }
 

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		88512C6B28EEFF97003DB63F /* NoNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88512C6A28EEFF97003DB63F /* NoNotificationView.swift */; };
+		88512C6D28EF066F003DB63F /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88512C6C28EF066F003DB63F /* CalendarView.swift */; };
+		88512C6F28EF1C07003DB63F /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88512C6E28EF1C07003DB63F /* CalendarCollectionViewCell.swift */; };
 		8858667128E1962000F11B72 /* KidsCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8858667028E1962000F11B72 /* KidsCardTableViewCell.swift */; };
 		8858667328E1968000F11B72 /* UpdatesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8858667228E1968000F11B72 /* UpdatesTableViewCell.swift */; };
 		8858667628E196E600F11B72 /* SecondaryLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8858667528E196E600F11B72 /* SecondaryLabel.swift */; };
@@ -65,6 +67,8 @@
 
 /* Begin PBXFileReference section */
 		88512C6A28EEFF97003DB63F /* NoNotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoNotificationView.swift; sourceTree = "<group>"; };
+		88512C6C28EF066F003DB63F /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		88512C6E28EF1C07003DB63F /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
 		8858667028E1962000F11B72 /* KidsCardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KidsCardTableViewCell.swift; sourceTree = "<group>"; };
 		8858667228E1968000F11B72 /* UpdatesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatesTableViewCell.swift; sourceTree = "<group>"; };
 		8858667528E196E600F11B72 /* SecondaryLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryLabel.swift; sourceTree = "<group>"; };
@@ -313,6 +317,8 @@
 				88EC057A28EC71F800A7E07C /* ChildHomeScreenViewController.swift */,
 				88EC058A28EC7C3600A7E07C /* NotificationView.swift */,
 				88512C6A28EEFF97003DB63F /* NoNotificationView.swift */,
+				88512C6C28EF066F003DB63F /* CalendarView.swift */,
+				88512C6E28EF1C07003DB63F /* CalendarCollectionViewCell.swift */,
 			);
 			path = ChildHomeScreenView;
 			sourceTree = "<group>";
@@ -485,6 +491,7 @@
 				88D5282428E328C800220DFB /* KidsData.swift in Sources */,
 				8890090928E426930044E02D /* LayoutConstants.swift in Sources */,
 				88EC058428EC726E00A7E07C /* ChildHomeScreenInteractorIO.swift in Sources */,
+				88512C6D28EF066F003DB63F /* CalendarView.swift in Sources */,
 				88C988F128E5E48B002DF8A3 /* ParentUpdatesViewIO.swift in Sources */,
 				8858668228E198D900F11B72 /* ParentHomeScreenInteractor.swift in Sources */,
 				88EC058928EC729B00A7E07C /* ChildHomeScreenRouter.swift in Sources */,
@@ -492,6 +499,7 @@
 				8858667A28E1973000F11B72 /* SubtitleLabel.swift in Sources */,
 				8858668B28E19A2500F11B72 /* ParentHomeScreenConfigurator.swift in Sources */,
 				8858668928E199F600F11B72 /* KidsUpdates.swift in Sources */,
+				88512C6F28EF1C07003DB63F /* CalendarCollectionViewCell.swift in Sources */,
 				889F435228E1904A00DC347D /* WelcomePresenter.swift in Sources */,
 				8858668728E199AC00F11B72 /* ParentHomeScreenViewController.swift in Sources */,
 				88EC058028EC723C00A7E07C /* ChildHomeScreenPresenter.swift in Sources */,

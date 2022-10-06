@@ -96,8 +96,8 @@ private extension NotificationView {
         NSLayoutConstraint.activate([
             closeButton.centerYAnchor.constraint(equalTo: centerYAnchor),
             closeButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -LayoutConstants.inset24),
-            closeButton.heightAnchor.constraint(equalToConstant: 8),
-            closeButton.widthAnchor.constraint(equalToConstant: 8)
+            closeButton.heightAnchor.constraint(equalToConstant: LayoutConstants.height8),
+            closeButton.widthAnchor.constraint(equalToConstant: LayoutConstants.width8)
         ])
     }
 }
