@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8840EEE028F0501600C67E5B /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8840EEDF28F0501600C67E5B /* Roboto-Regular.ttf */; };
+		8840EEE228F0502500C67E5B /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8840EEE128F0502500C67E5B /* Roboto-Medium.ttf */; };
+		8840EEE428F0503700C67E5B /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8840EEE328F0503700C67E5B /* Roboto-Bold.ttf */; };
+		8840EEE628F0636F00C67E5B /* UIDatePicker + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8840EEE528F0636F00C67E5B /* UIDatePicker + Extension.swift */; };
 		88512C6B28EEFF97003DB63F /* NoNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88512C6A28EEFF97003DB63F /* NoNotificationView.swift */; };
 		88512C6D28EF066F003DB63F /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88512C6C28EF066F003DB63F /* CalendarView.swift */; };
 		88512C6F28EF1C07003DB63F /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88512C6E28EF1C07003DB63F /* CalendarCollectionViewCell.swift */; };
@@ -66,6 +70,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8840EEDF28F0501600C67E5B /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		8840EEE128F0502500C67E5B /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		8840EEE328F0503700C67E5B /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		8840EEE528F0636F00C67E5B /* UIDatePicker + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDatePicker + Extension.swift"; sourceTree = "<group>"; };
 		88512C6A28EEFF97003DB63F /* NoNotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoNotificationView.swift; sourceTree = "<group>"; };
 		88512C6C28EF066F003DB63F /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		88512C6E28EF1C07003DB63F /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -116,9 +124,6 @@
 		88EC058A28EC7C3600A7E07C /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		88EC058C28EC8C2D00A7E07C /* KidsNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KidsNotification.swift; sourceTree = "<group>"; };
 		975958FD28D9B40900570BB4 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
-		9759590028D9B5A200570BB4 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
-		9759590128D9B5A200570BB4 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
-		9759590228D9B5A200570BB4 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		CA214CEA28BDFEF5006176A7 /* Project X.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project X.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA214CED28BDFEF5006176A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA214CEF28BDFEF5006176A7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -214,6 +219,7 @@
 				889F434028E18C7800DC347D /* UIColor + Extension.swift */,
 				889F434228E18CC500DC347D /* UIFont + Extension.swift */,
 				889F434428E18D1000DC347D /* UIView + Extension.swift */,
+				8840EEE528F0636F00C67E5B /* UIDatePicker + Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -354,9 +360,9 @@
 		975958FF28D9B59100570BB4 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				9759590028D9B5A200570BB4 /* Roboto-Bold.ttf */,
-				9759590128D9B5A200570BB4 /* Roboto-Medium.ttf */,
-				9759590228D9B5A200570BB4 /* Roboto-Regular.ttf */,
+				8840EEDF28F0501600C67E5B /* Roboto-Regular.ttf */,
+				8840EEE328F0503700C67E5B /* Roboto-Bold.ttf */,
+				8840EEE128F0502500C67E5B /* Roboto-Medium.ttf */,
 				889F434628E18E6100DC347D /* NexaDemo-Bold.ttf */,
 			);
 			path = Fonts;
@@ -457,8 +463,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8840EEE428F0503700C67E5B /* Roboto-Bold.ttf in Resources */,
 				889F434728E18E6100DC347D /* NexaDemo-Bold.ttf in Resources */,
 				CA214CFA28BDFEF7006176A7 /* LaunchScreen.storyboard in Resources */,
+				8840EEE228F0502500C67E5B /* Roboto-Medium.ttf in Resources */,
+				8840EEE028F0501600C67E5B /* Roboto-Regular.ttf in Resources */,
 				CA214CF728BDFEF7006176A7 /* Assets.xcassets in Resources */,
 				CA214CF528BDFEF5006176A7 /* Main.storyboard in Resources */,
 			);
@@ -496,6 +505,7 @@
 				8858668228E198D900F11B72 /* ParentHomeScreenInteractor.swift in Sources */,
 				88EC058928EC729B00A7E07C /* ChildHomeScreenRouter.swift in Sources */,
 				889F435728E190EA00DC347D /* ComeBackView.swift in Sources */,
+				8840EEE628F0636F00C67E5B /* UIDatePicker + Extension.swift in Sources */,
 				8858667A28E1973000F11B72 /* SubtitleLabel.swift in Sources */,
 				8858668B28E19A2500F11B72 /* ParentHomeScreenConfigurator.swift in Sources */,
 				8858668928E199F600F11B72 /* KidsUpdates.swift in Sources */,

@@ -61,13 +61,6 @@ private extension ChildHomeScreenViewController {
         view.addSubview(notificationView)
         view.addSubview(noNotificationView)
         view.addSubview(calendarView)
-        
-        let families = UIFont.familyNames
-        families.sorted().forEach {
-        print("\($0)")
-        let names = UIFont.fontNames(forFamilyName: $0)
-            print(names)
-        }
     }
     
     func setupNavigationBar() {

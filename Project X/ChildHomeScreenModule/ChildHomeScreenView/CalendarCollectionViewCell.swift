@@ -11,7 +11,7 @@ class CalendarCollectionViewCell: UICollectionViewCell {
     private let dayOfWeekLabel:UILabel = {
         let label = UILabel()
         label.text = "Ср"
-        label.font = .nexaDemoBold11()
+        label.font = .robotoMedium11()
         label.textColor  = .primaryMidnight
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -21,7 +21,7 @@ class CalendarCollectionViewCell: UICollectionViewCell {
     private let numberOfDayLabel:UILabel = {
         let label = UILabel()
         label.text = "29"
-        label.font = .nexaDemoBold14()
+        label.font = .robotoMedium14()
         label.textColor  = .primaryMidnight
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false

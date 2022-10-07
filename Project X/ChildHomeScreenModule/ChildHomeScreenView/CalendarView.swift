@@ -28,24 +28,22 @@ final class CalendarView: UIView {
         return label
     }()
     
-    private lazy var calendarButton: UIButton = {
-        let button = UIButton(type: .system)
-        let image = UIImage(named: "calendar")?.withRenderingMode(.alwaysTemplate)
-        button.setImage(image, for: .normal)
-        button.tintColor = .primaryMidnight
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.addTarget(self, action: #selector(calendarButtonTapped), for: .touchUpInside)
-        return button
+    private var calendarImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "calendar")?.withRenderingMode(.alwaysTemplate)
+        imageView.tintColor = .primaryMidnight
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
     }()
     
-    private lazy var forwardButton: UIButton = {
-        let button = UIButton(type: .system)
-        let image = UIImage(named: "right")?.withRenderingMode(.alwaysTemplate)
-        button.setImage(image, for: .normal)
-        button.tintColor = .duskGrey
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.addTarget(self, action: #selector(forwardButtonTapped), for: .touchUpInside)
-        return button
+    private lazy var datePicker: UIDatePicker = {
+        let datePicker = UIDatePicker()
+        datePicker.datePickerMode = .date
+        datePicker.backgroundColor = .red
+        datePicker.preferredDatePickerStyle = .compact
+        datePicker.translatesAutoresizingMaskIntoConstraints = false
+        datePicker.addTarget(self, action: #selector(datePickerValueChanged(_:)), for: .valueChanged)
+        return datePicker
     }()
     
     private lazy var backButton: UIButton = {
@@ -55,6 +53,16 @@ final class CalendarView: UIView {
         button.tintColor = .duskGrey
         button.translatesAutoresizingMaskIntoConstraints = false
         button.addTarget(self, action: #selector(backButtonTapped), for: .touchUpInside)
+        return button
+    }()
+
+    private lazy var forwardButton: UIButton = {
+        let button = UIButton(type: .system)
+        let image = UIImage(named: "right")?.withRenderingMode(.alwaysTemplate)
+        button.setImage(image, for: .normal)
+        button.tintColor = .duskGrey
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(forwardButtonTapped), for: .touchUpInside)
         return button
     }()
     
@@ -80,10 +88,6 @@ final class CalendarView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    @objc private func calendarButtonTapped() {
-        print("calendarButtonTapped")
-    }
-    
     @objc private func forwardButtonTapped() {
         print("forwardButtonTapped")
     }
@@ -91,6 +95,13 @@ final class CalendarView: UIView {
     @objc private func backButtonTapped() {
         print("backButtonTapped")
     }
+    
+    @objc func datePickerValueChanged(_ sender: UIDatePicker){
+           let dateFormatter: DateFormatter = DateFormatter()
+           dateFormatter.dateFormat = "E-dd"
+           let selectedDate: String = dateFormatter.string(from: sender.date)
+           print("Selected value \(selectedDate)")
+       }
 }
 
 //MARK: - Private extension
@@ -103,7 +114,9 @@ private extension CalendarView {
         layer.borderColor = UIColor.lavanderGrey.cgColor
         addSubview(todayLabel)
         addSubview(monthLabel)
-        addSubview(calendarButton)
+        addSubview(calendarImageView)
+        addSubview(datePicker)
+       // datePicker.paintClear()
         addSubview(backButton)
         addSubview(forwardButton)
         addSubview(collectionView)
@@ -122,14 +135,19 @@ private extension CalendarView {
         
         NSLayoutConstraint.activate([
             monthLabel.topAnchor.constraint(equalTo: topAnchor, constant: LayoutConstants.inset21),
-            monthLabel.trailingAnchor.constraint(equalTo: calendarButton.leadingAnchor, constant: -LayoutConstants.inset11)
+            monthLabel.trailingAnchor.constraint(equalTo: calendarImageView.leadingAnchor, constant: -LayoutConstants.inset11)
         ])
         
         NSLayoutConstraint.activate([
-            calendarButton.topAnchor.constraint(equalTo: topAnchor, constant: LayoutConstants.inset19),
-            calendarButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -LayoutConstants.inset43),
-            calendarButton.heightAnchor.constraint(equalToConstant: LayoutConstants.height18),
-            calendarButton.widthAnchor.constraint(equalToConstant: LayoutConstants.width18)
+            calendarImageView.topAnchor.constraint(equalTo: topAnchor, constant: LayoutConstants.inset19),
+            calendarImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -LayoutConstants.inset43),
+            calendarImageView.heightAnchor.constraint(equalToConstant: LayoutConstants.height18),
+            calendarImageView.widthAnchor.constraint(equalToConstant: LayoutConstants.width18)
+        ])
+
+        NSLayoutConstraint.activate([
+            datePicker.centerXAnchor.constraint(equalTo: calendarImageView.centerXAnchor),
+            datePicker.centerYAnchor.constraint(equalTo: calendarImageView.centerYAnchor)
         ])
         
         NSLayoutConstraint.activate([
@@ -188,7 +206,6 @@ extension CalendarView: UICollectionViewDataSource{
         cell.cellConfigure(numberOfDay: "15", dayOfWeek: "Вт")
         return cell
     }
-    
 }
 
 
