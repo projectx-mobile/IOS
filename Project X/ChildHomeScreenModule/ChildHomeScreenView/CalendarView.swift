@@ -40,6 +40,7 @@ final class CalendarView: UIView {
         let datePicker = UIDatePicker()
         datePicker.datePickerMode = .date
         datePicker.backgroundColor = .red
+        datePicker.tintColor = .primaryJuicyGrape
         datePicker.preferredDatePickerStyle = .compact
         datePicker.translatesAutoresizingMaskIntoConstraints = false
         datePicker.addTarget(self, action: #selector(datePickerValueChanged(_:)), for: .valueChanged)
@@ -101,6 +102,7 @@ final class CalendarView: UIView {
            dateFormatter.dateFormat = "E-dd"
            let selectedDate: String = dateFormatter.string(from: sender.date)
            print("Selected value \(selectedDate)")
+        print("here i need to change cell date")
        }
 }
 
@@ -116,7 +118,7 @@ private extension CalendarView {
         addSubview(monthLabel)
         addSubview(calendarImageView)
         addSubview(datePicker)
-       // datePicker.paintClear()
+        datePicker.paintClear()
         addSubview(backButton)
         addSubview(forwardButton)
         addSubview(collectionView)
