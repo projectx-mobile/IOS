@@ -278,7 +278,6 @@ private extension ParentHomeScreenViewController {
             containerView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             containerView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
             containerView.bottomAnchor.constraint(equalTo: updatesTableView.bottomAnchor)
-            
         ])
         
         NSLayoutConstraint.activate([

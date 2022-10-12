@@ -17,6 +17,14 @@ extension UIView {
         layer.shadowRadius = 0
     }
     
+    func addSmallShadowOnView() {
+        layer.shadowColor = UIColor.primaryMidnight.cgColor
+        layer.masksToBounds = false
+        layer.shadowOffset = CGSize(width: 1.4, height: 1.6)
+        layer.shadowOpacity = 1
+        layer.shadowRadius = 0
+    }
+    
     func createCustomViewWithShadow(_ corners: UIRectCorner, radius: CGFloat, borderColor: UIColor?, borderWidth: CGFloat?, fillColor: UIColor?, shadowColor: UIColor) {
         let path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
 

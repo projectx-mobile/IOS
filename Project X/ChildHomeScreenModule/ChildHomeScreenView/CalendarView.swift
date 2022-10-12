@@ -39,7 +39,7 @@ final class CalendarView: UIView {
     private lazy var datePicker: UIDatePicker = {
         let datePicker = UIDatePicker()
         datePicker.datePickerMode = .date
-        datePicker.backgroundColor = .red
+        datePicker.backgroundColor = .clear
         datePicker.tintColor = .primaryJuicyGrape
         datePicker.preferredDatePickerStyle = .compact
         datePicker.translatesAutoresizingMaskIntoConstraints = false

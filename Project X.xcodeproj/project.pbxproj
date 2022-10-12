@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		883050AC28F72B9A00902FC3 /* KidsTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883050AB28F72B9A00902FC3 /* KidsTask.swift */; };
+		883050AE28F72E4C00902FC3 /* TasksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883050AD28F72E4C00902FC3 /* TasksTableViewCell.swift */; };
 		8840EEE028F0501600C67E5B /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8840EEDF28F0501600C67E5B /* Roboto-Regular.ttf */; };
 		8840EEE228F0502500C67E5B /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8840EEE128F0502500C67E5B /* Roboto-Medium.ttf */; };
 		8840EEE428F0503700C67E5B /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8840EEE328F0503700C67E5B /* Roboto-Bold.ttf */; };
@@ -70,6 +72,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		883050AB28F72B9A00902FC3 /* KidsTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KidsTask.swift; sourceTree = "<group>"; };
+		883050AD28F72E4C00902FC3 /* TasksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksTableViewCell.swift; sourceTree = "<group>"; };
 		8840EEDF28F0501600C67E5B /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		8840EEE128F0502500C67E5B /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		8840EEE328F0503700C67E5B /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
@@ -298,6 +302,7 @@
 			isa = PBXGroup;
 			children = (
 				88D5282328E328C800220DFB /* KidsData.swift */,
+				883050AB28F72B9A00902FC3 /* KidsTask.swift */,
 				8858668828E199F600F11B72 /* KidsUpdates.swift */,
 				88EC058C28EC8C2D00A7E07C /* KidsNotification.swift */,
 			);
@@ -325,6 +330,7 @@
 				88512C6A28EEFF97003DB63F /* NoNotificationView.swift */,
 				88512C6C28EF066F003DB63F /* CalendarView.swift */,
 				88512C6E28EF1C07003DB63F /* CalendarCollectionViewCell.swift */,
+				883050AD28F72E4C00902FC3 /* TasksTableViewCell.swift */,
 			);
 			path = ChildHomeScreenView;
 			sourceTree = "<group>";
@@ -497,9 +503,11 @@
 				8858667828E1970C00F11B72 /* SecondaryLabelWithIcon.swift in Sources */,
 				889F435B28E191CF00DC347D /* WelcomeViewIO.swift in Sources */,
 				CA214CEE28BDFEF5006176A7 /* AppDelegate.swift in Sources */,
+				883050AC28F72B9A00902FC3 /* KidsTask.swift in Sources */,
 				88D5282428E328C800220DFB /* KidsData.swift in Sources */,
 				8890090928E426930044E02D /* LayoutConstants.swift in Sources */,
 				88EC058428EC726E00A7E07C /* ChildHomeScreenInteractorIO.swift in Sources */,
+				883050AE28F72E4C00902FC3 /* TasksTableViewCell.swift in Sources */,
 				88512C6D28EF066F003DB63F /* CalendarView.swift in Sources */,
 				88C988F128E5E48B002DF8A3 /* ParentUpdatesViewIO.swift in Sources */,
 				8858668228E198D900F11B72 /* ParentHomeScreenInteractor.swift in Sources */,
