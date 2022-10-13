@@ -45,6 +45,12 @@
 		88C988F128E5E48B002DF8A3 /* ParentUpdatesViewIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C988F028E5E48B002DF8A3 /* ParentUpdatesViewIO.swift */; };
 		88C988F328E5E4A1002DF8A3 /* ParentUpdatesInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C988F228E5E4A1002DF8A3 /* ParentUpdatesInteractorIO.swift */; };
 		88D5282428E328C800220DFB /* KidsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D5282328E328C800220DFB /* KidsData.swift */; };
+		971507A528F6F2100024475C /* RewardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9715079F28F6F2100024475C /* RewardsViewController.swift */; };
+		971507A628F6F2100024475C /* WalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971507A028F6F2100024475C /* WalletViewController.swift */; };
+		971507A728F6F2100024475C /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971507A128F6F2100024475C /* AddTaskViewController.swift */; };
+		971507A828F6F2100024475C /* MainTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971507A228F6F2100024475C /* MainTabbarController.swift */; };
+		971507A928F6F2100024475C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971507A328F6F2100024475C /* ProfileViewController.swift */; };
+		971507AA28F6F2100024475C /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971507A428F6F2100024475C /* TasksViewController.swift */; };
 		975958FE28D9B40900570BB4 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975958FD28D9B40900570BB4 /* Button.swift */; };
 		CA214CEE28BDFEF5006176A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA214CED28BDFEF5006176A7 /* AppDelegate.swift */; };
 		CA214CF028BDFEF5006176A7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA214CEF28BDFEF5006176A7 /* SceneDelegate.swift */; };
@@ -94,6 +100,12 @@
 		88C988F028E5E48B002DF8A3 /* ParentUpdatesViewIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentUpdatesViewIO.swift; sourceTree = "<group>"; };
 		88C988F228E5E4A1002DF8A3 /* ParentUpdatesInteractorIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentUpdatesInteractorIO.swift; sourceTree = "<group>"; };
 		88D5282328E328C800220DFB /* KidsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KidsData.swift; sourceTree = "<group>"; };
+		9715079F28F6F2100024475C /* RewardsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RewardsViewController.swift; sourceTree = "<group>"; };
+		971507A028F6F2100024475C /* WalletViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalletViewController.swift; sourceTree = "<group>"; };
+		971507A128F6F2100024475C /* AddTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
+		971507A228F6F2100024475C /* MainTabbarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabbarController.swift; sourceTree = "<group>"; };
+		971507A328F6F2100024475C /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		971507A428F6F2100024475C /* TasksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
 		975958FD28D9B40900570BB4 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		9759590028D9B5A200570BB4 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		9759590128D9B5A200570BB4 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
@@ -286,9 +298,23 @@
 			path = Entities;
 			sourceTree = "<group>";
 		};
+		9715079E28F6F1FC0024475C /* TabBarVC */ = {
+			isa = PBXGroup;
+			children = (
+				971507A128F6F2100024475C /* AddTaskViewController.swift */,
+				971507A228F6F2100024475C /* MainTabbarController.swift */,
+				971507A328F6F2100024475C /* ProfileViewController.swift */,
+				9715079F28F6F2100024475C /* RewardsViewController.swift */,
+				971507A428F6F2100024475C /* TasksViewController.swift */,
+				971507A028F6F2100024475C /* WalletViewController.swift */,
+			);
+			path = TabBarVC;
+			sourceTree = "<group>";
+		};
 		975958FB28D9B2FD00570BB4 /* Design System */ = {
 			isa = PBXGroup;
 			children = (
+				9715079E28F6F1FC0024475C /* TabBarVC */,
 				8890090728E426730044E02D /* Constants */,
 				889F433A28E18B5B00DC347D /* Views */,
 			);
@@ -506,15 +532,18 @@
 				889F434128E18C7800DC347D /* UIColor + Extension.swift in Sources */,
 				889F434D28E18FE000DC347D /* WelcomeInteractor.swift in Sources */,
 				88C988F328E5E4A1002DF8A3 /* ParentUpdatesInteractorIO.swift in Sources */,
+				971507A828F6F2100024475C /* MainTabbarController.swift in Sources */,
 				889F433E28E18BEC00DC347D /* PrimaryButton.swift in Sources */,
 				CA214CF228BDFEF5006176A7 /* ViewController.swift in Sources */,
 				88C988ED28E5E450002DF8A3 /* ParentUpdatesRouter.swift in Sources */,
 				8858668F28E19A7700F11B72 /* ParentHomeScreenRouter.swift in Sources */,
 				8858667C28E1975A00F11B72 /* TitleLabel.swift in Sources */,
 				975958FE28D9B40900570BB4 /* Button.swift in Sources */,
+				971507A528F6F2100024475C /* RewardsViewController.swift in Sources */,
 				8858667628E196E600F11B72 /* SecondaryLabel.swift in Sources */,
 				8858667828E1970C00F11B72 /* SecondaryLabelWithIcon.swift in Sources */,
 				889F435B28E191CF00DC347D /* WelcomeViewIO.swift in Sources */,
+				971507A728F6F2100024475C /* AddTaskViewController.swift in Sources */,
 				CA214CEE28BDFEF5006176A7 /* AppDelegate.swift in Sources */,
 				88D5282428E328C800220DFB /* KidsData.swift in Sources */,
 				8890090928E426930044E02D /* LayoutConstants.swift in Sources */,
@@ -522,9 +551,11 @@
 				8858668228E198D900F11B72 /* ParentHomeScreenInteractor.swift in Sources */,
 				889F435728E190EA00DC347D /* ComeBackView.swift in Sources */,
 				8858667A28E1973000F11B72 /* SubtitleLabel.swift in Sources */,
+				971507A628F6F2100024475C /* WalletViewController.swift in Sources */,
 				8858668B28E19A2500F11B72 /* ParentHomeScreenConfigurator.swift in Sources */,
 				8858668928E199F600F11B72 /* KidsUpdates.swift in Sources */,
 				889F435228E1904A00DC347D /* WelcomePresenter.swift in Sources */,
+				971507AA28F6F2100024475C /* TasksViewController.swift in Sources */,
 				8858668728E199AC00F11B72 /* ParentHomeScreenViewController.swift in Sources */,
 				8858668028E198B200F11B72 /* ParentHomeScreenInteractorIO.swift in Sources */,
 				889F434F28E1900B00DC347D /* WelcomeInteractorIO.swift in Sources */,
@@ -538,6 +569,7 @@
 				889F434528E18D1000DC347D /* UIView + Extension.swift in Sources */,
 				88C988EB28E5E407002DF8A3 /* ParentUpdatesViewController.swift in Sources */,
 				88C988E728E5E3CA002DF8A3 /* ParentUpdatesPresenter.swift in Sources */,
+				971507A928F6F2100024475C /* ProfileViewController.swift in Sources */,
 				889F434A28E18F5300DC347D /* WelcomeConfigurator.swift in Sources */,
 				88C988E928E5E3F1002DF8A3 /* ParentUpdatesInteractor.swift in Sources */,
 			);

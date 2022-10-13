@@ -171,7 +171,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.image` struct is generated, and contains static references to 6 images.
+  /// This `R.image` struct is generated, and contains static references to 15 images.
   struct image {
     /// Image `boy`.
     static let boy = Rswift.ImageResource(bundle: R.hostingBundle, name: "boy")
@@ -179,12 +179,30 @@ struct R: Rswift.Validatable {
     static let done = Rswift.ImageResource(bundle: R.hostingBundle, name: "done")
     /// Image `green`.
     static let green = Rswift.ImageResource(bundle: R.hostingBundle, name: "green")
+    /// Image `home.notselected`.
+    static let homeNotselected = Rswift.ImageResource(bundle: R.hostingBundle, name: "home.notselected")
+    /// Image `home.selected`.
+    static let homeSelected = Rswift.ImageResource(bundle: R.hostingBundle, name: "home.selected")
     /// Image `noKids`.
     static let noKids = Rswift.ImageResource(bundle: R.hostingBundle, name: "noKids")
     /// Image `noUpdates`.
     static let noUpdates = Rswift.ImageResource(bundle: R.hostingBundle, name: "noUpdates")
+    /// Image `plusButton`.
+    static let plusButton = Rswift.ImageResource(bundle: R.hostingBundle, name: "plusButton")
+    /// Image `profile.notselected`.
+    static let profileNotselected = Rswift.ImageResource(bundle: R.hostingBundle, name: "profile.notselected")
+    /// Image `profile.selected`.
+    static let profileSelected = Rswift.ImageResource(bundle: R.hostingBundle, name: "profile.selected")
+    /// Image `rewards.notselected`.
+    static let rewardsNotselected = Rswift.ImageResource(bundle: R.hostingBundle, name: "rewards.notselected")
+    /// Image `rewards.selected`.
+    static let rewardsSelected = Rswift.ImageResource(bundle: R.hostingBundle, name: "rewards.selected")
     /// Image `right`.
     static let right = Rswift.ImageResource(bundle: R.hostingBundle, name: "right")
+    /// Image `wallet.notselected`.
+    static let walletNotselected = Rswift.ImageResource(bundle: R.hostingBundle, name: "wallet.notselected")
+    /// Image `wallet.selected`.
+    static let walletSelected = Rswift.ImageResource(bundle: R.hostingBundle, name: "wallet.selected")
 
     #if os(iOS) || os(tvOS)
     /// `UIImage(named: "boy", bundle: ..., traitCollection: ...)`
@@ -208,6 +226,20 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "home.notselected", bundle: ..., traitCollection: ...)`
+    static func homeNotselected(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.homeNotselected, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "home.selected", bundle: ..., traitCollection: ...)`
+    static func homeSelected(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.homeSelected, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIImage(named: "noKids", bundle: ..., traitCollection: ...)`
     static func noKids(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.noKids, compatibleWith: traitCollection)
@@ -222,9 +254,58 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "plusButton", bundle: ..., traitCollection: ...)`
+    static func plusButton(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.plusButton, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "profile.notselected", bundle: ..., traitCollection: ...)`
+    static func profileNotselected(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.profileNotselected, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "profile.selected", bundle: ..., traitCollection: ...)`
+    static func profileSelected(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.profileSelected, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "rewards.notselected", bundle: ..., traitCollection: ...)`
+    static func rewardsNotselected(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.rewardsNotselected, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "rewards.selected", bundle: ..., traitCollection: ...)`
+    static func rewardsSelected(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.rewardsSelected, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIImage(named: "right", bundle: ..., traitCollection: ...)`
     static func right(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.right, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "wallet.notselected", bundle: ..., traitCollection: ...)`
+    static func walletNotselected(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.walletNotselected, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "wallet.selected", bundle: ..., traitCollection: ...)`
+    static func walletSelected(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.walletSelected, compatibleWith: traitCollection)
     }
     #endif
 
