@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CalendarCollectionViewCell: UICollectionViewCell {
+final class CalendarCollectionViewCell: UICollectionViewCell {
     private let dayOfWeekLabel:UILabel = {
         let label = UILabel()
         label.text = "Ср"
@@ -49,7 +49,15 @@ class CalendarCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 
-    private func setupViews() {
+    func cellConfigure(numberOfDay: String, dayOfWeek: String){
+        numberOfDayLabel.text = numberOfDay
+        dayOfWeekLabel.text = dayOfWeek
+    }
+}
+
+//MARK: - Private extension
+private extension CalendarCollectionViewCell {
+    func setupViews() {
         layer.cornerRadius = LayoutConstants.cornerRadius8
         layer.borderWidth = LayoutConstants.borderWidth
         layer.borderColor = UIColor.primaryMidnight.cgColor
@@ -58,12 +66,7 @@ class CalendarCollectionViewCell: UICollectionViewCell {
         addSubview(numberOfDayLabel)
     }
     
-    func cellConfigure(numberOfDay: String, dayOfWeek: String){
-        numberOfDayLabel.text = numberOfDay
-        dayOfWeekLabel.text = dayOfWeek
-    }
-    
-    private func setConstraints() {
+    func setConstraints() {
         NSLayoutConstraint.activate([
             dayOfWeekLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
             dayOfWeekLabel.topAnchor.constraint(equalTo: topAnchor, constant: LayoutConstants.inset10)

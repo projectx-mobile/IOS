@@ -28,6 +28,8 @@ enum LayoutConstants {
     static let inset20: CGFloat = 20.0
     static let inset21: CGFloat = 21.0
     static let inset24: CGFloat = 24.0
+    static let inset25: CGFloat = 25.0
+    static let inset27: CGFloat = 27.0
     static let inset30: CGFloat = 30.0
     static let inset32: CGFloat = 32.0
     static let inset36: CGFloat = 36.0
@@ -46,11 +48,13 @@ enum LayoutConstants {
     static let duration: TimeInterval = 0.1
     
     //MARK: - Height
+    static let height5: CGFloat = 5.0
     static let height8: CGFloat = 8.0
     static let height10: CGFloat = 10.0
     static let height18: CGFloat = 18.0
     static let height20: CGFloat = 20.0
     static let height24: CGFloat = 24.0
+    static let height32: CGFloat = 32.0
     static let height48: CGFloat = 48.0
     static let height56: CGFloat = 56.0
     static let height60: CGFloat = 60.0
@@ -65,11 +69,15 @@ enum LayoutConstants {
     static let width8: CGFloat = 8.0
     static let width18: CGFloat = 18.0
     static let width20: Double = 20.0
+    static let width24: Double = 24.0
+    static let width42: Double = 42.0
     static let width85: Double = 85.0
     static let width160: CGFloat = 160.0
     static let width167: Double = 167.0
     
     //MARK: - cornerRadius
+    static let cornerRadius3: CGFloat = 3.0
+    static let cornerRadius6: CGFloat = 6.0
     static let cornerRadius8: CGFloat = 8.0
     static let cornerRadius10: CGFloat = 10.0
     static let cornerRadius27: CGFloat = 27.0
@@ -105,4 +113,8 @@ enum LayoutConstants {
     
     //MARK: - numberOfCells
     static let numberOfCalendarCells5: Int = 5
+    
+    //MARK: - spacing
+    static let spacing6: CGFloat = 6.0
+    static let spacing8: CGFloat = 8.0
 }

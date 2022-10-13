@@ -22,9 +22,7 @@ class ViewController: UIViewController {
             button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             button.heightAnchor.constraint(equalToConstant: 56),
             button.widthAnchor.constraint(equalToConstant: 343)
-          
         ])
     }
-
 }
 

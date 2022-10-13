@@ -48,6 +48,21 @@ final class ChildHomeScreenViewController: UIViewController {
         return view
     }()
     
+    let separatorUnderView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .lavanderGrey
+        view.layer.cornerRadius = LayoutConstants.cornerRadius3
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
+    private let allTasksButton = TaskDescriptionButton(text: "все")
+    private let newTasksButton = TaskDescriptionButton(text: "новые")
+    private let doneTasksButton = TaskDescriptionButton(text: "готовы")
+    private let descendingTasksButton = TaskDescriptionButton(text: "по убыванию баллов")
+    
+    private var tasksButtonsStackView = UIStackView()
+    
     private let tasksTableView: UITableView = {
         let tableView = UITableView()
         tableView.backgroundColor = .primaryWhiteSnow
@@ -113,6 +128,17 @@ private extension ChildHomeScreenViewController {
         view.addSubview(calendarView)
         view.addSubview(containerView)
         containerView.addSubview(separatorView)
+        containerView.addSubview(separatorUnderView)
+        tasksButtonsStackView = UIStackView(arrangedSubviews: [allTasksButton, newTasksButton, doneTasksButton, descendingTasksButton])
+        tasksButtonsStackView.translatesAutoresizingMaskIntoConstraints = false
+        tasksButtonsStackView.distribution = .fill
+        tasksButtonsStackView.alignment = .center
+        tasksButtonsStackView.spacing = LayoutConstants.spacing8
+        allTasksButton.addTarget(self, action: #selector(allTasksButtonPressed), for: .touchUpInside)
+        newTasksButton.addTarget(self, action: #selector(newTasksButtonPressed), for: .touchUpInside)
+        doneTasksButton.addTarget(self, action: #selector(doneTasksButtonPressed), for: .touchUpInside)
+        descendingTasksButton.addTarget(self, action: #selector(descendingTasksButtonPressed), for: .touchUpInside)
+        containerView.addSubview(tasksButtonsStackView)
         containerView.addSubview(tasksTableView)
     }
     
@@ -155,6 +181,34 @@ private extension ChildHomeScreenViewController {
         notificationView.closeDelegate = self
         tasksTableView.delegate = self
         tasksTableView.dataSource = self
+    }
+    
+    @objc private func allTasksButtonPressed() {
+        [newTasksButton, doneTasksButton, descendingTasksButton].forEach { button in
+            button.setTitleColor(.primaryMidnight, for: .normal)
+            button.backgroundColor = .primaryWhiteSnow
+        }
+    }
+    
+    @objc private func newTasksButtonPressed() {
+        [allTasksButton, doneTasksButton, descendingTasksButton].forEach { button in
+            button.setTitleColor(.primaryMidnight, for: .normal)
+            button.backgroundColor = .primaryWhiteSnow
+        }
+    }
+    
+    @objc private func doneTasksButtonPressed() {
+        [newTasksButton, allTasksButton, descendingTasksButton].forEach { button in
+            button.setTitleColor(.primaryMidnight, for: .normal)
+            button.backgroundColor = .primaryWhiteSnow
+        }
+    }
+    
+    @objc private func descendingTasksButtonPressed() {
+        [newTasksButton, allTasksButton, doneTasksButton].forEach { button in
+            button.setTitleColor(.primaryMidnight, for: .normal)
+            button.backgroundColor = .primaryWhiteSnow
+        }
     }
 
     func setConstraints() {
@@ -212,11 +266,25 @@ private extension ChildHomeScreenViewController {
             separatorView.heightAnchor.constraint(equalToConstant: LayoutConstants.inset20)
         ])
         
+        NSLayoutConstraint.activate([
+            separatorUnderView.topAnchor.constraint(equalTo: containerView.topAnchor, constant: LayoutConstants.inset10),
+            separatorUnderView.centerXAnchor.constraint(equalTo: containerView.centerXAnchor),
+            separatorUnderView.widthAnchor.constraint(equalToConstant: LayoutConstants.width42),
+            separatorUnderView.heightAnchor.constraint(equalToConstant: LayoutConstants.height5)
+        ])
+        
+        NSLayoutConstraint.activate([
+            tasksButtonsStackView.topAnchor.constraint(equalTo: separatorUnderView.bottomAnchor, constant: LayoutConstants.inset27),
+            tasksButtonsStackView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: LayoutConstants.inset16),
+            tasksButtonsStackView.widthAnchor.constraint(lessThanOrEqualTo: containerView.widthAnchor, constant: -LayoutConstants.inset32),
+            tasksButtonsStackView.heightAnchor.constraint(equalToConstant: LayoutConstants.height32)
+        ])
+        
         tasksTableViewHeightConstraint = tasksTableView.heightAnchor.constraint(equalToConstant: LayoutConstants.initialHeight1000)
         NSLayoutConstraint.activate([tasksTableViewHeightConstraint!])
         
         NSLayoutConstraint.activate([
-            tasksTableView.topAnchor.constraint(equalTo: containerView.topAnchor, constant: LayoutConstants.inset19),
+            tasksTableView.topAnchor.constraint(equalTo: tasksButtonsStackView.bottomAnchor, constant: LayoutConstants.inset24),
             tasksTableView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: LayoutConstants.inset16),
             tasksTableView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -LayoutConstants.inset16)
         ])

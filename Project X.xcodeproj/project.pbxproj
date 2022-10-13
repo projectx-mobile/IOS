@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		882B2FF228F87D70008F1CDB /* TaskDescriptionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882B2FF128F87D70008F1CDB /* TaskDescriptionButton.swift */; };
 		883050AC28F72B9A00902FC3 /* KidsTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883050AB28F72B9A00902FC3 /* KidsTask.swift */; };
 		883050AE28F72E4C00902FC3 /* TasksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883050AD28F72E4C00902FC3 /* TasksTableViewCell.swift */; };
 		8840EEE028F0501600C67E5B /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8840EEDF28F0501600C67E5B /* Roboto-Regular.ttf */; };
@@ -72,6 +73,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		882B2FF128F87D70008F1CDB /* TaskDescriptionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDescriptionButton.swift; sourceTree = "<group>"; };
 		883050AB28F72B9A00902FC3 /* KidsTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KidsTask.swift; sourceTree = "<group>"; };
 		883050AD28F72E4C00902FC3 /* TasksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksTableViewCell.swift; sourceTree = "<group>"; };
 		8840EEDF28F0501600C67E5B /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
@@ -153,6 +155,8 @@
 			isa = PBXGroup;
 			children = (
 				8858667028E1962000F11B72 /* KidsCardTableViewCell.swift */,
+				883050AD28F72E4C00902FC3 /* TasksTableViewCell.swift */,
+				88512C6E28EF1C07003DB63F /* CalendarCollectionViewCell.swift */,
 				8858667228E1968000F11B72 /* UpdatesTableViewCell.swift */,
 			);
 			path = Cells;
@@ -329,8 +333,6 @@
 				88EC058A28EC7C3600A7E07C /* NotificationView.swift */,
 				88512C6A28EEFF97003DB63F /* NoNotificationView.swift */,
 				88512C6C28EF066F003DB63F /* CalendarView.swift */,
-				88512C6E28EF1C07003DB63F /* CalendarCollectionViewCell.swift */,
-				883050AD28F72E4C00902FC3 /* TasksTableViewCell.swift */,
 			);
 			path = ChildHomeScreenView;
 			sourceTree = "<group>";
@@ -358,6 +360,7 @@
 			children = (
 				975958FD28D9B40900570BB4 /* Button.swift */,
 				889F433B28E18B9200DC347D /* CustomButton.swift */,
+				882B2FF128F87D70008F1CDB /* TaskDescriptionButton.swift */,
 				889F433D28E18BEC00DC347D /* PrimaryButton.swift */,
 			);
 			path = Buttons;
@@ -527,6 +530,7 @@
 				88EC058228EC725500A7E07C /* ChildHomeScreenInteractor.swift in Sources */,
 				88EC058D28EC8C2D00A7E07C /* KidsNotification.swift in Sources */,
 				889F433C28E18B9200DC347D /* CustomButton.swift in Sources */,
+				882B2FF228F87D70008F1CDB /* TaskDescriptionButton.swift in Sources */,
 				88EC058B28EC7C3600A7E07C /* NotificationView.swift in Sources */,
 				88C988E528E5E3B7002DF8A3 /* ParentUpdatesConfigurator.swift in Sources */,
 				88512C6B28EEFF97003DB63F /* NoNotificationView.swift in Sources */,
