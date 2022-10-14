@@ -23,7 +23,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let parentVC = ParentHomeScreenViewController()
         navVC.viewControllers = [parentVC]
         configurator.configure(with: parentVC, with: navVC)
-        window?.rootViewController = navVC
+        window?.rootViewController = MainTabBarController()
         window?.makeKeyAndVisible()
         window?.overrideUserInterfaceStyle = .light
     }
