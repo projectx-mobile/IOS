@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		880E16BF28FD9EB10074F1D3 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880E16BE28FD9EB10074F1D3 /* Notification.swift */; };
 		882B2FF228F87D70008F1CDB /* TaskDescriptionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882B2FF128F87D70008F1CDB /* TaskDescriptionButton.swift */; };
 		883050AC28F72B9A00902FC3 /* KidsTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883050AB28F72B9A00902FC3 /* KidsTask.swift */; };
 		883050AE28F72E4C00902FC3 /* TasksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883050AD28F72E4C00902FC3 /* TasksTableViewCell.swift */; };
@@ -73,6 +74,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		880E16BE28FD9EB10074F1D3 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		882B2FF128F87D70008F1CDB /* TaskDescriptionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDescriptionButton.swift; sourceTree = "<group>"; };
 		883050AB28F72B9A00902FC3 /* KidsTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KidsTask.swift; sourceTree = "<group>"; };
 		883050AD28F72E4C00902FC3 /* TasksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksTableViewCell.swift; sourceTree = "<group>"; };
@@ -151,6 +153,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		880E16BD28FD9E940074F1D3 /* ChildHomeScreenPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				88EC057F28EC723C00A7E07C /* ChildHomeScreenPresenter.swift */,
+				880E16BE28FD9EB10074F1D3 /* Notification.swift */,
+			);
+			path = ChildHomeScreenPresenter;
+			sourceTree = "<group>";
+		};
 		8858666F28E195C500F11B72 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -317,7 +328,7 @@
 			isa = PBXGroup;
 			children = (
 				88EC057E28EC721A00A7E07C /* ChildHomeScreenView */,
-				88EC057F28EC723C00A7E07C /* ChildHomeScreenPresenter.swift */,
+				880E16BD28FD9E940074F1D3 /* ChildHomeScreenPresenter */,
 				88EC058528EC727400A7E07C /* ChildHomeScreenInteractor */,
 				88EC058628EC728E00A7E07C /* ChildHomeScreenConfigurator.swift */,
 				88EC058828EC729B00A7E07C /* ChildHomeScreenRouter.swift */,
@@ -539,6 +550,7 @@
 				8858668D28E19A4A00F11B72 /* ParentHomeScreenPresenter.swift in Sources */,
 				8858667328E1968000F11B72 /* UpdatesTableViewCell.swift in Sources */,
 				889F435428E1909600DC347D /* WelcomeRouter.swift in Sources */,
+				880E16BF28FD9EB10074F1D3 /* Notification.swift in Sources */,
 				889F434528E18D1000DC347D /* UIView + Extension.swift in Sources */,
 				88C988EB28E5E407002DF8A3 /* ParentUpdatesViewController.swift in Sources */,
 				88EC057D28EC721200A7E07C /* ChildHomeScreenViewIO.swift in Sources */,

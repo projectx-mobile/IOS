@@ -15,7 +15,7 @@ extension UIDatePicker {
             subview.alpha = 0.02
         }
     }
-    
+
     func paintClear() {
         self.traverse(view: self)
     }

@@ -119,16 +119,8 @@ final class ChildHomeScreenViewController: UIViewController {
 private extension ChildHomeScreenViewController {
     
     func setupViews() {
-        view.addSubview(backgroundView)
         backgroundView.transform = backgroundView.transform.rotated(by: CGFloat(-0.05))
-        view.addSubview(titleLabel)
-        view.addSubview(activeTasksLabel)
-        view.addSubview(notificationView)
-        view.addSubview(noNotificationView)
-        view.addSubview(calendarView)
-        view.addSubview(containerView)
-        containerView.addSubview(separatorView)
-        containerView.addSubview(separatorUnderView)
+        [backgroundView, titleLabel, activeTasksLabel, notificationView, noNotificationView, calendarView, containerView].forEach { view.addSubview($0) }
         tasksButtonsStackView = UIStackView(arrangedSubviews: [allTasksButton, newTasksButton, doneTasksButton, descendingTasksButton])
         tasksButtonsStackView.translatesAutoresizingMaskIntoConstraints = false
         tasksButtonsStackView.distribution = .fill
@@ -138,8 +130,7 @@ private extension ChildHomeScreenViewController {
         newTasksButton.addTarget(self, action: #selector(newTasksButtonPressed), for: .touchUpInside)
         doneTasksButton.addTarget(self, action: #selector(doneTasksButtonPressed), for: .touchUpInside)
         descendingTasksButton.addTarget(self, action: #selector(descendingTasksButtonPressed), for: .touchUpInside)
-        containerView.addSubview(tasksButtonsStackView)
-        containerView.addSubview(tasksTableView)
+        [separatorView, separatorUnderView, tasksButtonsStackView, tasksTableView].forEach { containerView.addSubview($0) }
     }
     
     func setupNavigationBar() {

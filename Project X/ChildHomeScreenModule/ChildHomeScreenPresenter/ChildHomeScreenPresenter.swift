@@ -7,10 +7,6 @@
 
 import Foundation
 
-struct Notification {
-    let text: String
-}
-
 final class ChildHomeScreenPresenter: ChildHomeScreenViewOutputProtocol{
 
     unowned let view: ChildHomeScreenViewInputProtocol
