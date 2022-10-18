@@ -21,4 +21,5 @@ extension UIColor {
     static let notifications = #colorLiteral(red: 0.9921568627, green: 0.9764705882, blue: 0.8470588235, alpha: 1)
     static let accentStatusNew = #colorLiteral(red: 0.9098039216, green: 0.9058823529, blue: 0.9803921569, alpha: 1)
     static let statusOverdue = #colorLiteral(red: 0.9607843137, green: 0.8196078431, blue: 0.8352941176, alpha: 1)
+    static let backgroundGrey = #colorLiteral(red: 0.8549019608, green: 0.8549019608, blue: 0.8549019608, alpha: 1)
 }

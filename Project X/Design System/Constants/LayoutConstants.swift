@@ -35,9 +35,11 @@ enum LayoutConstants {
     static let inset36: CGFloat = 36.0
     static let inset40: CGFloat = 40.0
     static let inset43: CGFloat = 43.0
+    static let inset49: CGFloat = 49.0
     static let inset52: CGFloat = 52.0
     static let inset55: CGFloat = 55.0
     static let inset58: CGFloat = 58.0
+    static let inset69: CGFloat = 69.0
     static let inset72: CGFloat = 72.0
     static let inset74: CGFloat = 74.0
     static let inset76: CGFloat = 76.0
@@ -62,7 +64,8 @@ enum LayoutConstants {
     static let height78: Double = 78.0
     static let height121: Double = 121.0
     static let height152: Double = 152.0
-    static let height375: CGFloat = 375.0
+    static let height158: Double = 158.0
+    static let height371: CGFloat = 371.0
     
     //MARK: - Width
     static let width5: CGFloat = 5.0
@@ -74,12 +77,14 @@ enum LayoutConstants {
     static let width85: Double = 85.0
     static let width160: CGFloat = 160.0
     static let width167: Double = 167.0
+    static let width242: Double = 242.0
     
     //MARK: - cornerRadius
     static let cornerRadius3: CGFloat = 3.0
     static let cornerRadius6: CGFloat = 6.0
     static let cornerRadius8: CGFloat = 8.0
     static let cornerRadius10: CGFloat = 10.0
+    static let cornerRadius12: CGFloat = 12.0
     static let cornerRadius27: CGFloat = 27.0
     static let cornerRadius36: CGFloat = 36.0
     
@@ -117,4 +122,7 @@ enum LayoutConstants {
     //MARK: - spacing
     static let spacing6: CGFloat = 6.0
     static let spacing8: CGFloat = 8.0
+    
+    //MARK: - alpha
+    static let alpha60: CGFloat = 0.6
 }

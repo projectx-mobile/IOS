@@ -23,6 +23,13 @@ class WelcomeViewController: UIViewController {
         button.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
         return button
     }()
+    
+    private var backgroundView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .backgroundGrey
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
 
     private let comeBackView = ComeBackView()
 
@@ -40,13 +47,15 @@ class WelcomeViewController: UIViewController {
 //MARK: - Private extension
 private extension WelcomeViewController {
     
-    private func setupViews() {
+    func setupViews() {
         view.addSubview(signUpButton)
         view.addSubview(logInButton)
+        view.addSubview(backgroundView)
+        backgroundView.isHidden = true
         view.addSubview(comeBackView)
     }
     
-    private func addSwipe() {
+    func addSwipe() {
         let swipe = UISwipeGestureRecognizer(target: self, action: #selector(doSwipe))
         swipe.direction = .down
         swipe.numberOfTouchesRequired = 1
@@ -54,25 +63,27 @@ private extension WelcomeViewController {
         comeBackView.addGestureRecognizer(swipe)
     }
     
-    @objc private func doSwipe() {
+    @objc func doSwipe() {
         UIView.animate(withDuration: 1) {
             self.comeBackView.frame = CGRect(x: 0,
                                              y: UIScreen.main.bounds.size.height,
                                              width: self.comeBackView.frame.width ,
                                              height: self.comeBackView.frame.height)
         }
+        self.backgroundView.isHidden = true
     }
     
-    @objc private func signUpButtonTapped() {
+    @objc func signUpButtonTapped() {
     }
 
-    @objc private func logInButtonTapped() {
+    @objc func logInButtonTapped() {
         UIView.animate(withDuration: 1) {
             self.comeBackView.frame = CGRect(x: 0,
                                              y: (UIScreen.main.bounds.size.height - self.comeBackView.frame.height),
                                              width: self.comeBackView.frame.width ,
                                              height: self.comeBackView.frame.height)
         }
+        self.backgroundView.isHidden = false
     }
 
     private func setConstraints() {
@@ -91,10 +102,17 @@ private extension WelcomeViewController {
         ])
 
         NSLayoutConstraint.activate([
-            comeBackView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            comeBackView.topAnchor.constraint(equalTo: view.bottomAnchor),
             comeBackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             comeBackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-            comeBackView.heightAnchor.constraint(equalToConstant: LayoutConstants.height375)
+            comeBackView.heightAnchor.constraint(equalToConstant: LayoutConstants.height371)
+        ])
+        
+        NSLayoutConstraint.activate([
+            backgroundView.topAnchor.constraint(equalTo: view.topAnchor),
+            backgroundView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            backgroundView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            backgroundView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
     }
 }

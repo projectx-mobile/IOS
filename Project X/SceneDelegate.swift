@@ -18,7 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
         
-        let navVC = UINavigationController()
+     //   let navVC = UINavigationController()
         
     //   ChildHomeScreen
 //        let configurator:ChildHomeScreenConfiguratorInputProtocol = ChildHomeScreenConfigurator()
