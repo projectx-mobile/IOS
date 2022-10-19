@@ -313,8 +313,8 @@
 		CA214CEC28BDFEF5006176A7 /* Project X */ = {
 			isa = PBXGroup;
 			children = (
-				0030963E28E491DA00C321CC /* Stories */,
 				0030963D28E4919300C321CC /* App */,
+				0030963E28E491DA00C321CC /* Stories */,
 				975958FB28D9B2FD00570BB4 /* Design System */,
 				889F433F28E18C4F00DC347D /* Extensions */,
 				889F434B28E18FA800DC347D /* Resources */,

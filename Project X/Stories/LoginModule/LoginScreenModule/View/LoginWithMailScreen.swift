@@ -52,6 +52,7 @@ private extension LoginWithMailScreen {
         inputPasswordField.layer.cornerRadius = 8
         inputPasswordField.layer.borderWidth = 1.4
         inputPasswordField.layer.borderColor = UIColor(red: 0.094, green: 0.098, blue: 0.145, alpha: 1).cgColor
+        inputPasswordField.backgroundColor = .secondaryDuskGrey
         view.addSubview(inputPasswordField)
         
         view.addSubview(continueButton)
