@@ -14,15 +14,15 @@ class WelcomeViewController: UIViewController {
     
     private let welcomeTitleLabel = WelcomeTitleLabel(text: "Рады видеть тебя в трекере заданий Alfredo")
     
-    private lazy var titleLabel: SubtitleLabel = {
-        let label = SubtitleLabel()
-        label.numberOfLines = 0
-        label.lineBreakMode = .byWordWrapping
-        var paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.lineHeightMultiple = 0.74
-        label.attributedText = NSMutableAttributedString(string: "Создавай задачи и выполняй их в срок", attributes: [NSAttributedString.Key.paragraphStyle: paragraphStyle])
-        return label
-    }()
+//    private lazy var titleLabel: SubtitleLabel = {
+//        let label = SubtitleLabel()
+//        label.numberOfLines = 0
+//        label.lineBreakMode = .byWordWrapping
+//        var paragraphStyle = NSMutableParagraphStyle()
+//        paragraphStyle.lineHeightMultiple = 0.74
+//        label.attributedText = NSMutableAttributedString(string: "Создавай задачи и выполняй их в срок", attributes: [NSAttributedString.Key.paragraphStyle: paragraphStyle])
+//        return label
+//    }()
 
     private lazy var logInButton: UIButton = {
         let button = PrimaryButton(text: "Войти", fillColor: .primaryWhiteSnow, tintColor: .primaryMidnight, borderColor: .primaryMidnight)
