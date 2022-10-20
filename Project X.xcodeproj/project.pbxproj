@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		055940F029006E43007EF6D1 /* WelcomeTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055940EF29006E43007EF6D1 /* WelcomeTitleLabel.swift */; };
 		5E90E3AB72F828369CE793A0 /* libPods-Project X.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DDA4B0201ADF2A41AD309361 /* libPods-Project X.a */; };
 		8858667128E1962000F11B72 /* KidsCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8858667028E1962000F11B72 /* KidsCardTableViewCell.swift */; };
 		8858667328E1968000F11B72 /* UpdatesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8858667228E1968000F11B72 /* UpdatesTableViewCell.swift */; };
@@ -61,6 +62,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		055940EF29006E43007EF6D1 /* WelcomeTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeTitleLabel.swift; sourceTree = "<group>"; };
 		288279B82A1B1561B1B6316C /* Pods-Project X.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project X.debug.xcconfig"; path = "Target Support Files/Pods-Project X/Pods-Project X.debug.xcconfig"; sourceTree = "<group>"; };
 		47AE13615C7A05EF6D23A4CF /* Pods-Project X.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project X.release.xcconfig"; path = "Target Support Files/Pods-Project X/Pods-Project X.release.xcconfig"; sourceTree = "<group>"; };
 		8858667028E1962000F11B72 /* KidsCardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KidsCardTableViewCell.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 				8858667728E1970C00F11B72 /* SecondaryLabelWithIcon.swift */,
 				8858667928E1973000F11B72 /* SubtitleLabel.swift */,
 				8858667B28E1975A00F11B72 /* TitleLabel.swift */,
+				055940EF29006E43007EF6D1 /* WelcomeTitleLabel.swift */,
 			);
 			path = Labels;
 			sourceTree = "<group>";
@@ -543,6 +546,7 @@
 				8858667628E196E600F11B72 /* SecondaryLabel.swift in Sources */,
 				8858667828E1970C00F11B72 /* SecondaryLabelWithIcon.swift in Sources */,
 				889F435B28E191CF00DC347D /* WelcomeViewIO.swift in Sources */,
+				055940F029006E43007EF6D1 /* WelcomeTitleLabel.swift in Sources */,
 				971507A728F6F2100024475C /* AddTaskViewController.swift in Sources */,
 				CA214CEE28BDFEF5006176A7 /* AppDelegate.swift in Sources */,
 				88D5282428E328C800220DFB /* KidsData.swift in Sources */,

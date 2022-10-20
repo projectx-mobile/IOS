@@ -1,13 +1,13 @@
 //
-//  TitleLabel.swift
+//  WelcomeTitleLabel.swift
 //  Project X
 //
-//  Created by Nataliya Lazouskaya on 26.09.22.
+//  Created by Александра Захаревич on 19.10.22.
 //
 
 import UIKit
 
-final class TitleLabel: UILabel {
+final class WelcomeTitleLabel: UILabel {
     convenience init(text: String) {
         self.init()
         configure(with: text)
@@ -15,11 +15,11 @@ final class TitleLabel: UILabel {
 }
 
 //MARK: - Private extension
-private extension TitleLabel {
+private extension WelcomeTitleLabel {
     private func configure(with text: String) {
         self.text = text
-        self.textColor = .primaryMidnight
-        self.font = .nexaDemoBold32()
+        self.textColor = .duskGrey
+        self.font = .robotoRegular13()
         self.textAlignment = .left
         self.translatesAutoresizingMaskIntoConstraints = false
     }
