@@ -16,9 +16,7 @@ final class PrimaryButton: UIButton {
     
     override var isHighlighted: Bool {
         didSet {
-            UIView.animate(withDuration: LayoutConstants.duration) {
-                self.layer.shadowOpacity = self.isHighlighted ? 0 : 1
-            }
+            self.layer.shadowOpacity = self.isHighlighted ? 0 : 1
         }
     }
 }
