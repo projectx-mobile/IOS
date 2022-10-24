@@ -14,7 +14,7 @@ class WelcomeViewController: UIViewController {
     
     private let welcomeTitleLabel = WelcomeTitleLabel(text: "Рады видеть тебя в трекере заданий Alfredo")
     
-    private let welcomeSubtitleLabel = WelcomeSubtitleLabel(text: "Создавай задачи и выполняй их в срок")
+    private let welcomeSubtitleLabel = WelcomeSubtitleLabel(text: "Создавай задачи \nи выполняй их в срок")
 
     private lazy var logInButton: UIButton = {
         let button = PrimaryButton(text: "Войти", fillColor: .primaryWhiteSnow, tintColor: .primaryMidnight, borderColor: .primaryMidnight)
