@@ -14,15 +14,7 @@ class WelcomeViewController: UIViewController {
     
     private let welcomeTitleLabel = WelcomeTitleLabel(text: "Рады видеть тебя в трекере заданий Alfredo")
     
-    private lazy var titleLabel: SubtitleLabel = {
-        let label = SubtitleLabel()
-        label.numberOfLines = 0
-        label.lineBreakMode = .byWordWrapping
-        var paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.lineHeightMultiple = 0.74
-        label.attributedText = NSMutableAttributedString(string: "Создавай задачи и выполняй их в срок", attributes: [NSAttributedString.Key.paragraphStyle: paragraphStyle])
-        return label
-    }()
+    private let welcomeSubtitleLabel = WelcomeSubtitleLabel(text: "Создавай задачи и выполняй их в срок")
 
     private lazy var logInButton: UIButton = {
         let button = PrimaryButton(text: "Войти", fillColor: .primaryWhiteSnow, tintColor: .primaryMidnight, borderColor: .primaryMidnight)
@@ -55,7 +47,7 @@ private extension WelcomeViewController {
         view.addSubview(signUpButton)
         view.addSubview(logInButton)
         view.addSubview(welcomeTitleLabel)
-        view.addSubview(titleLabel)
+        view.addSubview(welcomeSubtitleLabel)
 //        view.addSubview(comeBackView)
     }
 //    private func addSwipe() {
@@ -93,10 +85,10 @@ private extension WelcomeViewController {
             welcomeTitleLabel.heightAnchor.constraint(equalToConstant: LayoutConstants.height18)
         ])
         NSLayoutConstraint.activate([
-            titleLabel.topAnchor.constraint(equalTo: welcomeTitleLabel.bottomAnchor, constant: LayoutConstants.inset16),
-            titleLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: LayoutConstants.inset16),
-            titleLabel.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -LayoutConstants.inset16),
-            titleLabel.heightAnchor.constraint(equalToConstant: LayoutConstants.height72)
+            welcomeSubtitleLabel.topAnchor.constraint(equalTo: welcomeTitleLabel.bottomAnchor, constant: LayoutConstants.inset16),
+            welcomeSubtitleLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: LayoutConstants.inset16),
+            welcomeSubtitleLabel.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -LayoutConstants.inset16),
+            welcomeSubtitleLabel.heightAnchor.constraint(equalToConstant: LayoutConstants.height72)
         ])
         NSLayoutConstraint.activate([
             signUpButton.bottomAnchor.constraint(equalTo: logInButton.topAnchor, constant: -LayoutConstants.inset16),
