@@ -14,6 +14,7 @@ enum LayoutConstants {
     //MARK: - Insets
     static let inset5: CGFloat = 5.0
     static let inset6: CGFloat = 6.0
+    static let inset7: CGFloat = 7.5
     static let inset8: CGFloat = 8.0
     static let inset10: CGFloat = 10.0
     static let inset14: CGFloat = 14.0
@@ -41,6 +42,7 @@ enum LayoutConstants {
     static let height72: CGFloat = 72.0
     static let height78: Double = 78.0
     static let height152: Double = 152.0
+    static let height325: CGFloat = 325.0
     static let height375: CGFloat = 375.0
     //MARK: - Width
     static let width85: Double = 85.0

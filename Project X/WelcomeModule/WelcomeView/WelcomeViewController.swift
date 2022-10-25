@@ -88,7 +88,7 @@ private extension WelcomeViewController {
             welcomeSubtitleLabel.topAnchor.constraint(equalTo: welcomeTitleLabel.bottomAnchor, constant: LayoutConstants.inset16),
             welcomeSubtitleLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: LayoutConstants.inset16),
             welcomeSubtitleLabel.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -LayoutConstants.inset16),
-            welcomeSubtitleLabel.heightAnchor.constraint(equalToConstant: LayoutConstants.height72)
+            welcomeSubtitleLabel.heightAnchor.constraint(equalToConstant: LayoutConstants.height325)
         ])
         NSLayoutConstraint.activate([
             signUpButton.bottomAnchor.constraint(equalTo: logInButton.topAnchor, constant: -LayoutConstants.inset16),

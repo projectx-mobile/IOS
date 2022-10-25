@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0534BD0C29068EDF0051717E /* WelcomeSubtitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0534BD0B29068EDF0051717E /* WelcomeSubtitleLabel.swift */; };
 		055940F029006E43007EF6D1 /* WelcomeTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055940EF29006E43007EF6D1 /* WelcomeTitleLabel.swift */; };
+		056FBB2D29069F0B006C1F06 /* frame 2 onboarding.json in Resources */ = {isa = PBXBuildFile; fileRef = 056FBB2B29069F0B006C1F06 /* frame 2 onboarding.json */; };
+		056FBB2E29069F0B006C1F06 /* antframe1.json in Resources */ = {isa = PBXBuildFile; fileRef = 056FBB2C29069F0B006C1F06 /* antframe1.json */; };
 		5E90E3AB72F828369CE793A0 /* libPods-Project X.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DDA4B0201ADF2A41AD309361 /* libPods-Project X.a */; };
 		8858667128E1962000F11B72 /* KidsCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8858667028E1962000F11B72 /* KidsCardTableViewCell.swift */; };
 		8858667328E1968000F11B72 /* UpdatesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8858667228E1968000F11B72 /* UpdatesTableViewCell.swift */; };
@@ -65,6 +67,8 @@
 /* Begin PBXFileReference section */
 		0534BD0B29068EDF0051717E /* WelcomeSubtitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeSubtitleLabel.swift; sourceTree = "<group>"; };
 		055940EF29006E43007EF6D1 /* WelcomeTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeTitleLabel.swift; sourceTree = "<group>"; };
+		056FBB2B29069F0B006C1F06 /* frame 2 onboarding.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "frame 2 onboarding.json"; sourceTree = "<group>"; };
+		056FBB2C29069F0B006C1F06 /* antframe1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = antframe1.json; sourceTree = "<group>"; };
 		288279B82A1B1561B1B6316C /* Pods-Project X.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project X.debug.xcconfig"; path = "Target Support Files/Pods-Project X/Pods-Project X.debug.xcconfig"; sourceTree = "<group>"; };
 		47AE13615C7A05EF6D23A4CF /* Pods-Project X.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project X.release.xcconfig"; path = "Target Support Files/Pods-Project X/Pods-Project X.release.xcconfig"; sourceTree = "<group>"; };
 		8858667028E1962000F11B72 /* KidsCardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KidsCardTableViewCell.swift; sourceTree = "<group>"; };
@@ -378,6 +382,8 @@
 		CA214CEC28BDFEF5006176A7 /* Project X */ = {
 			isa = PBXGroup;
 			children = (
+				056FBB2C29069F0B006C1F06 /* antframe1.json */,
+				056FBB2B29069F0B006C1F06 /* frame 2 onboarding.json */,
 				CA214CED28BDFEF5006176A7 /* AppDelegate.swift */,
 				CA214CEF28BDFEF5006176A7 /* SceneDelegate.swift */,
 				CA214CF128BDFEF5006176A7 /* ViewController.swift */,
@@ -459,7 +465,9 @@
 				889F434728E18E6100DC347D /* NexaDemo-Bold.ttf in Resources */,
 				CA214CFA28BDFEF7006176A7 /* LaunchScreen.storyboard in Resources */,
 				CA214CF728BDFEF7006176A7 /* Assets.xcassets in Resources */,
+				056FBB2E29069F0B006C1F06 /* antframe1.json in Resources */,
 				CA214CF528BDFEF5006176A7 /* Main.storyboard in Resources */,
+				056FBB2D29069F0B006C1F06 /* frame 2 onboarding.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -735,6 +743,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -764,6 +773,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

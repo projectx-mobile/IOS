@@ -6,4 +6,5 @@ target 'Project X' do
   #use_frameworks!
 pod 'R.swift'
 pod 'SwiftLint'
+pod 'lottie-ios'
 end

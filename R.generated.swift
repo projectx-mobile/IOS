@@ -6,6 +6,8 @@
 import Foundation
 import Rswift
 import UIKit
+// swiftlint:disable type_name
+// swiftlint:disable identifier_name
 
 /// This `R` struct is generated and contains references to static resources.
 struct R: Rswift.Validatable {
