@@ -15,7 +15,7 @@ final class SecondaryLabel: UILabel {
     }
 }
 
-//MARK: - Private extension
+// MARK: - Private extension
 private extension SecondaryLabel {
     private func configure(with text: String) {
         self.text = text

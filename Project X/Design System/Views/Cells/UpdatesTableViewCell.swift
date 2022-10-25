@@ -8,7 +8,7 @@
 import UIKit
 
 final class UpdatesTableViewCell: UITableViewCell {
-    private let backgroundCell:UIView = {
+    private let backgroundCell: UIView = {
         let view = UIView()
         view.backgroundColor = .accentStatus
         view.layer.cornerRadius = LayoutConstants.cornerRadius8
@@ -33,12 +33,12 @@ final class UpdatesTableViewCell: UITableViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    func cellConfigure(data:KidsUpdates) {
+    func cellConfigure(data: KidsUpdates) {
         updateLabel.text = "\(data.name) \(data.update.rawValue)"
     }
 }
 
-//MARK: - Private extension
+// MARK: - Private extension
 private extension UpdatesTableViewCell {
     func setupViews() {
         backgroundColor = .clear

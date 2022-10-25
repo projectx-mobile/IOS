@@ -8,7 +8,7 @@
 import UIKit
 
 final class KidsCardTableViewCell: UITableViewCell {
-    private let backgroundCell:UIView = {
+    private let backgroundCell: UIView = {
         let view = UIView()
         view.backgroundColor = .accentStatus
         view.layer.cornerRadius = LayoutConstants.cornerRadius8
@@ -28,7 +28,7 @@ final class KidsCardTableViewCell: UITableViewCell {
     }()
     private let kidsImageView: UIImageView = {
         let view = UIImageView()
-        view.image = UIImage(named: "boy")//?.withRenderingMode(.alwaysTemplate)
+        view.image = UIImage(named: "boy")// ?.withRenderingMode(.alwaysTemplate)
         view.layer.cornerRadius = LayoutConstants.cornerRadius27
         view.layer.borderWidth = LayoutConstants.borderWidth
         view.layer.borderColor = UIColor.primaryMidnight.cgColor
@@ -83,14 +83,14 @@ final class KidsCardTableViewCell: UITableViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    func cellConfigure(data:KidsData) {
+    func cellConfigure(data: KidsData) {
         kidNameLabel.text = data.name
         tasksLabel.text = "\(data.numberOfTasksDone)/\(data.numberOfTasks) задач"
         addProgress(view: circleView, tasks: data.numberOfTasks, tasksDone: data.numberOfTasksDone)
     }
 }
 
-//MARK: - Private extension
+// MARK: - Private extension
 private extension KidsCardTableViewCell {
     func setupViews() {
         backgroundColor = .clear
@@ -105,8 +105,8 @@ private extension KidsCardTableViewCell {
     }
     func addProgress(view: UIView, tasks: Int, tasksDone: Int) {
         let center = LayoutConstants.centerBezier
-        let startAngle:CGFloat = (-CGFloat.pi) / 2
-        let endAngle:CGFloat = startAngle + (2 * CGFloat.pi)
+        let startAngle: CGFloat = (-CGFloat.pi) / 2
+        let endAngle: CGFloat = startAngle + (2 * CGFloat.pi)
         let circularPath = UIBezierPath(arcCenter: center, radius: LayoutConstants.radiusBezier, startAngle: startAngle, endAngle: endAngle, clockwise: true)
         let shapeLayer = CAShapeLayer()
         shapeLayer.path = circularPath.cgPath
@@ -153,7 +153,7 @@ private extension KidsCardTableViewCell {
         ])
         NSLayoutConstraint.activate([
             tasksLabel.centerYAnchor.constraint(equalTo: backgroundCell.centerYAnchor),
-            tasksLabel.trailingAnchor.constraint(equalTo: backgroundCell.trailingAnchor, constant: -LayoutConstants.inset16),
+            tasksLabel.trailingAnchor.constraint(equalTo: backgroundCell.trailingAnchor, constant: -LayoutConstants.inset16)
         ])
         let optionalWidthConstraint = tasksLabel.widthAnchor.constraint(equalToConstant: LayoutConstants.inset10)
         optionalWidthConstraint.priority = .defaultLow

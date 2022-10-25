@@ -8,14 +8,14 @@
 import UIKit
 
 final class TitleLabel: UILabel {
-    
+
     convenience init(text: String) {
         self.init()
         configure(with: text)
     }
 }
 
-//MARK: - Private extension
+// MARK: - Private extension
 private extension TitleLabel {
     private func configure(with text: String) {
         self.text = text

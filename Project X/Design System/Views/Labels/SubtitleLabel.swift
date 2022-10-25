@@ -15,7 +15,7 @@ final class SubtitleLabel: UILabel {
     }
 }
 
-//MARK: - Private extension
+// MARK: - Private extension
 private extension SubtitleLabel {
     private func configure(with text: String) {
         self.text = text
