@@ -24,6 +24,13 @@ class WelcomeViewController: UIViewController {
         return button
     }()
 
+    private var backgroundView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .backgroundGrey
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+
     private let comeBackView = ComeBackView()
 
     override func viewDidLoad() {
@@ -37,38 +44,45 @@ class WelcomeViewController: UIViewController {
     }
 }
 
-//MARK: - Private extension
+// MARK: - Private extension
 private extension WelcomeViewController {
-    private func setupViews() {
+    func setupViews() {
         view.addSubview(signUpButton)
         view.addSubview(logInButton)
+        view.addSubview(backgroundView)
+        backgroundView.isHidden = true
         view.addSubview(comeBackView)
     }
-    private func addSwipe() {
+
+    func addSwipe() {
         let swipe = UISwipeGestureRecognizer(target: self, action: #selector(doSwipe))
         swipe.direction = .down
         swipe.numberOfTouchesRequired = 1
         comeBackView.isUserInteractionEnabled = true
         comeBackView.addGestureRecognizer(swipe)
     }
-    @objc private func doSwipe() {
+
+    @objc func doSwipe() {
         UIView.animate(withDuration: 1) {
             self.comeBackView.frame = CGRect(x: 0,
                                              y: UIScreen.main.bounds.size.height,
-                                             width: self.comeBackView.frame.width ,
+                                             width: self.comeBackView.frame.width,
                                              height: self.comeBackView.frame.height)
         }
-    }
-    @objc private func signUpButtonTapped() {
+        self.backgroundView.isHidden = true
     }
 
-    @objc private func logInButtonTapped() {
+    @objc func signUpButtonTapped() {
+    }
+
+    @objc func logInButtonTapped() {
         UIView.animate(withDuration: 1) {
             self.comeBackView.frame = CGRect(x: 0,
                                              y: (UIScreen.main.bounds.size.height - self.comeBackView.frame.height),
-                                             width: self.comeBackView.frame.width ,
+                                             width: self.comeBackView.frame.width,
                                              height: self.comeBackView.frame.height)
         }
+        self.backgroundView.isHidden = false
     }
 
     private func setConstraints() {
@@ -78,6 +92,7 @@ private extension WelcomeViewController {
             signUpButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -LayoutConstants.inset16),
             signUpButton.heightAnchor.constraint(equalToConstant: LayoutConstants.height48)
         ])
+
         NSLayoutConstraint.activate([
             logInButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -LayoutConstants.inset58),
             logInButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: LayoutConstants.inset16),
@@ -86,10 +101,17 @@ private extension WelcomeViewController {
         ])
 
         NSLayoutConstraint.activate([
-            comeBackView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            comeBackView.topAnchor.constraint(equalTo: view.bottomAnchor),
             comeBackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             comeBackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-            comeBackView.heightAnchor.constraint(equalToConstant: LayoutConstants.height375)
+            comeBackView.heightAnchor.constraint(equalToConstant: LayoutConstants.height371)
+        ])
+
+        NSLayoutConstraint.activate([
+            backgroundView.topAnchor.constraint(equalTo: view.topAnchor),
+            backgroundView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            backgroundView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            backgroundView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
     }
 }

@@ -5,13 +5,15 @@
 //  Created by Nataliya Lazouskaya on 29.09.22.
 //
 
-import UIKit
 // swiftlint:disable force_cast
+
+import UIKit
+
 final class ParentUpdatesViewController: UIViewController {
     var presenter: ParentUpdatesViewOutputProtocol!
-    
+
     private let idUpdatesTableViewCell = "idUpdatesTableViewCell"
-    
+
     private let updatesTableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .grouped)
         tableView.backgroundColor = .primaryWhiteSnow
@@ -21,10 +23,10 @@ final class ParentUpdatesViewController: UIViewController {
         tableView.delaysContentTouches = false
         return tableView
     }()
-    
+
     private var numberOfUpdatesCells = 0
     private var cellUpdatesInfo: KidsUpdates?
-    
+
     override func viewDidLoad() {
         title = Constants.title
         super.viewDidLoad()
@@ -38,38 +40,38 @@ final class ParentUpdatesViewController: UIViewController {
     }
 }
 
-//MARK: - Private extension
+// MARK: - Private extension
 private extension ParentUpdatesViewController {
-    
+
     func setupViews() {
         view.addSubview(updatesTableView)
     }
-    
+
     func setDelegates() {
         updatesTableView.delegate = self
         updatesTableView.dataSource = self
     }
-    
+
     func setupNavigationBar() {
             let navBarAppearance = UINavigationBarAppearance()
             navBarAppearance.configureWithTransparentBackground()
             navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.primaryMidnight]
             navBarAppearance.backgroundColor = #colorLiteral(red: 0.9764705882, green: 0.9764705882, blue: 0.9843137255, alpha: 1).withAlphaComponent(0.8)
-            
+
             let scrollnavBarAppearance = UINavigationBarAppearance()
             scrollnavBarAppearance.configureWithOpaqueBackground()
             scrollnavBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.primaryWhiteSnow]
             scrollnavBarAppearance.backgroundColor = #colorLiteral(red: 0.9764705882, green: 0.9764705882, blue: 0.9843137255, alpha: 1)
-            
+
             navigationController?.navigationBar.standardAppearance = navBarAppearance
             navigationController?.navigationBar.scrollEdgeAppearance = scrollnavBarAppearance
-            
+
             let backButton = UIBarButtonItem()
             backButton.title = ""
             backButton.tintColor = .primaryMidnight
             self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
     }
-    
+
     func setConstraints() {
         NSLayoutConstraint.activate([
             updatesTableView.topAnchor.constraint(equalTo: view.topAnchor),
@@ -80,21 +82,21 @@ private extension ParentUpdatesViewController {
     }
 }
 
-//MARK: - Private extension
+// MARK: - Private extension
 private extension ParentUpdatesViewController {
     enum Constants {
         static let title = "Обновления"
     }
 }
 
-//MARK: - UITableViewDataSource
+// MARK: - UITableViewDataSource
 extension ParentUpdatesViewController: UITableViewDataSource {
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         presenter.getNumberOfUpdatesCells()
         return numberOfUpdatesCells
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: idUpdatesTableViewCell, for: indexPath) as! UpdatesTableViewCell
         presenter.getInfoForUpdatesCell(at: indexPath)
@@ -104,36 +106,36 @@ extension ParentUpdatesViewController: UITableViewDataSource {
         cell.accessoryType = .disclosureIndicator
         return cell
     }
-    
+
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: tableView.frame.width, height: 60))
-        
+
         let label = TitleLabel(text: "Обновления")
         label.frame = CGRect.init(x: 5, y: 5, width: headerView.frame.width, height: headerView.frame.height-10)
         headerView.addSubview(label)
         return headerView
     }
-    
+
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 60
     }
 }
 
-//MARK: - UITableViewDelegate
+// MARK: - UITableViewDelegate
 extension ParentUpdatesViewController: UITableViewDelegate {
-    
+
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return LayoutConstants.rowHeight66
     }
 }
 
-//MARK: - ParentUpdatesViewInputProtocol
+// MARK: - ParentUpdatesViewInputProtocol
 extension ParentUpdatesViewController: ParentUpdatesViewInputProtocol {
-    
+
     func receiveNumberOfUpdatesCells(number: Int) {
         numberOfUpdatesCells = number
     }
-    
+
     func receiveInfoForUpdatesCells(info: KidsUpdates) {
         cellUpdatesInfo = info
     }

@@ -17,7 +17,7 @@ final class ParentHomeScreenInteractor: ParentHomeScreenInteractorInputProtocol 
         KidsData(name: "Mike", numberOfTasks: 4, numberOfTasksDone: 3),
         KidsData(name: "Harry", numberOfTasks: 8, numberOfTasksDone: 3)
     ]
-    let updatesDataFromEntity:[KidsUpdates] = [KidsUpdates(name: "Mike", update: .created),
+    let updatesDataFromEntity: [KidsUpdates] = [KidsUpdates(name: "Mike", update: .created),
                                                KidsUpdates(name: "Alice", update: .completed),
                                                KidsUpdates(name: "Harry", update: .selected),
                                                KidsUpdates(name: "Harry", update: .selected),
@@ -40,7 +40,7 @@ final class ParentHomeScreenInteractor: ParentHomeScreenInteractorInputProtocol 
         let numberOfUpdates = updatesDataFromEntity.count
         presenter.receiveNumberOfUpdates(number: numberOfUpdates)
     }
-    func provideInfoForKidsCell(at indexPath: IndexPath){
+    func provideInfoForKidsCell(at indexPath: IndexPath) {
         let kidData = kidsDataFromEntity[indexPath.row]
         presenter.receiveInfoForKidsCell(info: kidData)
     }
@@ -49,7 +49,7 @@ final class ParentHomeScreenInteractor: ParentHomeScreenInteractorInputProtocol 
         presenter.receiveInfoForUpdatesCell(info: updateData)
     }
     func provideNumberOfActiveTasks() {
-        let numberOfActiveTasks = kidsDataFromEntity.reduce(0){total, kid in
+        let numberOfActiveTasks = kidsDataFromEntity.reduce(0) {total, kid in
             total + kid.numberOfTasks
         }
         presenter.receiveNumberOfActiveTasks(number: numberOfActiveTasks)

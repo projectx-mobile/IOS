@@ -12,9 +12,9 @@ protocol ParentUpdatesRouterInputProtocol {
 }
 
 final class ParentUpdatesRouter: ParentUpdatesRouterInputProtocol {
-    
+
     unowned let viewController: ParentUpdatesViewController
-    
+
     required init(viewController: ParentUpdatesViewController) {
         self.viewController = viewController
     }

@@ -7,7 +7,7 @@
 
 import Foundation
 
- final class WelcomePresenter: WelcomeViewOutputProtocol{
+ final class WelcomePresenter: WelcomeViewOutputProtocol {
 
      unowned let view: WelcomeViewInputProtocol
      var interactor: WelcomeInteractorInputProtocol!

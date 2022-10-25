@@ -10,7 +10,7 @@ import Foundation
 struct UpdatesTableInformation {
     let name: String
     let update: Action
-    
+
     enum Action: String {
         case selected = "selected reward"
         case completed = "completed task"
@@ -22,11 +22,11 @@ class ParentUpdatesPresenter: ParentUpdatesViewOutputProtocol {
     unowned let view: ParentUpdatesViewInputProtocol
     var interactor: ParentUpdatesInteractorInputProtocol!
     var router: ParentUpdatesRouterInputProtocol!
-    
+
     required init(view: ParentUpdatesViewInputProtocol) {
         self.view = view
     }
-    
+
     func getNumberOfUpdatesCells() {
         interactor.provideNumberOfUpdates()
     }
@@ -36,7 +36,7 @@ class ParentUpdatesPresenter: ParentUpdatesViewOutputProtocol {
     }
 }
 
-//MARK: - ParentUpdatesInteractorOutputProtocol
+// MARK: - ParentUpdatesInteractorOutputProtocol
 extension ParentUpdatesPresenter: ParentUpdatesInteractorOutputProtocol {
     func receiveNumberOfUpdates(number: Int) {
         let numberOfCells = number

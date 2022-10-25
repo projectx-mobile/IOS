@@ -12,12 +12,12 @@ protocol ParentUpdatesConfiguratorInputProtocol {
 }
 
 final class ParentUpdatesConfigurator: ParentUpdatesConfiguratorInputProtocol {
-    
+
     func configure(with viewController: ParentUpdatesViewController) {
         let presenter = ParentUpdatesPresenter(view: viewController as ParentUpdatesViewInputProtocol)
         let interactor = ParentUpdatesInteractor(presenter: presenter)
         let router = ParentUpdatesRouter(viewController: viewController)
-        
+
         viewController.presenter = presenter
         presenter.interactor = interactor
         presenter.router = router
