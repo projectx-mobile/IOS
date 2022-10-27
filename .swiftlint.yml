@@ -4,3 +4,4 @@ line_length:
 
 excluded :
 - R.generated.swift
+- AnimationContext.swift

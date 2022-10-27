@@ -6,8 +6,6 @@
 import Foundation
 import Rswift
 import UIKit
-// swiftlint:disable type_name
-// swiftlint:disable identifier_name
 
 /// This `R` struct is generated and contains references to static resources.
 struct R: Rswift.Validatable {
@@ -142,14 +140,30 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.file` struct is generated, and contains static references to 1 files.
+  /// This `R.file` struct is generated, and contains static references to 3 files.
   struct file {
     /// Resource file `NexaDemo-Bold.ttf`.
     static let nexaDemoBoldTtf = Rswift.FileResource(bundle: R.hostingBundle, name: "NexaDemo-Bold", pathExtension: "ttf")
+    /// Resource file `antframe1.json`.
+    static let antframe1Json = Rswift.FileResource(bundle: R.hostingBundle, name: "antframe1", pathExtension: "json")
+    /// Resource file `frame 2 onboarding.json`.
+    static let frame2OnboardingJson = Rswift.FileResource(bundle: R.hostingBundle, name: "frame 2 onboarding", pathExtension: "json")
 
     /// `bundle.url(forResource: "NexaDemo-Bold", withExtension: "ttf")`
     static func nexaDemoBoldTtf(_: Void = ()) -> Foundation.URL? {
       let fileResource = R.file.nexaDemoBoldTtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "antframe1", withExtension: "json")`
+    static func antframe1Json(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.antframe1Json
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "frame 2 onboarding", withExtension: "json")`
+    static func frame2OnboardingJson(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.frame2OnboardingJson
       return fileResource.bundle.url(forResource: fileResource)
     }
 

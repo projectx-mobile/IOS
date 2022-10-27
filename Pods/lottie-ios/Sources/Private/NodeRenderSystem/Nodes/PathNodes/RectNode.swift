@@ -7,6 +7,7 @@
 
 import CoreGraphics
 import Foundation
+// swiftlint:disable function_body_length
 
 // MARK: - RectNodeProperties
 

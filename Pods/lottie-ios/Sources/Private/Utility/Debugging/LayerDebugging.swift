@@ -7,6 +7,9 @@
 
 import Foundation
 import QuartzCore
+// swiftlint:disable shorthand_operator
+// swiftlint:disable identifier_name
+
 
 // MARK: - LayerDebugStyle
 

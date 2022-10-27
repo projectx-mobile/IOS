@@ -7,6 +7,8 @@
 
 import CoreGraphics
 import Foundation
+// swiftlint:disable identifier_name
+// swiftlint:disable shorthand_operator
 
 /// A single vertex with an in and out tangent
 struct CurveVertex {

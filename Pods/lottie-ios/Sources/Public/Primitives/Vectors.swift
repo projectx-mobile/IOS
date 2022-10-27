@@ -6,6 +6,7 @@
 //
 
 import Foundation
+// swiftlint:disable identifier_name
 
 // MARK: - Vector1D
 

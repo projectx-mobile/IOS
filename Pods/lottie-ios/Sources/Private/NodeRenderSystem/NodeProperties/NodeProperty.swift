@@ -7,6 +7,7 @@
 
 import CoreGraphics
 import Foundation
+// swiftlint:disable force_cast
 
 /// A node property that holds a reference to a T ValueProvider and a T ValueContainer.
 class NodeProperty<T>: AnyNodeProperty {

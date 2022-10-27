@@ -7,6 +7,7 @@
 
 import Foundation
 import QuartzCore
+// swiftlint:disable identifier_name
 
 extension CGFloat {
 

@@ -7,6 +7,9 @@
 
 import CoreGraphics
 import Foundation
+// swiftlint:disable identifier_name
+// swiftlint:disable shorthand_operator
+// swiftlint:disable large_tuple
 
 // MARK: - Vector1D + Interpolatable
 

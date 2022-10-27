@@ -7,6 +7,8 @@
 
 import Foundation
 import QuartzCore
+// swiftlint:disable cyclomatic_complexity
+// swiftlint:disable function_body_length
 
 // MARK: - TrimPathProperties
 

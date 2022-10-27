@@ -7,6 +7,7 @@
 
 import CoreGraphics
 import Foundation
+// swiftlint:disable identifier_name
 
 /// A `ValueProvider` that returns a Gradient Color Value.
 public final class GradientValueProvider: AnyValueProvider {

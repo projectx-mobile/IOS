@@ -141,6 +141,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		05F458A0290A89CD009B86A0 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				056FBB2C29069F0B006C1F06 /* antframe1.json */,
+				056FBB2B29069F0B006C1F06 /* frame 2 onboarding.json */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
 		5426B168F4A3C6DB748127CE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -244,6 +253,7 @@
 		889F434B28E18FA800DC347D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				05F458A0290A89CD009B86A0 /* Animations */,
 				CA214CF628BDFEF7006176A7 /* Assets.xcassets */,
 				975958FF28D9B59100570BB4 /* Fonts */,
 			);
@@ -382,8 +392,6 @@
 		CA214CEC28BDFEF5006176A7 /* Project X */ = {
 			isa = PBXGroup;
 			children = (
-				056FBB2C29069F0B006C1F06 /* antframe1.json */,
-				056FBB2B29069F0B006C1F06 /* frame 2 onboarding.json */,
 				CA214CED28BDFEF5006176A7 /* AppDelegate.swift */,
 				CA214CEF28BDFEF5006176A7 /* SceneDelegate.swift */,
 				CA214CF128BDFEF5006176A7 /* ViewController.swift */,

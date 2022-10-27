@@ -7,6 +7,11 @@
 
 import Foundation
 import QuartzCore
+// swiftlint:disable type_body_length
+// swiftlint:disable function_body_length
+// swiftlint:disable shorthand_operator
+// swiftlint:disable file_length
+
 
 // MARK: - LottieBackgroundBehavior
 

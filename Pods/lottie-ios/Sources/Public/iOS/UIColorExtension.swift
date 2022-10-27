@@ -8,6 +8,7 @@
 import Foundation
 #if os(iOS) || os(tvOS) || os(watchOS) || targetEnvironment(macCatalyst)
 import UIKit
+// swiftlint:disable identifier_name
 
 extension UIColor {
 

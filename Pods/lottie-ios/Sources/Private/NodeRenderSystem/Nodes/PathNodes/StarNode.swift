@@ -7,6 +7,8 @@
 
 import Foundation
 import QuartzCore
+// swiftlint:disable identifier_name
+// swiftlint:disable shorthand_operator
 
 // MARK: - StarNodeProperties
 
