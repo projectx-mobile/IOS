@@ -140,8 +140,10 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.file` struct is generated, and contains static references to 4 files.
+  /// This `R.file` struct is generated, and contains static references to 5 files.
   struct file {
+    /// Resource file `GoogleService-Info.plist`.
+    static let googleServiceInfoPlist = Rswift.FileResource(bundle: R.hostingBundle, name: "GoogleService-Info", pathExtension: "plist")
     /// Resource file `NexaDemo-Bold.ttf`.
     static let nexaDemoBoldTtf = Rswift.FileResource(bundle: R.hostingBundle, name: "NexaDemo-Bold", pathExtension: "ttf")
     /// Resource file `Roboto-Bold.ttf`.
@@ -150,6 +152,12 @@ struct R: Rswift.Validatable {
     static let robotoMediumTtf = Rswift.FileResource(bundle: R.hostingBundle, name: "Roboto-Medium", pathExtension: "ttf")
     /// Resource file `Roboto-Regular.ttf`.
     static let robotoRegularTtf = Rswift.FileResource(bundle: R.hostingBundle, name: "Roboto-Regular", pathExtension: "ttf")
+
+    /// `bundle.url(forResource: "GoogleService-Info", withExtension: "plist")`
+    static func googleServiceInfoPlist(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.googleServiceInfoPlist
+      return fileResource.bundle.url(forResource: fileResource)
+    }
 
     /// `bundle.url(forResource: "NexaDemo-Bold", withExtension: "ttf")`
     static func nexaDemoBoldTtf(_: Void = ()) -> Foundation.URL? {
