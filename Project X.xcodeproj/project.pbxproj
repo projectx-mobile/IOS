@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		25136AF0CE38C1D2A1B75DC7 /* Pods_Project_X.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADD95C7F5F7193C38CEA06C4 /* Pods_Project_X.framework */; };
+		847EBA22290AEA4200B4DE70 /* CustomLoginButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847EBA21290AEA4200B4DE70 /* CustomLoginButtonViewModel.swift */; };
+		847EBA28290AEB1200B4DE70 /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847EBA27290AEB1200B4DE70 /* LoginButton.swift */; };
+		847EBA2A290AEB8500B4DE70 /* LoginWithGAViewIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847EBA29290AEB8500B4DE70 /* LoginWithGAViewIO.swift */; };
+		847EBA2E290AECD800B4DE70 /* LoginWithGAScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847EBA2D290AECD800B4DE70 /* LoginWithGAScreenViewController.swift */; };
+		847EBA33290AEDBB00B4DE70 /* LoginWithGAScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847EBA32290AEDBB00B4DE70 /* LoginWithGAScreenPresenter.swift */; };
+		847EBA36290AEF8300B4DE70 /* LoginWhithGAScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847EBA35290AEF8300B4DE70 /* LoginWhithGAScreenInteractor.swift */; };
+		847EBA38290AEFE700B4DE70 /* LoginWithGAScreenInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847EBA37290AEFE700B4DE70 /* LoginWithGAScreenInteractorIO.swift */; };
+		847EBA3C290AF4E500B4DE70 /* LoginWithGAScreenConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847EBA3B290AF4E500B4DE70 /* LoginWithGAScreenConfigurator.swift */; };
+		847EBA3E290AFBAE00B4DE70 /* LoginWithGAScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847EBA3D290AFBAE00B4DE70 /* LoginWithGAScreenRouter.swift */; };
 		8858667128E1962000F11B72 /* KidsCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8858667028E1962000F11B72 /* KidsCardTableViewCell.swift */; };
 		8858667328E1968000F11B72 /* UpdatesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8858667228E1968000F11B72 /* UpdatesTableViewCell.swift */; };
 		8858667628E196E600F11B72 /* SecondaryLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8858667528E196E600F11B72 /* SecondaryLabel.swift */; };
@@ -84,6 +93,15 @@
 /* Begin PBXFileReference section */
 		288279B82A1B1561B1B6316C /* Pods-Project X.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project X.debug.xcconfig"; path = "Target Support Files/Pods-Project X/Pods-Project X.debug.xcconfig"; sourceTree = "<group>"; };
 		47AE13615C7A05EF6D23A4CF /* Pods-Project X.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project X.release.xcconfig"; path = "Target Support Files/Pods-Project X/Pods-Project X.release.xcconfig"; sourceTree = "<group>"; };
+		847EBA21290AEA4200B4DE70 /* CustomLoginButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLoginButtonViewModel.swift; sourceTree = "<group>"; };
+		847EBA27290AEB1200B4DE70 /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
+		847EBA29290AEB8500B4DE70 /* LoginWithGAViewIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWithGAViewIO.swift; sourceTree = "<group>"; };
+		847EBA2D290AECD800B4DE70 /* LoginWithGAScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWithGAScreenViewController.swift; sourceTree = "<group>"; };
+		847EBA32290AEDBB00B4DE70 /* LoginWithGAScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWithGAScreenPresenter.swift; sourceTree = "<group>"; };
+		847EBA35290AEF8300B4DE70 /* LoginWhithGAScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWhithGAScreenInteractor.swift; sourceTree = "<group>"; };
+		847EBA37290AEFE700B4DE70 /* LoginWithGAScreenInteractorIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWithGAScreenInteractorIO.swift; sourceTree = "<group>"; };
+		847EBA3B290AF4E500B4DE70 /* LoginWithGAScreenConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWithGAScreenConfigurator.swift; sourceTree = "<group>"; };
+		847EBA3D290AFBAE00B4DE70 /* LoginWithGAScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWithGAScreenRouter.swift; sourceTree = "<group>"; };
 		8858667028E1962000F11B72 /* KidsCardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KidsCardTableViewCell.swift; sourceTree = "<group>"; };
 		8858667228E1968000F11B72 /* UpdatesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatesTableViewCell.swift; sourceTree = "<group>"; };
 		8858667528E196E600F11B72 /* SecondaryLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryLabel.swift; sourceTree = "<group>"; };
@@ -178,6 +196,52 @@
 				ADD95C7F5F7193C38CEA06C4 /* Pods_Project_X.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		847EBA20290AEA2500B4DE70 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				847EBA21290AEA4200B4DE70 /* CustomLoginButtonViewModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		847EBA23290AEA8600B4DE70 /* LoginWithGAView */ = {
+			isa = PBXGroup;
+			children = (
+				847EBA2D290AECD800B4DE70 /* LoginWithGAScreenViewController.swift */,
+				847EBA29290AEB8500B4DE70 /* LoginWithGAViewIO.swift */,
+			);
+			path = LoginWithGAView;
+			sourceTree = "<group>";
+		};
+		847EBA2C290AEC7400B4DE70 /* LoginWithGAScreen */ = {
+			isa = PBXGroup;
+			children = (
+				847EBA23290AEA8600B4DE70 /* LoginWithGAView */,
+				847EBA2F290AED2600B4DE70 /* LoginWithGAScreenPresenter */,
+				847EBA34290AEF4400B4DE70 /* LoginWhithGAScreenInteractor */,
+				847EBA3B290AF4E500B4DE70 /* LoginWithGAScreenConfigurator.swift */,
+				847EBA3D290AFBAE00B4DE70 /* LoginWithGAScreenRouter.swift */,
+			);
+			path = LoginWithGAScreen;
+			sourceTree = "<group>";
+		};
+		847EBA2F290AED2600B4DE70 /* LoginWithGAScreenPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				847EBA32290AEDBB00B4DE70 /* LoginWithGAScreenPresenter.swift */,
+			);
+			path = LoginWithGAScreenPresenter;
+			sourceTree = "<group>";
+		};
+		847EBA34290AEF4400B4DE70 /* LoginWhithGAScreenInteractor */ = {
+			isa = PBXGroup;
+			children = (
+				847EBA35290AEF8300B4DE70 /* LoginWhithGAScreenInteractor.swift */,
+				847EBA37290AEFE700B4DE70 /* LoginWithGAScreenInteractorIO.swift */,
+			);
+			path = LoginWhithGAScreenInteractor;
 			sourceTree = "<group>";
 		};
 		8858666F28E195C500F11B72 /* Cells */ = {
@@ -400,6 +464,7 @@
 		975958FB28D9B2FD00570BB4 /* Design System */ = {
 			isa = PBXGroup;
 			children = (
+				847EBA20290AEA2500B4DE70 /* Models */,
 				9715079E28F6F1FC0024475C /* TabBarVC */,
 				8890090728E426730044E02D /* Constants */,
 				889F433A28E18B5B00DC347D /* Views */,
@@ -414,6 +479,7 @@
 				889F433B28E18B9200DC347D /* CustomButton.swift */,
 				889F433D28E18BEC00DC347D /* PrimaryButton.swift */,
 				885B24412907EBA800FA607B /* TaskDescriptionButton.swift */,
+				847EBA27290AEB1200B4DE70 /* LoginButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -464,6 +530,7 @@
 				CA214CF128BDFEF5006176A7 /* ViewController.swift */,
 				88D5282228E328AE00220DFB /* Entities */,
 				889F434828E18F0500DC347D /* WelcomeModule */,
+				847EBA2C290AEC7400B4DE70 /* LoginWithGAScreen */,
 				8858667D28E1985800F11B72 /* ParentHomeScreenModule */,
 				88C988E328E5E37F002DF8A3 /* ParentUpdatesModule */,
 				885B24432907EBEA00FA607B /* ChildHomeScreenModule */,
@@ -607,7 +674,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$SRCROOT/R.generated.swift",
+				$SRCROOT/R.generated.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -637,6 +704,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				847EBA33290AEDBB00B4DE70 /* LoginWithGAScreenPresenter.swift in Sources */,
 				889F434328E18CC500DC347D /* UIFont + Extension.swift in Sources */,
 				8858668528E1998100F11B72 /* ParentHomeScreenViewIO.swift in Sources */,
 				885B244E2907ED5100FA607B /* ChildHomeScreenViewController.swift in Sources */,
@@ -644,14 +712,19 @@
 				885B245E2907F4FC00FA607B /* ChildHomeScreenRouter.swift in Sources */,
 				889F434128E18C7800DC347D /* UIColor + Extension.swift in Sources */,
 				889F434D28E18FE000DC347D /* WelcomeInteractor.swift in Sources */,
+				847EBA38290AEFE700B4DE70 /* LoginWithGAScreenInteractorIO.swift in Sources */,
+				847EBA2A290AEB8500B4DE70 /* LoginWithGAViewIO.swift in Sources */,
 				885B24582907EF9900FA607B /* ChildHomeScreenPresenter.swift in Sources */,
 				88C988F328E5E4A1002DF8A3 /* ParentUpdatesInteractorIO.swift in Sources */,
 				971507A828F6F2100024475C /* MainTabbarController.swift in Sources */,
+				847EBA3C290AF4E500B4DE70 /* LoginWithGAScreenConfigurator.swift in Sources */,
+				847EBA3E290AFBAE00B4DE70 /* LoginWithGAScreenRouter.swift in Sources */,
 				885B245C2907F00400FA607B /* ChildHomeScreenInteractor.swift in Sources */,
 				889F433E28E18BEC00DC347D /* PrimaryButton.swift in Sources */,
 				CA214CF228BDFEF5006176A7 /* ViewController.swift in Sources */,
 				88C988ED28E5E450002DF8A3 /* ParentUpdatesRouter.swift in Sources */,
 				8858668F28E19A7700F11B72 /* ParentHomeScreenRouter.swift in Sources */,
+				847EBA22290AEA4200B4DE70 /* CustomLoginButtonViewModel.swift in Sources */,
 				885B24662907F63100FA607B /* CalendarCollectionViewCell.swift in Sources */,
 				885B24542907EEC400FA607B /* CalendarView.swift in Sources */,
 				8858667C28E1975A00F11B72 /* TitleLabel.swift in Sources */,
@@ -681,11 +754,14 @@
 				8858668728E199AC00F11B72 /* ParentHomeScreenViewController.swift in Sources */,
 				8858668028E198B200F11B72 /* ParentHomeScreenInteractorIO.swift in Sources */,
 				889F434F28E1900B00DC347D /* WelcomeInteractorIO.swift in Sources */,
+				847EBA2E290AECD800B4DE70 /* LoginWithGAScreenViewController.swift in Sources */,
 				CA214CF028BDFEF5006176A7 /* SceneDelegate.swift in Sources */,
+				847EBA28290AEB1200B4DE70 /* LoginButton.swift in Sources */,
 				885B24372907E7B700FA607B /* KidsNotification.swift in Sources */,
 				885B24642907F5BC00FA607B /* ChildHomeScreenInteractorIO.swift in Sources */,
 				889F433C28E18B9200DC347D /* CustomButton.swift in Sources */,
 				88C988E528E5E3B7002DF8A3 /* ParentUpdatesConfigurator.swift in Sources */,
+				847EBA36290AEF8300B4DE70 /* LoginWhithGAScreenInteractor.swift in Sources */,
 				8858667128E1962000F11B72 /* KidsCardTableViewCell.swift in Sources */,
 				8858668D28E19A4A00F11B72 /* ParentHomeScreenPresenter.swift in Sources */,
 				8858667328E1968000F11B72 /* UpdatesTableViewCell.swift in Sources */,

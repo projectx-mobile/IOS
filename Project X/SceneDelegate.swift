@@ -18,7 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
 
-        let navVC = UINavigationController()
+//        let navVC = UINavigationController()
         
         /*let configurator: ParentHomeScreenConfiguratorInputProtocol = ParentHomeScreenConfigurator()
         let parentVC = ParentHomeScreenViewController()
@@ -34,17 +34,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //         window?.rootViewController = navVC
         
         // ChildHomeScreen
-        let configurator:ChildHomeScreenConfiguratorInputProtocol = ChildHomeScreenConfigurator()
-        let childVC = ChildHomeScreenViewController()
-        navVC.viewControllers = [childVC]
-        configurator.configure(with: childVC, with: navVC)
-        window?.rootViewController = navVC
-        
+//        let configurator:ChildHomeScreenConfiguratorInputProtocol = ChildHomeScreenConfigurator()
+//        let childVC = ChildHomeScreenViewController()
+//        navVC.viewControllers = [childVC]
+//        configurator.configure(with: childVC, with: navVC)
+//        window?.rootViewController = navVC
+//        
    // Welcome VC
       //  window?.rootViewController = WelcomeViewController()
-
+        window?.rootViewController = LoginWithGAScreenViewController()
         window?.makeKeyAndVisible()
-        window?.overrideUserInterfaceStyle = .light
+//        window?.overrideUserInterfaceStyle = .light
     }
     
     func sceneDidDisconnect(_ scene: UIScene) {

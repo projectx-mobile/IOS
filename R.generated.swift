@@ -227,8 +227,10 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.image` struct is generated, and contains static references to 24 images.
+  /// This `R.image` struct is generated, and contains static references to 27 images.
   struct image {
+    /// Image `appleIcon`.
+    static let appleIcon = Rswift.ImageResource(bundle: R.hostingBundle, name: "appleIcon")
     /// Image `boy`.
     static let boy = Rswift.ImageResource(bundle: R.hostingBundle, name: "boy")
     /// Image `calendar`.
@@ -237,6 +239,10 @@ struct R: Rswift.Validatable {
     static let close = Rswift.ImageResource(bundle: R.hostingBundle, name: "close")
     /// Image `done`.
     static let done = Rswift.ImageResource(bundle: R.hostingBundle, name: "done")
+    /// Image `emailIcon`.
+    static let emailIcon = Rswift.ImageResource(bundle: R.hostingBundle, name: "emailIcon")
+    /// Image `googleIcon`.
+    static let googleIcon = Rswift.ImageResource(bundle: R.hostingBundle, name: "googleIcon")
     /// Image `green`.
     static let green = Rswift.ImageResource(bundle: R.hostingBundle, name: "green")
     /// Image `home.notselected`.
@@ -279,6 +285,13 @@ struct R: Rswift.Validatable {
     static let walletSelected = Rswift.ImageResource(bundle: R.hostingBundle, name: "wallet.selected")
 
     #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "appleIcon", bundle: ..., traitCollection: ...)`
+    static func appleIcon(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.appleIcon, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIImage(named: "boy", bundle: ..., traitCollection: ...)`
     static func boy(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.boy, compatibleWith: traitCollection)
@@ -303,6 +316,20 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "done", bundle: ..., traitCollection: ...)`
     static func done(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.done, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "emailIcon", bundle: ..., traitCollection: ...)`
+    static func emailIcon(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.emailIcon, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "googleIcon", bundle: ..., traitCollection: ...)`
+    static func googleIcon(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.googleIcon, compatibleWith: traitCollection)
     }
     #endif
 
