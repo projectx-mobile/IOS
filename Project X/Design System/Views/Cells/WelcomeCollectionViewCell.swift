@@ -15,11 +15,11 @@ import Lottie
      let welcomeSubtitleLabel: UILabel = {
         let label = UILabel()
         label.textColor = .black
-         label.font = .nexaDemoBold32()//  .systemFont(ofSize: 25) // в проекте должно быть 32
+         label.font = .nexaDemoBold32()
         label.numberOfLines = 0
         label.lineBreakMode = .byWordWrapping
         var paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.lineHeightMultiple = 0.74 //  в проекте должно быть 0.74
+        paragraphStyle.lineHeightMultiple = 0.74
         label.attributedText = NSMutableAttributedString(string: "", attributes: [NSAttributedString.Key.paragraphStyle: paragraphStyle])
         label.textAlignment = .left
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -42,10 +42,6 @@ import Lottie
         animationView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0).isActive = true
         animationView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0).isActive = true
         animationView.heightAnchor.constraint(equalToConstant: 325).isActive = true
-        
-//        welcomeSubtitleLabel.backgroundColor = .white
-//        animationView.backgroundColor = .yellow
-//        backgroundColor = .blue
     }
     
     required init?(coder: NSCoder) {
