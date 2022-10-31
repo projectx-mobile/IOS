@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		052A5967290FE33400C547BF /* PageControlItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052A5966290FE33400C547BF /* PageControlItem.swift */; };
+		052A5969290FE44000C547BF /* WelcomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052A5968290FE44000C547BF /* WelcomeCollectionViewCell.swift */; };
+		052A596B290FE54200C547BF /* WelcomeCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052A596A290FE54200C547BF /* WelcomeCellModel.swift */; };
+		052A596D290FE5C800C547BF /* WelcomeCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052A596C290FE5C800C547BF /* WelcomeCollectionView.swift */; };
 		0534BD0C29068EDF0051717E /* WelcomeSubtitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0534BD0B29068EDF0051717E /* WelcomeSubtitleLabel.swift */; };
 		055940F029006E43007EF6D1 /* WelcomeTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055940EF29006E43007EF6D1 /* WelcomeTitleLabel.swift */; };
 		056FBB2D29069F0B006C1F06 /* frame 2 onboarding.json in Resources */ = {isa = PBXBuildFile; fileRef = 056FBB2B29069F0B006C1F06 /* frame 2 onboarding.json */; };
@@ -65,6 +69,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		052A5966290FE33400C547BF /* PageControlItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControlItem.swift; sourceTree = "<group>"; };
+		052A5968290FE44000C547BF /* WelcomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		052A596A290FE54200C547BF /* WelcomeCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeCellModel.swift; sourceTree = "<group>"; };
+		052A596C290FE5C800C547BF /* WelcomeCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeCollectionView.swift; sourceTree = "<group>"; };
 		0534BD0B29068EDF0051717E /* WelcomeSubtitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeSubtitleLabel.swift; sourceTree = "<group>"; };
 		055940EF29006E43007EF6D1 /* WelcomeTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeTitleLabel.swift; sourceTree = "<group>"; };
 		056FBB2B29069F0B006C1F06 /* frame 2 onboarding.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "frame 2 onboarding.json"; sourceTree = "<group>"; };
@@ -141,6 +149,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		052A5965290FE30600C547BF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				052A5966290FE33400C547BF /* PageControlItem.swift */,
+				052A596C290FE5C800C547BF /* WelcomeCollectionView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		05F458A0290A89CD009B86A0 /* Animations */ = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +180,7 @@
 			children = (
 				8858667028E1962000F11B72 /* KidsCardTableViewCell.swift */,
 				8858667228E1968000F11B72 /* UpdatesTableViewCell.swift */,
+				052A5968290FE44000C547BF /* WelcomeCollectionViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -221,6 +239,7 @@
 		889F433A28E18B5B00DC347D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				052A5965290FE30600C547BF /* View */,
 				8858667428E196BF00F11B72 /* Labels */,
 				8858666F28E195C500F11B72 /* Cells */,
 				975958FC28D9B32900570BB4 /* Buttons */,
@@ -314,6 +333,7 @@
 			children = (
 				88D5282328E328C800220DFB /* KidsData.swift */,
 				8858668828E199F600F11B72 /* KidsUpdates.swift */,
+				052A596A290FE54200C547BF /* WelcomeCellModel.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -560,9 +580,12 @@
 				88C988ED28E5E450002DF8A3 /* ParentUpdatesRouter.swift in Sources */,
 				8858668F28E19A7700F11B72 /* ParentHomeScreenRouter.swift in Sources */,
 				8858667C28E1975A00F11B72 /* TitleLabel.swift in Sources */,
+				052A596B290FE54200C547BF /* WelcomeCellModel.swift in Sources */,
 				975958FE28D9B40900570BB4 /* Button.swift in Sources */,
+				052A5969290FE44000C547BF /* WelcomeCollectionViewCell.swift in Sources */,
 				971507A528F6F2100024475C /* RewardsViewController.swift in Sources */,
 				8858667628E196E600F11B72 /* SecondaryLabel.swift in Sources */,
+				052A596D290FE5C800C547BF /* WelcomeCollectionView.swift in Sources */,
 				8858667828E1970C00F11B72 /* SecondaryLabelWithIcon.swift in Sources */,
 				889F435B28E191CF00DC347D /* WelcomeViewIO.swift in Sources */,
 				055940F029006E43007EF6D1 /* WelcomeTitleLabel.swift in Sources */,
@@ -572,6 +595,7 @@
 				8890090928E426930044E02D /* LayoutConstants.swift in Sources */,
 				88C988F128E5E48B002DF8A3 /* ParentUpdatesViewIO.swift in Sources */,
 				8858668228E198D900F11B72 /* ParentHomeScreenInteractor.swift in Sources */,
+				052A5967290FE33400C547BF /* PageControlItem.swift in Sources */,
 				889F435728E190EA00DC347D /* ComeBackView.swift in Sources */,
 				8858667A28E1973000F11B72 /* SubtitleLabel.swift in Sources */,
 				971507A628F6F2100024475C /* WalletViewController.swift in Sources */,

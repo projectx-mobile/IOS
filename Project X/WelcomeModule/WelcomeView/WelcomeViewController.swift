@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Lottie
 
 class WelcomeViewController: UIViewController {
 
@@ -14,7 +15,12 @@ class WelcomeViewController: UIViewController {
     
     private let welcomeTitleLabel = WelcomeTitleLabel(text: "Рады видеть тебя в трекере заданий Alfredo")
     
-    private let welcomeSubtitleLabel = WelcomeSubtitleLabel(text: "Создавай задачи \nи выполняй их в срок")
+    private let collectionView = WelcomeCollectionView()
+    private let pageView1 = PageControlItem()
+    private let pageView2 = PageControlItem()
+    
+    var timer: Timer?
+    var currentCellIndex = 0
 
     private lazy var logInButton: UIButton = {
         let button = PrimaryButton(text: "Войти", fillColor: .primaryWhiteSnow, tintColor: .primaryMidnight, borderColor: .primaryMidnight)
@@ -38,6 +44,10 @@ class WelcomeViewController: UIViewController {
         setupViews()
         setConstraints()
 //        addSwipe()
+        startTimer()
+        setupCollection()
+        let tap = UITapGestureRecognizer(target: self, action: #selector(tapToAnotherIndex))
+        view.addGestureRecognizer(tap)
     }
 }
 
@@ -47,8 +57,14 @@ private extension WelcomeViewController {
         view.addSubview(signUpButton)
         view.addSubview(logInButton)
         view.addSubview(welcomeTitleLabel)
-        view.addSubview(welcomeSubtitleLabel)
-//        view.addSubview(comeBackView)
+        view.addSubview(collectionView)
+        pageView1.backgroundColor = .primaryJuicyGrape
+    }
+    
+    private func setupCollection() {
+        collectionView.setCells(cells: WelcomeCellModel.fetchWelcomeModel())
+        collectionView.showsHorizontalScrollIndicator = false
+        collectionView.isPagingEnabled = true
     }
 //    private func addSwipe() {
 //        let swipe = UISwipeGestureRecognizer(target: self, action: #selector(doSwipe))
@@ -76,6 +92,37 @@ private extension WelcomeViewController {
                                              height: self.comeBackView.frame.height)
         }
     }
+    
+    private func startTimer() {
+        timer = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(moveToNextIndex), userInfo: nil, repeats: true)
+    }
+    
+    @objc func moveToNextIndex() {
+        if currentCellIndex < 1 {
+            currentCellIndex += 1
+            pageView1.backgroundColor = .primaryPureWhite
+            pageView2.backgroundColor = .primaryJuicyGrape
+        } else {
+            currentCellIndex -= 1
+            pageView1.backgroundColor = .primaryJuicyGrape
+            pageView2.backgroundColor = .primaryPureWhite
+        }
+        collectionView.scrollToItem(at: IndexPath(item: currentCellIndex, section: 0), at: .centeredHorizontally, animated: true)
+    }
+    
+    @objc func tapToAnotherIndex() {
+        if currentCellIndex < 1 {
+            currentCellIndex += 1
+            pageView1.backgroundColor = .primaryPureWhite
+            pageView2.backgroundColor = .primaryJuicyGrape
+        } else {
+            currentCellIndex -= 1
+            pageView1.backgroundColor = .primaryJuicyGrape
+            pageView2.backgroundColor = .primaryPureWhite
+        }
+        collectionView.scrollToItem(at: IndexPath(item: currentCellIndex, section: 0), at: .centeredHorizontally, animated: true)
+        timer?.invalidate()
+    }
 
     private func setConstraints() {
         NSLayoutConstraint.activate([
@@ -83,12 +130,6 @@ private extension WelcomeViewController {
             welcomeTitleLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: LayoutConstants.inset16),
             welcomeTitleLabel.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -LayoutConstants.inset16),
             welcomeTitleLabel.heightAnchor.constraint(equalToConstant: LayoutConstants.height18)
-        ])
-        NSLayoutConstraint.activate([
-            welcomeSubtitleLabel.topAnchor.constraint(equalTo: welcomeTitleLabel.bottomAnchor, constant: LayoutConstants.inset16),
-            welcomeSubtitleLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: LayoutConstants.inset16),
-            welcomeSubtitleLabel.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -LayoutConstants.inset16),
-            welcomeSubtitleLabel.heightAnchor.constraint(equalToConstant: LayoutConstants.height325)
         ])
         NSLayoutConstraint.activate([
             signUpButton.bottomAnchor.constraint(equalTo: logInButton.topAnchor, constant: -LayoutConstants.inset16),
@@ -109,5 +150,27 @@ private extension WelcomeViewController {
 //            comeBackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
 //            comeBackView.heightAnchor.constraint(equalToConstant: LayoutConstants.height375)
 //        ])
+        NSLayoutConstraint.activate([
+            collectionView.topAnchor.constraint(equalTo: welcomeTitleLabel.bottomAnchor, constant: 16),
+            collectionView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 0),
+            collectionView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: 0),
+            collectionView.heightAnchor.constraint(equalToConstant: 429)
+        ])
+        
+     let controlStack: UIStackView = {
+        let controlStack = UIStackView(arrangedSubviews: [
+            pageView1, pageView2
+        ])
+        controlStack.axis = .horizontal
+        controlStack.spacing = 8.0
+        controlStack.alignment = .center
+        controlStack.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(controlStack)
+        return controlStack
+    }()
+        NSLayoutConstraint.activate([
+            controlStack.topAnchor.constraint(equalTo: collectionView.bottomAnchor),
+            controlStack.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+        ])
     }
 }
