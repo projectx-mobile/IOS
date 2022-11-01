@@ -122,11 +122,6 @@ private extension LoginWithGAScreenViewController {
     
     @objc private func buttonLoginMailDidTap() {
         //Логин через mail и показ экрана входа по почте
-        
-//        let infoVC = LoginWithMailScreen(nibName: String(describing: LoginWithMailScreen.self), bundle: nil)
-//        navigationController?.pushViewController(infoVC, animated: true)
-//        print("MailTap")
-//        navigationController?.pushViewController(LoginWithMailScreen, animated: true)
     }
     
     @objc private func createButtonDidTap() {

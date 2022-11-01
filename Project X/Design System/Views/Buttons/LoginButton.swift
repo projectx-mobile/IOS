@@ -26,16 +26,7 @@ final class LoginButton: UIButton {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        addSubview(textLabel)
-        addSubview(iconImageView)
-        translatesAutoresizingMaskIntoConstraints = false
-        layer.cornerRadius = 8
-        layer.borderWidth = 1.4
-        layer.borderColor = UIColor(red: 0.094, green: 0.098, blue: 0.145, alpha: 1).cgColor
-        layer.shadowColor = UIColor(red: 0.094, green: 0.098, blue: 0.145, alpha: 1).cgColor
-        layer.shadowOpacity = 1
-        layer.shadowRadius = 0
-        layer.shadowOffset = CGSize(width: 2.5, height: 3)
+        setupButton()
     }
     
     required init?(coder: NSCoder) {
@@ -61,6 +52,19 @@ final class LoginButton: UIButton {
                                  y: 0,
                                  width: textLabel.frame.size.width,
                                  height: frame.size.height)
+    }
+    private func setupButton(){
+        addSubview(textLabel)
+        addSubview(iconImageView)
+        translatesAutoresizingMaskIntoConstraints = false
+        layer.cornerRadius = 8
+        layer.borderWidth = 1.4
+        layer.borderColor = UIColor(red: 0.094, green: 0.098, blue: 0.145, alpha: 1).cgColor
+        layer.shadowColor = UIColor(red: 0.094, green: 0.098, blue: 0.145, alpha: 1).cgColor
+        layer.shadowOpacity = 1
+        layer.shadowRadius = 0
+        layer.shadowOffset = CGSize(width: 2.5, height: 3)
+        
     }
     
     override func layoutSubviews() {

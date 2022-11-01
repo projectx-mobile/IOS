@@ -198,14 +198,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		847EBA20290AEA2500B4DE70 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				847EBA21290AEA4200B4DE70 /* CustomLoginButtonViewModel.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		847EBA23290AEA8600B4DE70 /* LoginWithGAView */ = {
 			isa = PBXGroup;
 			children = (
@@ -440,6 +432,7 @@
 		88D5282228E328AE00220DFB /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				847EBA21290AEA4200B4DE70 /* CustomLoginButtonViewModel.swift */,
 				88D5282328E328C800220DFB /* KidsData.swift */,
 				8858668828E199F600F11B72 /* KidsUpdates.swift */,
 				885B24362907E7B700FA607B /* KidsNotification.swift */,
@@ -464,7 +457,6 @@
 		975958FB28D9B2FD00570BB4 /* Design System */ = {
 			isa = PBXGroup;
 			children = (
-				847EBA20290AEA2500B4DE70 /* Models */,
 				9715079E28F6F1FC0024475C /* TabBarVC */,
 				8890090728E426730044E02D /* Constants */,
 				889F433A28E18B5B00DC347D /* Views */,
