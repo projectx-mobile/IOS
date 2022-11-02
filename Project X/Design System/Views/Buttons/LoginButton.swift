@@ -33,12 +33,29 @@ final class LoginButton: UIButton {
         fatalError()
     }
     
+    override var isHighlighted: Bool {
+        didSet {
+            UIView.animate(withDuration: 0.1) {
+                self.layer.shadowOpacity = self.isHighlighted ? 0 : 1
+            }
+        }
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        setupLayout()
+    }
+    
     func configurate(with viewModel: CustomLoginButtonViewModel) {
         textLabel.text = viewModel.textLabel
         textLabel.textColor = viewModel.tintColor
         iconImageView.image = UIImage(named: viewModel.imageView)
         layer.backgroundColor = viewModel.backgroundColor.cgColor
     }
+}
+
+// MARK: - Private extension
+private extension LoginButton {
     
     private func setupLayout() {
         textLabel.sizeToFit()
@@ -64,19 +81,6 @@ final class LoginButton: UIButton {
         layer.shadowOpacity = 1
         layer.shadowRadius = 0
         layer.shadowOffset = CGSize(width: 2.5, height: 3)
-        
     }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        setupLayout()
-    }
-    
-    override var isHighlighted: Bool {
-        didSet {
-            UIView.animate(withDuration: 0.1) {
-                self.layer.shadowOpacity = self.isHighlighted ? 0 : 1
-            }
-        }
-    }
 }

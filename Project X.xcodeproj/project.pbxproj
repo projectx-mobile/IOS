@@ -17,6 +17,7 @@
 		847EBA38290AEFE700B4DE70 /* LoginWithGAScreenInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847EBA37290AEFE700B4DE70 /* LoginWithGAScreenInteractorIO.swift */; };
 		847EBA3C290AF4E500B4DE70 /* LoginWithGAScreenConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847EBA3B290AF4E500B4DE70 /* LoginWithGAScreenConfigurator.swift */; };
 		847EBA3E290AFBAE00B4DE70 /* LoginWithGAScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847EBA3D290AFBAE00B4DE70 /* LoginWithGAScreenRouter.swift */; };
+		847EBA9C2912685700B4DE70 /* LoginWithMailScreemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847EBA9B2912685700B4DE70 /* LoginWithMailScreemViewController.swift */; };
 		8858667128E1962000F11B72 /* KidsCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8858667028E1962000F11B72 /* KidsCardTableViewCell.swift */; };
 		8858667328E1968000F11B72 /* UpdatesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8858667228E1968000F11B72 /* UpdatesTableViewCell.swift */; };
 		8858667628E196E600F11B72 /* SecondaryLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8858667528E196E600F11B72 /* SecondaryLabel.swift */; };
@@ -102,6 +103,7 @@
 		847EBA37290AEFE700B4DE70 /* LoginWithGAScreenInteractorIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWithGAScreenInteractorIO.swift; sourceTree = "<group>"; };
 		847EBA3B290AF4E500B4DE70 /* LoginWithGAScreenConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWithGAScreenConfigurator.swift; sourceTree = "<group>"; };
 		847EBA3D290AFBAE00B4DE70 /* LoginWithGAScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWithGAScreenRouter.swift; sourceTree = "<group>"; };
+		847EBA9B2912685700B4DE70 /* LoginWithMailScreemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWithMailScreemViewController.swift; sourceTree = "<group>"; };
 		8858667028E1962000F11B72 /* KidsCardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KidsCardTableViewCell.swift; sourceTree = "<group>"; };
 		8858667228E1968000F11B72 /* UpdatesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatesTableViewCell.swift; sourceTree = "<group>"; };
 		8858667528E196E600F11B72 /* SecondaryLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryLabel.swift; sourceTree = "<group>"; };
@@ -207,7 +209,7 @@
 			path = LoginWithGAView;
 			sourceTree = "<group>";
 		};
-		847EBA2C290AEC7400B4DE70 /* LoginWithGAScreen */ = {
+		847EBA2C290AEC7400B4DE70 /* LoginWithGAScreenModule */ = {
 			isa = PBXGroup;
 			children = (
 				847EBA23290AEA8600B4DE70 /* LoginWithGAView */,
@@ -216,7 +218,7 @@
 				847EBA3B290AF4E500B4DE70 /* LoginWithGAScreenConfigurator.swift */,
 				847EBA3D290AFBAE00B4DE70 /* LoginWithGAScreenRouter.swift */,
 			);
-			path = LoginWithGAScreen;
+			path = LoginWithGAScreenModule;
 			sourceTree = "<group>";
 		};
 		847EBA2F290AED2600B4DE70 /* LoginWithGAScreenPresenter */ = {
@@ -234,6 +236,22 @@
 				847EBA37290AEFE700B4DE70 /* LoginWithGAScreenInteractorIO.swift */,
 			);
 			path = LoginWhithGAScreenInteractor;
+			sourceTree = "<group>";
+		};
+		847EBA99291267D200B4DE70 /* LoginWithMailSceenModule */ = {
+			isa = PBXGroup;
+			children = (
+				847EBA9A2912682200B4DE70 /* LoginWithMailSceenView */,
+			);
+			path = LoginWithMailSceenModule;
+			sourceTree = "<group>";
+		};
+		847EBA9A2912682200B4DE70 /* LoginWithMailSceenView */ = {
+			isa = PBXGroup;
+			children = (
+				847EBA9B2912685700B4DE70 /* LoginWithMailScreemViewController.swift */,
+			);
+			path = LoginWithMailSceenView;
 			sourceTree = "<group>";
 		};
 		8858666F28E195C500F11B72 /* Cells */ = {
@@ -522,7 +540,8 @@
 				CA214CF128BDFEF5006176A7 /* ViewController.swift */,
 				88D5282228E328AE00220DFB /* Entities */,
 				889F434828E18F0500DC347D /* WelcomeModule */,
-				847EBA2C290AEC7400B4DE70 /* LoginWithGAScreen */,
+				847EBA99291267D200B4DE70 /* LoginWithMailSceenModule */,
+				847EBA2C290AEC7400B4DE70 /* LoginWithGAScreenModule */,
 				8858667D28E1985800F11B72 /* ParentHomeScreenModule */,
 				88C988E328E5E37F002DF8A3 /* ParentUpdatesModule */,
 				885B24432907EBEA00FA607B /* ChildHomeScreenModule */,
@@ -734,6 +753,7 @@
 				8890090928E426930044E02D /* LayoutConstants.swift in Sources */,
 				88C988F128E5E48B002DF8A3 /* ParentUpdatesViewIO.swift in Sources */,
 				8858668228E198D900F11B72 /* ParentHomeScreenInteractor.swift in Sources */,
+				847EBA9C2912685700B4DE70 /* LoginWithMailScreemViewController.swift in Sources */,
 				889F435728E190EA00DC347D /* ComeBackView.swift in Sources */,
 				885B24682907F69100FA607B /* UIDatePicker + Extension.swift in Sources */,
 				885B243E2907E98100FA607B /* TasksTableViewCell.swift in Sources */,
