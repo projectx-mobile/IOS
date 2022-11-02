@@ -22,7 +22,7 @@ final class PageControlItem: UIView {
 
 //MARK: - Private extension
 private extension PageControlItem {
-    private func configure() {
+    func configure() {
         layer.cornerRadius = 4
         layer.borderWidth = 1.2
         layer.borderColor = UIColor.primaryMidnight.cgColor
