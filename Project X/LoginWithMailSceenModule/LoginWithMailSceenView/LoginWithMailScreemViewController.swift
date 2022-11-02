@@ -8,6 +8,10 @@
 import UIKit
 
 final class LoginWithMailScreenViewController: UIViewController {
+    
+    var presenter: LoginWithMailScreenViewOutputProtocol!
+    private let configurator: LoginWhithMailScreenConfiguratorInputProtocol = LoginWithMailScreenConfigurator()
+    
     private let titleLabel = UILabel()
     private let subTitleLabel = UILabel()
     private let inputMailField = UITextField()
@@ -124,5 +128,10 @@ private extension LoginWithMailScreenViewController {
     @objc private func helpButtonDidTap() {
         // вызов экрана восстановления аккаунта
     }
+}
+
+// MARK: - LoginWithMailScreenViewInputProtocol
+extension LoginWithMailScreenViewController: LoginWithMailScreenViewInputProtocol {
+    
 }
 

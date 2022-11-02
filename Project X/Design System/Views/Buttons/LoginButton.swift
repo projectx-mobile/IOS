@@ -57,7 +57,7 @@ final class LoginButton: UIButton {
 // MARK: - Private extension
 private extension LoginButton {
     
-    private func setupLayout() {
+        func setupLayout() {
         textLabel.sizeToFit()
         let iconSize: CGFloat = 24
         let xPosition: CGFloat = (frame.size.width - textLabel.frame.size.width - iconSize - 5) / 2
@@ -70,7 +70,7 @@ private extension LoginButton {
                                  width: textLabel.frame.size.width,
                                  height: frame.size.height)
     }
-    private func setupButton(){
+        func setupButton(){
         addSubview(textLabel)
         addSubview(iconImageView)
         translatesAutoresizingMaskIntoConstraints = false
