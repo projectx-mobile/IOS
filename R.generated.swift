@@ -187,10 +187,14 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.image` struct is generated, and contains static references to 15 images.
+  /// This `R.image` struct is generated, and contains static references to 24 images.
   struct image {
     /// Image `boy`.
     static let boy = Rswift.ImageResource(bundle: R.hostingBundle, name: "boy")
+    /// Image `calendar 2`.
+    static let calendar2 = Rswift.ImageResource(bundle: R.hostingBundle, name: "calendar 2")
+    /// Image `close 2`.
+    static let close2 = Rswift.ImageResource(bundle: R.hostingBundle, name: "close 2")
     /// Image `done`.
     static let done = Rswift.ImageResource(bundle: R.hostingBundle, name: "done")
     /// Image `green`.
@@ -199,12 +203,22 @@ struct R: Rswift.Validatable {
     static let homeNotselected = Rswift.ImageResource(bundle: R.hostingBundle, name: "home.notselected")
     /// Image `home.selected`.
     static let homeSelected = Rswift.ImageResource(bundle: R.hostingBundle, name: "home.selected")
+    /// Image `left 2`.
+    static let left2 = Rswift.ImageResource(bundle: R.hostingBundle, name: "left 2")
     /// Image `noKids`.
     static let noKids = Rswift.ImageResource(bundle: R.hostingBundle, name: "noKids")
+    /// Image `noNotifications 2`.
+    static let noNotifications2 = Rswift.ImageResource(bundle: R.hostingBundle, name: "noNotifications 2")
     /// Image `noUpdates`.
     static let noUpdates = Rswift.ImageResource(bundle: R.hostingBundle, name: "noUpdates")
+    /// Image `notDone 2`.
+    static let notDone2 = Rswift.ImageResource(bundle: R.hostingBundle, name: "notDone 2")
+    /// Image `notification 2`.
+    static let notification2 = Rswift.ImageResource(bundle: R.hostingBundle, name: "notification 2")
     /// Image `plusButton`.
     static let plusButton = Rswift.ImageResource(bundle: R.hostingBundle, name: "plusButton")
+    /// Image `points 2`.
+    static let points2 = Rswift.ImageResource(bundle: R.hostingBundle, name: "points 2")
     /// Image `profile.notselected`.
     static let profileNotselected = Rswift.ImageResource(bundle: R.hostingBundle, name: "profile.notselected")
     /// Image `profile.selected`.
@@ -215,6 +229,10 @@ struct R: Rswift.Validatable {
     static let rewardsSelected = Rswift.ImageResource(bundle: R.hostingBundle, name: "rewards.selected")
     /// Image `right`.
     static let right = Rswift.ImageResource(bundle: R.hostingBundle, name: "right")
+    /// Image `spot 2`.
+    static let spot2 = Rswift.ImageResource(bundle: R.hostingBundle, name: "spot 2")
+    /// Image `today 2`.
+    static let today2 = Rswift.ImageResource(bundle: R.hostingBundle, name: "today 2")
     /// Image `wallet.notselected`.
     static let walletNotselected = Rswift.ImageResource(bundle: R.hostingBundle, name: "wallet.notselected")
     /// Image `wallet.selected`.
@@ -224,6 +242,20 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "boy", bundle: ..., traitCollection: ...)`
     static func boy(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.boy, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "calendar 2", bundle: ..., traitCollection: ...)`
+    static func calendar2(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.calendar2, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "close 2", bundle: ..., traitCollection: ...)`
+    static func close2(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.close2, compatibleWith: traitCollection)
     }
     #endif
 
@@ -256,9 +288,23 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "left 2", bundle: ..., traitCollection: ...)`
+    static func left2(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.left2, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIImage(named: "noKids", bundle: ..., traitCollection: ...)`
     static func noKids(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.noKids, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "noNotifications 2", bundle: ..., traitCollection: ...)`
+    static func noNotifications2(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.noNotifications2, compatibleWith: traitCollection)
     }
     #endif
 
@@ -270,9 +316,30 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "notDone 2", bundle: ..., traitCollection: ...)`
+    static func notDone2(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.notDone2, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "notification 2", bundle: ..., traitCollection: ...)`
+    static func notification2(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.notification2, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIImage(named: "plusButton", bundle: ..., traitCollection: ...)`
     static func plusButton(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.plusButton, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "points 2", bundle: ..., traitCollection: ...)`
+    static func points2(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.points2, compatibleWith: traitCollection)
     }
     #endif
 
@@ -308,6 +375,20 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "right", bundle: ..., traitCollection: ...)`
     static func right(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.right, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "spot 2", bundle: ..., traitCollection: ...)`
+    static func spot2(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.spot2, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "today 2", bundle: ..., traitCollection: ...)`
+    static func today2(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.today2, compatibleWith: traitCollection)
     }
     #endif
 
