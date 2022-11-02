@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class LoginWithMailScreen: UIViewController {
+final class LoginWithMailScreenViewController: UIViewController {
     private let titleLabel = UILabel()
     private let subTitleLabel = UILabel()
     private let inputMailField = UITextField()
@@ -28,7 +28,7 @@ final class LoginWithMailScreen: UIViewController {
     }
 }
 
-private extension LoginWithMailScreen {
+private extension LoginWithMailScreenViewController {
     func setupUI() {
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.textColor = .primaryMidnight
@@ -50,6 +50,7 @@ private extension LoginWithMailScreen {
             .foregroundColor: UIColor.duskGrey,
             .font: UIFont.robotoRegular14()
         ])
+        inputMailField.indent(size: 16)
         view.addSubview(inputMailField)
         
         inputPasswordField.translatesAutoresizingMaskIntoConstraints = false
@@ -60,6 +61,7 @@ private extension LoginWithMailScreen {
             .foregroundColor: UIColor.duskGrey,
             .font: UIFont.robotoRegular14()
         ])
+        inputPasswordField.indent(size: 16)
         view.addSubview(inputPasswordField)
         
         view.addSubview(continueButton)
@@ -103,7 +105,7 @@ private extension LoginWithMailScreen {
             continueButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
             continueButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16),
             continueButton.heightAnchor.constraint(equalToConstant: 56),
-
+            
             helpLabel.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -64),
             helpLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
             helpLabel.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16),
@@ -118,7 +120,7 @@ private extension LoginWithMailScreen {
     @objc private func continueButtonDidTap() {
         // вызов проверки и экрана родительского профиля
     }
-
+    
     @objc private func helpButtonDidTap() {
         // вызов экрана восстановления аккаунта
     }

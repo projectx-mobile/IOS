@@ -18,6 +18,7 @@
 		847EBA3C290AF4E500B4DE70 /* LoginWithGAScreenConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847EBA3B290AF4E500B4DE70 /* LoginWithGAScreenConfigurator.swift */; };
 		847EBA3E290AFBAE00B4DE70 /* LoginWithGAScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847EBA3D290AFBAE00B4DE70 /* LoginWithGAScreenRouter.swift */; };
 		847EBA9C2912685700B4DE70 /* LoginWithMailScreemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847EBA9B2912685700B4DE70 /* LoginWithMailScreemViewController.swift */; };
+		84D496B429127790004D7EE9 /* UITextField + Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D496B329127790004D7EE9 /* UITextField + Extention.swift */; };
 		8858667128E1962000F11B72 /* KidsCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8858667028E1962000F11B72 /* KidsCardTableViewCell.swift */; };
 		8858667328E1968000F11B72 /* UpdatesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8858667228E1968000F11B72 /* UpdatesTableViewCell.swift */; };
 		8858667628E196E600F11B72 /* SecondaryLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8858667528E196E600F11B72 /* SecondaryLabel.swift */; };
@@ -104,6 +105,7 @@
 		847EBA3B290AF4E500B4DE70 /* LoginWithGAScreenConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWithGAScreenConfigurator.swift; sourceTree = "<group>"; };
 		847EBA3D290AFBAE00B4DE70 /* LoginWithGAScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWithGAScreenRouter.swift; sourceTree = "<group>"; };
 		847EBA9B2912685700B4DE70 /* LoginWithMailScreemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWithMailScreemViewController.swift; sourceTree = "<group>"; };
+		84D496B329127790004D7EE9 /* UITextField + Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField + Extention.swift"; sourceTree = "<group>"; };
 		8858667028E1962000F11B72 /* KidsCardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KidsCardTableViewCell.swift; sourceTree = "<group>"; };
 		8858667228E1968000F11B72 /* UpdatesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatesTableViewCell.swift; sourceTree = "<group>"; };
 		8858667528E196E600F11B72 /* SecondaryLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryLabel.swift; sourceTree = "<group>"; };
@@ -373,6 +375,7 @@
 				889F434228E18CC500DC347D /* UIFont + Extension.swift */,
 				889F434428E18D1000DC347D /* UIView + Extension.swift */,
 				885B24672907F69100FA607B /* UIDatePicker + Extension.swift */,
+				84D496B329127790004D7EE9 /* UITextField + Extention.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -759,6 +762,7 @@
 				885B243E2907E98100FA607B /* TasksTableViewCell.swift in Sources */,
 				8858667A28E1973000F11B72 /* SubtitleLabel.swift in Sources */,
 				971507A628F6F2100024475C /* WalletViewController.swift in Sources */,
+				84D496B429127790004D7EE9 /* UITextField + Extention.swift in Sources */,
 				8858668B28E19A2500F11B72 /* ParentHomeScreenConfigurator.swift in Sources */,
 				8858668928E199F600F11B72 /* KidsUpdates.swift in Sources */,
 				889F435228E1904A00DC347D /* WelcomePresenter.swift in Sources */,
