@@ -33,15 +33,15 @@ import Lottie
         setupViews()
         setupAnimation()
         
-        welcomeSubtitleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 0).isActive = true
+        welcomeSubtitleLabel.topAnchor.constraint(equalTo: topAnchor).isActive = true
         welcomeSubtitleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8.5).isActive = true
         welcomeSubtitleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8.5).isActive = true
-        welcomeSubtitleLabel.widthAnchor.constraint(equalToConstant: 343).isActive = true
+        welcomeSubtitleLabel.widthAnchor.constraint(equalToConstant: LayoutConstants.width343).isActive = true
         
-        animationView.topAnchor.constraint(equalTo: welcomeSubtitleLabel.bottomAnchor, constant: 32).isActive = true
-        animationView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0).isActive = true
-        animationView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0).isActive = true
-        animationView.heightAnchor.constraint(equalToConstant: 325).isActive = true
+        animationView.topAnchor.constraint(equalTo: welcomeSubtitleLabel.bottomAnchor, constant: LayoutConstants.inset32).isActive = true
+        animationView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
+        animationView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+        animationView.heightAnchor.constraint(equalToConstant: LayoutConstants.width325).isActive = true
     }
     
     required init?(coder: NSCoder) {

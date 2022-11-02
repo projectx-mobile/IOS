@@ -23,12 +23,11 @@ final class PageControlItem: UIView {
 //MARK: - Private extension
 private extension PageControlItem {
     private func configure() {
-//      backgroundColor = .systemPink
         layer.cornerRadius = 4
         layer.borderWidth = 1.2
         layer.borderColor = UIColor.primaryMidnight.cgColor
         translatesAutoresizingMaskIntoConstraints = false
-        widthAnchor.constraint(equalToConstant: 40).isActive = true
-        heightAnchor.constraint(equalToConstant: 8).isActive = true
+        widthAnchor.constraint(equalToConstant: LayoutConstants.inset40).isActive = true
+        heightAnchor.constraint(equalToConstant: LayoutConstants.inset8).isActive = true
     }
 }

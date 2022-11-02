@@ -151,10 +151,10 @@ private extension WelcomeViewController {
 //            comeBackView.heightAnchor.constraint(equalToConstant: LayoutConstants.height375)
 //        ])
         NSLayoutConstraint.activate([
-            collectionView.topAnchor.constraint(equalTo: welcomeTitleLabel.bottomAnchor, constant: 16),
-            collectionView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 0),
-            collectionView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: 0),
-            collectionView.heightAnchor.constraint(equalToConstant: 429)
+            collectionView.topAnchor.constraint(equalTo: welcomeTitleLabel.bottomAnchor, constant: LayoutConstants.inset16),
+            collectionView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            collectionView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            collectionView.heightAnchor.constraint(equalToConstant: LayoutConstants.height429)
         ])
         
      let controlStack: UIStackView = {

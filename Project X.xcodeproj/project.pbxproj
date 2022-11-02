@@ -11,7 +11,6 @@
 		052A5969290FE44000C547BF /* WelcomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052A5968290FE44000C547BF /* WelcomeCollectionViewCell.swift */; };
 		052A596B290FE54200C547BF /* WelcomeCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052A596A290FE54200C547BF /* WelcomeCellModel.swift */; };
 		052A596D290FE5C800C547BF /* WelcomeCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052A596C290FE5C800C547BF /* WelcomeCollectionView.swift */; };
-		0534BD0C29068EDF0051717E /* WelcomeSubtitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0534BD0B29068EDF0051717E /* WelcomeSubtitleLabel.swift */; };
 		055940F029006E43007EF6D1 /* WelcomeTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055940EF29006E43007EF6D1 /* WelcomeTitleLabel.swift */; };
 		056FBB2D29069F0B006C1F06 /* frame 2 onboarding.json in Resources */ = {isa = PBXBuildFile; fileRef = 056FBB2B29069F0B006C1F06 /* frame 2 onboarding.json */; };
 		056FBB2E29069F0B006C1F06 /* antframe1.json in Resources */ = {isa = PBXBuildFile; fileRef = 056FBB2C29069F0B006C1F06 /* antframe1.json */; };
@@ -73,7 +72,6 @@
 		052A5968290FE44000C547BF /* WelcomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		052A596A290FE54200C547BF /* WelcomeCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeCellModel.swift; sourceTree = "<group>"; };
 		052A596C290FE5C800C547BF /* WelcomeCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeCollectionView.swift; sourceTree = "<group>"; };
-		0534BD0B29068EDF0051717E /* WelcomeSubtitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeSubtitleLabel.swift; sourceTree = "<group>"; };
 		055940EF29006E43007EF6D1 /* WelcomeTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeTitleLabel.swift; sourceTree = "<group>"; };
 		056FBB2B29069F0B006C1F06 /* frame 2 onboarding.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "frame 2 onboarding.json"; sourceTree = "<group>"; };
 		056FBB2C29069F0B006C1F06 /* antframe1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = antframe1.json; sourceTree = "<group>"; };
@@ -193,7 +191,6 @@
 				8858667928E1973000F11B72 /* SubtitleLabel.swift */,
 				8858667B28E1975A00F11B72 /* TitleLabel.swift */,
 				055940EF29006E43007EF6D1 /* WelcomeTitleLabel.swift */,
-				0534BD0B29068EDF0051717E /* WelcomeSubtitleLabel.swift */,
 			);
 			path = Labels;
 			sourceTree = "<group>";
@@ -601,7 +598,6 @@
 				971507A628F6F2100024475C /* WalletViewController.swift in Sources */,
 				8858668B28E19A2500F11B72 /* ParentHomeScreenConfigurator.swift in Sources */,
 				8858668928E199F600F11B72 /* KidsUpdates.swift in Sources */,
-				0534BD0C29068EDF0051717E /* WelcomeSubtitleLabel.swift in Sources */,
 				889F435228E1904A00DC347D /* WelcomePresenter.swift in Sources */,
 				971507AA28F6F2100024475C /* TasksViewController.swift in Sources */,
 				8858668728E199AC00F11B72 /* ParentHomeScreenViewController.swift in Sources */,
