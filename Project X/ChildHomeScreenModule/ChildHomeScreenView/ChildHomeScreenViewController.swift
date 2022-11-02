@@ -108,6 +108,7 @@ final class ChildHomeScreenViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         checkNumberOfNotifications()
+        checkNumberOfActiveTasks()
     }
 
     deinit {
@@ -166,6 +167,10 @@ private extension ChildHomeScreenViewController {
             presenter.getTextOfNotification()
             notificationView.configureWithText(text: textOfNotification)
         }
+    }
+
+    func checkNumberOfActiveTasks() {
+        presenter.getNumberOfActiveTasks()
     }
 
     func setDelegates() {
@@ -291,6 +296,10 @@ extension ChildHomeScreenViewController: CloseProtocol {
 
 // MARK: - ChildHomeScreenViewInputProtocol
 extension ChildHomeScreenViewController: ChildHomeScreenViewInputProtocol {
+    func receiveActiveTasksLabelText(text: String) {
+        activeTasksLabel.text = text
+    }
+    
     func receiveNumberOfNotifications(number: Int) {
         numberOfNotifications = number
     }
