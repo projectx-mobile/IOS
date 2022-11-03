@@ -67,6 +67,7 @@ private extension WelcomeViewController {
         backgroundView.isHidden = true
         view.addSubview(comeBackView)
         pageView1.backgroundColor = .primaryJuicyGrape
+        view.addSubview(welcomeTitleLabel)
         view.addSubview(collectionView)
     }
     
@@ -173,7 +174,7 @@ private extension WelcomeViewController {
             welcomeTitleLabel.heightAnchor.constraint(equalToConstant: 18)
         ])
         NSLayoutConstraint.activate([
-            collectionView.topAnchor.constraint(equalTo: view.topAnchor, constant: 200),
+            collectionView.topAnchor.constraint(equalTo: welcomeTitleLabel.bottomAnchor, constant: 16),
             collectionView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 0),
             collectionView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: 0),
             collectionView.heightAnchor.constraint(equalToConstant: 429)

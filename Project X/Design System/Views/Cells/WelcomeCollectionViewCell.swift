@@ -42,10 +42,6 @@ import Lottie
         animationView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0).isActive = true
         animationView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0).isActive = true
         animationView.heightAnchor.constraint(equalToConstant: 325).isActive = true
-        
-        welcomeSubtitleLabel.backgroundColor = .white
-        animationView.backgroundColor = .yellow
-        backgroundColor = .blue
     }
     
     required init?(coder: NSCoder) {

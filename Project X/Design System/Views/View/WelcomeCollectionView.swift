@@ -7,6 +7,7 @@
 
 import UIKit
 import Lottie
+// swiftlint:disable force_cast
 
 class WelcomeCollectionView: UICollectionView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
