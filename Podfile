@@ -9,4 +9,5 @@ pod 'SwiftLint'
 pod 'FirebaseAnalytics'
 pod 'FirebaseAuth'
 pod 'FirebaseFirestore'
+pod 'lottie-ios'
 end
