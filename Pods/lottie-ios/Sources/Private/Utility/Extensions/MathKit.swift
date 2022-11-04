@@ -8,7 +8,8 @@
 
 import CoreGraphics
 import Foundation
-
+// swiftlint:disable shorthand_operator
+// swiftlint:disable identifier_name
 extension Int {
   var cgFloat: CGFloat {
     CGFloat(self)

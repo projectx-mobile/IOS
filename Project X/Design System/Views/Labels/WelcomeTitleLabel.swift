@@ -16,7 +16,7 @@ final class WelcomeTitleLabel: UILabel {
 
 //MARK: - Private extension
 private extension WelcomeTitleLabel {
-    func configure(with text: String) {
+    private func configure(with text: String) {
         self.text = text
         self.textColor = .duskGrey
         self.font = .robotoRegular13()

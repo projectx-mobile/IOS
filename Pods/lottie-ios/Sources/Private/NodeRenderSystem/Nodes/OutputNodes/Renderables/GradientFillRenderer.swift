@@ -7,7 +7,7 @@
 
 import Foundation
 import QuartzCore
-
+// swiftlint:disable identifier_name
 /// A rendered for a Path Fill
 final class GradientFillRenderer: PassThroughOutputNode, Renderable {
 

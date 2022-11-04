@@ -7,7 +7,7 @@
 
 import CoreGraphics
 import Foundation
-
+// swiftlint:disable function_body_length
 // MARK: - RectNodeProperties
 
 final class RectNodeProperties: NodePropertyMap, KeypathSearchable {

@@ -7,7 +7,7 @@
 
 import Foundation
 import QuartzCore
-
+// swiftlint:disable shorthand_operator
 // MARK: - EllipseNodeProperties
 
 final class EllipseNodeProperties: NodePropertyMap, KeypathSearchable {

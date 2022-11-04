@@ -7,7 +7,9 @@
 
 import CoreGraphics
 import Foundation
-
+// swiftlint:disable shorthand_operator
+// swiftlint:disable identifier_name
+// swiftlint:disable large_tuple
 // MARK: - Vector1D + Interpolatable
 
 extension Vector1D: Interpolatable {

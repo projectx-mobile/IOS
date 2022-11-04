@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+// swiftlint:disable identifier_name
 /**
  Used for coding/decoding a group of Keyframes by type.
 

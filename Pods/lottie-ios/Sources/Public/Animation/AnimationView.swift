@@ -7,7 +7,10 @@
 
 import Foundation
 import QuartzCore
-
+// swiftlint:disable type_body_length
+// swiftlint:disable function_body_length
+// swiftlint:disable shorthand_operator
+// swiftlint:disable file_length
 // MARK: - LottieBackgroundBehavior
 
 /// Describes the behavior of an AnimationView when the app is moved to the background.

@@ -7,7 +7,8 @@
 
 import CoreGraphics
 import Foundation
-
+// swiftlint:disable shorthand_operator
+// swiftlint:disable identifier_name
 // MARK: - BezierPath
 
 /// A container that holds instructions for creating a single, unbroken Bezier Path.

@@ -7,7 +7,7 @@
 
 import CoreGraphics
 import Foundation
-
+// swiftlint:disable force_cast
 /// A value provider that produces an array of values from an array of Keyframe Interpolators
 final class GroupInterpolator<ValueType>: AnyValueProvider where ValueType: Interpolatable {
 

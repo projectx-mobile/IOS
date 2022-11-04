@@ -8,7 +8,7 @@
 import CoreGraphics
 import Foundation
 import QuartzCore
-
+// swiftlint:disable force_cast
 /// A completion block for animations. `true` is passed in if the animation completed playing.
 public typealias LottieCompletionBlock = (Bool) -> Void
 

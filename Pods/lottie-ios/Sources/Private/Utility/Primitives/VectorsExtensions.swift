@@ -8,7 +8,7 @@
 import CoreGraphics
 import Foundation
 import QuartzCore
-
+// swiftlint:disable identifier_name
 // MARK: - Vector1D + Codable
 
 /**

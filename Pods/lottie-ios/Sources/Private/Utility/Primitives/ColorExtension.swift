@@ -7,7 +7,7 @@
 
 import CoreGraphics
 import Foundation
-
+// swiftlint:disable shorthand_operator
 // MARK: - Color + Codable
 
 extension Color: Codable {

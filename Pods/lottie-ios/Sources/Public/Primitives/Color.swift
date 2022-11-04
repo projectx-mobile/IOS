@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+// swiftlint:disable identifier_name
 // MARK: - ColorFormatDenominator
 
 public enum ColorFormatDenominator {

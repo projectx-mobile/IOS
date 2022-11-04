@@ -7,7 +7,8 @@
 
 import CoreGraphics
 import Foundation
-
+// swiftlint:disable shorthand_operator
+// swiftlint:disable identifier_name
 /**
  A collection of BezierPath objects that can be trimmed and added.
 

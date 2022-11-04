@@ -9,7 +9,7 @@ import CoreGraphics
 import CoreText
 import Foundation
 import QuartzCore
-
+// swiftlint:disable force_cast
 /// Needed for NSMutableParagraphStyle...
 #if os(OSX)
 import AppKit
