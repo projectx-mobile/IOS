@@ -8,7 +8,6 @@
 import Foundation
 
 final class ChildHomeScreenPresenter: ChildHomeScreenViewOutputProtocol {
-
     unowned let view: ChildHomeScreenViewInputProtocol
     var interactor: ChildHomeScreenInteractorInputProtocol!
     var router: ChildHomeScreenRouterInputProtocol!
@@ -30,6 +29,10 @@ final class ChildHomeScreenPresenter: ChildHomeScreenViewOutputProtocol {
     func deleteFirstNotification() {
         interactor.deleteFirstNotification()
     }
+    
+    func getNumberOfActiveTasks() {
+        interactor.provideNumberOfActiveTasks()
+    }
 }
 
 // MARK: - ChildHomeScreenInteractorOutputProtocol
@@ -42,5 +45,10 @@ extension ChildHomeScreenPresenter: ChildHomeScreenInteractorOutputProtocol {
     func receiveTextOfNotification(text: String) {
         let textOfNotification = text
         view.receiveTextOfNotification(text: textOfNotification)
+    }
+    
+    func receiveNumberOfActiveTasks(number: Int) {
+        let text =  "Активных на сегодня (\(number))"
+        view.receiveActiveTasksLabelText(text: text)
     }
 }

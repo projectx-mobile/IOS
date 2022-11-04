@@ -34,14 +34,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //         window?.rootViewController = navVC
         
         // ChildHomeScreen
-        let configurator:ChildHomeScreenConfiguratorInputProtocol = ChildHomeScreenConfigurator()
-        let childVC = ChildHomeScreenViewController()
-        navVC.viewControllers = [childVC]
-        configurator.configure(with: childVC, with: navVC)
-        window?.rootViewController = navVC
+//        let configurator:ChildHomeScreenConfiguratorInputProtocol = ChildHomeScreenConfigurator()
+//        let childVC = ChildHomeScreenViewController()
+//        navVC.viewControllers = [childVC]
+//        configurator.configure(with: childVC, with: navVC)
+//        window?.rootViewController = navVC
         
    // Welcome VC
-      //  window?.rootViewController = WelcomeViewController()
+        window?.rootViewController = WelcomeViewController()
 
         window?.makeKeyAndVisible()
         window?.overrideUserInterfaceStyle = .light

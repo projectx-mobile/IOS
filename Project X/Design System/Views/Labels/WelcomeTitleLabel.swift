@@ -1,0 +1,26 @@
+//
+//  WelcomeTitleLabel.swift
+//  Project X
+//
+//  Created by Александра Захаревич on 3.11.22.
+//
+
+import UIKit
+
+final class WelcomeTitleLabel: UILabel {
+    convenience init(text: String) {
+        self.init()
+        configure(with: text)
+    }
+}
+
+//MARK: - Private extension
+private extension WelcomeTitleLabel {
+    func configure(with text: String) {
+        self.text = text
+        self.textColor = .duskGrey
+        self.font = .robotoRegular13()
+        self.textAlignment = .left
+        self.translatesAutoresizingMaskIntoConstraints = false
+    }
+}
