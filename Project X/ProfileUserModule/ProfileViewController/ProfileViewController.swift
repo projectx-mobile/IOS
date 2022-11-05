@@ -15,7 +15,7 @@ protocol ProfileVCProtocol: AnyObject {
 final class ProfileViewController: UIViewController {
 
 var presenter: ProfilePresenterProtocol?
-private var isParent: Bool = false
+private var isParent: Bool = true
     // MARK: Custom Navigation Bar
 private var customNavigationBar: UINavigationBar = UINavigationBar()
     // MARK: Basic scrollView
