@@ -10,7 +10,7 @@ import UIKit
 final class ButtonForUI: UIButton {
     var title: String = ""
     var style: Style
-    //MARK: - Initializer
+    // MARK: - Initializer
      init(style: Style, title: String) {
          self.style = style
         self.title = title
@@ -21,7 +21,7 @@ final class ButtonForUI: UIButton {
         fatalError("init(coder:) has not been implemented")
     }
 }
-    //MARK: - Constants
+    // MARK: - Constants
  extension ButtonForUI {
     enum Style {
         case primary

@@ -631,11 +631,11 @@
 		CA214CEC28BDFEF5006176A7 /* Project X */ = {
 			isa = PBXGroup;
 			children = (
-				ED73FCA529166EB7008AC0E9 /* ProfileUserModule */,
-				CA214CED28BDFEF5006176A7 /* AppDelegate.swift */,
-				CA214CEF28BDFEF5006176A7 /* SceneDelegate.swift */,
 				CA214CF128BDFEF5006176A7 /* ViewController.swift */,
+				CA214CEF28BDFEF5006176A7 /* SceneDelegate.swift */,
+				CA214CED28BDFEF5006176A7 /* AppDelegate.swift */,
 				88D5282228E328AE00220DFB /* Entities */,
+				ED73FCA529166EB7008AC0E9 /* ProfileUserModule */,
 				889F434828E18F0500DC347D /* WelcomeModule */,
 				847EBA99291267D200B4DE70 /* LoginWithMailSceenModule */,
 				847EBA2C290AEC7400B4DE70 /* LoginWithGAScreenModule */,

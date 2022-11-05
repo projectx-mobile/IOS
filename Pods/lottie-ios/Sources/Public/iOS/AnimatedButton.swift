@@ -71,7 +71,7 @@ open class AnimatedButton: AnimatedControl {
 
   // MARK: Fileprivate
 
-  fileprivate var rangesForEvents: [UInt : (from: CGFloat, to: CGFloat)] =
-    [UIControl.Event.touchUpInside.rawValue : (from: 0, to: 1)]
+  fileprivate var rangesForEvents: [UInt: (from: CGFloat, to: CGFloat)] =
+    [UIControl.Event.touchUpInside.rawValue: (from: 0, to: 1)]
 }
 #endif

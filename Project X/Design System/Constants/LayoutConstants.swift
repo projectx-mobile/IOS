@@ -26,30 +26,38 @@ enum LayoutConstants {
     static let inset19: CGFloat = 19.0
     static let inset20: CGFloat = 20.0
     static let inset21: CGFloat = 21.0
+    static let inset22: CGFloat = 22.0
     static let inset24: CGFloat = 24.0
     static let inset25: CGFloat = 25.0
     static let inset27: CGFloat = 27.0
     static let inset30: CGFloat = 30.0
     static let inset32: CGFloat = 32.0
+    static let inset34: CGFloat = 34.0
     static let inset36: CGFloat = 36.0
     static let inset40: CGFloat = 40.0
     static let inset43: CGFloat = 43.0
+    static let inset46: CGFloat = 46.0
+    static let inset48: CGFloat = 48.0
     static let inset49: CGFloat = 49.0
     static let inset52: CGFloat = 52.0
     static let inset55: CGFloat = 55.0
     static let inset58: CGFloat = 58.0
+    static let inset64: CGFloat = 64.0
     static let inset69: CGFloat = 69.0
     static let inset72: CGFloat = 72.0
     static let inset74: CGFloat = 74.0
     static let inset76: CGFloat = 76.0
+    static let inset80: CGFloat = 80.0
     static let inset88: CGFloat = 88.0
     static let inset92: CGFloat = 92.0
     // MARK: - Duration
     static let duration: TimeInterval = 0.1
     // MARK: - Height
+    static let height1: CGFloat = 1.0
     static let height5: CGFloat = 5.0
     static let height8: CGFloat = 8.0
     static let height10: CGFloat = 10.0
+    static let height17: CGFloat = 17.0
     static let height18: CGFloat = 18.0
     static let height20: CGFloat = 20.0
     static let height24: CGFloat = 24.0
@@ -59,6 +67,7 @@ enum LayoutConstants {
     static let height60: CGFloat = 60.0
     static let height64: CGFloat = 64.0
     static let height78: Double = 78.0
+    static let height100: CGFloat = 100.0
     static let height121: Double = 121.0
     static let height152: Double = 152.0
     static let height158: Double = 158.0
@@ -71,7 +80,9 @@ enum LayoutConstants {
     static let width20: Double = 20.0
     static let width24: Double = 24.0
     static let width42: Double = 42.0
+    static let width56: CGFloat = 56.0
     static let width85: Double = 85.0
+    static let width112: CGFloat = 112.0
     static let width160: CGFloat = 160.0
     static let width167: Double = 167.0
     static let width242: Double = 242.0
