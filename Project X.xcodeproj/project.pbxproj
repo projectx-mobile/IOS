@@ -94,7 +94,6 @@
 		971507A628F6F2100024475C /* WalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971507A028F6F2100024475C /* WalletViewController.swift */; };
 		971507A728F6F2100024475C /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971507A128F6F2100024475C /* AddTaskViewController.swift */; };
 		971507A828F6F2100024475C /* MainTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971507A228F6F2100024475C /* MainTabbarController.swift */; };
-		971507A928F6F2100024475C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971507A328F6F2100024475C /* ProfileViewController.swift */; };
 		971507AA28F6F2100024475C /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971507A428F6F2100024475C /* TasksViewController.swift */; };
 		975958FE28D9B40900570BB4 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975958FD28D9B40900570BB4 /* Button.swift */; };
 		CA214CEE28BDFEF5006176A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA214CED28BDFEF5006176A7 /* AppDelegate.swift */; };
@@ -103,6 +102,16 @@
 		CA214CF528BDFEF5006176A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA214CF328BDFEF5006176A7 /* Main.storyboard */; };
 		CA214CF728BDFEF7006176A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA214CF628BDFEF7006176A7 /* Assets.xcassets */; };
 		CA214CFA28BDFEF7006176A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA214CF828BDFEF7006176A7 /* LaunchScreen.storyboard */; };
+		ED73FCAB29167150008AC0E9 /* AvatarIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED73FCAA29167150008AC0E9 /* AvatarIcon.swift */; };
+		ED73FCAD29167184008AC0E9 /* ProfileButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED73FCAC29167184008AC0E9 /* ProfileButton.swift */; };
+		ED73FCAF291672FF008AC0E9 /* FamilyMembersCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED73FCAE291672FF008AC0E9 /* FamilyMembersCollectionView.swift */; };
+		ED73FCB129167352008AC0E9 /* FamilyMembersCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED73FCB029167352008AC0E9 /* FamilyMembersCells.swift */; };
+		ED73FCB3291675A6008AC0E9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED73FCB2291675A6008AC0E9 /* ProfileViewController.swift */; };
+		ED73FCB5291675FF008AC0E9 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED73FCB4291675FF008AC0E9 /* ProfilePresenter.swift */; };
+		ED73FCB729167649008AC0E9 /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED73FCB629167649008AC0E9 /* ProfileRouter.swift */; };
+		ED73FCB92916767A008AC0E9 /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED73FCB82916767A008AC0E9 /* ProfileInteractor.swift */; };
+		ED73FCBB291676B8008AC0E9 /* ProfileConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED73FCBA291676B8008AC0E9 /* ProfileConfigurator.swift */; };
+		EDFD5E0329166B7F006E1D5C /* FamilyMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFD5E0229166B7F006E1D5C /* FamilyMember.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -194,7 +203,6 @@
 		971507A028F6F2100024475C /* WalletViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalletViewController.swift; sourceTree = "<group>"; };
 		971507A128F6F2100024475C /* AddTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
 		971507A228F6F2100024475C /* MainTabbarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabbarController.swift; sourceTree = "<group>"; };
-		971507A328F6F2100024475C /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		971507A428F6F2100024475C /* TasksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
 		975958FD28D9B40900570BB4 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		ADD95C7F5F7193C38CEA06C4 /* Pods_Project_X.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Project_X.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -206,6 +214,16 @@
 		CA214CF628BDFEF7006176A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA214CF928BDFEF7006176A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CA214CFB28BDFEF7006176A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED73FCAA29167150008AC0E9 /* AvatarIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarIcon.swift; sourceTree = "<group>"; };
+		ED73FCAC29167184008AC0E9 /* ProfileButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileButton.swift; sourceTree = "<group>"; };
+		ED73FCAE291672FF008AC0E9 /* FamilyMembersCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyMembersCollectionView.swift; sourceTree = "<group>"; };
+		ED73FCB029167352008AC0E9 /* FamilyMembersCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyMembersCells.swift; sourceTree = "<group>"; };
+		ED73FCB2291675A6008AC0E9 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		ED73FCB4291675FF008AC0E9 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
+		ED73FCB629167649008AC0E9 /* ProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRouter.swift; sourceTree = "<group>"; };
+		ED73FCB82916767A008AC0E9 /* ProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
+		ED73FCBA291676B8008AC0E9 /* ProfileConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileConfigurator.swift; sourceTree = "<group>"; };
+		EDFD5E0229166B7F006E1D5C /* FamilyMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyMember.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,6 +252,7 @@
 			children = (
 				05DA1E992914190C00CFA8DC /* WelcomeCollectionView.swift */,
 				05DA1E9B291419C000CFA8DC /* PageControlItem.swift */,
+				ED73FCAE291672FF008AC0E9 /* FamilyMembersCollectionView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -330,6 +349,7 @@
 				885B243D2907E98100FA607B /* TasksTableViewCell.swift */,
 				885B24652907F63100FA607B /* CalendarCollectionViewCell.swift */,
 				05DA1E9D29141A3300CFA8DC /* WelcomeCollectionViewCell.swift */,
+				ED73FCB029167352008AC0E9 /* FamilyMembersCells.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -529,6 +549,7 @@
 				885B24362907E7B700FA607B /* KidsNotification.swift */,
 				885B24382907E7D600FA607B /* KidsTask.swift */,
 				05DA1E962914184000CFA8DC /* WelcomeCellModel.swift */,
+				EDFD5E0229166B7F006E1D5C /* FamilyMember.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -538,7 +559,6 @@
 			children = (
 				971507A128F6F2100024475C /* AddTaskViewController.swift */,
 				971507A228F6F2100024475C /* MainTabbarController.swift */,
-				971507A328F6F2100024475C /* ProfileViewController.swift */,
 				9715079F28F6F2100024475C /* RewardsViewController.swift */,
 				971507A428F6F2100024475C /* TasksViewController.swift */,
 				971507A028F6F2100024475C /* WalletViewController.swift */,
@@ -564,6 +584,8 @@
 				889F433D28E18BEC00DC347D /* PrimaryButton.swift */,
 				885B24412907EBA800FA607B /* TaskDescriptionButton.swift */,
 				847EBA27290AEB1200B4DE70 /* LoginButton.swift */,
+				ED73FCAA29167150008AC0E9 /* AvatarIcon.swift */,
+				ED73FCAC29167184008AC0E9 /* ProfileButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -609,6 +631,7 @@
 		CA214CEC28BDFEF5006176A7 /* Project X */ = {
 			isa = PBXGroup;
 			children = (
+				ED73FCA529166EB7008AC0E9 /* ProfileUserModule */,
 				CA214CED28BDFEF5006176A7 /* AppDelegate.swift */,
 				CA214CEF28BDFEF5006176A7 /* SceneDelegate.swift */,
 				CA214CF128BDFEF5006176A7 /* ViewController.swift */,
@@ -628,6 +651,50 @@
 				88B0AB2029093A470049F8B8 /* GoogleService-Info.plist */,
 			);
 			path = "Project X";
+			sourceTree = "<group>";
+		};
+		ED73FCA429166E9F008AC0E9 /* ProfileViewController */ = {
+			isa = PBXGroup;
+			children = (
+				ED73FCB2291675A6008AC0E9 /* ProfileViewController.swift */,
+			);
+			path = ProfileViewController;
+			sourceTree = "<group>";
+		};
+		ED73FCA529166EB7008AC0E9 /* ProfileUserModule */ = {
+			isa = PBXGroup;
+			children = (
+				ED73FCA429166E9F008AC0E9 /* ProfileViewController */,
+				ED73FCA829166EF1008AC0E9 /* ProfilePresenter */,
+				ED73FCA629166ED0008AC0E9 /* ProfileRouter */,
+				ED73FCA929166F29008AC0E9 /* ProfileInteractor */,
+				ED73FCBA291676B8008AC0E9 /* ProfileConfigurator.swift */,
+			);
+			path = ProfileUserModule;
+			sourceTree = "<group>";
+		};
+		ED73FCA629166ED0008AC0E9 /* ProfileRouter */ = {
+			isa = PBXGroup;
+			children = (
+				ED73FCB629167649008AC0E9 /* ProfileRouter.swift */,
+			);
+			path = ProfileRouter;
+			sourceTree = "<group>";
+		};
+		ED73FCA829166EF1008AC0E9 /* ProfilePresenter */ = {
+			isa = PBXGroup;
+			children = (
+				ED73FCB4291675FF008AC0E9 /* ProfilePresenter.swift */,
+			);
+			path = ProfilePresenter;
+			sourceTree = "<group>";
+		};
+		ED73FCA929166F29008AC0E9 /* ProfileInteractor */ = {
+			isa = PBXGroup;
+			children = (
+				ED73FCB82916767A008AC0E9 /* ProfileInteractor.swift */,
+			);
+			path = ProfileInteractor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -803,12 +870,14 @@
 				889F434128E18C7800DC347D /* UIColor + Extension.swift in Sources */,
 				889F434D28E18FE000DC347D /* WelcomeInteractor.swift in Sources */,
 				847EBA38290AEFE700B4DE70 /* LoginWithGAScreenInteractorIO.swift in Sources */,
+				ED73FCB3291675A6008AC0E9 /* ProfileViewController.swift in Sources */,
 				847EBA2A290AEB8500B4DE70 /* LoginWithGAViewIO.swift in Sources */,
 				885B24582907EF9900FA607B /* ChildHomeScreenPresenter.swift in Sources */,
 				88C988F328E5E4A1002DF8A3 /* ParentUpdatesInteractorIO.swift in Sources */,
 				971507A828F6F2100024475C /* MainTabbarController.swift in Sources */,
 				847EBA3C290AF4E500B4DE70 /* LoginWithGAScreenConfigurator.swift in Sources */,
 				847EBA3E290AFBAE00B4DE70 /* LoginWithGAScreenRouter.swift in Sources */,
+				ED73FCB729167649008AC0E9 /* ProfileRouter.swift in Sources */,
 				84D496BC291287D7004D7EE9 /* LoginWithMailScreenViewIO.swift in Sources */,
 				885B245C2907F00400FA607B /* ChildHomeScreenInteractor.swift in Sources */,
 				889F433E28E18BEC00DC347D /* PrimaryButton.swift in Sources */,
@@ -836,10 +905,13 @@
 				847EBA9C2912685700B4DE70 /* LoginWithMailScreemViewController.swift in Sources */,
 				889F435728E190EA00DC347D /* ComeBackView.swift in Sources */,
 				885B24682907F69100FA607B /* UIDatePicker + Extension.swift in Sources */,
+				ED73FCB5291675FF008AC0E9 /* ProfilePresenter.swift in Sources */,
 				885B243E2907E98100FA607B /* TasksTableViewCell.swift in Sources */,
 				84D496BE29128804004D7EE9 /* LoginWithMailScreenPresenter.swift in Sources */,
+				ED73FCBB291676B8008AC0E9 /* ProfileConfigurator.swift in Sources */,
 				05DA1E95291417BC00CFA8DC /* WelcomeTitleLabel.swift in Sources */,
 				889F435728E190EA00DC347D /* ComeBackView.swift in Sources */,
+				ED73FCAB29167150008AC0E9 /* AvatarIcon.swift in Sources */,
 				885B24682907F69100FA607B /* UIDatePicker + Extension.swift in Sources */,
 				885B243E2907E98100FA607B /* TasksTableViewCell.swift in Sources */,
 				05DA1E9A2914190C00CFA8DC /* WelcomeCollectionView.swift in Sources */,
@@ -847,6 +919,7 @@
 				971507A628F6F2100024475C /* WalletViewController.swift in Sources */,
 				84D496B429127790004D7EE9 /* UITextField + Extention.swift in Sources */,
 				8858668B28E19A2500F11B72 /* ParentHomeScreenConfigurator.swift in Sources */,
+				ED73FCAD29167184008AC0E9 /* ProfileButton.swift in Sources */,
 				8858668928E199F600F11B72 /* KidsUpdates.swift in Sources */,
 				889F435228E1904A00DC347D /* WelcomePresenter.swift in Sources */,
 				971507AA28F6F2100024475C /* TasksViewController.swift in Sources */,
@@ -854,6 +927,7 @@
 				84D496B829128797004D7EE9 /* LoginWithMailScreenRouter.swift in Sources */,
 				8858668028E198B200F11B72 /* ParentHomeScreenInteractorIO.swift in Sources */,
 				889F434F28E1900B00DC347D /* WelcomeInteractorIO.swift in Sources */,
+				EDFD5E0329166B7F006E1D5C /* FamilyMember.swift in Sources */,
 				847EBA2E290AECD800B4DE70 /* LoginWithGAScreenViewController.swift in Sources */,
 				CA214CF028BDFEF5006176A7 /* SceneDelegate.swift in Sources */,
 				847EBA28290AEB1200B4DE70 /* LoginButton.swift in Sources */,
@@ -864,20 +938,22 @@
 				88C988E528E5E3B7002DF8A3 /* ParentUpdatesConfigurator.swift in Sources */,
 				847EBA36290AEF8300B4DE70 /* LoginWhithGAScreenInteractor.swift in Sources */,
 				8858667128E1962000F11B72 /* KidsCardTableViewCell.swift in Sources */,
+				ED73FCAF291672FF008AC0E9 /* FamilyMembersCollectionView.swift in Sources */,
 				8858668D28E19A4A00F11B72 /* ParentHomeScreenPresenter.swift in Sources */,
 				8858667328E1968000F11B72 /* UpdatesTableViewCell.swift in Sources */,
+				ED73FCB129167352008AC0E9 /* FamilyMembersCells.swift in Sources */,
 				889F435428E1909600DC347D /* WelcomeRouter.swift in Sources */,
 				05DA1E9E29141A3300CFA8DC /* WelcomeCollectionViewCell.swift in Sources */,
 				889F434528E18D1000DC347D /* UIView + Extension.swift in Sources */,
 				88C988EB28E5E407002DF8A3 /* ParentUpdatesViewController.swift in Sources */,
 				84D496BA291287AF004D7EE9 /* LoginWithMailScreenConfigurator.swift in Sources */,
 				88C988E728E5E3CA002DF8A3 /* ParentUpdatesPresenter.swift in Sources */,
-				971507A928F6F2100024475C /* ProfileViewController.swift in Sources */,
 				885B24522907EE7500FA607B /* NotificationView.swift in Sources */,
 				885B24422907EBA800FA607B /* TaskDescriptionButton.swift in Sources */,
 				885B24562907EF7800FA607B /* Notification.swift in Sources */,
 				889F434A28E18F5300DC347D /* WelcomeConfigurator.swift in Sources */,
 				885B244A2907ECB700FA607B /* ChildHomeScreenConfigurator.swift in Sources */,
+				ED73FCB92916767A008AC0E9 /* ProfileInteractor.swift in Sources */,
 				88C988E928E5E3F1002DF8A3 /* ParentUpdatesInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

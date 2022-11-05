@@ -20,11 +20,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         let navVC = UINavigationController()
         
-        /*let configurator: ParentHomeScreenConfiguratorInputProtocol = ParentHomeScreenConfigurator()
+        let configurator: ParentHomeScreenConfiguratorInputProtocol = ParentHomeScreenConfigurator()
         let parentVC = ParentHomeScreenViewController()
         navVC.viewControllers = [parentVC]
         configurator.configure(with: parentVC, with: navVC)
-        window?.rootViewController = MainTabBarController()*/
+        window?.rootViewController = MainTabBarController()
         
         // ParentHomeScreen
 //        let configurator:ParentHomeScreenConfiguratorInputProtocol = ParentHomeScreenConfigurator()
@@ -34,11 +34,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //         window?.rootViewController = navVC
         
         // ChildHomeScreen
-        let configurator:ChildHomeScreenConfiguratorInputProtocol = ChildHomeScreenConfigurator()
-        let childVC = ChildHomeScreenViewController()
-        navVC.viewControllers = [childVC]
-        configurator.configure(with: childVC, with: navVC)
-        window?.rootViewController = navVC
+//        let configurator: ChildHomeScreenConfiguratorInputProtocol = ChildHomeScreenConfigurator()
+//        let childVC = ChildHomeScreenViewController()
+//        navVC.viewControllers = [childVC]
+//        configurator.configure(with: childVC, with: navVC)
+//        window?.rootViewController = navVC
         
    // Welcome VC
 //        window?.rootViewController = WelcomeViewController()
