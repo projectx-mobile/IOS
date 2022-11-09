@@ -6,11 +6,20 @@
 //
 
 import Foundation
+//
+//protocol ProfileInteractorProtocol: AnyObject {
+//}
+//class ProfileInteractor {
+//    weak var presenter: ProfilePresenter?
+//}
+//extension ProfileInteractor: ProfileInteractorProtocol {
+//}
 
-protocol ProfileInteractorProtocol: AnyObject {
-}
-class ProfileInteractor {
-    weak var presenter: ProfilePresenterProtocol?
-}
-extension ProfileInteractor: ProfileInteractorProtocol {
+final class ProfileInteractor: ProfileInteractorInputProtocol {
+    
+    unowned let presenter: ProfileInteractorOutputProtocol
+    
+    required init(presenter: ProfileInteractorOutputProtocol) {
+        self.presenter = presenter
+    }
 }

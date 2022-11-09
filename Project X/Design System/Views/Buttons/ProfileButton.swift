@@ -33,6 +33,7 @@ final class ProfileButton: UIButton {
     private func setButton(leftIcon: UIImage?, title: String) {
         self.translatesAutoresizingMaskIntoConstraints = false
         // MARK: Check button
+        backgroundColor = .primaryWhiteSnow
         setTitle(title, for: .normal)
         setTitleColor(.primaryMidnight, for: .normal)
         self.setImage(disclosureIndicator?.withTintColor(.primaryMidnight, renderingMode: .alwaysOriginal), for: .normal)
@@ -51,10 +52,12 @@ final class ProfileButton: UIButton {
         self.layer.cornerRadius = 8
         self.layer.borderWidth = 1.4
         self.layer.borderColor = UIColor.primaryMidnight.cgColor
+      
         // addSubview
         self.addSubview(iconImage)
 
     }
+   
 }
 // MARK: Constraints for button
 private extension ProfileButton {

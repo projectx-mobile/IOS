@@ -102,6 +102,41 @@
 		CA214CF528BDFEF5006176A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA214CF328BDFEF5006176A7 /* Main.storyboard */; };
 		CA214CF728BDFEF7006176A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA214CF628BDFEF7006176A7 /* Assets.xcassets */; };
 		CA214CFA28BDFEF7006176A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA214CF828BDFEF7006176A7 /* LaunchScreen.storyboard */; };
+		ED7323C729190BD60021E49C /* EmailSettinsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7323C629190BD60021E49C /* EmailSettinsVC.swift */; };
+		ED7323CE29190C420021E49C /* EmailSettingConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7323CD29190C420021E49C /* EmailSettingConfigurator.swift */; };
+		ED7323D429190CE70021E49C /* PasswordSettingConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7323D329190CE70021E49C /* PasswordSettingConfigurator.swift */; };
+		ED7323D629190D260021E49C /* UserRolesConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7323D529190D260021E49C /* UserRolesConfigurator.swift */; };
+		ED7323DC29190D860021E49C /* AddNewUserConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7323DB29190D860021E49C /* AddNewUserConfigurator.swift */; };
+		ED7323E229190DC90021E49C /* LanguageSettingConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7323E129190DC90021E49C /* LanguageSettingConfigurator.swift */; };
+		ED7323E829190E1D0021E49C /* SupportConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7323E729190E1D0021E49C /* SupportConfigurator.swift */; };
+		ED7323EE29190E720021E49C /* SupportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7323ED29190E720021E49C /* SupportVC.swift */; };
+		ED7323F029190E7F0021E49C /* SupportPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7323EF29190E7F0021E49C /* SupportPresenter.swift */; };
+		ED7323F229190E8D0021E49C /* SupportRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7323F129190E8D0021E49C /* SupportRouter.swift */; };
+		ED7323F429190EB40021E49C /* LanguageSettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7323F329190EB40021E49C /* LanguageSettingVC.swift */; };
+		ED7323F629190EBD0021E49C /* LanguageSettingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7323F529190EBD0021E49C /* LanguageSettingPresenter.swift */; };
+		ED7323F829190EC80021E49C /* LanguageSettingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7323F729190EC80021E49C /* LanguageSettingRouter.swift */; };
+		ED7323FA29190ED80021E49C /* LanguageSettingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7323F929190ED80021E49C /* LanguageSettingInteractor.swift */; };
+		ED7323FC29190EF00021E49C /* SupportInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7323FB29190EEF0021E49C /* SupportInteractor.swift */; };
+		ED7323FE29190F190021E49C /* AddNewUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7323FD29190F190021E49C /* AddNewUserViewController.swift */; };
+		ED73240029190F220021E49C /* AddNewUserPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7323FF29190F220021E49C /* AddNewUserPresenter.swift */; };
+		ED73240229190F2A0021E49C /* AddNewUserRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED73240129190F2A0021E49C /* AddNewUserRouter.swift */; };
+		ED73240429190F3A0021E49C /* AddNewUserInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED73240329190F3A0021E49C /* AddNewUserInteractor.swift */; };
+		ED73240629190F560021E49C /* UserRolesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED73240529190F560021E49C /* UserRolesViewController.swift */; };
+		ED73240829190F5E0021E49C /* UserRolesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED73240729190F5E0021E49C /* UserRolesPresenter.swift */; };
+		ED73240A29190F680021E49C /* UserRolesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED73240929190F680021E49C /* UserRolesRouter.swift */; };
+		ED73240D29190F7E0021E49C /* UserRolesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED73240C29190F7E0021E49C /* UserRolesInteractor.swift */; };
+		ED73240F29190F930021E49C /* PasswordSettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED73240E29190F930021E49C /* PasswordSettingVC.swift */; };
+		ED73241129190F9C0021E49C /* PasswordSettingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED73241029190F9C0021E49C /* PasswordSettingPresenter.swift */; };
+		ED73241329190FA90021E49C /* PasswordSettingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED73241229190FA90021E49C /* PasswordSettingRouter.swift */; };
+		ED73241629190FC10021E49C /* PasswordSettingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED73241529190FC10021E49C /* PasswordSettingInteractor.swift */; };
+		ED73241829190FFD0021E49C /* EmailSettingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED73241729190FFD0021E49C /* EmailSettingPresenter.swift */; };
+		ED73241A291910050021E49C /* EmailSettingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED732419291910050021E49C /* EmailSettingRouter.swift */; };
+		ED73241C291910120021E49C /* EmailSettingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED73241B291910120021E49C /* EmailSettingInteractor.swift */; };
+		ED732424291940980021E49C /* CustomizeProfileConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED732423291940980021E49C /* CustomizeProfileConfigurator.swift */; };
+		ED732426291940D40021E49C /* CustomizeProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED732425291940D40021E49C /* CustomizeProfileVC.swift */; };
+		ED732428291941220021E49C /* CustomizeProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED732427291941220021E49C /* CustomizeProfilePresenter.swift */; };
+		ED73242A291941940021E49C /* CustomizeProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED732429291941940021E49C /* CustomizeProfileRouter.swift */; };
+		ED73242C291941DF0021E49C /* CustomizeProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED73242B291941DF0021E49C /* CustomizeProfileInteractor.swift */; };
 		ED73FCAB29167150008AC0E9 /* AvatarIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED73FCAA29167150008AC0E9 /* AvatarIcon.swift */; };
 		ED73FCAD29167184008AC0E9 /* ProfileButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED73FCAC29167184008AC0E9 /* ProfileButton.swift */; };
 		ED73FCAF291672FF008AC0E9 /* FamilyMembersCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED73FCAE291672FF008AC0E9 /* FamilyMembersCollectionView.swift */; };
@@ -111,6 +146,29 @@
 		ED73FCB729167649008AC0E9 /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED73FCB629167649008AC0E9 /* ProfileRouter.swift */; };
 		ED73FCB92916767A008AC0E9 /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED73FCB82916767A008AC0E9 /* ProfileInteractor.swift */; };
 		ED73FCBB291676B8008AC0E9 /* ProfileConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED73FCBA291676B8008AC0E9 /* ProfileConfigurator.swift */; };
+		EDC06365291B8E4900257D5E /* ProfileViewControllerIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC06364291B8E4900257D5E /* ProfileViewControllerIO.swift */; };
+		EDC06367291BA5CB00257D5E /* ProfileInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC06366291BA5CB00257D5E /* ProfileInteractorIO.swift */; };
+		EDC06369291BB06F00257D5E /* UserRolesViewControllerIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC06368291BB06F00257D5E /* UserRolesViewControllerIO.swift */; };
+		EDC0636B291BB3FB00257D5E /* UserRolesInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC0636A291BB3FB00257D5E /* UserRolesInteractorIO.swift */; };
+		EDC0636D291BE77000257D5E /* CustomizeProfileIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC0636C291BE77000257D5E /* CustomizeProfileIO.swift */; };
+		EDC0636F291BE78800257D5E /* CustomizeProfileInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC0636E291BE78800257D5E /* CustomizeProfileInteractorIO.swift */; };
+		EDC06371291BE79C00257D5E /* EmailSettinsVCIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC06370291BE79C00257D5E /* EmailSettinsVCIO.swift */; };
+		EDC06373291BE7AF00257D5E /* EmailSettingInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC06372291BE7AF00257D5E /* EmailSettingInteractorIO.swift */; };
+		EDC06375291BE7C500257D5E /* PasswordSettingVCIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC06374291BE7C500257D5E /* PasswordSettingVCIO.swift */; };
+		EDC06377291BE7E000257D5E /* PasswordSettingInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC06376291BE7E000257D5E /* PasswordSettingInteractorIO.swift */; };
+		EDC06379291BE94700257D5E /* AddNewUserViewControllerIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC06378291BE94700257D5E /* AddNewUserViewControllerIO.swift */; };
+		EDC0637B291BE97000257D5E /* AddNewUserInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC0637A291BE97000257D5E /* AddNewUserInteractorIO.swift */; };
+		EDC0637D291BE98400257D5E /* LanguageSettingVCIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC0637C291BE98400257D5E /* LanguageSettingVCIO.swift */; };
+		EDC0637F291BE99F00257D5E /* LanguageSettingInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC0637E291BE99F00257D5E /* LanguageSettingInteractorIO.swift */; };
+		EDC06381291BE9AE00257D5E /* SupportVCIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC06380291BE9AE00257D5E /* SupportVCIO.swift */; };
+		EDC06383291BE9CB00257D5E /* SupportInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC06382291BE9CB00257D5E /* SupportInteractorIO.swift */; };
+		EDC06387291C0DA800257D5E /* NotificationsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC06386291C0DA800257D5E /* NotificationsVC.swift */; };
+		EDC06389291C0DB600257D5E /* NotificationsVCIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC06388291C0DB600257D5E /* NotificationsVCIO.swift */; };
+		EDC0638C291C0DED00257D5E /* NotificationsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC0638B291C0DED00257D5E /* NotificationsPresenter.swift */; };
+		EDC0638F291C0E1100257D5E /* NotificationsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC0638E291C0E1100257D5E /* NotificationsRouter.swift */; };
+		EDC06392291C0E3300257D5E /* NotificationsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC06391291C0E3300257D5E /* NotificationsInteractor.swift */; };
+		EDC06394291C0E4100257D5E /* NotificationsInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC06393291C0E4100257D5E /* NotificationsInteractorIO.swift */; };
+		EDC06396291C0E5900257D5E /* NotificationsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC06395291C0E5900257D5E /* NotificationsConfigurator.swift */; };
 		EDFD5E0329166B7F006E1D5C /* FamilyMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFD5E0229166B7F006E1D5C /* FamilyMember.swift */; };
 /* End PBXBuildFile section */
 
@@ -214,6 +272,41 @@
 		CA214CF628BDFEF7006176A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA214CF928BDFEF7006176A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CA214CFB28BDFEF7006176A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED7323C629190BD60021E49C /* EmailSettinsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailSettinsVC.swift; sourceTree = "<group>"; };
+		ED7323CD29190C420021E49C /* EmailSettingConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailSettingConfigurator.swift; sourceTree = "<group>"; };
+		ED7323D329190CE70021E49C /* PasswordSettingConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordSettingConfigurator.swift; sourceTree = "<group>"; };
+		ED7323D529190D260021E49C /* UserRolesConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRolesConfigurator.swift; sourceTree = "<group>"; };
+		ED7323DB29190D860021E49C /* AddNewUserConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewUserConfigurator.swift; sourceTree = "<group>"; };
+		ED7323E129190DC90021E49C /* LanguageSettingConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSettingConfigurator.swift; sourceTree = "<group>"; };
+		ED7323E729190E1D0021E49C /* SupportConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportConfigurator.swift; sourceTree = "<group>"; };
+		ED7323ED29190E720021E49C /* SupportVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportVC.swift; sourceTree = "<group>"; };
+		ED7323EF29190E7F0021E49C /* SupportPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportPresenter.swift; sourceTree = "<group>"; };
+		ED7323F129190E8D0021E49C /* SupportRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportRouter.swift; sourceTree = "<group>"; };
+		ED7323F329190EB40021E49C /* LanguageSettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSettingVC.swift; sourceTree = "<group>"; };
+		ED7323F529190EBD0021E49C /* LanguageSettingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSettingPresenter.swift; sourceTree = "<group>"; };
+		ED7323F729190EC80021E49C /* LanguageSettingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSettingRouter.swift; sourceTree = "<group>"; };
+		ED7323F929190ED80021E49C /* LanguageSettingInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSettingInteractor.swift; sourceTree = "<group>"; };
+		ED7323FB29190EEF0021E49C /* SupportInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportInteractor.swift; sourceTree = "<group>"; };
+		ED7323FD29190F190021E49C /* AddNewUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewUserViewController.swift; sourceTree = "<group>"; };
+		ED7323FF29190F220021E49C /* AddNewUserPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewUserPresenter.swift; sourceTree = "<group>"; };
+		ED73240129190F2A0021E49C /* AddNewUserRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewUserRouter.swift; sourceTree = "<group>"; };
+		ED73240329190F3A0021E49C /* AddNewUserInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewUserInteractor.swift; sourceTree = "<group>"; };
+		ED73240529190F560021E49C /* UserRolesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRolesViewController.swift; sourceTree = "<group>"; };
+		ED73240729190F5E0021E49C /* UserRolesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRolesPresenter.swift; sourceTree = "<group>"; };
+		ED73240929190F680021E49C /* UserRolesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRolesRouter.swift; sourceTree = "<group>"; };
+		ED73240C29190F7E0021E49C /* UserRolesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRolesInteractor.swift; sourceTree = "<group>"; };
+		ED73240E29190F930021E49C /* PasswordSettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordSettingVC.swift; sourceTree = "<group>"; };
+		ED73241029190F9C0021E49C /* PasswordSettingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordSettingPresenter.swift; sourceTree = "<group>"; };
+		ED73241229190FA90021E49C /* PasswordSettingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordSettingRouter.swift; sourceTree = "<group>"; };
+		ED73241529190FC10021E49C /* PasswordSettingInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordSettingInteractor.swift; sourceTree = "<group>"; };
+		ED73241729190FFD0021E49C /* EmailSettingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailSettingPresenter.swift; sourceTree = "<group>"; };
+		ED732419291910050021E49C /* EmailSettingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailSettingRouter.swift; sourceTree = "<group>"; };
+		ED73241B291910120021E49C /* EmailSettingInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailSettingInteractor.swift; sourceTree = "<group>"; };
+		ED732423291940980021E49C /* CustomizeProfileConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizeProfileConfigurator.swift; sourceTree = "<group>"; };
+		ED732425291940D40021E49C /* CustomizeProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizeProfileVC.swift; sourceTree = "<group>"; };
+		ED732427291941220021E49C /* CustomizeProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizeProfilePresenter.swift; sourceTree = "<group>"; };
+		ED732429291941940021E49C /* CustomizeProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizeProfileRouter.swift; sourceTree = "<group>"; };
+		ED73242B291941DF0021E49C /* CustomizeProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizeProfileInteractor.swift; sourceTree = "<group>"; };
 		ED73FCAA29167150008AC0E9 /* AvatarIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarIcon.swift; sourceTree = "<group>"; };
 		ED73FCAC29167184008AC0E9 /* ProfileButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileButton.swift; sourceTree = "<group>"; };
 		ED73FCAE291672FF008AC0E9 /* FamilyMembersCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyMembersCollectionView.swift; sourceTree = "<group>"; };
@@ -223,6 +316,29 @@
 		ED73FCB629167649008AC0E9 /* ProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRouter.swift; sourceTree = "<group>"; };
 		ED73FCB82916767A008AC0E9 /* ProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
 		ED73FCBA291676B8008AC0E9 /* ProfileConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileConfigurator.swift; sourceTree = "<group>"; };
+		EDC06364291B8E4900257D5E /* ProfileViewControllerIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewControllerIO.swift; sourceTree = "<group>"; };
+		EDC06366291BA5CB00257D5E /* ProfileInteractorIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractorIO.swift; sourceTree = "<group>"; };
+		EDC06368291BB06F00257D5E /* UserRolesViewControllerIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRolesViewControllerIO.swift; sourceTree = "<group>"; };
+		EDC0636A291BB3FB00257D5E /* UserRolesInteractorIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRolesInteractorIO.swift; sourceTree = "<group>"; };
+		EDC0636C291BE77000257D5E /* CustomizeProfileIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizeProfileIO.swift; sourceTree = "<group>"; };
+		EDC0636E291BE78800257D5E /* CustomizeProfileInteractorIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizeProfileInteractorIO.swift; sourceTree = "<group>"; };
+		EDC06370291BE79C00257D5E /* EmailSettinsVCIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailSettinsVCIO.swift; sourceTree = "<group>"; };
+		EDC06372291BE7AF00257D5E /* EmailSettingInteractorIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailSettingInteractorIO.swift; sourceTree = "<group>"; };
+		EDC06374291BE7C500257D5E /* PasswordSettingVCIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordSettingVCIO.swift; sourceTree = "<group>"; };
+		EDC06376291BE7E000257D5E /* PasswordSettingInteractorIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordSettingInteractorIO.swift; sourceTree = "<group>"; };
+		EDC06378291BE94700257D5E /* AddNewUserViewControllerIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewUserViewControllerIO.swift; sourceTree = "<group>"; };
+		EDC0637A291BE97000257D5E /* AddNewUserInteractorIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewUserInteractorIO.swift; sourceTree = "<group>"; };
+		EDC0637C291BE98400257D5E /* LanguageSettingVCIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSettingVCIO.swift; sourceTree = "<group>"; };
+		EDC0637E291BE99F00257D5E /* LanguageSettingInteractorIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSettingInteractorIO.swift; sourceTree = "<group>"; };
+		EDC06380291BE9AE00257D5E /* SupportVCIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportVCIO.swift; sourceTree = "<group>"; };
+		EDC06382291BE9CB00257D5E /* SupportInteractorIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportInteractorIO.swift; sourceTree = "<group>"; };
+		EDC06386291C0DA800257D5E /* NotificationsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsVC.swift; sourceTree = "<group>"; };
+		EDC06388291C0DB600257D5E /* NotificationsVCIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsVCIO.swift; sourceTree = "<group>"; };
+		EDC0638B291C0DED00257D5E /* NotificationsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsPresenter.swift; sourceTree = "<group>"; };
+		EDC0638E291C0E1100257D5E /* NotificationsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsRouter.swift; sourceTree = "<group>"; };
+		EDC06391291C0E3300257D5E /* NotificationsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsInteractor.swift; sourceTree = "<group>"; };
+		EDC06393291C0E4100257D5E /* NotificationsInteractorIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsInteractorIO.swift; sourceTree = "<group>"; };
+		EDC06395291C0E5900257D5E /* NotificationsConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsConfigurator.swift; sourceTree = "<group>"; };
 		EDFD5E0229166B7F006E1D5C /* FamilyMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyMember.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -635,28 +751,359 @@
 				CA214CEF28BDFEF5006176A7 /* SceneDelegate.swift */,
 				CA214CED28BDFEF5006176A7 /* AppDelegate.swift */,
 				88D5282228E328AE00220DFB /* Entities */,
-				ED73FCA529166EB7008AC0E9 /* ProfileUserModule */,
 				889F434828E18F0500DC347D /* WelcomeModule */,
 				847EBA99291267D200B4DE70 /* LoginWithMailSceenModule */,
 				847EBA2C290AEC7400B4DE70 /* LoginWithGAScreenModule */,
 				8858667D28E1985800F11B72 /* ParentHomeScreenModule */,
 				88C988E328E5E37F002DF8A3 /* ParentUpdatesModule */,
 				885B24432907EBEA00FA607B /* ChildHomeScreenModule */,
+				ED73FCA529166EB7008AC0E9 /* ProfileUserModule */,
+				ED7323BE291908760021E49C /* CustomizeProfileModule */,
+				ED7323BF291908C60021E49C /* EmailSettingModule */,
+				ED7323C0291908FC0021E49C /* PasswordSettingModule */,
+				ED7323C1291909390021E49C /* UserRolesModule */,
+				EDC06384291C0D7600257D5E /* NotificationsModule */,
+				ED7323C3291909720021E49C /* AddNewUserModule */,
+				ED7323C2291909570021E49C /* LanguageSettingsModule */,
+				ED7323C429190A090021E49C /* SupportModule */,
+				889F434B28E18FA800DC347D /* Resources */,
 				975958FB28D9B2FD00570BB4 /* Design System */,
 				889F433F28E18C4F00DC347D /* Extensions */,
-				889F434B28E18FA800DC347D /* Resources */,
-				CA214CF328BDFEF5006176A7 /* Main.storyboard */,
 				CA214CF828BDFEF7006176A7 /* LaunchScreen.storyboard */,
+				CA214CF328BDFEF5006176A7 /* Main.storyboard */,
 				CA214CFB28BDFEF7006176A7 /* Info.plist */,
 				88B0AB2029093A470049F8B8 /* GoogleService-Info.plist */,
 			);
 			path = "Project X";
 			sourceTree = "<group>";
 		};
+		ED7323BE291908760021E49C /* CustomizeProfileModule */ = {
+			isa = PBXGroup;
+			children = (
+				ED73241E291940350021E49C /* CustomizeProfileViewController */,
+				ED732421291940730021E49C /* CustomizeProfilePresenter */,
+				ED732420291940680021E49C /* CustomizeProfileRouter */,
+				ED73241F291940540021E49C /* CustomizeProfileInteractor */,
+				ED732423291940980021E49C /* CustomizeProfileConfigurator.swift */,
+			);
+			path = CustomizeProfileModule;
+			sourceTree = "<group>";
+		};
+		ED7323BF291908C60021E49C /* EmailSettingModule */ = {
+			isa = PBXGroup;
+			children = (
+				ED7323C529190BA50021E49C /* EmailSettingViewController */,
+				ED7323C929190BF60021E49C /* EmailSettingPresenter */,
+				ED7323CA29190C0E0021E49C /* EmailSettingRouter */,
+				ED7323CB29190C1D0021E49C /* EmailSettingInteractor */,
+				ED7323CD29190C420021E49C /* EmailSettingConfigurator.swift */,
+			);
+			path = EmailSettingModule;
+			sourceTree = "<group>";
+		};
+		ED7323C0291908FC0021E49C /* PasswordSettingModule */ = {
+			isa = PBXGroup;
+			children = (
+				ED7323CF29190C5C0021E49C /* PasswordSettingVC */,
+				ED7323D229190CBB0021E49C /* PasswordSettingPresenter */,
+				ED7323D129190CAA0021E49C /* PasswordSettingRouter */,
+				ED7323D029190C890021E49C /* PasswordSettingInteractor */,
+				ED7323D329190CE70021E49C /* PasswordSettingConfigurator.swift */,
+			);
+			path = PasswordSettingModule;
+			sourceTree = "<group>";
+		};
+		ED7323C1291909390021E49C /* UserRolesModule */ = {
+			isa = PBXGroup;
+			children = (
+				ED7323DA29190D5C0021E49C /* UserRolesViewController */,
+				ED7323D929190D520021E49C /* UserRolesPresenter */,
+				ED7323D829190D480021E49C /* UserRolesRouter */,
+				ED7323D729190D2D0021E49C /* UserRolesInteractor */,
+				ED7323D529190D260021E49C /* UserRolesConfigurator.swift */,
+			);
+			path = UserRolesModule;
+			sourceTree = "<group>";
+		};
+		ED7323C2291909570021E49C /* LanguageSettingsModule */ = {
+			isa = PBXGroup;
+			children = (
+				ED7323E629190E000021E49C /* LanguageSettingVC */,
+				ED7323E529190DF00021E49C /* LanguageSettingPresenter */,
+				ED7323E429190DE70021E49C /* LanguageSettingRouter */,
+				ED7323E329190DDD0021E49C /* LanguageSettingInteractor */,
+				ED7323E129190DC90021E49C /* LanguageSettingConfigurator.swift */,
+			);
+			path = LanguageSettingsModule;
+			sourceTree = "<group>";
+		};
+		ED7323C3291909720021E49C /* AddNewUserModule */ = {
+			isa = PBXGroup;
+			children = (
+				ED7323E029190DAA0021E49C /* AddNewUserViewController */,
+				ED7323DF29190D9F0021E49C /* AddNewUserPresenter */,
+				ED7323DE29190D950021E49C /* AddNewUserRouter */,
+				ED7323DD29190D8B0021E49C /* AddNewUserInteractor */,
+				ED7323DB29190D860021E49C /* AddNewUserConfigurator.swift */,
+			);
+			path = AddNewUserModule;
+			sourceTree = "<group>";
+		};
+		ED7323C429190A090021E49C /* SupportModule */ = {
+			isa = PBXGroup;
+			children = (
+				ED7323EC29190E560021E49C /* SupportViewController */,
+				ED7323EB29190E4D0021E49C /* SupportPresenter */,
+				ED7323EA29190E3A0021E49C /* SupportRouter */,
+				ED7323E929190E210021E49C /* SupportInteractor */,
+				ED7323E729190E1D0021E49C /* SupportConfigurator.swift */,
+			);
+			path = SupportModule;
+			sourceTree = "<group>";
+		};
+		ED7323C529190BA50021E49C /* EmailSettingViewController */ = {
+			isa = PBXGroup;
+			children = (
+				ED7323C629190BD60021E49C /* EmailSettinsVC.swift */,
+				EDC06370291BE79C00257D5E /* EmailSettinsVCIO.swift */,
+			);
+			path = EmailSettingViewController;
+			sourceTree = "<group>";
+		};
+		ED7323C929190BF60021E49C /* EmailSettingPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				ED73241729190FFD0021E49C /* EmailSettingPresenter.swift */,
+			);
+			path = EmailSettingPresenter;
+			sourceTree = "<group>";
+		};
+		ED7323CA29190C0E0021E49C /* EmailSettingRouter */ = {
+			isa = PBXGroup;
+			children = (
+				ED732419291910050021E49C /* EmailSettingRouter.swift */,
+			);
+			path = EmailSettingRouter;
+			sourceTree = "<group>";
+		};
+		ED7323CB29190C1D0021E49C /* EmailSettingInteractor */ = {
+			isa = PBXGroup;
+			children = (
+				ED73241B291910120021E49C /* EmailSettingInteractor.swift */,
+				EDC06372291BE7AF00257D5E /* EmailSettingInteractorIO.swift */,
+			);
+			path = EmailSettingInteractor;
+			sourceTree = "<group>";
+		};
+		ED7323CF29190C5C0021E49C /* PasswordSettingVC */ = {
+			isa = PBXGroup;
+			children = (
+				ED73240E29190F930021E49C /* PasswordSettingVC.swift */,
+				EDC06374291BE7C500257D5E /* PasswordSettingVCIO.swift */,
+			);
+			path = PasswordSettingVC;
+			sourceTree = "<group>";
+		};
+		ED7323D029190C890021E49C /* PasswordSettingInteractor */ = {
+			isa = PBXGroup;
+			children = (
+				ED73241529190FC10021E49C /* PasswordSettingInteractor.swift */,
+				EDC06376291BE7E000257D5E /* PasswordSettingInteractorIO.swift */,
+			);
+			path = PasswordSettingInteractor;
+			sourceTree = "<group>";
+		};
+		ED7323D129190CAA0021E49C /* PasswordSettingRouter */ = {
+			isa = PBXGroup;
+			children = (
+				ED73241229190FA90021E49C /* PasswordSettingRouter.swift */,
+			);
+			path = PasswordSettingRouter;
+			sourceTree = "<group>";
+		};
+		ED7323D229190CBB0021E49C /* PasswordSettingPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				ED73241029190F9C0021E49C /* PasswordSettingPresenter.swift */,
+			);
+			path = PasswordSettingPresenter;
+			sourceTree = "<group>";
+		};
+		ED7323D729190D2D0021E49C /* UserRolesInteractor */ = {
+			isa = PBXGroup;
+			children = (
+				ED73240C29190F7E0021E49C /* UserRolesInteractor.swift */,
+				EDC0636A291BB3FB00257D5E /* UserRolesInteractorIO.swift */,
+			);
+			path = UserRolesInteractor;
+			sourceTree = "<group>";
+		};
+		ED7323D829190D480021E49C /* UserRolesRouter */ = {
+			isa = PBXGroup;
+			children = (
+				ED73240929190F680021E49C /* UserRolesRouter.swift */,
+			);
+			path = UserRolesRouter;
+			sourceTree = "<group>";
+		};
+		ED7323D929190D520021E49C /* UserRolesPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				ED73240729190F5E0021E49C /* UserRolesPresenter.swift */,
+			);
+			path = UserRolesPresenter;
+			sourceTree = "<group>";
+		};
+		ED7323DA29190D5C0021E49C /* UserRolesViewController */ = {
+			isa = PBXGroup;
+			children = (
+				ED73240529190F560021E49C /* UserRolesViewController.swift */,
+				EDC06368291BB06F00257D5E /* UserRolesViewControllerIO.swift */,
+			);
+			path = UserRolesViewController;
+			sourceTree = "<group>";
+		};
+		ED7323DD29190D8B0021E49C /* AddNewUserInteractor */ = {
+			isa = PBXGroup;
+			children = (
+				ED73240329190F3A0021E49C /* AddNewUserInteractor.swift */,
+				EDC0637A291BE97000257D5E /* AddNewUserInteractorIO.swift */,
+			);
+			path = AddNewUserInteractor;
+			sourceTree = "<group>";
+		};
+		ED7323DE29190D950021E49C /* AddNewUserRouter */ = {
+			isa = PBXGroup;
+			children = (
+				ED73240129190F2A0021E49C /* AddNewUserRouter.swift */,
+			);
+			path = AddNewUserRouter;
+			sourceTree = "<group>";
+		};
+		ED7323DF29190D9F0021E49C /* AddNewUserPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				ED7323FF29190F220021E49C /* AddNewUserPresenter.swift */,
+			);
+			path = AddNewUserPresenter;
+			sourceTree = "<group>";
+		};
+		ED7323E029190DAA0021E49C /* AddNewUserViewController */ = {
+			isa = PBXGroup;
+			children = (
+				ED7323FD29190F190021E49C /* AddNewUserViewController.swift */,
+				EDC06378291BE94700257D5E /* AddNewUserViewControllerIO.swift */,
+			);
+			path = AddNewUserViewController;
+			sourceTree = "<group>";
+		};
+		ED7323E329190DDD0021E49C /* LanguageSettingInteractor */ = {
+			isa = PBXGroup;
+			children = (
+				ED7323F929190ED80021E49C /* LanguageSettingInteractor.swift */,
+				EDC0637E291BE99F00257D5E /* LanguageSettingInteractorIO.swift */,
+			);
+			path = LanguageSettingInteractor;
+			sourceTree = "<group>";
+		};
+		ED7323E429190DE70021E49C /* LanguageSettingRouter */ = {
+			isa = PBXGroup;
+			children = (
+				ED7323F729190EC80021E49C /* LanguageSettingRouter.swift */,
+			);
+			path = LanguageSettingRouter;
+			sourceTree = "<group>";
+		};
+		ED7323E529190DF00021E49C /* LanguageSettingPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				ED7323F529190EBD0021E49C /* LanguageSettingPresenter.swift */,
+			);
+			path = LanguageSettingPresenter;
+			sourceTree = "<group>";
+		};
+		ED7323E629190E000021E49C /* LanguageSettingVC */ = {
+			isa = PBXGroup;
+			children = (
+				ED7323F329190EB40021E49C /* LanguageSettingVC.swift */,
+				EDC0637C291BE98400257D5E /* LanguageSettingVCIO.swift */,
+			);
+			path = LanguageSettingVC;
+			sourceTree = "<group>";
+		};
+		ED7323E929190E210021E49C /* SupportInteractor */ = {
+			isa = PBXGroup;
+			children = (
+				ED7323FB29190EEF0021E49C /* SupportInteractor.swift */,
+				EDC06382291BE9CB00257D5E /* SupportInteractorIO.swift */,
+			);
+			path = SupportInteractor;
+			sourceTree = "<group>";
+		};
+		ED7323EA29190E3A0021E49C /* SupportRouter */ = {
+			isa = PBXGroup;
+			children = (
+				ED7323F129190E8D0021E49C /* SupportRouter.swift */,
+			);
+			path = SupportRouter;
+			sourceTree = "<group>";
+		};
+		ED7323EB29190E4D0021E49C /* SupportPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				ED7323EF29190E7F0021E49C /* SupportPresenter.swift */,
+			);
+			path = SupportPresenter;
+			sourceTree = "<group>";
+		};
+		ED7323EC29190E560021E49C /* SupportViewController */ = {
+			isa = PBXGroup;
+			children = (
+				ED7323ED29190E720021E49C /* SupportVC.swift */,
+				EDC06380291BE9AE00257D5E /* SupportVCIO.swift */,
+			);
+			path = SupportViewController;
+			sourceTree = "<group>";
+		};
+		ED73241E291940350021E49C /* CustomizeProfileViewController */ = {
+			isa = PBXGroup;
+			children = (
+				ED732425291940D40021E49C /* CustomizeProfileVC.swift */,
+				EDC0636C291BE77000257D5E /* CustomizeProfileIO.swift */,
+			);
+			path = CustomizeProfileViewController;
+			sourceTree = "<group>";
+		};
+		ED73241F291940540021E49C /* CustomizeProfileInteractor */ = {
+			isa = PBXGroup;
+			children = (
+				ED73242B291941DF0021E49C /* CustomizeProfileInteractor.swift */,
+				EDC0636E291BE78800257D5E /* CustomizeProfileInteractorIO.swift */,
+			);
+			path = CustomizeProfileInteractor;
+			sourceTree = "<group>";
+		};
+		ED732420291940680021E49C /* CustomizeProfileRouter */ = {
+			isa = PBXGroup;
+			children = (
+				ED732429291941940021E49C /* CustomizeProfileRouter.swift */,
+			);
+			path = CustomizeProfileRouter;
+			sourceTree = "<group>";
+		};
+		ED732421291940730021E49C /* CustomizeProfilePresenter */ = {
+			isa = PBXGroup;
+			children = (
+				ED732427291941220021E49C /* CustomizeProfilePresenter.swift */,
+			);
+			path = CustomizeProfilePresenter;
+			sourceTree = "<group>";
+		};
 		ED73FCA429166E9F008AC0E9 /* ProfileViewController */ = {
 			isa = PBXGroup;
 			children = (
 				ED73FCB2291675A6008AC0E9 /* ProfileViewController.swift */,
+				EDC06364291B8E4900257D5E /* ProfileViewControllerIO.swift */,
 			);
 			path = ProfileViewController;
 			sourceTree = "<group>";
@@ -693,8 +1140,55 @@
 			isa = PBXGroup;
 			children = (
 				ED73FCB82916767A008AC0E9 /* ProfileInteractor.swift */,
+				EDC06366291BA5CB00257D5E /* ProfileInteractorIO.swift */,
 			);
 			path = ProfileInteractor;
+			sourceTree = "<group>";
+		};
+		EDC06384291C0D7600257D5E /* NotificationsModule */ = {
+			isa = PBXGroup;
+			children = (
+				EDC06385291C0D8A00257D5E /* NotificationsVC */,
+				EDC0638A291C0DBA00257D5E /* NotificationsPresenter */,
+				EDC0638D291C0E0200257D5E /* Notifications Router */,
+				EDC06390291C0E1C00257D5E /* NotificationsInteractor */,
+				EDC06395291C0E5900257D5E /* NotificationsConfigurator.swift */,
+			);
+			path = NotificationsModule;
+			sourceTree = "<group>";
+		};
+		EDC06385291C0D8A00257D5E /* NotificationsVC */ = {
+			isa = PBXGroup;
+			children = (
+				EDC06386291C0DA800257D5E /* NotificationsVC.swift */,
+				EDC06388291C0DB600257D5E /* NotificationsVCIO.swift */,
+			);
+			path = NotificationsVC;
+			sourceTree = "<group>";
+		};
+		EDC0638A291C0DBA00257D5E /* NotificationsPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				EDC0638B291C0DED00257D5E /* NotificationsPresenter.swift */,
+			);
+			path = NotificationsPresenter;
+			sourceTree = "<group>";
+		};
+		EDC0638D291C0E0200257D5E /* Notifications Router */ = {
+			isa = PBXGroup;
+			children = (
+				EDC0638E291C0E1100257D5E /* NotificationsRouter.swift */,
+			);
+			path = "Notifications Router";
+			sourceTree = "<group>";
+		};
+		EDC06390291C0E1C00257D5E /* NotificationsInteractor */ = {
+			isa = PBXGroup;
+			children = (
+				EDC06391291C0E3300257D5E /* NotificationsInteractor.swift */,
+				EDC06393291C0E4100257D5E /* NotificationsInteractorIO.swift */,
+			);
+			path = NotificationsInteractor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -858,8 +1352,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED73242C291941DF0021E49C /* CustomizeProfileInteractor.swift in Sources */,
 				847EBA33290AEDBB00B4DE70 /* LoginWithGAScreenPresenter.swift in Sources */,
 				889F434328E18CC500DC347D /* UIFont + Extension.swift in Sources */,
+				ED73241A291910050021E49C /* EmailSettingRouter.swift in Sources */,
 				05DA1E972914184000CFA8DC /* WelcomeCellModel.swift in Sources */,
 				8858668528E1998100F11B72 /* ParentHomeScreenViewIO.swift in Sources */,
 				885B244E2907ED5100FA607B /* ChildHomeScreenViewController.swift in Sources */,
@@ -869,12 +1365,17 @@
 				05DA1E9C291419C000CFA8DC /* PageControlItem.swift in Sources */,
 				889F434128E18C7800DC347D /* UIColor + Extension.swift in Sources */,
 				889F434D28E18FE000DC347D /* WelcomeInteractor.swift in Sources */,
+				EDC06394291C0E4100257D5E /* NotificationsInteractorIO.swift in Sources */,
+				ED73240F29190F930021E49C /* PasswordSettingVC.swift in Sources */,
 				847EBA38290AEFE700B4DE70 /* LoginWithGAScreenInteractorIO.swift in Sources */,
+				EDC06389291C0DB600257D5E /* NotificationsVCIO.swift in Sources */,
+				ED7323E829190E1D0021E49C /* SupportConfigurator.swift in Sources */,
 				ED73FCB3291675A6008AC0E9 /* ProfileViewController.swift in Sources */,
 				847EBA2A290AEB8500B4DE70 /* LoginWithGAViewIO.swift in Sources */,
 				885B24582907EF9900FA607B /* ChildHomeScreenPresenter.swift in Sources */,
 				88C988F328E5E4A1002DF8A3 /* ParentUpdatesInteractorIO.swift in Sources */,
 				971507A828F6F2100024475C /* MainTabbarController.swift in Sources */,
+				ED732424291940980021E49C /* CustomizeProfileConfigurator.swift in Sources */,
 				847EBA3C290AF4E500B4DE70 /* LoginWithGAScreenConfigurator.swift in Sources */,
 				847EBA3E290AFBAE00B4DE70 /* LoginWithGAScreenRouter.swift in Sources */,
 				ED73FCB729167649008AC0E9 /* ProfileRouter.swift in Sources */,
@@ -884,37 +1385,54 @@
 				CA214CF228BDFEF5006176A7 /* ViewController.swift in Sources */,
 				88C988ED28E5E450002DF8A3 /* ParentUpdatesRouter.swift in Sources */,
 				8858668F28E19A7700F11B72 /* ParentHomeScreenRouter.swift in Sources */,
+				EDC06392291C0E3300257D5E /* NotificationsInteractor.swift in Sources */,
+				ED732428291941220021E49C /* CustomizeProfilePresenter.swift in Sources */,
 				847EBA22290AEA4200B4DE70 /* CustomLoginButtonViewModel.swift in Sources */,
 				885B24662907F63100FA607B /* CalendarCollectionViewCell.swift in Sources */,
+				ED7323D429190CE70021E49C /* PasswordSettingConfigurator.swift in Sources */,
 				885B24542907EEC400FA607B /* CalendarView.swift in Sources */,
 				8858667C28E1975A00F11B72 /* TitleLabel.swift in Sources */,
 				885B24622907F57500FA607B /* ChildHomeScreenViewIO.swift in Sources */,
 				885B24502907EE3D00FA607B /* NoNotificationView.swift in Sources */,
 				885B24392907E7D600FA607B /* KidsTask.swift in Sources */,
 				975958FE28D9B40900570BB4 /* Button.swift in Sources */,
+				ED73240629190F560021E49C /* UserRolesViewController.swift in Sources */,
 				971507A528F6F2100024475C /* RewardsViewController.swift in Sources */,
 				8858667628E196E600F11B72 /* SecondaryLabel.swift in Sources */,
+				ED73240029190F220021E49C /* AddNewUserPresenter.swift in Sources */,
 				8858667828E1970C00F11B72 /* SecondaryLabelWithIcon.swift in Sources */,
+				EDC06373291BE7AF00257D5E /* EmailSettingInteractorIO.swift in Sources */,
 				889F435B28E191CF00DC347D /* WelcomeViewIO.swift in Sources */,
+				EDC06383291BE9CB00257D5E /* SupportInteractorIO.swift in Sources */,
 				971507A728F6F2100024475C /* AddTaskViewController.swift in Sources */,
 				CA214CEE28BDFEF5006176A7 /* AppDelegate.swift in Sources */,
+				ED7323FC29190EF00021E49C /* SupportInteractor.swift in Sources */,
 				88D5282428E328C800220DFB /* KidsData.swift in Sources */,
 				8890090928E426930044E02D /* LayoutConstants.swift in Sources */,
 				88C988F128E5E48B002DF8A3 /* ParentUpdatesViewIO.swift in Sources */,
+				ED7323E229190DC90021E49C /* LanguageSettingConfigurator.swift in Sources */,
 				8858668228E198D900F11B72 /* ParentHomeScreenInteractor.swift in Sources */,
 				847EBA9C2912685700B4DE70 /* LoginWithMailScreemViewController.swift in Sources */,
 				889F435728E190EA00DC347D /* ComeBackView.swift in Sources */,
 				885B24682907F69100FA607B /* UIDatePicker + Extension.swift in Sources */,
+				ED73241629190FC10021E49C /* PasswordSettingInteractor.swift in Sources */,
 				ED73FCB5291675FF008AC0E9 /* ProfilePresenter.swift in Sources */,
 				885B243E2907E98100FA607B /* TasksTableViewCell.swift in Sources */,
+				ED73240429190F3A0021E49C /* AddNewUserInteractor.swift in Sources */,
+				ED73240229190F2A0021E49C /* AddNewUserRouter.swift in Sources */,
+				ED73241829190FFD0021E49C /* EmailSettingPresenter.swift in Sources */,
 				84D496BE29128804004D7EE9 /* LoginWithMailScreenPresenter.swift in Sources */,
 				ED73FCBB291676B8008AC0E9 /* ProfileConfigurator.swift in Sources */,
 				05DA1E95291417BC00CFA8DC /* WelcomeTitleLabel.swift in Sources */,
 				889F435728E190EA00DC347D /* ComeBackView.swift in Sources */,
 				ED73FCAB29167150008AC0E9 /* AvatarIcon.swift in Sources */,
+				ED7323C729190BD60021E49C /* EmailSettinsVC.swift in Sources */,
+				ED7323FE29190F190021E49C /* AddNewUserViewController.swift in Sources */,
 				885B24682907F69100FA607B /* UIDatePicker + Extension.swift in Sources */,
 				885B243E2907E98100FA607B /* TasksTableViewCell.swift in Sources */,
+				ED73241329190FA90021E49C /* PasswordSettingRouter.swift in Sources */,
 				05DA1E9A2914190C00CFA8DC /* WelcomeCollectionView.swift in Sources */,
+				ED73240829190F5E0021E49C /* UserRolesPresenter.swift in Sources */,
 				8858667A28E1973000F11B72 /* SubtitleLabel.swift in Sources */,
 				971507A628F6F2100024475C /* WalletViewController.swift in Sources */,
 				84D496B429127790004D7EE9 /* UITextField + Extention.swift in Sources */,
@@ -922,39 +1440,73 @@
 				ED73FCAD29167184008AC0E9 /* ProfileButton.swift in Sources */,
 				8858668928E199F600F11B72 /* KidsUpdates.swift in Sources */,
 				889F435228E1904A00DC347D /* WelcomePresenter.swift in Sources */,
+				EDC06369291BB06F00257D5E /* UserRolesViewControllerIO.swift in Sources */,
 				971507AA28F6F2100024475C /* TasksViewController.swift in Sources */,
 				8858668728E199AC00F11B72 /* ParentHomeScreenViewController.swift in Sources */,
+				ED7323DC29190D860021E49C /* AddNewUserConfigurator.swift in Sources */,
 				84D496B829128797004D7EE9 /* LoginWithMailScreenRouter.swift in Sources */,
+				ED7323F229190E8D0021E49C /* SupportRouter.swift in Sources */,
 				8858668028E198B200F11B72 /* ParentHomeScreenInteractorIO.swift in Sources */,
 				889F434F28E1900B00DC347D /* WelcomeInteractorIO.swift in Sources */,
+				ED7323F429190EB40021E49C /* LanguageSettingVC.swift in Sources */,
+				ED73241129190F9C0021E49C /* PasswordSettingPresenter.swift in Sources */,
+				EDC0637D291BE98400257D5E /* LanguageSettingVCIO.swift in Sources */,
+				EDC0636B291BB3FB00257D5E /* UserRolesInteractorIO.swift in Sources */,
 				EDFD5E0329166B7F006E1D5C /* FamilyMember.swift in Sources */,
 				847EBA2E290AECD800B4DE70 /* LoginWithGAScreenViewController.swift in Sources */,
 				CA214CF028BDFEF5006176A7 /* SceneDelegate.swift in Sources */,
 				847EBA28290AEB1200B4DE70 /* LoginButton.swift in Sources */,
 				84D496C329128838004D7EE9 /* LoginWithMailScreenInteractorIO.swift in Sources */,
 				885B24372907E7B700FA607B /* KidsNotification.swift in Sources */,
+				ED7323F629190EBD0021E49C /* LanguageSettingPresenter.swift in Sources */,
 				885B24642907F5BC00FA607B /* ChildHomeScreenInteractorIO.swift in Sources */,
+				ED73240D29190F7E0021E49C /* UserRolesInteractor.swift in Sources */,
+				EDC06377291BE7E000257D5E /* PasswordSettingInteractorIO.swift in Sources */,
 				889F433C28E18B9200DC347D /* CustomButton.swift in Sources */,
+				EDC0637F291BE99F00257D5E /* LanguageSettingInteractorIO.swift in Sources */,
+				EDC0636D291BE77000257D5E /* CustomizeProfileIO.swift in Sources */,
+				EDC0638F291C0E1100257D5E /* NotificationsRouter.swift in Sources */,
 				88C988E528E5E3B7002DF8A3 /* ParentUpdatesConfigurator.swift in Sources */,
+				EDC06371291BE79C00257D5E /* EmailSettinsVCIO.swift in Sources */,
+				ED7323EE29190E720021E49C /* SupportVC.swift in Sources */,
+				ED7323F029190E7F0021E49C /* SupportPresenter.swift in Sources */,
+				ED73240A29190F680021E49C /* UserRolesRouter.swift in Sources */,
 				847EBA36290AEF8300B4DE70 /* LoginWhithGAScreenInteractor.swift in Sources */,
 				8858667128E1962000F11B72 /* KidsCardTableViewCell.swift in Sources */,
+				ED7323FA29190ED80021E49C /* LanguageSettingInteractor.swift in Sources */,
 				ED73FCAF291672FF008AC0E9 /* FamilyMembersCollectionView.swift in Sources */,
 				8858668D28E19A4A00F11B72 /* ParentHomeScreenPresenter.swift in Sources */,
+				EDC06375291BE7C500257D5E /* PasswordSettingVCIO.swift in Sources */,
 				8858667328E1968000F11B72 /* UpdatesTableViewCell.swift in Sources */,
+				ED7323CE29190C420021E49C /* EmailSettingConfigurator.swift in Sources */,
 				ED73FCB129167352008AC0E9 /* FamilyMembersCells.swift in Sources */,
 				889F435428E1909600DC347D /* WelcomeRouter.swift in Sources */,
 				05DA1E9E29141A3300CFA8DC /* WelcomeCollectionViewCell.swift in Sources */,
+				EDC06381291BE9AE00257D5E /* SupportVCIO.swift in Sources */,
 				889F434528E18D1000DC347D /* UIView + Extension.swift in Sources */,
+				EDC0637B291BE97000257D5E /* AddNewUserInteractorIO.swift in Sources */,
 				88C988EB28E5E407002DF8A3 /* ParentUpdatesViewController.swift in Sources */,
 				84D496BA291287AF004D7EE9 /* LoginWithMailScreenConfigurator.swift in Sources */,
 				88C988E728E5E3CA002DF8A3 /* ParentUpdatesPresenter.swift in Sources */,
+				ED7323D629190D260021E49C /* UserRolesConfigurator.swift in Sources */,
 				885B24522907EE7500FA607B /* NotificationView.swift in Sources */,
+				EDC06367291BA5CB00257D5E /* ProfileInteractorIO.swift in Sources */,
 				885B24422907EBA800FA607B /* TaskDescriptionButton.swift in Sources */,
+				EDC06365291B8E4900257D5E /* ProfileViewControllerIO.swift in Sources */,
 				885B24562907EF7800FA607B /* Notification.swift in Sources */,
 				889F434A28E18F5300DC347D /* WelcomeConfigurator.swift in Sources */,
+				EDC0638C291C0DED00257D5E /* NotificationsPresenter.swift in Sources */,
+				EDC0636F291BE78800257D5E /* CustomizeProfileInteractorIO.swift in Sources */,
 				885B244A2907ECB700FA607B /* ChildHomeScreenConfigurator.swift in Sources */,
+				EDC06379291BE94700257D5E /* AddNewUserViewControllerIO.swift in Sources */,
+				EDC06396291C0E5900257D5E /* NotificationsConfigurator.swift in Sources */,
+				ED73242A291941940021E49C /* CustomizeProfileRouter.swift in Sources */,
+				ED732426291940D40021E49C /* CustomizeProfileVC.swift in Sources */,
 				ED73FCB92916767A008AC0E9 /* ProfileInteractor.swift in Sources */,
+				ED73241C291910120021E49C /* EmailSettingInteractor.swift in Sources */,
+				EDC06387291C0DA800257D5E /* NotificationsVC.swift in Sources */,
 				88C988E928E5E3F1002DF8A3 /* ParentUpdatesInteractor.swift in Sources */,
+				ED7323F829190EC80021E49C /* LanguageSettingRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

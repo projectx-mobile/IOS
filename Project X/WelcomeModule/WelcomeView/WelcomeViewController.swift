@@ -11,7 +11,7 @@ class WelcomeViewController: UIViewController {
 
     var presenter: WelcomeViewOutputProtocol!
     private let configurator: WelcomeConfiguratorInputProtocol = WelcomeConfigurator()
-    
+
     private let welcomeTitleLabel = WelcomeTitleLabel(text: "Рады видеть тебя в трекере заданий Alfredo")
     
     private let collectionView = WelcomeCollectionView()

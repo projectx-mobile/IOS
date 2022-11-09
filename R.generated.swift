@@ -243,7 +243,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.image` struct is generated, and contains static references to 38 images.
+  /// This `R.image` struct is generated, and contains static references to 39 images.
   struct image {
     /// Image `AddUserNoEnabledFigma`.
     static let addUserNoEnabledFigma = Rswift.ImageResource(bundle: R.hostingBundle, name: "AddUserNoEnabledFigma")
@@ -283,6 +283,8 @@ struct R: Rswift.Validatable {
     static let keyFigma = Rswift.ImageResource(bundle: R.hostingBundle, name: "keyFigma")
     /// Image `left`.
     static let left = Rswift.ImageResource(bundle: R.hostingBundle, name: "left")
+    /// Image `navigation`.
+    static let navigation = Rswift.ImageResource(bundle: R.hostingBundle, name: "navigation")
     /// Image `noKids`.
     static let noKids = Rswift.ImageResource(bundle: R.hostingBundle, name: "noKids")
     /// Image `noNotifications`.
@@ -452,6 +454,13 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "left", bundle: ..., traitCollection: ...)`
     static func left(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.left, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "navigation", bundle: ..., traitCollection: ...)`
+    static func navigation(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.navigation, compatibleWith: traitCollection)
     }
     #endif
 

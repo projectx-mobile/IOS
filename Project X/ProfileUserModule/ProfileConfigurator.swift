@@ -6,17 +6,34 @@
 //
 
 import Foundation
+import UIKit
 
-final class ProfileConfigurator {
-    static func build() -> ProfileViewController {
-        let interactor = ProfileInteractor()
-        let router = ProfileRouter()
-        let presenter = ProfilePresenter(router: router, interactor: interactor)
-        let rootVC = ProfileViewController()
-        rootVC.presenter = presenter
-        presenter.view = rootVC
-        router.profileVC = rootVC
-        interactor.presenter = presenter
-        return rootVC
+//final class ProfileConfigurator {
+//        func build() -> ProfileViewController {
+//        let interactor = ProfileInteractor()
+//        let router = ProfileRouter()
+//        let presenter = ProfilePresenter(router: router, interactor: interactor)
+//        let rootVC = ProfileViewController()
+//        rootVC.presenter = presenter
+//        presenter.view = rootVC
+//        router.profileVC = rootVC
+//        interactor.presenter = presenter
+//        return rootVC
+//    }
+//}
+
+protocol ProfileConfiguratorInputProtocol {
+    func configure(with viewController: ProfileViewController, with navigationController: UINavigationController)
+}
+
+final class ProfileConfigurator: ProfileConfiguratorInputProtocol {
+    func configure(with viewController: ProfileViewController, with navigationController: UINavigationController) {
+        let presenter = ProfilePresenter(view: viewController as ProfileViewControllerInputProtocol)
+        let interactor = ProfileInteractor(presenter: presenter)
+        let router = ProfileRouter(viewController: viewController)
+        viewController.presenter = presenter
+        presenter.interactor = interactor
+        presenter.router = router
+        router.navigationController = navigationController
     }
 }
