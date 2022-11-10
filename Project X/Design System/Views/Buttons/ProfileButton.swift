@@ -4,10 +4,8 @@
 //
 //  Created by Alinser Shchurko on 5.11.22.
 //
-
 import Foundation
 import UIKit
-
 // MARK: Class sample button for profile user disp
 final class ProfileButton: UIButton {
     // MARK: Properties
@@ -24,11 +22,19 @@ final class ProfileButton: UIButton {
         self.setButton(leftIcon: leftIcon, title: title)
         constraints()
     }
+    // MARK: Animation button
+    override var isHighlighted: Bool {
+        didSet {
+            UIView.animate(withDuration: LayoutConstants.duration) {
+                self.layer.shadowOpacity = self.isHighlighted ? 1 : 0
+            }
+        }
+    }
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 }
-
+// MARK: Profile Button set
   private extension ProfileButton {
     private func setButton(leftIcon: UIImage?, title: String) {
         self.translatesAutoresizingMaskIntoConstraints = false
@@ -52,12 +58,9 @@ final class ProfileButton: UIButton {
         self.layer.cornerRadius = 8
         self.layer.borderWidth = 1.4
         self.layer.borderColor = UIColor.primaryMidnight.cgColor
-      
         // addSubview
         self.addSubview(iconImage)
-
     }
-   
 }
 // MARK: Constraints for button
 private extension ProfileButton {

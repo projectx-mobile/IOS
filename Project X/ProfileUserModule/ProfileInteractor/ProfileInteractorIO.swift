@@ -9,9 +9,6 @@ import Foundation
 
 protocol ProfileInteractorInputProtocol {
     init(presenter: ProfileInteractorOutputProtocol)
-
 }
-
 protocol ProfileInteractorOutputProtocol: AnyObject {
- 
 }

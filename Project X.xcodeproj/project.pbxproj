@@ -146,6 +146,7 @@
 		ED73FCB729167649008AC0E9 /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED73FCB629167649008AC0E9 /* ProfileRouter.swift */; };
 		ED73FCB92916767A008AC0E9 /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED73FCB82916767A008AC0E9 /* ProfileInteractor.swift */; };
 		ED73FCBB291676B8008AC0E9 /* ProfileConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED73FCBA291676B8008AC0E9 /* ProfileConfigurator.swift */; };
+		ED9D024B291CF8FF004F2110 /* EditProfileButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9D024A291CF8FF004F2110 /* EditProfileButton.swift */; };
 		EDC06365291B8E4900257D5E /* ProfileViewControllerIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC06364291B8E4900257D5E /* ProfileViewControllerIO.swift */; };
 		EDC06367291BA5CB00257D5E /* ProfileInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC06366291BA5CB00257D5E /* ProfileInteractorIO.swift */; };
 		EDC06369291BB06F00257D5E /* UserRolesViewControllerIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC06368291BB06F00257D5E /* UserRolesViewControllerIO.swift */; };
@@ -316,6 +317,7 @@
 		ED73FCB629167649008AC0E9 /* ProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRouter.swift; sourceTree = "<group>"; };
 		ED73FCB82916767A008AC0E9 /* ProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
 		ED73FCBA291676B8008AC0E9 /* ProfileConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileConfigurator.swift; sourceTree = "<group>"; };
+		ED9D024A291CF8FF004F2110 /* EditProfileButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileButton.swift; sourceTree = "<group>"; };
 		EDC06364291B8E4900257D5E /* ProfileViewControllerIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewControllerIO.swift; sourceTree = "<group>"; };
 		EDC06366291BA5CB00257D5E /* ProfileInteractorIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractorIO.swift; sourceTree = "<group>"; };
 		EDC06368291BB06F00257D5E /* UserRolesViewControllerIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRolesViewControllerIO.swift; sourceTree = "<group>"; };
@@ -702,6 +704,7 @@
 				847EBA27290AEB1200B4DE70 /* LoginButton.swift */,
 				ED73FCAA29167150008AC0E9 /* AvatarIcon.swift */,
 				ED73FCAC29167184008AC0E9 /* ProfileButton.swift */,
+				ED9D024A291CF8FF004F2110 /* EditProfileButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -1373,6 +1376,7 @@
 				ED73FCB3291675A6008AC0E9 /* ProfileViewController.swift in Sources */,
 				847EBA2A290AEB8500B4DE70 /* LoginWithGAViewIO.swift in Sources */,
 				885B24582907EF9900FA607B /* ChildHomeScreenPresenter.swift in Sources */,
+				ED9D024B291CF8FF004F2110 /* EditProfileButton.swift in Sources */,
 				88C988F328E5E4A1002DF8A3 /* ParentUpdatesInteractorIO.swift in Sources */,
 				971507A828F6F2100024475C /* MainTabbarController.swift in Sources */,
 				ED732424291940980021E49C /* CustomizeProfileConfigurator.swift in Sources */,

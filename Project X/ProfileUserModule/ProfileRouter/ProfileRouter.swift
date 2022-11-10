@@ -83,6 +83,7 @@ final class ProfileRouter: ProfileRouterInputProtocol {
         configurator.configure(with: viewController)
         navigationController?.pushViewController(viewController, animated: true)
     }
+    // MARK: Exit func
     func exit() {
 //        let viewController = // ()
 //        let configurator: // = //()

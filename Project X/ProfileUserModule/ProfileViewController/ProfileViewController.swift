@@ -7,11 +7,10 @@
 
 import Foundation
 import UIKit
-
-
+// MARK: Profile class
 final class ProfileViewController: UIViewController {
-    var presenter: ProfileViewControllerOutputProtocol!
-    private var isParent: Bool = true
+    var presenter: ProfileViewControllerOutputProtocol?
+    private var isParent: Bool = false
     // MARK: Custom Navigation Bar
     private var customNavigationBar: UINavigationBar = UINavigationBar()
     // MARK: Basic scrollView
@@ -26,11 +25,11 @@ final class ProfileViewController: UIViewController {
     // MARK: Basic container view
     private var conteinerView = UIView()
     // MARK: Сonstant for start position scrollView. Used in delegate scrollview method
-    lazy var contentOffset = self.baseScrollView.contentOffset.y
+    private lazy var contentOffset = self.baseScrollView.contentOffset.y
     // MARK: Labels
     private let avatarIcon = AvatarIcon(userName: "UserName", image: UIImage(named: "") ?? nil )
     // MARK: Collection view (Family members)
-    let collectionView = FamilyCollection()
+    private let collectionView = FamilyCollection()
     // MARK: Labels
     // Username Title name of user
     private let titleUsernameLabel: UILabel = {
@@ -50,17 +49,11 @@ final class ProfileViewController: UIViewController {
     }()
     // MARK: Buttons
     // Edit profile button
-    private let editProfileButton: UIButton = {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setImage(UIImage(named: "navigation"), for: .normal)
-        button.titleLabel?.tintColor = .primaryMidnight
+    private lazy var editProfileButton: UIButton = {
+        let button = EditProfileButton()
         button.addTarget(self, action: #selector(transitionToNewVc), for: .touchUpInside)
         return button
     }()
-    @objc func color(sender: UIButton) {
-        sender.backgroundColor = .duskGrey
-    }
     // MARK: Group buttons
     private lazy var emailButton: UIButton = {
         let button = ProfileButton(leftIcon: UIImage(named: "emailFigma"), title: "Email")
@@ -184,11 +177,14 @@ final class ProfileViewController: UIViewController {
     // MARK: DidLayoutSubviews
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        conteinerView.frame = CGRect(x: 0.0, y: 0.0, width: UIScreen.main.bounds.width, height: 1000)
+        conteinerView.frame = CGRect(x: 0.0, y: 0.0, width: UIScreen.main.bounds.width, height: (baseScrollView.frame.height + LayoutConstants.height375))
+        //customNavigationBar.isHidden = true
     }
+    // MARK: When user return from new display i hide system navigation bar
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.navigationBar.isHidden = true
+        //customNavigationBar.isHidden = true
     }
     // MARK: ViewDidLoad
     override func viewDidLoad() {
@@ -288,44 +284,47 @@ final class ProfileViewController: UIViewController {
             exitButton.widthAnchor.constraint(equalToConstant: LayoutConstants.width112),
             exitButton.heightAnchor.constraint(equalToConstant: LayoutConstants.height48),
             // Scroll view (that anchor take height for scroll)
-            baseScrollView.bottomAnchor.constraint(equalTo: exitButton.bottomAnchor, constant: LayoutConstants.inset80)
+            baseScrollView.bottomAnchor.constraint(equalTo: exitButton.bottomAnchor, constant: LayoutConstants.inset80),
         ])
     }
 }
 // MARK: Extension for show/hide navigation bar
 extension ProfileViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if self.contentOffset < scrollView.contentOffset.y {
+        let tabBarHeight = 86.0
+        if (self.contentOffset + tabBarHeight) < scrollView.contentOffset.y {
             customNavigationBar.isHidden = false
         } else {
             customNavigationBar.isHidden = true
         }
     }
 }
+// MARK: To presenter for take router info for open needed screen
 extension ProfileViewController {
     @objc func transitionToNewVc(sender: UIButton) {
         switch sender {
         case editProfileButton:
-            presenter.customizeProfile()
+            presenter?.openNewVC(.customize)
         case emailButton:
-            presenter.emailSetting()
+            presenter?.openNewVC(.emailSetting)
         case passwordButton:
-            presenter.passwordSetting()
+            presenter?.openNewVC(.passwordSetting)
         case parentButton:
-            presenter.userRoles()
+            presenter?.openNewVC(.userRoles)
         case notificationButton:
-            presenter.notificationsVC()
+            presenter?.openNewVC(.notifications)
         case addNewUser:
-            presenter.addNewUser()
+            presenter?.openNewVC(.addNewUser)
         case languageButton:
-            presenter.languageSettings()
+            presenter?.openNewVC(.language)
         case supportButton:
-            presenter.support()
+            presenter?.openNewVC(.support)
         case exitButton:
-            presenter.exit()
+            presenter?.openNewVC(.exit)
         default: break
         }
+    }
 }
-        }
+// MARK: Input VC protocol
 extension ProfileViewController: ProfileViewControllerInputProtocol {
     }
