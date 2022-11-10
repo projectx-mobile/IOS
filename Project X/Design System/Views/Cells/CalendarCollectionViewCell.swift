@@ -53,6 +53,10 @@ final class CalendarCollectionViewCell: UICollectionViewCell {
         numberOfDayLabel.text = numberOfDay
         dayOfWeekLabel.text = dayOfWeek
     }
+    func setupcell(_ model: CalendarDayModel) {
+        dayOfWeekLabel.text = model.selectedWeekDay
+        numberOfDayLabel.text = model.selectedDay
+    }
 }
 
 // MARK: - Private extension

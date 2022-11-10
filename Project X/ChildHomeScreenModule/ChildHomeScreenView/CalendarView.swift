@@ -75,6 +75,7 @@ final class CalendarView: UIView {
     }()
 
     private let idCalendarCell = "idCalendarCell"
+    var cells = [CalendarDayModel]()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -98,11 +99,22 @@ final class CalendarView: UIView {
     }
 
     @objc func datePickerValueChanged(_ sender: UIDatePicker) {
-        let dateFormatter: DateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "E-dd"
-        let selectedDate: String = dateFormatter.string(from: sender.date)
-        print("Selected value \(selectedDate)")
+        let dateFormatterWeekDay: DateFormatter = DateFormatter()
+        let dateFormatterDay: DateFormatter = DateFormatter()
+//        dateFormatter.dateFormat = "E-dd"
+        dateFormatterWeekDay.dateFormat = "E"
+        dateFormatterDay.dateFormat = "dd"
+//        let selectedDate: String = dateFormatter.string(from: sender.date)
+        let selectedWeekDay: String = dateFormatterWeekDay.string(from: sender.date)
+        let selectedDay: String = dateFormatterDay.string(from: sender.date)
+//        print("Selected value \(selectedDate)")
+        print("Selected value \(selectedWeekDay), \(selectedDay)")
+//        var calendarDate = CalendarDayModel(selectedWeekDay: "\(selectedWeekDay)", selectedDay: "\(selectedDay)")
         print("here i need to change cell date")
+    }
+    
+    func setCells(cells: [CalendarDayModel]){
+        self.cells = cells
     }
 }
 
@@ -206,7 +218,9 @@ extension CalendarView: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: idCalendarCell, for: indexPath) as? CalendarCollectionViewCell else {
             fatalError("could not cast cell")
         }
-        cell.cellConfigure(numberOfDay: "15", dayOfWeek: "Вт")
+//        cell.cellConfigure(numberOfDay: "15", dayOfWeek: "Вт")
+        cell.setupcell(cells[indexPath.row])
+        
         return cell
     }
 }

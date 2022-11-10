@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		054B067E291A98A600E01301 /* CalendarDayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054B067D291A98A600E01301 /* CalendarDayModel.swift */; };
 		05DA1E912914176D00CFA8DC /* antframe1.json in Resources */ = {isa = PBXBuildFile; fileRef = 05DA1E902914176D00CFA8DC /* antframe1.json */; };
 		05DA1E932914177500CFA8DC /* frame 2 onboarding.json in Resources */ = {isa = PBXBuildFile; fileRef = 05DA1E922914177500CFA8DC /* frame 2 onboarding.json */; };
 		05DA1E95291417BC00CFA8DC /* WelcomeTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DA1E94291417BC00CFA8DC /* WelcomeTitleLabel.swift */; };
@@ -106,6 +107,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		054B067D291A98A600E01301 /* CalendarDayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDayModel.swift; sourceTree = "<group>"; };
 		05DA1E902914176D00CFA8DC /* antframe1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = antframe1.json; sourceTree = "<group>"; };
 		05DA1E922914177500CFA8DC /* frame 2 onboarding.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "frame 2 onboarding.json"; sourceTree = "<group>"; };
 		05DA1E94291417BC00CFA8DC /* WelcomeTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeTitleLabel.swift; sourceTree = "<group>"; };
@@ -529,6 +531,7 @@
 				885B24362907E7B700FA607B /* KidsNotification.swift */,
 				885B24382907E7D600FA607B /* KidsTask.swift */,
 				05DA1E962914184000CFA8DC /* WelcomeCellModel.swift */,
+				054B067D291A98A600E01301 /* CalendarDayModel.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -825,6 +828,7 @@
 				975958FE28D9B40900570BB4 /* Button.swift in Sources */,
 				971507A528F6F2100024475C /* RewardsViewController.swift in Sources */,
 				8858667628E196E600F11B72 /* SecondaryLabel.swift in Sources */,
+				054B067E291A98A600E01301 /* CalendarDayModel.swift in Sources */,
 				8858667828E1970C00F11B72 /* SecondaryLabelWithIcon.swift in Sources */,
 				889F435B28E191CF00DC347D /* WelcomeViewIO.swift in Sources */,
 				971507A728F6F2100024475C /* AddTaskViewController.swift in Sources */,
