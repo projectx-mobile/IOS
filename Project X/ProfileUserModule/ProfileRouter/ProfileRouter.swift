@@ -18,6 +18,7 @@ protocol ProfileRouterInputProtocol {
     func addNewUser()
     func languageSetting()
     func support()
+    func openWindowFamilyMember(familyMember: FamilysMember, isParent: Bool)
     func exit()
 }
 // MARK: ProfileRouter Class
@@ -83,12 +84,17 @@ final class ProfileRouter: ProfileRouterInputProtocol {
         configurator.configure(with: viewController)
         navigationController?.pushViewController(viewController, animated: true)
     }
+    func openWindowFamilyMember(familyMember: FamilysMember, isParent: Bool) {
+        let viewController = ModalWindowFamilyMemberVC()
+        viewController.familyMember = familyMember
+        viewController.profileDelegate = self.viewController
+        viewController.isParent = isParent
+        viewController.modalPresentationStyle = .overFullScreen
+        navigationController?.present(viewController, animated: true) 
+    }
     // MARK: Exit func
     func exit() {
-//        let viewController = // ()
-//        let configurator: // = //()
-//        configurator.configure(with: viewController)
-//        navigationController?.pushViewController(viewController, animated: true)
+
     }
 
 }

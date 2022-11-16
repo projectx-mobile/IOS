@@ -13,8 +13,10 @@ final class FamilysMemberCell: UICollectionViewCell {
     var avatar: UIButton = {
         let button = AvatarIcon(userName: "", image: UIImage(named: ""))
         button.translatesAutoresizingMaskIntoConstraints = true
+        button.isUserInteractionEnabled = false
         return button
     }()
+
     // MARK: User name title under avatar
     var title: UILabel = {
         let label = UILabel()
@@ -27,6 +29,7 @@ final class FamilysMemberCell: UICollectionViewCell {
     // MARK: Cell init
     override init(frame: CGRect) {
         super.init(frame: frame)
+       // self.isUserInteractionEnabled = true
         addSubview(self.avatar)
         addSubview(self.title)
         constraints()

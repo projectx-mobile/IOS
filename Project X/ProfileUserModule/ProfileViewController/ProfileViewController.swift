@@ -10,6 +10,7 @@ import UIKit
 // MARK: Profile class
 final class ProfileViewController: UIViewController {
     var presenter: ProfileViewControllerOutputProtocol?
+    var user: FamilysMember?
     private var isParent: Bool = false
     // MARK: Custom Navigation Bar
     private var customNavigationBar: UINavigationBar = UINavigationBar()
@@ -23,23 +24,30 @@ final class ProfileViewController: UIViewController {
         return scrollView
     }()
     // MARK: Basic container view
-    private var conteinerView = UIView()
+    private var conteinerView: UIView = {
+        let view = UIView()
+        return view
+    }()
     // MARK: Сonstant for start position scrollView. Used in delegate scrollview method
     private lazy var contentOffset = self.baseScrollView.contentOffset.y
     // MARK: Labels
     private let avatarIcon = AvatarIcon(userName: "UserName", image: UIImage(named: "") ?? nil )
     // MARK: Collection view (Family members)
-    private let collectionView = FamilyCollection()
+    private lazy var collectionView: FamilyCollection = {
+        let collectionView = FamilyCollection()
+        collectionView.delegateProfileVC = self
+        return collectionView
+    }()
     // MARK: Labels
     // Username Title name of user
     private let titleUsernameLabel: UILabel = {
-       let label = TitleLabel(text: "UserName")
+        let label = TitleLabel(text: "UserName")
         label.numberOfLines = 0
         return label
     }()
     // Set profile label
     private let setProfileLabel: UILabel = {
-       let label = UILabel()
+        let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Настройки профиля"
         label.textAlignment = .left
@@ -71,7 +79,7 @@ final class ProfileViewController: UIViewController {
         parentButton.addTarget(self, action: #selector(transitionToNewVc), for: .touchUpInside)
         parentButton.isEnabled = true
         childrenButton.isEnabled = false
-       return isParent ? parentButton : childrenButton
+        return isParent ? parentButton : childrenButton
     }()
     private lazy var notificationButton: UIButton = {
         let button = ProfileButton(leftIcon: UIImage(named: "bellFigma"), title: "Уведомления")
@@ -89,23 +97,23 @@ final class ProfileViewController: UIViewController {
         return button
     }()
     private lazy var exitButton: UIButton = {
-         let button = PrimaryButton(text: "Выйти", fillColor: .primaryWhiteSnow, tintColor: .primaryMidnight, borderColor: .primaryMidnight)
+        let button = PrimaryButton(text: "Выйти", fillColor: .primaryWhiteSnow, tintColor: .primaryMidnight, borderColor: .primaryMidnight)
         button.titleLabel?.font = UIFont.robotoBold16()
         button.setImage(UIImage(named: "quitButtonFigma"), for: .normal)
         button.imageView?.trailingAnchor.constraint(equalTo: button.titleLabel?.leadingAnchor ?? button.leadingAnchor, constant: -12.5).isActive = true
         button.addTarget(self, action: #selector(transitionToNewVc(sender: )), for: .touchUpInside)
         return button
     }()
-   // MARK: StackView
-   private lazy var firstFourButtonsStack: UIStackView = {
-       let view = UIStackView(arrangedSubviews: [emailButton, passwordButton, parentButton, notificationButton ])
-       view.translatesAutoresizingMaskIntoConstraints = false
-       view.axis = .vertical
-       view.spacing = 8
-       var widthDispConstraints = 32.0
-       view.frame.size = CGSize(width: UIScreen.main.bounds.width - widthDispConstraints, height: max(emailButton.frame.size.height, passwordButton.frame.size.height, parentButton.frame.size.height, notificationButton.frame.size.height))
-       return view
-   }()
+    // MARK: StackView
+    private lazy var firstFourButtonsStack: UIStackView = {
+        let view = UIStackView(arrangedSubviews: [emailButton, passwordButton, parentButton, notificationButton ])
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.axis = .vertical
+        view.spacing = 8
+        var widthDispConstraints = 32.0
+        view.frame.size = CGSize(width: UIScreen.main.bounds.width - widthDispConstraints, height: max(emailButton.frame.size.height, passwordButton.frame.size.height, parentButton.frame.size.height, notificationButton.frame.size.height))
+        return view
+    }()
     // MARK: Buttons language and notification
     private lazy var lastTwoButtonsStack: UIStackView = {
         let view = UIStackView(arrangedSubviews: [languageButton, supportButton])
@@ -119,7 +127,7 @@ final class ProfileViewController: UIViewController {
     // MARK: navigationBarLabels
     // User namelabel (NavBar)
     private let navBarUsernameLabel: UILabel = {
-       let label = UILabel()
+        let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Username"
         label.textColor = .primaryMidnight
@@ -129,14 +137,14 @@ final class ProfileViewController: UIViewController {
     }()
     // Constant "Set profile" label
     private let navBarSetProfileLabel: UILabel = {
-    let label = UILabel()
-     label.translatesAutoresizingMaskIntoConstraints = false
-     label.text = "Настройки профиля"
-     label.textColor = .duskGrey
-     label.textAlignment = .center
-     label.font = UIFont.robotoRegular13()
-     return label
- }()
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "Настройки профиля"
+        label.textColor = .duskGrey
+        label.textAlignment = .center
+        label.font = UIFont.robotoRegular13()
+        return label
+    }()
     // MARK: My Family label
     private let myFamilyLabel: UILabel = {
         let label = UILabel()
@@ -178,21 +186,21 @@ final class ProfileViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         conteinerView.frame = CGRect(x: 0.0, y: 0.0, width: UIScreen.main.bounds.width, height: (baseScrollView.frame.height + LayoutConstants.height375))
-        //customNavigationBar.isHidden = true
     }
     // MARK: When user return from new display i hide system navigation bar
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.navigationBar.isHidden = true
-        //customNavigationBar.isHidden = true
     }
     // MARK: ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         addView()
         setCustomNavBarView()
+        
+        
         constraints()
-       }
+    }
     // MARK: Set custom NavBar
     private func setCustomNavBarView() {
         self.customNavigationBar.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 132)
@@ -200,7 +208,7 @@ final class ProfileViewController: UIViewController {
         self.customNavigationBar.layer.borderColor = UIColor.lightGray.withAlphaComponent(0.5).cgColor
         self.customNavigationBar.layer.borderWidth = 1.0
         self.customNavigationBar.isHidden = true
-            }
+    }
     // MARK: Add view on screen
     private func addView() {
         self.view.addSubview(baseScrollView)
@@ -229,7 +237,7 @@ final class ProfileViewController: UIViewController {
             avatarIcon.leadingAnchor.constraint(equalTo: conteinerView.leadingAnchor, constant: LayoutConstants.inset16),
             avatarIcon.widthAnchor.constraint(equalToConstant: LayoutConstants.width56),
             avatarIcon.heightAnchor.constraint(equalToConstant: LayoutConstants.height56),
-             // Title Username
+            // Title Username
             titleUsernameLabel.leadingAnchor.constraint(equalTo: avatarIcon.trailingAnchor, constant: LayoutConstants.inset8),
             titleUsernameLabel.trailingAnchor.constraint(equalTo: conteinerView.trailingAnchor, constant: -LayoutConstants.inset40),
             titleUsernameLabel.centerYAnchor.constraint(equalTo: avatarIcon.centerYAnchor),
@@ -284,7 +292,7 @@ final class ProfileViewController: UIViewController {
             exitButton.widthAnchor.constraint(equalToConstant: LayoutConstants.width112),
             exitButton.heightAnchor.constraint(equalToConstant: LayoutConstants.height48),
             // Scroll view (that anchor take height for scroll)
-            baseScrollView.bottomAnchor.constraint(equalTo: exitButton.bottomAnchor, constant: LayoutConstants.inset80),
+            baseScrollView.bottomAnchor.constraint(equalTo: exitButton.bottomAnchor, constant: LayoutConstants.inset80)
         ])
     }
 }
@@ -327,4 +335,16 @@ extension ProfileViewController {
 }
 // MARK: Input VC protocol
 extension ProfileViewController: ProfileViewControllerInputProtocol {
+    // MARK: Delete family member
+    func deleteFamilyMember(_ familyMember: FamilysMember) {
+        for (index, value) in self.collectionView.familyMembers.enumerated() {
+            if value.name == familyMember.name {
+                self.collectionView.familyMembers.remove(at: index)
+            }
+        }
     }
+    // MARK: Open new VC (For router)
+    func userInfo(_ familyMember: FamilysMember) {
+        presenter?.transitToFamilyMember(familyMember, isParent: isParent)
+    }
+}

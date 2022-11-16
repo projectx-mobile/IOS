@@ -7,7 +7,9 @@
 
 import Foundation
 final class ProfileInteractor: ProfileInteractorInputProtocol {
-    unowned let presenter: ProfileInteractorOutputProtocol
+   
+    
+    unowned let presenter: ProfileInteractorOutputProtocol?
     required init(presenter: ProfileInteractorOutputProtocol) {
         self.presenter = presenter
     }

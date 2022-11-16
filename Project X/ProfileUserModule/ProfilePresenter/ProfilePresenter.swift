@@ -50,6 +50,11 @@ final class ProfilePresenter: ProfileViewControllerOutputProtocol {
             router?.exit()
         }
     }
+    func transitToFamilyMember(_ familyMember: FamilysMember, isParent: Bool) {
+        router?.openWindowFamilyMember(familyMember: familyMember, isParent: isParent)
+    }
 }
 extension ProfilePresenter: ProfileInteractorOutputProtocol {
 }
+
+

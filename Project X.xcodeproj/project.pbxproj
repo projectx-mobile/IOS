@@ -170,6 +170,7 @@
 		EDC06392291C0E3300257D5E /* NotificationsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC06391291C0E3300257D5E /* NotificationsInteractor.swift */; };
 		EDC06394291C0E4100257D5E /* NotificationsInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC06393291C0E4100257D5E /* NotificationsInteractorIO.swift */; };
 		EDC06396291C0E5900257D5E /* NotificationsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC06395291C0E5900257D5E /* NotificationsConfigurator.swift */; };
+		EDCE0677291E31D500E86B2D /* ModalWindowFamilyMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCE0676291E31D500E86B2D /* ModalWindowFamilyMember.swift */; };
 		EDFD5E0329166B7F006E1D5C /* FamilyMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFD5E0229166B7F006E1D5C /* FamilyMember.swift */; };
 /* End PBXBuildFile section */
 
@@ -341,6 +342,7 @@
 		EDC06391291C0E3300257D5E /* NotificationsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsInteractor.swift; sourceTree = "<group>"; };
 		EDC06393291C0E4100257D5E /* NotificationsInteractorIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsInteractorIO.swift; sourceTree = "<group>"; };
 		EDC06395291C0E5900257D5E /* NotificationsConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsConfigurator.swift; sourceTree = "<group>"; };
+		EDCE0676291E31D500E86B2D /* ModalWindowFamilyMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalWindowFamilyMember.swift; sourceTree = "<group>"; };
 		EDFD5E0229166B7F006E1D5C /* FamilyMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyMember.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -750,6 +752,7 @@
 		CA214CEC28BDFEF5006176A7 /* Project X */ = {
 			isa = PBXGroup;
 			children = (
+				ED5D9EFF291FD0910096CA9E /* ModalWindowVC */,
 				CA214CF128BDFEF5006176A7 /* ViewController.swift */,
 				CA214CEF28BDFEF5006176A7 /* SceneDelegate.swift */,
 				CA214CED28BDFEF5006176A7 /* AppDelegate.swift */,
@@ -778,6 +781,13 @@
 				88B0AB2029093A470049F8B8 /* GoogleService-Info.plist */,
 			);
 			path = "Project X";
+			sourceTree = "<group>";
+		};
+		ED5D9EFF291FD0910096CA9E /* ModalWindowVC */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ModalWindowVC;
 			sourceTree = "<group>";
 		};
 		ED7323BE291908760021E49C /* CustomizeProfileModule */ = {
@@ -1107,6 +1117,7 @@
 			children = (
 				ED73FCB2291675A6008AC0E9 /* ProfileViewController.swift */,
 				EDC06364291B8E4900257D5E /* ProfileViewControllerIO.swift */,
+				EDCE0676291E31D500E86B2D /* ModalWindowFamilyMember.swift */,
 			);
 			path = ProfileViewController;
 			sourceTree = "<group>";
@@ -1395,6 +1406,7 @@
 				885B24662907F63100FA607B /* CalendarCollectionViewCell.swift in Sources */,
 				ED7323D429190CE70021E49C /* PasswordSettingConfigurator.swift in Sources */,
 				885B24542907EEC400FA607B /* CalendarView.swift in Sources */,
+				EDCE0677291E31D500E86B2D /* ModalWindowFamilyMember.swift in Sources */,
 				8858667C28E1975A00F11B72 /* TitleLabel.swift in Sources */,
 				885B24622907F57500FA607B /* ChildHomeScreenViewIO.swift in Sources */,
 				885B24502907EE3D00FA607B /* NoNotificationView.swift in Sources */,

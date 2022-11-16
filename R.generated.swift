@@ -243,7 +243,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.image` struct is generated, and contains static references to 39 images.
+  /// This `R.image` struct is generated, and contains static references to 41 images.
   struct image {
     /// Image `AddUserNoEnabledFigma`.
     static let addUserNoEnabledFigma = Rswift.ImageResource(bundle: R.hostingBundle, name: "AddUserNoEnabledFigma")
@@ -259,8 +259,12 @@ struct R: Rswift.Validatable {
     static let calendar = Rswift.ImageResource(bundle: R.hostingBundle, name: "calendar")
     /// Image `changeLunguage`.
     static let changeLunguage = Rswift.ImageResource(bundle: R.hostingBundle, name: "changeLunguage")
+    /// Image `closeAlertWindow`.
+    static let closeAlertWindow = Rswift.ImageResource(bundle: R.hostingBundle, name: "closeAlertWindow")
     /// Image `close`.
     static let close = Rswift.ImageResource(bundle: R.hostingBundle, name: "close")
+    /// Image `deleteUserFigma`.
+    static let deleteUserFigma = Rswift.ImageResource(bundle: R.hostingBundle, name: "deleteUserFigma")
     /// Image `disclosureRight`.
     static let disclosureRight = Rswift.ImageResource(bundle: R.hostingBundle, name: "disclosureRight")
     /// Image `done`.
@@ -377,6 +381,20 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "close", bundle: ..., traitCollection: ...)`
     static func close(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.close, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "closeAlertWindow", bundle: ..., traitCollection: ...)`
+    static func closeAlertWindow(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.closeAlertWindow, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "deleteUserFigma", bundle: ..., traitCollection: ...)`
+    static func deleteUserFigma(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.deleteUserFigma, compatibleWith: traitCollection)
     }
     #endif
 
