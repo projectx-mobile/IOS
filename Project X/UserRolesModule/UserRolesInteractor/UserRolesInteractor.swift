@@ -8,9 +8,7 @@
 import Foundation
 
 final class UserRolesInteractor: UserRolesInteractorInputProtocol {
-    
     unowned let presenter: UserRolesInteractorOutputProtocol
-    
     required init(presenter: UserRolesInteractorOutputProtocol) {
         self.presenter = presenter
     }

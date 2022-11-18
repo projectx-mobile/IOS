@@ -10,6 +10,5 @@ import Foundation
 protocol UserRolesInteractorInputProtocol: AnyObject {
     init(presenter: UserRolesInteractorOutputProtocol)
 }
-
 protocol UserRolesInteractorOutputProtocol: AnyObject {
 }

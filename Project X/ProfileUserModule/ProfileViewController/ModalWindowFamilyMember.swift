@@ -5,41 +5,41 @@
 //  Created by Alinser Shchurko on 11.11.22.
 //
 
-import Foundation
 import UIKit
+
 final class ModalWindowFamilyMemberVC: UIViewController {
     var isParent: Bool = true
     var familyMember: FamilysMember? = FamilysMember(name: "")
     weak var profileDelegate: ProfileViewControllerInputProtocol?
     // MARK: Avatar button
     private lazy var avatar: UIButton = {
-       let avatar = UIButton()
-       avatar.translatesAutoresizingMaskIntoConstraints = false
-       avatar.layer.borderWidth = 1.0
-       avatar.setImage(familyMember?.avatar, for: .normal)
-       avatar.setTitle(familyMember?.name.first?.uppercased(), for: .normal)
-       avatar.backgroundColor = UIColor(red: 208/255, green: 192/255, blue: 245/255, alpha: 1)
-       avatar.frame.size = CGSize(width: LayoutConstants.width72, height: LayoutConstants.height72)
-       avatar.layer.borderColor = UIColor.primaryMidnight.cgColor
-       avatar.titleLabel?.font = UIFont.nexaDemoBold24()
-       avatar.setTitleColor( .primaryMidnight, for: .normal)
-       avatar.titleLabel?.textAlignment = .center
-       avatar.layer.cornerRadius = avatar.frame.width / 2
-       avatar.clipsToBounds = true
-       return avatar
+        let avatar = UIButton()
+        avatar.translatesAutoresizingMaskIntoConstraints = false
+        avatar.layer.borderWidth = 1.0
+        avatar.setImage(familyMember?.avatar, for: .normal)
+        avatar.setTitle(familyMember?.name.first?.uppercased(), for: .normal)
+        avatar.backgroundColor = UIColor(red: 208/255, green: 192/255, blue: 245/255, alpha: 1)
+        avatar.frame.size = CGSize(width: LayoutConstants.width72, height: LayoutConstants.height72)
+        avatar.layer.borderColor = UIColor.primaryMidnight.cgColor
+        avatar.titleLabel?.font = UIFont.nexaDemoBold24()
+        avatar.setTitleColor( .primaryMidnight, for: .normal)
+        avatar.titleLabel?.textAlignment = .center
+        avatar.layer.cornerRadius = avatar.frame.width / 2
+        avatar.clipsToBounds = true
+        return avatar
     }()
-   // MARK: UserName
-   private lazy var userName: SubtitleLabel = {
+    // MARK: UserName
+    private lazy var userName: SubtitleLabel = {
         let label = SubtitleLabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-       label.text = familyMember?.name
+        label.text = familyMember?.name
         label.textAlignment = .center
         label.textColor = .primaryMidnight
         return label
     }()
-   // MARK: Alert
-  private var alertView: UIView = {
-       let view = UIView()
+    // MARK: Alert
+    private var alertView: UIView = {
+        let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.layer.backgroundColor = UIColor(red: 0.949, green: 0.949, blue: 0.949, alpha: 0.8).cgColor
         view.layer.cornerRadius = 14
@@ -63,7 +63,7 @@ final class ModalWindowFamilyMemberVC: UIViewController {
         button.titleLabel?.font = UIFont.robotoMedium16()
         button.setImage(UIImage(named: "deleteUserFigma"), for: .normal)
         button.imageView?.trailingAnchor.constraint(equalTo: button.titleLabel?.leadingAnchor ?? button.leadingAnchor, constant: -LayoutConstants.inset10).isActive = true
-       button.addTarget(self, action: #selector(deleteFamilyMember), for: .touchUpInside)
+        button.addTarget(self, action: #selector(deleteFamilyMember), for: .touchUpInside)
         return button
     }()
     // delete family member
@@ -79,7 +79,7 @@ final class ModalWindowFamilyMemberVC: UIViewController {
         alert.addAction(delete)
         alert.addAction(cancelButton)
         present(alert, animated: true)
-        }
+    }
     // MARK: ViewDidload
     override func viewDidLoad() {
         super.viewDidLoad()

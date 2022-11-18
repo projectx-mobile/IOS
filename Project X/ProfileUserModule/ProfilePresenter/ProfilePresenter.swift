@@ -5,7 +5,7 @@
 //  Created by Alinser Shchurko on 5.11.22.
 //
 
-import Foundation
+
 import UIKit
 // MARK: Enum for  undesteding 
 enum DisplayNames {

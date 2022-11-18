@@ -5,7 +5,7 @@
 //  Created by Alinser Shchurko on 5.11.22.
 //
 
-import Foundation
+
 import UIKit
 protocol ProfileConfiguratorInputProtocol {
     func configure(with viewController: ProfileViewController, with navigationController: UINavigationController)

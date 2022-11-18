@@ -16,7 +16,6 @@ final class FamilysMemberCell: UICollectionViewCell {
         button.isUserInteractionEnabled = false
         return button
     }()
-
     // MARK: User name title under avatar
     var title: UILabel = {
         let label = UILabel()
@@ -29,12 +28,10 @@ final class FamilysMemberCell: UICollectionViewCell {
     // MARK: Cell init
     override init(frame: CGRect) {
         super.init(frame: frame)
-       // self.isUserInteractionEnabled = true
         addSubview(self.avatar)
         addSubview(self.title)
         constraints()
     }
-    // requared init
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

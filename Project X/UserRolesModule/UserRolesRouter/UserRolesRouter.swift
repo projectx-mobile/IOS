@@ -5,18 +5,7 @@
 //  Created by Alinser Shchurko on 7.11.22.
 //
 
-import Foundation
 import UIKit
-
-//protocol UserRolesRouterProtocol: AnyObject {
-//}
-//
-//final class UserRolesRouter {
-//    var viewController: UserRolesVC?
-//}
-//
-//extension UserRolesRouter: UserRolesRouterProtocol {
-//}
 protocol UserRolesRouterInputProtocol {
     init(viewController: UserRolesViewController)
     func openParentUpdatesViewController()

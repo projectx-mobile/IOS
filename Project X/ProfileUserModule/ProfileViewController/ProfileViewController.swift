@@ -5,8 +5,9 @@
 //  Created by Alinser Shchurko on 5.11.22.
 //
 
-import Foundation
+
 import UIKit
+
 // MARK: Profile class
 final class ProfileViewController: UIViewController {
     var presenter: ProfileViewControllerOutputProtocol?

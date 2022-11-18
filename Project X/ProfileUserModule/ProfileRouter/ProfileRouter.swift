@@ -5,7 +5,7 @@
 //  Created by Alinser Shchurko on 5.11.22.
 //
 
-import Foundation
+
 import UIKit
 // MARK: Profile protocol
 protocol ProfileRouterInputProtocol {
@@ -94,7 +94,7 @@ final class ProfileRouter: ProfileRouterInputProtocol {
     }
     // MARK: Exit func
     func exit() {
-
+     // Exit to start app page (work when user press exit button)
     }
 
 }

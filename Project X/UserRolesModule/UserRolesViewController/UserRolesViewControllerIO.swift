@@ -8,7 +8,6 @@
 import Foundation
 
 protocol UserRolesViewControllerInputProtocol: AnyObject {
- 
 }
 
 protocol UserRolesViewControllerOutputProtocol: AnyObject {

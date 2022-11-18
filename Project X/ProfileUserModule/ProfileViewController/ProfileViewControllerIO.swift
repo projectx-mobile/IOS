@@ -5,8 +5,8 @@
 //  Created by Alinser Shchurko on 9.11.22.
 //
 
+
 import Foundation
-import UIKit
 protocol ProfileViewControllerInputProtocol: AnyObject {
     // Get info about user from Collection view (My Family)
     func userInfo(_ familyMember: FamilysMember)

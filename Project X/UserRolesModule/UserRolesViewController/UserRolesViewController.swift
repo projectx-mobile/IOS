@@ -5,7 +5,6 @@
 //  Created by Alinser Shchurko on 7.11.22.
 //
 
-import Foundation
 import UIKit
 // MARK: USER ROLES DISPLAY
 final class UserRolesViewController: UIViewController {
