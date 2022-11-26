@@ -198,8 +198,6 @@ final class ProfileViewController: UIViewController {
         super.viewDidLoad()
         addView()
         setCustomNavBarView()
-        
-        
         constraints()
     }
     // MARK: Set custom NavBar

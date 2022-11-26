@@ -4,8 +4,6 @@
 //
 //  Created by Alinser Shchurko on 7.11.22.
 //
-
-import Foundation
 import UIKit
 // MARK: Router protocol
 protocol AddNewUserRouterProtocol {

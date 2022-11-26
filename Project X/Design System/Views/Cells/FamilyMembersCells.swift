@@ -4,8 +4,6 @@
 //
 //  Created by Alinser Shchurko on 5.11.22.
 //
-
-import Foundation
 import UIKit
 
 final class FamilysMemberCell: UICollectionViewCell {
