@@ -52,7 +52,6 @@ private extension AddNewUserVC {
         view.addSubview(newUserLabel)
         view.addSubview(secondaryLabel)
         view.addSubview(stackViewButton)
-        
     }
 }
 // MARK: Constraints
@@ -60,9 +59,12 @@ private extension AddNewUserVC {
     func constraints() {
         NSLayoutConstraint.activate([
             // Name user label
-            newUserLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant:  LayoutConstants.inset16),
-            newUserLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant:  LayoutConstants.inset16),
-            newUserLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant:  -LayoutConstants.inset16),
+            newUserLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor,
+                                              constant: LayoutConstants.inset16),
+            newUserLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor,
+                                                  constant: LayoutConstants.inset16),
+            newUserLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor,
+                                                   constant: -LayoutConstants.inset16),
            // Secondary header label
             secondaryLabel.topAnchor.constraint(equalTo: newUserLabel.bottomAnchor, constant: LayoutConstants.inset8),
             secondaryLabel.widthAnchor.constraint(equalTo: newUserLabel.widthAnchor),
