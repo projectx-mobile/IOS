@@ -753,28 +753,14 @@
 			isa = PBXGroup;
 			children = (
 				ED5D9EFF291FD0910096CA9E /* ModalWindowVC */,
-				CA214CF128BDFEF5006176A7 /* ViewController.swift */,
-				CA214CEF28BDFEF5006176A7 /* SceneDelegate.swift */,
-				CA214CED28BDFEF5006176A7 /* AppDelegate.swift */,
+				EDCDE6D8293DF14D0049CEA9 /* Modules */,
 				88D5282228E328AE00220DFB /* Entities */,
-				889F434828E18F0500DC347D /* WelcomeModule */,
-				847EBA99291267D200B4DE70 /* LoginWithMailSceenModule */,
-				847EBA2C290AEC7400B4DE70 /* LoginWithGAScreenModule */,
-				8858667D28E1985800F11B72 /* ParentHomeScreenModule */,
-				88C988E328E5E37F002DF8A3 /* ParentUpdatesModule */,
-				885B24432907EBEA00FA607B /* ChildHomeScreenModule */,
-				ED73FCA529166EB7008AC0E9 /* ProfileUserModule */,
-				ED7323BE291908760021E49C /* CustomizeProfileModule */,
-				ED7323BF291908C60021E49C /* EmailSettingModule */,
-				ED7323C0291908FC0021E49C /* PasswordSettingModule */,
-				ED7323C1291909390021E49C /* UserRolesModule */,
-				EDC06384291C0D7600257D5E /* NotificationsModule */,
-				ED7323C3291909720021E49C /* AddNewUserModule */,
-				ED7323C2291909570021E49C /* LanguageSettingsModule */,
-				ED7323C429190A090021E49C /* SupportModule */,
 				889F434B28E18FA800DC347D /* Resources */,
 				975958FB28D9B2FD00570BB4 /* Design System */,
 				889F433F28E18C4F00DC347D /* Extensions */,
+				CA214CF128BDFEF5006176A7 /* ViewController.swift */,
+				CA214CEF28BDFEF5006176A7 /* SceneDelegate.swift */,
+				CA214CED28BDFEF5006176A7 /* AppDelegate.swift */,
 				CA214CF828BDFEF7006176A7 /* LaunchScreen.storyboard */,
 				CA214CF328BDFEF5006176A7 /* Main.storyboard */,
 				CA214CFB28BDFEF7006176A7 /* Info.plist */,
@@ -1203,6 +1189,28 @@
 				EDC06393291C0E4100257D5E /* NotificationsInteractorIO.swift */,
 			);
 			path = NotificationsInteractor;
+			sourceTree = "<group>";
+		};
+		EDCDE6D8293DF14D0049CEA9 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				ED7323C429190A090021E49C /* SupportModule */,
+				ED7323C2291909570021E49C /* LanguageSettingsModule */,
+				ED7323C3291909720021E49C /* AddNewUserModule */,
+				EDC06384291C0D7600257D5E /* NotificationsModule */,
+				ED7323C1291909390021E49C /* UserRolesModule */,
+				ED7323C0291908FC0021E49C /* PasswordSettingModule */,
+				ED7323BF291908C60021E49C /* EmailSettingModule */,
+				ED7323BE291908760021E49C /* CustomizeProfileModule */,
+				ED73FCA529166EB7008AC0E9 /* ProfileUserModule */,
+				885B24432907EBEA00FA607B /* ChildHomeScreenModule */,
+				88C988E328E5E37F002DF8A3 /* ParentUpdatesModule */,
+				8858667D28E1985800F11B72 /* ParentHomeScreenModule */,
+				847EBA2C290AEC7400B4DE70 /* LoginWithGAScreenModule */,
+				847EBA99291267D200B4DE70 /* LoginWithMailSceenModule */,
+				889F434828E18F0500DC347D /* WelcomeModule */,
+			);
+			path = Modules;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

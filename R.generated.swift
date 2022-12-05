@@ -243,7 +243,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.image` struct is generated, and contains static references to 41 images.
+  /// This `R.image` struct is generated, and contains static references to 43 images.
   struct image {
     /// Image `AddUserNoEnabledFigma`.
     static let addUserNoEnabledFigma = Rswift.ImageResource(bundle: R.hostingBundle, name: "AddUserNoEnabledFigma")
@@ -285,8 +285,12 @@ struct R: Rswift.Validatable {
     static let homeSelected = Rswift.ImageResource(bundle: R.hostingBundle, name: "home.selected")
     /// Image `keyFigma`.
     static let keyFigma = Rswift.ImageResource(bundle: R.hostingBundle, name: "keyFigma")
+    /// Image `leftChevronFigma`.
+    static let leftChevronFigma = Rswift.ImageResource(bundle: R.hostingBundle, name: "leftChevronFigma")
     /// Image `left`.
     static let left = Rswift.ImageResource(bundle: R.hostingBundle, name: "left")
+    /// Image `linkFigma`.
+    static let linkFigma = Rswift.ImageResource(bundle: R.hostingBundle, name: "linkFigma")
     /// Image `navigation`.
     static let navigation = Rswift.ImageResource(bundle: R.hostingBundle, name: "navigation")
     /// Image `noKids`.
@@ -472,6 +476,20 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "left", bundle: ..., traitCollection: ...)`
     static func left(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.left, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "leftChevronFigma", bundle: ..., traitCollection: ...)`
+    static func leftChevronFigma(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.leftChevronFigma, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "linkFigma", bundle: ..., traitCollection: ...)`
+    static func linkFigma(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.linkFigma, compatibleWith: traitCollection)
     }
     #endif
 

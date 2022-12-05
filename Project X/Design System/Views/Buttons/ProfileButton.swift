@@ -26,7 +26,7 @@ final class ProfileButton: UIButton {
     override var isHighlighted: Bool {
         didSet {
             UIView.animate(withDuration: LayoutConstants.duration) {
-                self.layer.shadowOpacity = self.isHighlighted ? 1 : 0
+                self.isHighlighted ? (self.backgroundColor = .black.withAlphaComponent(0.2)) : (self.backgroundColor = .clear)
             }
         }
     }

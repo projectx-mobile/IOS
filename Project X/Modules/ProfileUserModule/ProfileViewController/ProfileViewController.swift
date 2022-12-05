@@ -12,7 +12,7 @@ import UIKit
 final class ProfileViewController: UIViewController {
     var presenter: ProfileViewControllerOutputProtocol?
     var user: FamilysMember?
-    private var isParent: Bool = false
+    private var isParent: Bool = true
     // MARK: Custom Navigation Bar
     private var customNavigationBar: UINavigationBar = UINavigationBar()
     // MARK: Basic scrollView
