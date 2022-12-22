@@ -197,3 +197,6 @@ private extension WelcomeViewController {
         ])
     }
 }
+extension WelcomeViewController: WelcomeViewInputProtocol {
+    
+}

@@ -17,6 +17,7 @@ struct WelcomeCellModel {
         let firstItem = WelcomeCellModel(
             subtitle: "Создавай задачи \nи выполняй их в срок",
             animationName: "antframe1"
+            
         )
         let secondItem = WelcomeCellModel(
             subtitle: "Достигай цели \nи получай награды",

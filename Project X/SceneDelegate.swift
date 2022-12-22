@@ -18,7 +18,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
 
-       
+        // Welcome screen
+        let configurator: WelcomeConfiguratorInputProtocol = WelcomeConfigurator()
+        let childVC = WelcomeViewController()
+       // navVC.viewControllers = [childVC]
+        configurator.configure(with: childVC)
+        window?.rootViewController = childVC
    
         // ParentHomeScreen
 //        let configurator:ParentHomeScreenConfiguratorInputProtocol = ParentHomeScreenConfigurator()
@@ -35,13 +40,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //        window?.rootViewController = navVC
         
         // ProfileScreen
-        let navVC = UINavigationController()
+   //     let navVC = UINavigationController()
        // let mainTabBar = MainTabBarController()
-        let configurator: ProfileConfiguratorInputProtocol = ProfileConfigurator()
-        let profileVC = ProfileViewController()
-        navVC.viewControllers = [profileVC]
-        configurator.configure(with: profileVC, with: navVC)
-        window?.rootViewController = navVC
+//        let configurator: ProfileConfiguratorInputProtocol = ProfileConfigurator()
+//        let profileVC = ProfileViewController()
+//        navVC.viewControllers = [profileVC]
+//        configurator.configure(with: profileVC, with: navVC)
+//        window?.rootViewController = navVC
    // Welcome VC
 //        window?.rootViewController = WelcomeViewController()
 
