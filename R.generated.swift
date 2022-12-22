@@ -243,7 +243,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.image` struct is generated, and contains static references to 43 images.
+  /// This `R.image` struct is generated, and contains static references to 45 images.
   struct image {
     /// Image `AddUserNoEnabledFigma`.
     static let addUserNoEnabledFigma = Rswift.ImageResource(bundle: R.hostingBundle, name: "AddUserNoEnabledFigma")
@@ -321,6 +321,10 @@ struct R: Rswift.Validatable {
     static let rewardsSelected = Rswift.ImageResource(bundle: R.hostingBundle, name: "rewards.selected")
     /// Image `right`.
     static let right = Rswift.ImageResource(bundle: R.hostingBundle, name: "right")
+    /// Image `selectedNo`.
+    static let selectedNo = Rswift.ImageResource(bundle: R.hostingBundle, name: "selectedNo")
+    /// Image `selectedYes`.
+    static let selectedYes = Rswift.ImageResource(bundle: R.hostingBundle, name: "selectedYes")
     /// Image `spot`.
     static let spot = Rswift.ImageResource(bundle: R.hostingBundle, name: "spot")
     /// Image `supportFigma`.
@@ -595,6 +599,20 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "right", bundle: ..., traitCollection: ...)`
     static func right(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.right, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "selectedNo", bundle: ..., traitCollection: ...)`
+    static func selectedNo(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.selectedNo, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "selectedYes", bundle: ..., traitCollection: ...)`
+    static func selectedYes(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.selectedYes, compatibleWith: traitCollection)
     }
     #endif
 

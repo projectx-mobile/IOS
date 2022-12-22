@@ -17,7 +17,11 @@ final class AddNewUserVC: UIViewController {
         return label
     }()
     // MARK: Buttons
-    private let inviteByEmailButton = ProfileButton(leftIcon: UIImage(named: "emailFigma"), title: "Пригласить по email")
+    private let inviteByEmailButton: UIButton = {
+        let button = ProfileButton(leftIcon: UIImage(named: "emailFigma"), title: "Пригласить по email")
+        button.addTarget(self, action: #selector(openNextVc(sender:)), for: .touchUpInside)
+        return button
+    }()
     private let inviteByLinkButton = ProfileButton(leftIcon: UIImage(named: "linkFigma"), title: "Поделиться ссылкой")
     private let familyIdButton = ProfileButton(leftIcon: UIImage(named: "keyFigma"), title: "Поделиться ссылкой")
     // MARK: View
@@ -44,7 +48,7 @@ private extension AddNewUserVC {
     }
     func setNavigationBar() {
         navigationController?.navigationBar.isHidden = false
-        navigationController?.navigationBar.topItem?.backButtonTitle = ""
+        navigationController?.navigationBar.topItem?.backButtonTitle = String()
         navigationController?.navigationBar.backIndicatorImage = UIImage(named: "leftChevronFigma")?.withTintColor(.primaryMidnight, renderingMode: .alwaysOriginal)
         navigationController?.navigationBar.backIndicatorTransitionMaskImage = UIImage(named: "leftChevronFigma")?.withTintColor(.primaryMidnight, renderingMode: .alwaysOriginal)
     }
@@ -76,5 +80,20 @@ private extension AddNewUserVC {
         ])
     }
 }
+// MARK: Action
+extension AddNewUserVC {
+  @objc private func openNextVc(sender: UIButton) {
+        switch sender {
+        case inviteByEmailButton:
+            presenter.openNewVc(sender: "Email")
+        case inviteByLinkButton:
+            presenter.openNewVc(sender: "Link")
+        case familyIdButton:
+            presenter.openNewVc(sender: "FamilyID")
+        default: break
+        }
+    }
+}
 extension AddNewUserVC: AddNewUserVCInputProtocol {
+    
 }

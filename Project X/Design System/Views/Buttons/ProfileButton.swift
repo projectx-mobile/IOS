@@ -65,14 +65,12 @@ final class ProfileButton: UIButton {
 // MARK: Constraints for button
 private extension ProfileButton {
      func constraints() {
-        self.heightAnchor.constraint(equalToConstant: LayoutConstants.height56).isActive = true
-        self.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width - widthConstraintsForButton).isActive = true
-        self.imageView?.widthAnchor.constraint(equalToConstant: LayoutConstants.width20).isActive = true
-        self.imageView?.heightAnchor.constraint(equalToConstant: LayoutConstants.height17).isActive = true
-        self.titleLabel?.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: LayoutConstants.inset48).isActive = true
-        self.imageView?.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -LayoutConstants.inset17).isActive = true
-        self.titleLabel?.trailingAnchor.constraint(equalTo: self.imageView!.leadingAnchor, constant: -LayoutConstants.inset10).isActive = true
-        self.imageView?.leadingAnchor.constraint(equalTo: titleLabel!.trailingAnchor, constant: LayoutConstants.inset20).isActive = true
-        imageView?.contentMode = .right
+         self.heightAnchor.constraint(equalToConstant: LayoutConstants.height56).isActive = true
+         self.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width - widthConstraintsForButton).isActive = true
+          self.titleLabel?.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: LayoutConstants.inset48).isActive = true
+          self.titleLabel?.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -LayoutConstants.inset2).isActive = true
+          self.imageView?.leadingAnchor.constraint(equalTo: titleLabel!.trailingAnchor, constant: -LayoutConstants.inset2).isActive = true
+          self.imageView?.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -LayoutConstants.inset17).isActive = true
+          imageView?.contentMode = .right
     }
 }

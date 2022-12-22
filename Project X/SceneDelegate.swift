@@ -19,41 +19,35 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
 
         // Welcome screen
-        let configurator: WelcomeConfiguratorInputProtocol = WelcomeConfigurator()
-        let childVC = WelcomeViewController()
-       // navVC.viewControllers = [childVC]
-        configurator.configure(with: childVC)
-        window?.rootViewController = childVC
-   
+//        let configurator: WelcomeConfiguratorInputProtocol = WelcomeConfigurator()
+//        let childVC = WelcomeViewController()
+//       // navVC.viewControllers = [childVC]
+//        configurator.configure(with: childVC)
+//        window?.rootViewController = childVC
+//
         // ParentHomeScreen
 //        let configurator:ParentHomeScreenConfiguratorInputProtocol = ParentHomeScreenConfigurator()
 //        let parentVC = ParentHomeScreenViewController()
 //        navVC.viewControllers = [parentVC]
 //        configurator.configure(with: parentVC, with: navVC)
 //         window?.rootViewController = navVC
-        
         // ChildHomeScreen
 //        let configurator: ChildHomeScreenConfiguratorInputProtocol = ChildHomeScreenConfigurator()
 //        let childVC = ChildHomeScreenViewController()
 //        navVC.viewControllers = [childVC]
 //        configurator.configure(with: childVC, with: navVC)
 //        window?.rootViewController = navVC
-        
         // ProfileScreen
-   //     let navVC = UINavigationController()
-       // let mainTabBar = MainTabBarController()
-//        let configurator: ProfileConfiguratorInputProtocol = ProfileConfigurator()
-//        let profileVC = ProfileViewController()
-//        navVC.viewControllers = [profileVC]
-//        configurator.configure(with: profileVC, with: navVC)
-//        window?.rootViewController = navVC
-   // Welcome VC
-//        window?.rootViewController = WelcomeViewController()
-
+        let navVC = UINavigationController()
+      //  let mainTabBar = MainTabBarController()
+        let configurator: ProfileConfiguratorInputProtocol = ProfileConfigurator()
+        let profileVC = ProfileViewController()
+        navVC.viewControllers = [profileVC]
+        configurator.configure(with: profileVC, with: navVC)
+        window?.rootViewController = navVC
         window?.makeKeyAndVisible()
         window?.overrideUserInterfaceStyle = .light
     }
-    
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
         // This occurs shortly after the scene enters the background, or when its session is discarded.

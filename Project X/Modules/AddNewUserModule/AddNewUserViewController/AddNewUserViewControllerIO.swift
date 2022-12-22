@@ -11,4 +11,5 @@ protocol AddNewUserVCInputProtocol: AnyObject {
 }
 protocol AddNewUserVCOutputProtocol: AnyObject {
     init(view: AddNewUserVCInputProtocol)
+    func openNewVc(sender: String)
 }

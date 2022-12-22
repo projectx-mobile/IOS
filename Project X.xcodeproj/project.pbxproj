@@ -170,6 +170,14 @@
 		EDC06392291C0E3300257D5E /* NotificationsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC06391291C0E3300257D5E /* NotificationsInteractor.swift */; };
 		EDC06394291C0E4100257D5E /* NotificationsInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC06393291C0E4100257D5E /* NotificationsInteractorIO.swift */; };
 		EDC06396291C0E5900257D5E /* NotificationsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC06395291C0E5900257D5E /* NotificationsConfigurator.swift */; };
+		EDC3BF7529549E9D0042F895 /* InviteByEmailConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC3BF7429549E9D0042F895 /* InviteByEmailConfigurator.swift */; };
+		EDC3BF7729549ED90042F895 /* EmailUserInviteEmailVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC3BF7629549ED90042F895 /* EmailUserInviteEmailVc.swift */; };
+		EDC3BF7929549F140042F895 /* EmailUserInviteEmailIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC3BF7829549F140042F895 /* EmailUserInviteEmailIO.swift */; };
+		EDC3BF7B2954A0A00042F895 /* EmailUserInvitePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC3BF7A2954A0A00042F895 /* EmailUserInvitePresenter.swift */; };
+		EDC3BF7D2954A3740042F895 /* EmailUserInviteRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC3BF7C2954A3740042F895 /* EmailUserInviteRouter.swift */; };
+		EDC3BF7F2954A4770042F895 /* EmailUserInviteInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC3BF7E2954A4770042F895 /* EmailUserInviteInteractor.swift */; };
+		EDC3BF812954A5800042F895 /* EmailUserInviteInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC3BF802954A5800042F895 /* EmailUserInviteInteractorIO.swift */; };
+		EDC3BF832954BCE40042F895 /* RadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC3BF822954BCE40042F895 /* RadioButton.swift */; };
 		EDCE0677291E31D500E86B2D /* ModalWindowFamilyMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCE0676291E31D500E86B2D /* ModalWindowFamilyMember.swift */; };
 		EDFD5E0329166B7F006E1D5C /* FamilyMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFD5E0229166B7F006E1D5C /* FamilyMember.swift */; };
 /* End PBXBuildFile section */
@@ -342,6 +350,14 @@
 		EDC06391291C0E3300257D5E /* NotificationsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsInteractor.swift; sourceTree = "<group>"; };
 		EDC06393291C0E4100257D5E /* NotificationsInteractorIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsInteractorIO.swift; sourceTree = "<group>"; };
 		EDC06395291C0E5900257D5E /* NotificationsConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsConfigurator.swift; sourceTree = "<group>"; };
+		EDC3BF7429549E9D0042F895 /* InviteByEmailConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteByEmailConfigurator.swift; sourceTree = "<group>"; };
+		EDC3BF7629549ED90042F895 /* EmailUserInviteEmailVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailUserInviteEmailVc.swift; sourceTree = "<group>"; };
+		EDC3BF7829549F140042F895 /* EmailUserInviteEmailIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailUserInviteEmailIO.swift; sourceTree = "<group>"; };
+		EDC3BF7A2954A0A00042F895 /* EmailUserInvitePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailUserInvitePresenter.swift; sourceTree = "<group>"; };
+		EDC3BF7C2954A3740042F895 /* EmailUserInviteRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailUserInviteRouter.swift; sourceTree = "<group>"; };
+		EDC3BF7E2954A4770042F895 /* EmailUserInviteInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailUserInviteInteractor.swift; sourceTree = "<group>"; };
+		EDC3BF802954A5800042F895 /* EmailUserInviteInteractorIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailUserInviteInteractorIO.swift; sourceTree = "<group>"; };
+		EDC3BF822954BCE40042F895 /* RadioButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButton.swift; sourceTree = "<group>"; };
 		EDCE0676291E31D500E86B2D /* ModalWindowFamilyMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalWindowFamilyMember.swift; sourceTree = "<group>"; };
 		EDFD5E0229166B7F006E1D5C /* FamilyMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyMember.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -707,6 +723,7 @@
 				ED73FCAA29167150008AC0E9 /* AvatarIcon.swift */,
 				ED73FCAC29167184008AC0E9 /* ProfileButton.swift */,
 				ED9D024A291CF8FF004F2110 /* EditProfileButton.swift */,
+				EDC3BF822954BCE40042F895 /* RadioButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -1191,9 +1208,56 @@
 			path = NotificationsInteractor;
 			sourceTree = "<group>";
 		};
+		EDC3BF6F29549DDA0042F895 /* EmailUserInviteModule */ = {
+			isa = PBXGroup;
+			children = (
+				EDC3BF7029549E0C0042F895 /* EmailUserInviteVc */,
+				EDC3BF7129549E3B0042F895 /* EmailUserInvitePresenter */,
+				EDC3BF7329549E570042F895 /* EmailUserInviteRouter */,
+				EDC3BF7229549E4A0042F895 /* EmailUserInviteInteractor */,
+				EDC3BF7429549E9D0042F895 /* InviteByEmailConfigurator.swift */,
+			);
+			path = EmailUserInviteModule;
+			sourceTree = "<group>";
+		};
+		EDC3BF7029549E0C0042F895 /* EmailUserInviteVc */ = {
+			isa = PBXGroup;
+			children = (
+				EDC3BF7629549ED90042F895 /* EmailUserInviteEmailVc.swift */,
+				EDC3BF7829549F140042F895 /* EmailUserInviteEmailIO.swift */,
+			);
+			path = EmailUserInviteVc;
+			sourceTree = "<group>";
+		};
+		EDC3BF7129549E3B0042F895 /* EmailUserInvitePresenter */ = {
+			isa = PBXGroup;
+			children = (
+				EDC3BF7A2954A0A00042F895 /* EmailUserInvitePresenter.swift */,
+			);
+			path = EmailUserInvitePresenter;
+			sourceTree = "<group>";
+		};
+		EDC3BF7229549E4A0042F895 /* EmailUserInviteInteractor */ = {
+			isa = PBXGroup;
+			children = (
+				EDC3BF7E2954A4770042F895 /* EmailUserInviteInteractor.swift */,
+				EDC3BF802954A5800042F895 /* EmailUserInviteInteractorIO.swift */,
+			);
+			path = EmailUserInviteInteractor;
+			sourceTree = "<group>";
+		};
+		EDC3BF7329549E570042F895 /* EmailUserInviteRouter */ = {
+			isa = PBXGroup;
+			children = (
+				EDC3BF7C2954A3740042F895 /* EmailUserInviteRouter.swift */,
+			);
+			path = EmailUserInviteRouter;
+			sourceTree = "<group>";
+		};
 		EDCDE6D8293DF14D0049CEA9 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				EDC3BF6F29549DDA0042F895 /* EmailUserInviteModule */,
 				ED7323C429190A090021E49C /* SupportModule */,
 				ED7323C2291909570021E49C /* LanguageSettingsModule */,
 				ED7323C3291909720021E49C /* AddNewUserModule */,
@@ -1379,6 +1443,8 @@
 				889F434328E18CC500DC347D /* UIFont + Extension.swift in Sources */,
 				ED73241A291910050021E49C /* EmailSettingRouter.swift in Sources */,
 				05DA1E972914184000CFA8DC /* WelcomeCellModel.swift in Sources */,
+				EDC3BF7B2954A0A00042F895 /* EmailUserInvitePresenter.swift in Sources */,
+				EDC3BF7D2954A3740042F895 /* EmailUserInviteRouter.swift in Sources */,
 				8858668528E1998100F11B72 /* ParentHomeScreenViewIO.swift in Sources */,
 				885B244E2907ED5100FA607B /* ChildHomeScreenViewController.swift in Sources */,
 				84D496C129128820004D7EE9 /* LoginWithMailScreenInteractor.swift in Sources */,
@@ -1395,6 +1461,7 @@
 				ED73FCB3291675A6008AC0E9 /* ProfileViewController.swift in Sources */,
 				847EBA2A290AEB8500B4DE70 /* LoginWithGAViewIO.swift in Sources */,
 				885B24582907EF9900FA607B /* ChildHomeScreenPresenter.swift in Sources */,
+				EDC3BF7529549E9D0042F895 /* InviteByEmailConfigurator.swift in Sources */,
 				ED9D024B291CF8FF004F2110 /* EditProfileButton.swift in Sources */,
 				88C988F328E5E4A1002DF8A3 /* ParentUpdatesInteractorIO.swift in Sources */,
 				971507A828F6F2100024475C /* MainTabbarController.swift in Sources */,
@@ -1413,6 +1480,7 @@
 				847EBA22290AEA4200B4DE70 /* CustomLoginButtonViewModel.swift in Sources */,
 				885B24662907F63100FA607B /* CalendarCollectionViewCell.swift in Sources */,
 				ED7323D429190CE70021E49C /* PasswordSettingConfigurator.swift in Sources */,
+				EDC3BF7F2954A4770042F895 /* EmailUserInviteInteractor.swift in Sources */,
 				885B24542907EEC400FA607B /* CalendarView.swift in Sources */,
 				EDCE0677291E31D500E86B2D /* ModalWindowFamilyMember.swift in Sources */,
 				8858667C28E1975A00F11B72 /* TitleLabel.swift in Sources */,
@@ -1434,12 +1502,14 @@
 				88D5282428E328C800220DFB /* KidsData.swift in Sources */,
 				8890090928E426930044E02D /* LayoutConstants.swift in Sources */,
 				88C988F128E5E48B002DF8A3 /* ParentUpdatesViewIO.swift in Sources */,
+				EDC3BF7929549F140042F895 /* EmailUserInviteEmailIO.swift in Sources */,
 				ED7323E229190DC90021E49C /* LanguageSettingConfigurator.swift in Sources */,
 				8858668228E198D900F11B72 /* ParentHomeScreenInteractor.swift in Sources */,
 				847EBA9C2912685700B4DE70 /* LoginWithMailScreemViewController.swift in Sources */,
 				889F435728E190EA00DC347D /* ComeBackView.swift in Sources */,
 				885B24682907F69100FA607B /* UIDatePicker + Extension.swift in Sources */,
 				ED73241629190FC10021E49C /* PasswordSettingInteractor.swift in Sources */,
+				EDC3BF812954A5800042F895 /* EmailUserInviteInteractorIO.swift in Sources */,
 				ED73FCB5291675FF008AC0E9 /* ProfilePresenter.swift in Sources */,
 				885B243E2907E98100FA607B /* TasksTableViewCell.swift in Sources */,
 				ED73240429190F3A0021E49C /* AddNewUserInteractor.swift in Sources */,
@@ -1463,6 +1533,7 @@
 				8858668B28E19A2500F11B72 /* ParentHomeScreenConfigurator.swift in Sources */,
 				ED73FCAD29167184008AC0E9 /* ProfileButton.swift in Sources */,
 				8858668928E199F600F11B72 /* KidsUpdates.swift in Sources */,
+				EDC3BF7729549ED90042F895 /* EmailUserInviteEmailVc.swift in Sources */,
 				889F435228E1904A00DC347D /* WelcomePresenter.swift in Sources */,
 				EDC06369291BB06F00257D5E /* UserRolesViewControllerIO.swift in Sources */,
 				971507AA28F6F2100024475C /* TasksViewController.swift in Sources */,
@@ -1499,6 +1570,7 @@
 				8858667128E1962000F11B72 /* KidsCardTableViewCell.swift in Sources */,
 				ED7323FA29190ED80021E49C /* LanguageSettingInteractor.swift in Sources */,
 				ED73FCAF291672FF008AC0E9 /* FamilyMembersCollectionView.swift in Sources */,
+				EDC3BF832954BCE40042F895 /* RadioButton.swift in Sources */,
 				8858668D28E19A4A00F11B72 /* ParentHomeScreenPresenter.swift in Sources */,
 				EDC06375291BE7C500257D5E /* PasswordSettingVCIO.swift in Sources */,
 				8858667328E1968000F11B72 /* UpdatesTableViewCell.swift in Sources */,
