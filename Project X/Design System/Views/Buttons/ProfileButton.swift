@@ -65,7 +65,6 @@ final class ProfileButton: UIButton {
 // MARK: Constraints for button
 private extension ProfileButton {
      func constraints() {
-         gfggf
         self.heightAnchor.constraint(equalToConstant: LayoutConstants.height56).isActive = true
         self.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width - widthConstraintsForButton).isActive = true
          self.titleLabel?.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: LayoutConstants.inset48).isActive = true
