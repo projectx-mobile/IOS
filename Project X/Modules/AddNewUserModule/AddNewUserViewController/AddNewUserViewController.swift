@@ -71,8 +71,10 @@ private extension AddNewUserVC {
             secondaryLabel.centerXAnchor.constraint(equalTo: newUserLabel.centerXAnchor),
             // Stack view button
             stackViewButton.topAnchor.constraint(equalTo: secondaryLabel.bottomAnchor, constant: LayoutConstants.inset48),
-            stackViewButton.widthAnchor.constraint(equalTo: secondaryLabel.widthAnchor),
-            stackViewButton.centerXAnchor.constraint(equalTo: secondaryLabel.centerXAnchor)
+            stackViewButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: LayoutConstants.inset16),
+            stackViewButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -LayoutConstants.inset16),
+//            stackViewButton.widthAnchor.constraint(equalTo: secondaryLabel.widthAnchor),
+//            stackViewButton.centerXAnchor.constraint(equalTo: secondaryLabel.centerXAnchor)
         ])
     }
 }
