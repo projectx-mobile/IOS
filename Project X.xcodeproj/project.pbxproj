@@ -102,6 +102,8 @@
 		CA214CF528BDFEF5006176A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA214CF328BDFEF5006176A7 /* Main.storyboard */; };
 		CA214CF728BDFEF7006176A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA214CF628BDFEF7006176A7 /* Assets.xcassets */; };
 		CA214CFA28BDFEF7006176A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA214CF828BDFEF7006176A7 /* LaunchScreen.storyboard */; };
+		ED1C6B48295D9A3F0017F6EF /* PrimarySecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1C6B47295D9A3F0017F6EF /* PrimarySecondaryButton.swift */; };
+		ED426D112956F43400772291 /* UiNavigationController + extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED426D102956F43400772291 /* UiNavigationController + extension.swift */; };
 		ED7323C729190BD60021E49C /* EmailSettinsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7323C629190BD60021E49C /* EmailSettinsVC.swift */; };
 		ED7323CE29190C420021E49C /* EmailSettingConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7323CD29190C420021E49C /* EmailSettingConfigurator.swift */; };
 		ED7323D429190CE70021E49C /* PasswordSettingConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7323D329190CE70021E49C /* PasswordSettingConfigurator.swift */; };
@@ -146,7 +148,6 @@
 		ED73FCB729167649008AC0E9 /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED73FCB629167649008AC0E9 /* ProfileRouter.swift */; };
 		ED73FCB92916767A008AC0E9 /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED73FCB82916767A008AC0E9 /* ProfileInteractor.swift */; };
 		ED73FCBB291676B8008AC0E9 /* ProfileConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED73FCBA291676B8008AC0E9 /* ProfileConfigurator.swift */; };
-		ED9D024B291CF8FF004F2110 /* EditProfileButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9D024A291CF8FF004F2110 /* EditProfileButton.swift */; };
 		EDC06365291B8E4900257D5E /* ProfileViewControllerIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC06364291B8E4900257D5E /* ProfileViewControllerIO.swift */; };
 		EDC06367291BA5CB00257D5E /* ProfileInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC06366291BA5CB00257D5E /* ProfileInteractorIO.swift */; };
 		EDC06369291BB06F00257D5E /* UserRolesViewControllerIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC06368291BB06F00257D5E /* UserRolesViewControllerIO.swift */; };
@@ -178,6 +179,8 @@
 		EDC3BF7F2954A4770042F895 /* EmailUserInviteInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC3BF7E2954A4770042F895 /* EmailUserInviteInteractor.swift */; };
 		EDC3BF812954A5800042F895 /* EmailUserInviteInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC3BF802954A5800042F895 /* EmailUserInviteInteractorIO.swift */; };
 		EDC3BF832954BCE40042F895 /* RadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC3BF822954BCE40042F895 /* RadioButton.swift */; };
+		EDC63ADA2955F78C00E73EAC /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC63AD92955F78C00E73EAC /* CustomTextField.swift */; };
+		EDC6FC89295EF99D00695A18 /* sent.json in Resources */ = {isa = PBXBuildFile; fileRef = EDC6FC88295EEE4100695A18 /* sent.json */; };
 		EDCE0677291E31D500E86B2D /* ModalWindowFamilyMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCE0676291E31D500E86B2D /* ModalWindowFamilyMember.swift */; };
 		EDFD5E0329166B7F006E1D5C /* FamilyMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFD5E0229166B7F006E1D5C /* FamilyMember.swift */; };
 /* End PBXBuildFile section */
@@ -282,6 +285,8 @@
 		CA214CF628BDFEF7006176A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA214CF928BDFEF7006176A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CA214CFB28BDFEF7006176A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED1C6B47295D9A3F0017F6EF /* PrimarySecondaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimarySecondaryButton.swift; sourceTree = "<group>"; };
+		ED426D102956F43400772291 /* UiNavigationController + extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UiNavigationController + extension.swift"; sourceTree = "<group>"; };
 		ED7323C629190BD60021E49C /* EmailSettinsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailSettinsVC.swift; sourceTree = "<group>"; };
 		ED7323CD29190C420021E49C /* EmailSettingConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailSettingConfigurator.swift; sourceTree = "<group>"; };
 		ED7323D329190CE70021E49C /* PasswordSettingConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordSettingConfigurator.swift; sourceTree = "<group>"; };
@@ -326,7 +331,6 @@
 		ED73FCB629167649008AC0E9 /* ProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRouter.swift; sourceTree = "<group>"; };
 		ED73FCB82916767A008AC0E9 /* ProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
 		ED73FCBA291676B8008AC0E9 /* ProfileConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileConfigurator.swift; sourceTree = "<group>"; };
-		ED9D024A291CF8FF004F2110 /* EditProfileButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileButton.swift; sourceTree = "<group>"; };
 		EDC06364291B8E4900257D5E /* ProfileViewControllerIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewControllerIO.swift; sourceTree = "<group>"; };
 		EDC06366291BA5CB00257D5E /* ProfileInteractorIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractorIO.swift; sourceTree = "<group>"; };
 		EDC06368291BB06F00257D5E /* UserRolesViewControllerIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRolesViewControllerIO.swift; sourceTree = "<group>"; };
@@ -358,6 +362,8 @@
 		EDC3BF7E2954A4770042F895 /* EmailUserInviteInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailUserInviteInteractor.swift; sourceTree = "<group>"; };
 		EDC3BF802954A5800042F895 /* EmailUserInviteInteractorIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailUserInviteInteractorIO.swift; sourceTree = "<group>"; };
 		EDC3BF822954BCE40042F895 /* RadioButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButton.swift; sourceTree = "<group>"; };
+		EDC63AD92955F78C00E73EAC /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		EDC6FC88295EEE4100695A18 /* sent.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = sent.json; sourceTree = "<group>"; };
 		EDCE0676291E31D500E86B2D /* ModalWindowFamilyMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalWindowFamilyMember.swift; sourceTree = "<group>"; };
 		EDFD5E0229166B7F006E1D5C /* FamilyMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyMember.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -379,6 +385,7 @@
 			children = (
 				05DA1E902914176D00CFA8DC /* antframe1.json */,
 				05DA1E922914177500CFA8DC /* frame 2 onboarding.json */,
+				EDC6FC88295EEE4100695A18 /* sent.json */,
 			);
 			path = Animations;
 			sourceTree = "<group>";
@@ -585,6 +592,7 @@
 		889F433A28E18B5B00DC347D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EDC63AD82955F6F200E73EAC /* TextFields */,
 				05DA1E98291418EE00CFA8DC /* View */,
 				8858667428E196BF00F11B72 /* Labels */,
 				8858666F28E195C500F11B72 /* Cells */,
@@ -601,6 +609,7 @@
 				889F434428E18D1000DC347D /* UIView + Extension.swift */,
 				885B24672907F69100FA607B /* UIDatePicker + Extension.swift */,
 				84D496B329127790004D7EE9 /* UITextField + Extention.swift */,
+				ED426D102956F43400772291 /* UiNavigationController + extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -716,13 +725,13 @@
 			isa = PBXGroup;
 			children = (
 				975958FD28D9B40900570BB4 /* Button.swift */,
+				ED1C6B47295D9A3F0017F6EF /* PrimarySecondaryButton.swift */,
 				889F433B28E18B9200DC347D /* CustomButton.swift */,
 				889F433D28E18BEC00DC347D /* PrimaryButton.swift */,
 				885B24412907EBA800FA607B /* TaskDescriptionButton.swift */,
 				847EBA27290AEB1200B4DE70 /* LoginButton.swift */,
 				ED73FCAA29167150008AC0E9 /* AvatarIcon.swift */,
 				ED73FCAC29167184008AC0E9 /* ProfileButton.swift */,
-				ED9D024A291CF8FF004F2110 /* EditProfileButton.swift */,
 				EDC3BF822954BCE40042F895 /* RadioButton.swift */,
 			);
 			path = Buttons;
@@ -1254,6 +1263,14 @@
 			path = EmailUserInviteRouter;
 			sourceTree = "<group>";
 		};
+		EDC63AD82955F6F200E73EAC /* TextFields */ = {
+			isa = PBXGroup;
+			children = (
+				EDC63AD92955F78C00E73EAC /* CustomTextField.swift */,
+			);
+			path = TextFields;
+			sourceTree = "<group>";
+		};
 		EDCDE6D8293DF14D0049CEA9 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
@@ -1342,6 +1359,7 @@
 				889F434728E18E6100DC347D /* NexaDemo-Bold.ttf in Resources */,
 				88B0AB2129093A470049F8B8 /* GoogleService-Info.plist in Resources */,
 				885B24332907D7A700FA607B /* Roboto-Regular.ttf in Resources */,
+				EDC6FC89295EF99D00695A18 /* sent.json in Resources */,
 				CA214CFA28BDFEF7006176A7 /* LaunchScreen.storyboard in Resources */,
 				885B24312907D79C00FA607B /* Roboto-Medium.ttf in Resources */,
 				885B242F2907D78900FA607B /* Roboto-Bold.ttf in Resources */,
@@ -1462,7 +1480,6 @@
 				847EBA2A290AEB8500B4DE70 /* LoginWithGAViewIO.swift in Sources */,
 				885B24582907EF9900FA607B /* ChildHomeScreenPresenter.swift in Sources */,
 				EDC3BF7529549E9D0042F895 /* InviteByEmailConfigurator.swift in Sources */,
-				ED9D024B291CF8FF004F2110 /* EditProfileButton.swift in Sources */,
 				88C988F328E5E4A1002DF8A3 /* ParentUpdatesInteractorIO.swift in Sources */,
 				971507A828F6F2100024475C /* MainTabbarController.swift in Sources */,
 				ED732424291940980021E49C /* CustomizeProfileConfigurator.swift in Sources */,
@@ -1544,6 +1561,7 @@
 				8858668028E198B200F11B72 /* ParentHomeScreenInteractorIO.swift in Sources */,
 				889F434F28E1900B00DC347D /* WelcomeInteractorIO.swift in Sources */,
 				ED7323F429190EB40021E49C /* LanguageSettingVC.swift in Sources */,
+				ED426D112956F43400772291 /* UiNavigationController + extension.swift in Sources */,
 				ED73241129190F9C0021E49C /* PasswordSettingPresenter.swift in Sources */,
 				EDC0637D291BE98400257D5E /* LanguageSettingVCIO.swift in Sources */,
 				EDC0636B291BB3FB00257D5E /* UserRolesInteractorIO.swift in Sources */,
@@ -1560,7 +1578,9 @@
 				889F433C28E18B9200DC347D /* CustomButton.swift in Sources */,
 				EDC0637F291BE99F00257D5E /* LanguageSettingInteractorIO.swift in Sources */,
 				EDC0636D291BE77000257D5E /* CustomizeProfileIO.swift in Sources */,
+				EDC63ADA2955F78C00E73EAC /* CustomTextField.swift in Sources */,
 				EDC0638F291C0E1100257D5E /* NotificationsRouter.swift in Sources */,
+				ED1C6B48295D9A3F0017F6EF /* PrimarySecondaryButton.swift in Sources */,
 				88C988E528E5E3B7002DF8A3 /* ParentUpdatesConfigurator.swift in Sources */,
 				EDC06371291BE79C00257D5E /* EmailSettinsVCIO.swift in Sources */,
 				ED7323EE29190E720021E49C /* SupportVC.swift in Sources */,

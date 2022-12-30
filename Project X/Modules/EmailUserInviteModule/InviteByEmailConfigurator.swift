@@ -6,6 +6,7 @@
 //
 
 import UIKit
+
 protocol EmailUserInviteConfiguratorInputProtocol {
     func configure(with viewController: EmailUserInviteVc)
 }

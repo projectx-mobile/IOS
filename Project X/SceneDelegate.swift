@@ -38,8 +38,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //        configurator.configure(with: childVC, with: navVC)
 //        window?.rootViewController = navVC
         // ProfileScreen
-        let navVC = UINavigationController()
+        
       //  let mainTabBar = MainTabBarController()
+        let navVC = UINavigationController()
         let configurator: ProfileConfiguratorInputProtocol = ProfileConfigurator()
         let profileVC = ProfileViewController()
         navVC.viewControllers = [profileVC]
@@ -47,6 +48,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.rootViewController = navVC
         window?.makeKeyAndVisible()
         window?.overrideUserInterfaceStyle = .light
+        
     }
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.

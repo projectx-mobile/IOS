@@ -56,5 +56,3 @@ final class ProfilePresenter: ProfileViewControllerOutputProtocol {
 }
 extension ProfilePresenter: ProfileInteractorOutputProtocol {
 }
-
-

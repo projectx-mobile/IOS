@@ -59,8 +59,11 @@ final class ProfileViewController: UIViewController {
     // MARK: Buttons
     // Edit profile button
     private lazy var editProfileButton: UIButton = {
-        let button = EditProfileButton()
+        let button = UIButton(type: .system)
+        button.translatesAutoresizingMaskIntoConstraints = false
         button.addTarget(self, action: #selector(transitionToNewVc), for: .touchUpInside)
+        button.setImage(UIImage(named: "navigation")?.withTintColor(.primaryMidnight, renderingMode: .alwaysOriginal), for: .normal)
+        button.titleLabel?.tintColor = .primaryMidnight
         return button
     }()
     // MARK: Group buttons

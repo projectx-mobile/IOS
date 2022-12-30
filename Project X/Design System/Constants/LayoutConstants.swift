@@ -12,7 +12,9 @@ enum LayoutConstants {
     static let borderWidth: CGFloat = 1.4
 
     // MARK: - Insets
+    static let inset0: CGFloat = 0.0
     static let inset2: CGFloat = 2.0
+    static let inset4: CGFloat = 4.0
     static let inset5: CGFloat = 5.0
     static let inset6: CGFloat = 6.0
     static let inset8: CGFloat = 8.0
@@ -44,6 +46,7 @@ enum LayoutConstants {
     static let inset55: CGFloat = 55.0
     static let inset58: CGFloat = 58.0
     static let inset64: CGFloat = 64.0
+    static let inset66: CGFloat = 66.0
     static let inset69: CGFloat = 69.0
     static let inset72: CGFloat = 72.0
     static let inset74: CGFloat = 74.0
@@ -51,6 +54,8 @@ enum LayoutConstants {
     static let inset80: CGFloat = 80.0
     static let inset88: CGFloat = 88.0
     static let inset92: CGFloat = 92.0
+    static let inset112: CGFloat = 112.0
+    static let inset132: CGFloat = 132.0
     static let inset282: CGFloat = 282.0
     // MARK: - Duration
     static let duration: TimeInterval = 0.1
@@ -59,6 +64,7 @@ enum LayoutConstants {
     static let height5: CGFloat = 5.0
     static let height8: CGFloat = 8.0
     static let height10: CGFloat = 10.0
+    static let height14: CGFloat = 14.0
     static let height15: CGFloat = 15.0
     static let height17: CGFloat = 17.0
     static let height18: CGFloat = 18.0
@@ -81,7 +87,9 @@ enum LayoutConstants {
     // MARK: - Width
     static let width5: CGFloat = 5.0
     static let width8: CGFloat = 8.0
+    static let width10: CGFloat = 10.0
     static let width15: CGFloat = 15.0
+    static let width16: CGFloat = 16.0
     static let width18: CGFloat = 18.0
     static let width20: Double = 20.0
     static let width24: Double = 24.0

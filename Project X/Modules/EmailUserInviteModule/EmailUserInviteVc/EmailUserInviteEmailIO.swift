@@ -11,5 +11,5 @@ protocol EmailUserInviteVcInputProtocol: AnyObject {
 
 protocol EmailUserInviteVcOutputProtocol: AnyObject {
     init(view: EmailUserInviteVcInputProtocol)
-    
+    func toRouter()
 }

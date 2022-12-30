@@ -27,7 +27,6 @@ private extension RadioButton {
         self.setTitleColor(.black, for: .normal)
     }
     func constraints() {
-     
         self.imageView?.widthAnchor.constraint(equalToConstant: LayoutConstants.inset24).isActive = true
         self.imageView?.heightAnchor.constraint(equalToConstant: LayoutConstants.inset24).isActive = true
         self.imageView?.trailingAnchor.constraint(equalTo: titleLabel!.leadingAnchor, constant: -LayoutConstants.inset10).isActive = true

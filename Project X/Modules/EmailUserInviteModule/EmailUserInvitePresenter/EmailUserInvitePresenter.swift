@@ -14,9 +14,9 @@ final class EmailUserInvitePresenter: EmailUserInviteVcOutputProtocol {
     required init(view: EmailUserInviteVcInputProtocol) {
         self.view = view
     }
-    
-    
+    func toRouter() {
+        router?.popToProfileVc()
+    }
 }
-
 extension EmailUserInvitePresenter: EmailUserInviteInteractorOutputProtocol {
 }

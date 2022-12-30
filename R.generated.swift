@@ -140,7 +140,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.file` struct is generated, and contains static references to 7 files.
+  /// This `R.file` struct is generated, and contains static references to 8 files.
   struct file {
     /// Resource file `GoogleService-Info.plist`.
     static let googleServiceInfoPlist = Rswift.FileResource(bundle: R.hostingBundle, name: "GoogleService-Info", pathExtension: "plist")
@@ -156,6 +156,8 @@ struct R: Rswift.Validatable {
     static let antframe1Json = Rswift.FileResource(bundle: R.hostingBundle, name: "antframe1", pathExtension: "json")
     /// Resource file `frame 2 onboarding.json`.
     static let frame2OnboardingJson = Rswift.FileResource(bundle: R.hostingBundle, name: "frame 2 onboarding", pathExtension: "json")
+    /// Resource file `sent.json`.
+    static let sentJson = Rswift.FileResource(bundle: R.hostingBundle, name: "sent", pathExtension: "json")
 
     /// `bundle.url(forResource: "GoogleService-Info", withExtension: "plist")`
     static func googleServiceInfoPlist(_: Void = ()) -> Foundation.URL? {
@@ -196,6 +198,12 @@ struct R: Rswift.Validatable {
     /// `bundle.url(forResource: "frame 2 onboarding", withExtension: "json")`
     static func frame2OnboardingJson(_: Void = ()) -> Foundation.URL? {
       let fileResource = R.file.frame2OnboardingJson
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "sent", withExtension: "json")`
+    static func sentJson(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.sentJson
       return fileResource.bundle.url(forResource: fileResource)
     }
 
